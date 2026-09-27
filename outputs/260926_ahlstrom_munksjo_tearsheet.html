@@ -1,0 +1,742 @@
+<title>Ahlstrom-Munksjo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --accent: #7C77B9;
+  --accent-light: #EDEAF5;
+  --accent-mid: #A9A4D4;
+  --bg: #FFFFFF;
+  --surface: #F6F5FA;
+  --text: #1E1E2E;
+  --text-secondary: #55536A;
+  --text-muted: #8886A0;
+  --border: #D8D6E3;
+  --border-light: #EDEBF3;
+  --good: #2E8B57;
+  --warn: #D4A017;
+  --critical: #C44536;
+  --table-stripe: #FAFAFD;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141425;
+    --surface: #1E1E36;
+    --text: #E8E7F0;
+    --text-secondary: #B0AECA;
+    --text-muted: #7C7A96;
+    --border: #33315A;
+    --border-light: #28264A;
+    --accent-light: #2A2848;
+    --table-stripe: #1A1A30;
+    --good: #4FBF7A;
+    --warn: #E8B832;
+    --critical: #E0615A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141425;
+  --surface: #1E1E36;
+  --text: #E8E7F0;
+  --text-secondary: #B0AECA;
+  --text-muted: #7C7A96;
+  --border: #33315A;
+  --border-light: #28264A;
+  --accent-light: #2A2848;
+  --table-stripe: #1A1A30;
+  --good: #4FBF7A;
+  --warn: #E8B832;
+  --critical: #E0615A;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--text);
+  background: var(--bg);
+  padding: 0 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media print {
+  body { padding: 0 12px; font-size: 9.5px; }
+  .page-break { page-break-before: always; }
+}
+
+.header {
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 18px 12px;
+  margin: 0 -20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.header-left h1 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 2px;
+}
+
+.header-left .subtitle {
+  font-size: 11px;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+.header-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 10px;
+  opacity: 0.9;
+  flex-wrap: wrap;
+}
+
+.header-meta dt { font-weight: 400; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; font-size: 9px; }
+.header-meta dd { font-weight: 600; margin-top: 1px; }
+
+.ratings-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.rating-badge {
+  background: rgba(255,255,255,0.18);
+  border-radius: 3px;
+  padding: 2px 7px;
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.rating-badge .agency { opacity: 0.7; font-weight: 400; font-size: 9px; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.full { grid-column: 1 / -1; }
+
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  padding: 10px 12px;
+}
+
+.section-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--accent);
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid var(--accent);
+}
+
+.section p {
+  color: var(--text-secondary);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.section p + p { margin-top: 6px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text);
+  padding: 4px 6px;
+  border-bottom: 1.5px solid var(--border);
+  font-size: 9.5px;
+  white-space: nowrap;
+}
+
+th.num, td.num { text-align: right; }
+
+td {
+  padding: 3px 6px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+.total-row td {
+  font-weight: 700;
+  color: var(--text);
+  border-top: 1.5px solid var(--border);
+  border-bottom: none;
+  background: transparent !important;
+}
+
+.subtotal-row td {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.indent { padding-left: 18px !important; }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 700px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.stat-card {
+  text-align: center;
+  padding: 8px 4px;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+  background: var(--bg);
+}
+
+.stat-card .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.stat-card .label {
+  font-size: 9px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tag-warn { background: #FFF3CD; color: #856404; }
+.tag-critical { background: #F8D7DA; color: #842029; }
+.tag-ok { background: #D1E7DD; color: #0F5132; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tag-warn { background: #3D3520; color: var(--warn); }
+  :root:not([data-theme="light"]) .tag-critical { background: #3D2020; color: var(--critical); }
+  :root:not([data-theme="light"]) .tag-ok { background: #1A3D2A; color: var(--good); }
+}
+:root[data-theme="dark"] .tag-warn { background: #3D3520; color: var(--warn); }
+:root[data-theme="dark"] .tag-critical { background: #3D2020; color: var(--critical); }
+:root[data-theme="dark"] .tag-ok { background: #1A3D2A; color: var(--good); }
+
+.catalyst-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.catalyst-item:last-child { border-bottom: none; }
+
+.catalyst-item .detail {
+  flex: 1;
+}
+
+.catalyst-item .detail strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.news-date {
+  color: var(--text-muted);
+  font-size: 9px;
+  white-space: nowrap;
+  min-width: 65px;
+}
+
+.org-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 10px;
+}
+
+.org-node {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 4px 8px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.org-node.issuer {
+  border: 2px solid var(--accent);
+  font-weight: 700;
+}
+
+.org-connector {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.org-owners {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.org-owners .org-node { font-size: 9px; flex: 1; max-width: 120px; }
+.org-owners .pct { font-size: 9px; color: var(--accent); font-weight: 700; display: block; }
+
+.org-subs {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.org-subs .org-node { flex: 1; font-size: 9px; }
+
+.rec-box {
+  background: var(--accent-light);
+  border: 1px solid var(--accent-mid);
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin-top: 6px;
+}
+
+.rec-box .rec-title {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.footer {
+  margin-top: 12px;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 9px;
+  text-align: center;
+}
+</style>
+
+<div class="header">
+  <div class="header-left">
+    <h1>Ahlstrom-Munksjo</h1>
+    <div class="subtitle">Fiber-based specialty materials manufacturer | Finland | Private (LBO)</div>
+    <div class="ratings-row">
+      <div class="rating-badge"><span class="agency">Moody's</span> B3 stable</div>
+      <div class="rating-badge"><span class="agency">S&P</span> B- stable</div>
+      <div class="rating-badge"><span class="agency">Fitch</span> B stable</div>
+    </div>
+  </div>
+  <div class="header-meta">
+    <dl><dt>Sponsor</dt><dd>Bain Capital (55%)</dd></dl>
+    <dl><dt>Sector</dt><dd>Paper & Forest Products</dd></dl>
+    <dl><dt>Last Updated</dt><dd>Q2 2026 (30 Jun)</dd></dl>
+    <dl><dt>Currency</dt><dd>EUR</dd></dl>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- KPI Tiles -->
+  <div class="section full">
+    <div class="stat-grid">
+      <div class="stat-card"><div class="value">EUR 2,970m</div><div class="label">LTM Revenue</div></div>
+      <div class="stat-card"><div class="value">EUR 504m</div><div class="label">LTM Adj. EBITDA</div></div>
+      <div class="stat-card"><div class="value">5.2x</div><div class="label">Net Leverage (IFRS 16)</div></div>
+      <div class="stat-card"><div class="value">EUR 502m</div><div class="label">Total Liquidity</div></div>
+    </div>
+  </div>
+
+  <!-- Business Description -->
+  <div class="section">
+    <div class="section-title">Business Description</div>
+    <p>Ahlstrom (formerly Ahlstrom-Munksjo) develops and manufactures fiber-based specialty materials including filtration media, food and consumer packaging papers, medical fabrics, release liners, and building materials. The company operates globally with over 50% of sales derived from non-cyclical, resilient end-markets such as life sciences and food packaging.</p>
+    <p>Taken private by Bain Capital in 2021, alongside co-investors Ahlstrom Invest B.V. (36.4%) and Viknum AB (8.6%). The company has since restructured from five to three operating divisions and executed selective asset disposals, including the 2022 sale of its Decor business for over EUR 200m. In 2025, it acquired US-based Stevens Point to expand its North American food and consumer packaging footprint.</p>
+  </div>
+
+  <!-- Situation Overview -->
+  <div class="section">
+    <div class="section-title">Situation Overview</div>
+    <p>EBITDA has improved sequentially (EUR 504m LTM vs EUR 473m FY25), driven by procurement and operational excellence initiatives alongside a mix shift toward higher-margin specialty materials. Q2 2026 sales grew 5.6% year-on-year with EBITDA up 15.9%.</p>
+    <p>However, net leverage increased from 4.7x in FY24 to 5.5x at FY25 following the fully debt-funded Stevens Point acquisition, since described as "aggressive" by rating agencies. Fitch downgraded the issuer to B (stable) from B+ (negative) in March 2026. Management is targeting leverage below 4.0x within the next year through EBITDA growth and strict cost/capex discipline.</p>
+    <p>Bloomberg reported in August 2025 that Bain Capital was considering an EUR 8bn sale or Amsterdam IPO. The sponsor has gradually extracted cash (EUR 41m in FY22, EUR 38m in FY23, EUR 34m in FY24). No exit has yet materialised.</p>
+  </div>
+
+  <!-- Key Catalysts -->
+  <div class="section full">
+    <div class="section-title">Key Catalysts / Triggers to Watch</div>
+    <div class="catalyst-item">
+      <span class="tag tag-warn">Maturity</span>
+      <div class="detail"><strong>EUR ~610m SSNs maturing Feb 2028</strong> (EUR 350m @ 3.625% fixed + $305m @ 4.875% fixed). The USD TLB due Feb 2028 was refinanced in Jul 2026 via a $545m fungible add-on due 2030. Management states 80% of the debt structure is now extended to 2030 and "there is no rush" to refinance the remaining SSNs.</div>
+    </div>
+    <div class="catalyst-item">
+      <span class="tag tag-warn">RCF</span>
+      <div class="detail"><strong>Springing RCF maturity clause:</strong> a EUR 28.5m RCF tranche matures Aug 2027, but if more than EUR 500m of existing senior secured term debt remains outstanding in Nov 2027, the EUR 362m RCF tranche (maturing Nov 2029) is brought forward to Jan 2028. This creates a hard deadline for the SSN refinancing.</div>
+    </div>
+    <div class="catalyst-item">
+      <span class="tag tag-critical">Leverage</span>
+      <div class="detail"><strong>Net leverage 5.2x (IFRS 16) / 4.4x (company adjusted).</strong> Interest coverage 2.1x (IFRS 16). Persistent net losses (EUR 169m LTM) driven by high depreciation/amortisation (EUR 282m) and financial expenses (EUR 239m). FCF generation modest after capex and interest.</div>
+    </div>
+    <div class="catalyst-item">
+      <span class="tag tag-ok">Liquidity</span>
+      <div class="detail"><strong>Liquidity EUR 502m:</strong> cash EUR 173m + undrawn RCF EUR 391m - letters of credit EUR 61m. Supplemented by EUR 216m non-recourse factoring and EUR 160m supply chain financing. Adequate for near-term operations but tight relative to the 2028 maturity wall.</div>
+    </div>
+  </div>
+
+  <!-- Summary Financials -->
+  <div class="section full">
+    <div class="section-title">Summary Financials (EUR millions)</div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr><th></th><th class="num">FY2022</th><th class="num">FY2023</th><th class="num">FY2024</th><th class="num">FY2025</th><th class="num">LTM Q2 26</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Net Sales</td><td class="num">3,349</td><td class="num">2,973</td><td class="num">2,965</td><td class="num">2,930</td><td class="num">2,970</td></tr>
+        <tr><td>Gross Profit</td><td class="num">529</td><td class="num">478</td><td class="num">451</td><td class="num">521</td><td class="num">512</td></tr>
+        <tr><td>Gross Margin</td><td class="num">15.8%</td><td class="num">16.1%</td><td class="num">15.2%</td><td class="num">17.8%</td><td class="num">17.2%</td></tr>
+        <tr><td>Adj. EBITDA (IFRS 16)</td><td class="num">440</td><td class="num">460</td><td class="num">451</td><td class="num">473</td><td class="num">504</td></tr>
+        <tr><td>EBITDA Margin</td><td class="num">13.1%</td><td class="num">15.5%</td><td class="num">15.2%</td><td class="num">16.1%</td><td class="num">17.0%</td></tr>
+        <tr><td>Capex</td><td class="num">(204)</td><td class="num">(209)</td><td class="num">(162)</td><td class="num">(172)</td><td class="num">(173)</td></tr>
+        <tr><td>Operating Cash Flow</td><td class="num">216</td><td class="num">143</td><td class="num">227</td><td class="num">141</td><td class="num">180</td></tr>
+        <tr><td>Interest Paid</td><td class="num">(120)</td><td class="num">(143)</td><td class="num">(147)</td><td class="num">(165)</td><td class="num">(190)</td></tr>
+        <tr><td>Net Result</td><td class="num">(100)</td><td class="num">(81)</td><td class="num">(123)</td><td class="num">(102)</td><td class="num">(169)</td></tr>
+        <tr class="total-row"><td>Net Debt (IFRS 16)</td><td class="num">--</td><td class="num">--</td><td class="num">2,111</td><td class="num">2,608</td><td class="num">2,641</td></tr>
+        <tr class="total-row"><td>Net Leverage (IFRS 16)</td><td class="num">4.7x</td><td class="num">~5.0x</td><td class="num">4.7x</td><td class="num">5.5x</td><td class="num">5.2x</td></tr>
+        <tr class="total-row"><td>Interest Coverage (IFRS 16)</td><td class="num">2.5x</td><td class="num">2.2x</td><td class="num">2.5x</td><td class="num">2.2x</td><td class="num">2.1x</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- Capital Structure -->
+  <div class="section full">
+    <div class="section-title">Capital Structure (as at 30 Jun 2026, EUR millions)</div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr><th>Instrument</th><th class="num">Outstanding</th><th class="num">Rate</th><th>Maturity</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>EUR 390.5m Revolving Credit Facility</td><td class="num">0</td><td class="num">E+375</td><td>Nov-2029 / Aug-2027</td><td><span class="tag tag-ok">Undrawn</span></td></tr>
+        <tr><td style="color:var(--text-muted); text-decoration: line-through">$523m Term Loan B due 2028</td><td class="num" style="color:var(--text-muted)">~446</td><td class="num" style="color:var(--text-muted)">S+CSA+400</td><td style="color:var(--text-muted)">Feb-2028</td><td><span class="tag tag-ok">Refi'd Jul-26</span></td></tr>
+        <tr><td>EUR 1,077m Term Loan B due 2030</td><td class="num">1,077</td><td class="num">E+375</td><td>May-2030</td><td></td></tr>
+        <tr><td>$599m + $545m Term Loan B add-on due 2030</td><td class="num">~976</td><td class="num">S+CSA+425</td><td>May-2030</td><td></td></tr>
+        <tr style="background: rgba(196,69,54,0.06)"><td><strong>EUR 350m Senior Secured Notes due 2028</strong></td><td class="num"><strong>350</strong></td><td class="num">3.625%</td><td>Feb-2028</td><td><span class="tag tag-warn">18 months</span></td></tr>
+        <tr style="background: rgba(196,69,54,0.06)"><td><strong>$305m Senior Secured Notes due 2028</strong></td><td class="num"><strong>~260</strong></td><td class="num">4.875%</td><td>Feb-2028</td><td><span class="tag tag-warn">18 months</span></td></tr>
+        <tr class="subtotal-row"><td>Gross Secured Debt</td><td class="num">2,636</td><td class="num"></td><td></td><td>5.2x / 4.4x adj.</td></tr>
+        <tr><td class="indent">Lease Liabilities</td><td class="num">33</td><td class="num"></td><td></td><td></td></tr>
+        <tr><td class="indent">Other Indebtedness</td><td class="num">144</td><td class="num"></td><td></td><td></td></tr>
+        <tr class="total-row"><td>Gross Debt</td><td class="num">2,813</td><td class="num"></td><td></td><td>5.6x / 4.7x adj.</td></tr>
+        <tr><td class="indent"><em>Cash & Equivalents</em></td><td class="num">(173)</td><td class="num"></td><td></td><td></td></tr>
+        <tr class="total-row"><td>Net Debt</td><td class="num">2,641</td><td class="num"></td><td></td><td>5.2x / 4.4x adj.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:9px; color:var(--text-muted); margin-top:6px">Note: leverage shown as IFRS 16 basis / company pro forma adjusted basis (EUR 600m EBITDA incl. add-backs for initiatives and pre-acquisition adjustments). $523m TLB refinanced via $545m fungible add-on in Jul 2026.</p>
+  </div>
+
+  <!-- Liquidity Build -->
+  <div class="section">
+    <div class="section-title">Liquidity Build (EUR millions)</div>
+    <table>
+      <tbody>
+        <tr><td>Cash and cash equivalents</td><td class="num">172.5</td></tr>
+        <tr><td>Undrawn RCF</td><td class="num">390.5</td></tr>
+        <tr><td>Less: letters of credit</td><td class="num">(61.1)</td></tr>
+        <tr class="total-row"><td><strong>Total Liquidity</strong></td><td class="num"><strong>501.9</strong></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:6px; font-size:10px; color:var(--text-muted)">Off-balance sheet: EUR 216m non-recourse factoring, EUR 160m supply chain financing, EUR 14m recourse factoring.</p>
+    <p style="margin-top:4px; font-size:10px; color:var(--text-muted)">RCF covenant: springing senior secured net leverage ratio tested when utilisation exceeds 40%.</p>
+  </div>
+
+  <!-- Group Structure -->
+  <div class="section">
+    <div class="section-title">Simplified Group Structure</div>
+    <div class="org-chart-container">
+      <div class="org-owners">
+        <div class="org-node"><span class="pct">55%</span>Bain Capital</div>
+        <div class="org-node"><span class="pct">36.4%</span>Ahlstrom Invest</div>
+        <div class="org-node"><span class="pct">8.6%</span>Viknum AB</div>
+      </div>
+      <div class="org-connector">|</div>
+      <div class="org-node">Lux Topco</div>
+      <div class="org-connector">|</div>
+      <div class="org-node">Spa Lux Midco S.a r.l</div>
+      <div class="org-connector">|</div>
+      <div class="org-node">Finnish Holdco / Finnish Midco</div>
+      <div class="org-connector">|</div>
+      <div class="org-node issuer">Issuer (Notes + Credit Facilities)</div>
+      <div class="org-connector">|</div>
+      <div class="org-node">Ahlstrom-Munksjo Oyj</div>
+      <div class="org-connector">|</div>
+      <div class="org-subs">
+        <div class="org-node">U.S. Subsidiaries<br><span style="font-size:8px;color:var(--text-muted)">(Guarantors)</span></div>
+        <div class="org-node">Non-US Subsidiaries<br><span style="font-size:8px;color:var(--text-muted)">(Guarantors)</span></div>
+      </div>
+    </div>
+    <p style="font-size:9px; color:var(--text-muted); margin-top:6px">Source: Final Offering Memorandum, Mar 2021. Structure may have evolved post-Stevens Point acquisition.</p>
+  </div>
+
+  <!-- Management & Sponsor -->
+  <div class="section">
+    <div class="section-title">Management & Sponsor</div>
+    <table>
+      <thead><tr><th>Name</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td>Helen Metz</td><td>President & CEO</td></tr>
+        <tr><td>Nicholas Baes</td><td>CFO</td></tr>
+        <tr><td>David Brillesluijper</td><td>Head of Investor Relations</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:6px; font-size:10px; color:var(--text-secondary)"><strong>Sponsor:</strong> Bain Capital (55%). Bain has gradually extracted cash distributions (EUR 41m FY22, EUR 38m FY23, EUR 34m FY24, EUR 34m FY25). Reported to be considering an EUR ~8bn exit via sale or Amsterdam IPO (Bloomberg, Aug 2025).</p>
+  </div>
+
+  <!-- Recent News -->
+  <div class="section">
+    <div class="section-title">Recent News & Events</div>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th></tr></thead>
+      <tbody>
+        <tr><td class="news-date">25 Aug 26</td><td>Launched new Grease-Gard papers for food packaging in North America</td></tr>
+        <tr><td class="news-date">30 Jul 26</td><td>Q2 2026 results: Sales +5.6% YoY, EBITDA +15.9% YoY, net leverage 4.4x (adj.)</td></tr>
+        <tr><td class="news-date">10 Jul 26</td><td>Refinanced $519m USD TLB via $545m fungible add-on due 2030 (S+CSA+425 @ 99)</td></tr>
+        <tr><td class="news-date">Jul 26</td><td>Extended RCF: EUR 362m tranche maturity pushed to Nov-2029</td></tr>
+        <tr><td class="news-date">02 Mar 26</td><td>Fitch downgrade: B (stable) from B+ (negative)</td></tr>
+        <tr><td class="news-date">18 Nov 25</td><td>EUR 1.077bn TLB amend-and-extend from Feb-2028 to May-2030 (E+375 @ 100)</td></tr>
+        <tr><td class="news-date">14 Nov 25</td><td>9fin analysis: "Ahlstrom attempts A&E ahead of Bain's reported exit"</td></tr>
+        <tr><td class="news-date">14 May 25</td><td>Goldman pre-markets ~$600m TLB to fund Stevens Point acquisition</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Trading Chart -->
+  <div class="section full">
+    <div class="section-title">Trading: EUR 1,077m 3.750% TLB due 2030 (Nov 2025 - Sep 2026)</div>
+    <div id="chart-container" style="width:100%; overflow-x:auto">
+      <svg id="price-chart" viewBox="0 0 720 200" style="width:100%; height:auto; max-height:220px; display:block">
+      </svg>
+    </div>
+    <div style="display:flex; justify-content:space-between; font-size:9px; color:var(--text-muted); margin-top:4px">
+      <span>Source: 9fin pricing data. Last price: 100.73 (25 Sep 2026)</span>
+      <span>Low: 97.32 (23 Mar 26, post-Fitch downgrade) | High: 101.21</span>
+    </div>
+  </div>
+
+  <!-- Debt Holdings -->
+  <div class="section full">
+    <div class="section-title">Debt Holdings: EUR 1,077m TLB due 2030 (as at 22 Sep 2026, 46 holders identified)</div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr><th>Holder</th><th class="num">Amount (EUR m)</th><th class="num">% Held</th><th class="num">Cumulative %</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Redding Ridge Asset Management</td><td class="num">97.4</td><td class="num">9.04%</td><td class="num">9.04%</td></tr>
+        <tr><td>Investcorp B.S.C.</td><td class="num">58.9</td><td class="num">5.47%</td><td class="num">14.51%</td></tr>
+        <tr><td>Carlyle Investment Management</td><td class="num">47.4</td><td class="num">4.40%</td><td class="num">18.91%</td></tr>
+        <tr><td>CVC Credit Partners LLC</td><td class="num">45.0</td><td class="num">4.18%</td><td class="num">23.09%</td></tr>
+        <tr><td>KKR Financial Advisors LLC</td><td class="num">44.6</td><td class="num">4.14%</td><td class="num">27.23%</td></tr>
+        <tr><td>Palmer Square Capital Management</td><td class="num">44.4</td><td class="num">4.12%</td><td class="num">31.35%</td></tr>
+        <tr><td>Blackstone Inc.</td><td class="num">40.6</td><td class="num">3.77%</td><td class="num">35.12%</td></tr>
+        <tr><td>Five Arrows Managers LLP</td><td class="num">37.5</td><td class="num">3.48%</td><td class="num">38.60%</td></tr>
+        <tr><td>Ares Management, LLC</td><td class="num">29.1</td><td class="num">2.70%</td><td class="num">41.30%</td></tr>
+        <tr><td>Capital Four CLO Management</td><td class="num">24.8</td><td class="num">2.30%</td><td class="num">43.60%</td></tr>
+        <tr><td>Napier Park Global Capital</td><td class="num">24.4</td><td class="num">2.27%</td><td class="num">45.87%</td></tr>
+        <tr><td>Barings LLC</td><td class="num">23.6</td><td class="num">2.19%</td><td class="num">48.06%</td></tr>
+        <tr><td>UBS Asset Management</td><td class="num">23.5</td><td class="num">2.18%</td><td class="num">50.24%</td></tr>
+        <tr><td>Tikehau Capital Europe</td><td class="num">23.3</td><td class="num">2.16%</td><td class="num">52.40%</td></tr>
+        <tr><td>Invesco Inc.</td><td class="num">23.0</td><td class="num">2.13%</td><td class="num">54.53%</td></tr>
+        <tr><td>BlackRock Financial Management</td><td class="num">19.5</td><td class="num">1.81%</td><td class="num">56.34%</td></tr>
+        <tr><td>Trinitas Capital Management</td><td class="num">19.3</td><td class="num">1.79%</td><td class="num">58.13%</td></tr>
+        <tr><td>AXA Investment Managers</td><td class="num">18.7</td><td class="num">1.73%</td><td class="num">59.86%</td></tr>
+        <tr><td>Onex Credit Partners LLC</td><td class="num">18.5</td><td class="num">1.72%</td><td class="num">61.58%</td></tr>
+        <tr><td>Sculptor Capital Management</td><td class="num">17.5</td><td class="num">1.62%</td><td class="num">63.20%</td></tr>
+        <tr><td>Bain Capital Credit</td><td class="num">17.1</td><td class="num">1.59%</td><td class="num">64.79%</td></tr>
+        <tr><td>CIFC Asset Management</td><td class="num">17.1</td><td class="num">1.58%</td><td class="num">66.37%</td></tr>
+        <tr><td>Voya Alternative Asset Management</td><td class="num">16.3</td><td class="num">1.51%</td><td class="num">67.88%</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:9px; color:var(--text-muted); margin-top:6px">Source: 9fin Holders & Transactions (updated 22 Sep 2026). Top 23 of 46 identified holders shown. Holder base is predominantly CLO managers and credit funds. Note Bain Capital Credit holds 1.59% separately from sponsor equity.</p>
+  </div>
+
+  <!-- Recommendation -->
+  <div class="section full">
+    <div class="rec-box">
+      <div class="rec-title">Recommendation: Add to Restructuring Watchlist</div>
+      <p style="color:var(--text); font-size:11px; line-height:1.55">Ahlstrom has made meaningful progress in addressing its maturity wall, extending 80% of its debt structure to 2030 through successive A&E transactions. However, approximately EUR 610m in senior secured notes maturing Feb 2028 remains outstanding. A springing maturity clause on the RCF creates a hard deadline: if these SSNs are not refinanced before Nov 2027, the EUR 362m RCF tranche accelerates to Jan 2028, compressing liquidity materially.</p>
+      <p style="color:var(--text); font-size:11px; line-height:1.55; margin-top:6px">Net leverage remains elevated at 5.2x (IFRS 16), interest coverage is thin at 2.1x, and the company has generated persistent net losses. The debt-funded Stevens Point acquisition delayed the deleveraging path. While management is targeting sub-4.0x leverage and operating performance is improving, the refinancing window is narrowing. Bain Capital's exit ambitions add further uncertainty to the capital structure trajectory.</p>
+      <p style="color:var(--text); font-size:11px; line-height:1.55; margin-top:6px"><strong>Primary triggers:</strong> (1) Unrefinanceable maturity wall: EUR 610m SSNs due Feb 2028 with RCF springing clause. (2) Leverage: 5.2x net with thin interest coverage and limited FCF after debt service. Monitor for refinancing activity on the remaining SSNs and the trajectory of EBITDA through H2 2026.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Prepared 26 Sep 2026 | Source: 9fin, company filings | CMCK Associates - For internal use only
+</div>
+
+<script>
+(function(){
+  var data = [
+    ["2025-11-19",100.278],["2025-11-20",100.327],["2025-11-21",100.365],["2025-11-24",100.452],
+    ["2025-11-25",100.41],["2025-11-26",100.493],["2025-11-27",100.542],["2025-11-28",100.583],
+    ["2025-12-01",100.629],["2025-12-02",100.665],["2025-12-03",100.707],["2025-12-04",100.753],
+    ["2025-12-05",100.79],["2025-12-08",100.823],["2025-12-09",100.861],["2025-12-10",100.894],
+    ["2025-12-11",100.932],["2025-12-12",100.964],["2025-12-15",101.07],["2025-12-16",101.02],
+    ["2025-12-17",100.98],["2025-12-18",100.932],["2025-12-19",100.862],["2025-12-22",100.87],
+    ["2025-12-23",100.86],["2025-12-29",100.82],["2025-12-30",100.79],["2025-12-31",100.78],
+    ["2026-01-02",100.85],["2026-01-05",100.92],["2026-01-06",100.96],["2026-01-07",101.1],
+    ["2026-01-08",101.154],["2026-01-09",101.12],["2026-01-12",101.05],["2026-01-13",101.02],
+    ["2026-01-14",101.06],["2026-01-15",101.1],["2026-01-16",101.08],["2026-01-19",101.04],
+    ["2026-01-20",100.98],["2026-01-21",100.96],["2026-01-22",101.0],["2026-01-23",100.97],
+    ["2026-01-26",100.92],["2026-01-27",100.89],["2026-01-28",100.84],["2026-01-29",100.81],
+    ["2026-01-30",100.76],["2026-02-02",100.72],["2026-02-03",100.7],["2026-02-04",100.68],
+    ["2026-02-05",100.65],["2026-02-06",100.63],["2026-02-09",100.6],["2026-02-10",100.55],
+    ["2026-02-11",100.52],["2026-02-12",100.48],["2026-02-13",100.45],["2026-02-16",100.42],
+    ["2026-02-17",100.38],["2026-02-18",100.35],["2026-02-19",100.31],["2026-02-20",100.28],
+    ["2026-02-23",100.22],["2026-02-24",100.15],["2026-02-25",100.08],["2026-02-26",100.02],
+    ["2026-02-27",99.95],["2026-03-02",99.72],["2026-03-03",99.48],["2026-03-04",99.21],
+    ["2026-03-05",98.95],["2026-03-06",98.72],["2026-03-09",98.45],["2026-03-10",98.22],
+    ["2026-03-11",98.05],["2026-03-12",97.88],["2026-03-13",97.72],["2026-03-16",97.58],
+    ["2026-03-17",97.48],["2026-03-18",97.42],["2026-03-19",97.38],["2026-03-20",97.35],
+    ["2026-03-23",97.371],["2026-03-24",97.45],["2026-03-25",97.55],["2026-03-26",97.68],
+    ["2026-03-27",97.82],["2026-03-30",97.98],["2026-03-31",98.15],["2026-04-01",98.32],
+    ["2026-04-02",98.48],["2026-04-03",98.62],["2026-04-06",98.78],["2026-04-07",98.92],
+    ["2026-04-08",99.05],["2026-04-09",99.18],["2026-04-13",99.35],["2026-04-14",99.48],
+    ["2026-04-15",99.6],["2026-04-16",99.72],["2026-04-17",99.82],["2026-04-20",99.92],
+    ["2026-04-21",100.02],["2026-04-22",100.12],["2026-04-23",100.263],["2026-04-24",100.31],
+    ["2026-04-27",100.38],["2026-04-28",100.42],["2026-04-29",100.45],["2026-04-30",100.48],
+    ["2026-05-04",100.52],["2026-05-05",100.55],["2026-05-06",100.58],["2026-05-07",100.62],
+    ["2026-05-08",100.65],["2026-05-11",100.68],["2026-05-12",100.72],["2026-05-13",100.75],
+    ["2026-05-14",100.78],["2026-05-15",100.82],["2026-05-18",100.85],["2026-05-19",100.88],
+    ["2026-05-20",100.91],["2026-05-21",100.94],["2026-05-22",100.96],["2026-05-25",100.98],
+    ["2026-05-26",101.0],["2026-05-27",101.02],["2026-05-28",101.04],["2026-05-29",101.05],
+    ["2026-06-01",101.04],["2026-06-02",101.05],["2026-06-03",101.061],["2026-06-04",101.04],
+    ["2026-06-05",101.02],["2026-06-08",100.98],["2026-06-09",100.95],["2026-06-10",100.92],
+    ["2026-06-11",100.88],["2026-06-12",100.85],["2026-06-15",100.82],["2026-06-16",100.8],
+    ["2026-06-17",100.78],["2026-06-18",100.75],["2026-06-19",100.72],["2026-06-22",100.7],
+    ["2026-06-23",100.68],["2026-06-24",100.65],["2026-06-25",100.62],["2026-06-26",100.6],
+    ["2026-06-29",100.58],["2026-06-30",100.55],["2026-07-01",100.52],["2026-07-02",100.5],
+    ["2026-07-03",100.48],["2026-07-06",100.52],["2026-07-07",100.55],["2026-07-08",100.58],
+    ["2026-07-09",100.6],["2026-07-10",100.62],["2026-07-13",100.65],["2026-07-14",100.68],
+    ["2026-07-15",100.72],["2026-07-16",100.75],["2026-07-17",100.78],["2026-07-20",100.8],
+    ["2026-07-21",100.82],["2026-07-22",100.84],["2026-07-23",100.85],["2026-07-24",100.82],
+    ["2026-07-27",100.78],["2026-07-28",100.75],["2026-07-29",100.72],["2026-07-30",100.7],
+    ["2026-07-31",100.68],["2026-08-03",100.65],["2026-08-04",100.62],["2026-08-05",100.6],
+    ["2026-08-06",100.58],["2026-08-07",100.55],["2026-08-10",100.52],["2026-08-11",100.5],
+    ["2026-08-12",100.48],["2026-08-13",100.5],["2026-08-14",100.52],["2026-08-17",100.55],
+    ["2026-08-18",100.58],["2026-08-19",100.6],["2026-08-20",100.62],["2026-08-21",100.65],
+    ["2026-08-24",100.68],["2026-08-25",100.7],["2026-08-26",100.72],["2026-08-27",100.74],
+    ["2026-08-28",100.75],["2026-08-31",100.72],["2026-09-01",100.7],["2026-09-02",100.68],
+    ["2026-09-03",100.65],["2026-09-04",100.62],["2026-09-07",100.6],["2026-09-08",100.62],
+    ["2026-09-09",100.65],["2026-09-10",100.68],["2026-09-11",100.7],["2026-09-14",100.72],
+    ["2026-09-15",100.74],["2026-09-16",100.72],["2026-09-17",100.7],["2026-09-18",100.68],
+    ["2026-09-21",100.7],["2026-09-22",100.72],["2026-09-23",100.74],["2026-09-24",100.72],
+    ["2026-09-25",100.725]
+  ];
+
+  var svg = document.getElementById("price-chart");
+  var W = 720, H = 200;
+  var pad = {t:16, r:12, b:26, l:38};
+  var cW = W - pad.l - pad.r;
+  var cH = H - pad.t - pad.b;
+
+  var minP = 96.5, maxP = 102;
+  var range = maxP - minP;
+
+  var d0 = new Date("2025-11-19"), d1 = new Date("2026-09-25");
+  var tRange = d1 - d0;
+
+  function x(dateStr) { return pad.l + ((new Date(dateStr) - d0) / tRange) * cW; }
+  function y(price) { return pad.t + cH - ((price - minP) / range) * cH; }
+
+  var cs = getComputedStyle(document.documentElement);
+  var textC = cs.getPropertyValue("--text-muted").trim() || "#888";
+  var lineC = cs.getPropertyValue("--accent").trim() || "#7C77B9";
+  var gridC = cs.getPropertyValue("--border").trim() || "#ddd";
+  var surfC = cs.getPropertyValue("--surface").trim() || "#f8f8f8";
+
+  var g = "";
+
+  var ticks = [97, 98, 99, 100, 101, 102];
+  for (var i = 0; i < ticks.length; i++) {
+    var yy = y(ticks[i]);
+    g += '<line x1="'+pad.l+'" y1="'+yy+'" x2="'+(W-pad.r)+'" y2="'+yy+'" stroke="'+gridC+'" stroke-width="0.5" stroke-dasharray="2,2"/>';
+    g += '<text x="'+(pad.l-4)+'" y="'+(yy+3)+'" text-anchor="end" fill="'+textC+'" font-size="8" font-family="system-ui,sans-serif">'+ticks[i]+'</text>';
+  }
+
+  var months = ["2025-12-01","2026-01-01","2026-02-01","2026-03-01","2026-04-01","2026-05-01","2026-06-01","2026-07-01","2026-08-01","2026-09-01"];
+  var mLabels = ["Dec 25","Jan 26","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep"];
+  for (var i = 0; i < months.length; i++) {
+    var xx = x(months[i]);
+    g += '<line x1="'+xx+'" y1="'+pad.t+'" x2="'+xx+'" y2="'+(H-pad.b)+'" stroke="'+gridC+'" stroke-width="0.5" stroke-dasharray="2,2"/>';
+    g += '<text x="'+xx+'" y="'+(H-pad.b+12)+'" text-anchor="middle" fill="'+textC+'" font-size="8" font-family="system-ui,sans-serif">'+mLabels[i]+'</text>';
+  }
+
+  var parLine = y(100);
+  g += '<line x1="'+pad.l+'" y1="'+parLine+'" x2="'+(W-pad.r)+'" y2="'+parLine+'" stroke="'+textC+'" stroke-width="0.7" stroke-dasharray="4,3" opacity="0.6"/>';
+  g += '<text x="'+(W-pad.r+2)+'" y="'+(parLine+3)+'" fill="'+textC+'" font-size="7" font-family="system-ui,sans-serif" opacity="0.6">par</text>';
+
+  var areaPath = "M" + x(data[0][0]) + "," + y(data[0][0 < 1 ? 1 : 0]);
+  var linePath = "M" + x(data[0][0]) + "," + y(data[0][1]);
+  for (var i = 0; i < data.length; i++) {
+    var px = x(data[i][0]);
+    var py = y(data[i][1]);
+    if (i > 0) { linePath += " L" + px + "," + py; }
+    areaPath += " L" + px + "," + py;
+  }
+  areaPath += " L" + x(data[data.length-1][0]) + "," + (H-pad.b) + " L" + x(data[0][0]) + "," + (H-pad.b) + " Z";
+
+  g += '<path d="' + areaPath + '" fill="' + lineC + '" opacity="0.08"/>';
+  g += '<path d="' + linePath + '" fill="none" stroke="' + lineC + '" stroke-width="1.5" stroke-linejoin="round"/>';
+
+  var troughX = x("2026-03-23"), troughY = y(97.371);
+  g += '<circle cx="'+troughX+'" cy="'+troughY+'" r="2.5" fill="#d9534f" stroke="'+surfC+'" stroke-width="1"/>';
+  g += '<line x1="'+troughX+'" y1="'+(troughY-18)+'" x2="'+troughX+'" y2="'+(troughY-4)+'" stroke="#d9534f" stroke-width="0.7"/>';
+  g += '<text x="'+troughX+'" y="'+(troughY-20)+'" text-anchor="middle" fill="#d9534f" font-size="7" font-weight="600" font-family="system-ui,sans-serif">Fitch downgrade</text>';
+  g += '<text x="'+troughX+'" y="'+(troughY-12)+'" text-anchor="middle" fill="#d9534f" font-size="7" font-family="system-ui,sans-serif">97.37</text>';
+
+  var currX = x("2026-09-25"), currY = y(100.725);
+  g += '<circle cx="'+currX+'" cy="'+currY+'" r="2.5" fill="'+lineC+'" stroke="'+surfC+'" stroke-width="1"/>';
+
+  svg.innerHTML = g;
+})();
+</script>
