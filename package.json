@@ -1,0 +1,8 @@
+{
+  "name": "9fin-agent",
+  "private": true,
+  "description": "Weekly restructuring target screener workflow tooling.",
+  "dependencies": {
+    "puppeteer": "^25.12.0"
+  }
+}

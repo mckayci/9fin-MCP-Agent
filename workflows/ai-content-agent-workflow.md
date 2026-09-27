@@ -38,16 +38,17 @@ A custom set of criteria used for a manual run applies to that run only. It does
 
 **Steps:**
 1. Confirm which criteria to use (scheduled = defaults; manual = ask, per Section 2).
-2. Use 9fin get bond loans screener filters to pull criter as options
-3. Ask user to select available options
-4. Query 9fin's company and bond/loan screeners against those criteria.
-5. For each name returned, pull: business description, key financials, leverage, bond/loan trading levels, credit rating.
-6. Check the name against `/target_list`. If it appeared in a prior week:
+2. Before delegating to the screener subagent, confirm the 9fin connector is live in this orchestrating session by making one direct 9fin call yourself (e.g. `get_company_screener_filters` or `get_bonds_loans_screener_filters`). Only launch the subagent once that call succeeds — see Section 6, "9fin connector not live for a subagent."
+3. Use 9fin get bond loans screener filters to pull criteria options
+4. Ask user to select available options
+5. Query 9fin's company and bond/loan screeners against those criteria.
+6. For each name returned, pull: business description, key financials, leverage, bond/loan trading levels, credit rating.
+7. Check the name against `/target_list`. If it appeared in a prior week:
    - Carry forward the prior recommendation and note the date it was last assessed
    - Only redo the full assessment if something material has changed since (price move, rating action, news, new financials)
    - If nothing material has changed, note "no material change since [date]" instead of repeating the workup
-7. Build a triage table (see output spec below).
-8. Present the triage table to Ciarán and stop. Wait for his instruction on which names, if any, to progress to Phase 2.
+8. Build a triage table (see output spec below).
+9. Present the triage table to Ciarán and stop. Wait for his instruction on which names, if any, to progress to Phase 2.
 
 **Output — Triage Table:**
 
@@ -74,10 +75,11 @@ If none apply, recommend "pass" and state why briefly. Every recommendation stat
 **Goal:** Produce a single-page, self-contained summary per selected name that a reader with no prior context can absorb in five minutes.
 
 **Steps:**
-1. For each name Ciarán selects, pull the full data set from 9fin: financials, capital structure, covenants, ownership/org structure, holders, trading levels, news, transcripts.
-2. Populate every section of the fixed output structure (below). Do not omit a section for lack of data; mark missing items per the Error Handling rules in Section 6.
-3. Write commentary in Ciarán's communication style (Section 5).
-4. Build the page to the fixed layout and colour scheme.
+1. Before launching the three parallel Phase 2 researcher subagents (capital, financials, news), confirm the 9fin connector is still live in this session by making one direct 9fin call yourself, per Phase 1 Step 2. Do this even if Phase 1 already confirmed it earlier in the same session, since the connection isn't guaranteed to still be live later on.
+2. For each name Ciarán selects, pull the full data set from 9fin: financials, capital structure, covenants, ownership/org structure, holders, trading levels, news, transcripts.
+3. Populate every section of the fixed output structure (below). Do not omit a section for lack of data; mark missing items per the Error Handling rules in Section 6.
+4. Write commentary in Ciarán's communication style (Section 5).
+5. Build the page to the fixed layout and colour scheme.
 
 **Output — Tearsheet Structure (one page, in this order):**
 1. Header block — company name, sector/industry, country, company type, ticker, ownership/sponsor, last update date, coverage status
@@ -112,6 +114,25 @@ If none apply, recommend "pass" and state why briefly. Every recommendation stat
 
 ---
 
+### Phase 2.5 — Audit
+
+**Goal:** Catch a fact stated inconsistently across the three parallel Phase 2 researchers, or against an uploaded resources file, before it reaches the tearsheet.
+
+**Why this exists:** the three Phase 2 researchers (capital, financials, news) run in parallel and write independently. On a real run this produced a live conflict — 9fin showed one TLB size and maturity date, an uploaded rating agency report showed another — that only got caught by chance on a manual follow-up pass. Nothing checked the three outputs against each other before that point.
+
+**Steps:**
+1. Once all three Phase 2 researchers have returned for a company, launch the `auditor` subagent (spec: `.claude/agents/auditor.md`) before building that company's tearsheet. It reads `capital.json`, `financials.json`, `news.json`, and every file in `/resources/{companyname}/`, and cross-references any fact stated in more than one place.
+2. The auditor writes `/drafts/{companyname}/audit_report.json` with one of three outcomes:
+   - **Clean** — nothing inconsistent found.
+   - **Auto-resolved** — a mismatch existed but the standing priority rule (an uploaded resources file outweighs a 9fin-sourced figure) resolved it cleanly. Apply the correction to the named file.
+   - **Needs reverification** — a mismatch the priority rule can't resolve on its own (e.g. two 9fin-sourced figures disagree, or two uploads disagree).
+3. For anything needing reverification, the orchestrating session relays the auditor's specific question to the specific researcher that produced the disputed figure (resuming that subagent — the auditor cannot contact it directly, since it wasn't the one who launched it). Batch all questions for one researcher into a single round trip.
+4. Once the flagged researcher(s) respond and update their file, re-invoke the auditor once to confirm. This is one clarification round only — do not loop further.
+5. If a discrepancy is still unresolved after that one round, do not pick a value. Build the tearsheet showing both conflicting figures with their sources against the affected field, styled the same way as the FCF "n.a." convention (italics, hex `#e74c3c`).
+6. If everything is resolved (auto or via reverification), the tearsheet shows only the correct figure — no visible trace of what the auditor caught.
+
+---
+
 ### Phase 3 — Delivery
 
 **Goal:** Get the finished output to Ciarán's inbox with enough context to act on immediately, without sending anything he hasn't reviewed.
@@ -119,7 +140,7 @@ If none apply, recommend "pass" and state why briefly. Every recommendation stat
 **Steps:**
 1. Build each tearsheet as an HTML file styled for A4 portrait (as in Phase 2).
 2. Convert to PDF and combine:
-   - Use Puppeteer (`npx puppeteer`) or `wkhtmltopdf` to render each HTML tearsheet to PDF at A4 portrait dimensions (210mm x 297mm).
+   - Render each HTML tearsheet to PDF at A4 portrait dimensions (210mm x 297mm) using `render_pdf.js` (Puppeteer is installed as a project dependency — run `npm install` from the project root if `node_modules` is ever missing, rather than reinstalling into a temp directory each run).
    - If multiple companies were taken to Phase 2, combine into one PDF with one page per company, using a page break between each. Name the combined file `ddmmyy_weekly_screen.pdf`.
    - If only one company, save the single tearsheet PDF using the standard file convention (`ddmmyy_companyname_tearsheet.pdf`).
    - Save the PDF to `/outputs`. The HTML artifact may still be published for interactive viewing, but the email attachment must be a PDF.
@@ -171,6 +192,8 @@ All written output (triage table commentary, tearsheet commentary, email copy) f
 | A name repeats from a prior week with no material change | Carry forward the prior view; note "no material change since [date]." Do not silently redo full diligence. |
 | The screener returns an error, or an unusual/ambiguous result | Stop and ask Ciarán rather than improvising or guessing at intent. |
 | Ciarán gives an instruction that doesn't fit the existing scope of a given week's run | Stop and ask, rather than extending the process on the fly. |
+| 9fin connector not live for a subagent | Confirmed by a failed direct 9fin call in the orchestrating session before delegating (Phase 1 Step 2, Phase 2 Step 1). Do not launch the screener or researcher subagents until the connector is confirmed live — a subagent launched too early can get no 9fin tools at all and will silently fail its whole pass rather than erroring loudly. |
+| The Phase 2.5 auditor flags a discrepancy between researchers, or against a resources upload | Apply the priority-rule resolution if the auditor supplied one. Otherwise relay its question to the specific researcher for one round of reverification (Phase 2.5). If still unresolved after that round, show both figures with sources on the tearsheet rather than picking one. |
 | Before sending any email | Always confirm recipient and content with Ciarán first, every time, no exceptions. |
 
 ---
@@ -182,7 +205,7 @@ All written output (triage table commentary, tearsheet commentary, email copy) f
 **Folders:**
 - `/workflows` — workflow instructions, agent definitions, process documents
 - `/outputs` — completed deliverables
-- `/target_list` — running Excel record of identified targets: sales, EBITDA, sponsor, liquidity, leverage, next maturity, recommended next steps
+- `/target_list` — running CSV record of identified targets: sales, EBITDA, sponsor, liquidity, leverage, next maturity, recommended next steps
 - `/resources` — reference materials, source documents, research
 - `/drafts` — work in progress
 - `/Templates` — reusable templates and frameworks; `weekly_screen_email_template.md` is the covering email template for Phase 3; `recipient_names.csv` maps email addresses to first names for greetings
