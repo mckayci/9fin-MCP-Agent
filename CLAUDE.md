@@ -172,4 +172,3 @@ Used automatically for the scheduled Sunday-night run. For a manually triggered 
 - Borrower type: corporate
 - Region: Europe
 - Rating (CFR): BB, B or CCC
-- Prior week price move: worse than -2.5pts
