@@ -1,0 +1,1604 @@
+{
+  "company": "Rodenstock",
+  "company_id": 1348,
+  "prepared": "2026-09-27",
+  "version_note": "Rebuild of 27-Sep-2026 draft. Supersedes the prior capital.json. Incorporates three user uploads in /resources/Rodenstock/: the Fitch 06-Jul-2026 rating action commentary (PDF), the 9fin daily pricing export for both TLB tranches (CSV) and the 9fin holder screen for the EUR660m TLB (PNG).",
+  "confidence_note": "9fin still holds no structured cap table, debt instruments/covenants table or org chart for Rodenstock. The primary source for current debt quantum, RCF terms, leverage and liquidity is now the Fitch rating commentary dated 06-Jul-2026. Its figures are as at end-2025 (31-Dec-2025) unless stated. Tranche-level detail (EUR660m / EUR150m split, exact maturity dates) comes from the 9fin bonds/loans screener and the 9fin pricing export and does not fully reconcile to Fitch (see reconciliation). No figure in this file is more recent than end-2025 for debt drawn or cash. Prices are current to 25-Sep-2026 and holders to 16-Sep-2026.",
+  "resources_folder_check": "/Users/ciaranmckay/Claude/9fin-agent/resources/Rodenstock/ checked 27-Sep-2026. Files used: '9fin-pricing-chart.csv' (primary trading source), '660m TLB holders.png' (primary holder source), 'Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf' (primary source for debt quantum, RCF, leverage, liquidity and recovery).",
+  "refinancing_status": "No refinancing, extension or repricing has completed as of 27-Sep-2026 (confirmed by Ciaran). Consistent with Fitch, which rates the EXISTING capital structure, assumes refinancing in 2027 at a 6% margin (vs current 5%), and states that failure to refinance or present a credible refinancing plan within six months of 06-Jul-2026 (i.e. by c.early Jan-2027) could lead to negative rating action, potentially into the 'CCC' category. Also consistent with 9fin's Aug-2026 LevFin tracker ('Stale but Not Forgotten').",
+  "capital_structure": [
+    {
+      "instrument": "Local facilities (prior-ranking)",
+      "amount": "EUR 11m (Fitch, Jul-2026 report; as-of date not specified, assumed end-2025 basis). Drawn/undrawn split not stated",
+      "ebitda_multiple": "0.1x (on Fitch-derived 2025 EBITDA of c.EUR108m; see capital_structure_summary)",
+      "rate": "not available - further diligence required",
+      "maturity": "not available - further diligence required",
+      "price": "n.a. (not traded)",
+      "yield": "n.a.",
+      "rating": "Not rated",
+      "notes": "Fitch treats these as super senior, ranking ahead of the TLB and RCF in its recovery waterfall. Borrowing entity not specified.",
+      "source": "Fitch Ratings, 'Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable', 06-Jul-2026 (committee 01-Jul-2026), user upload /resources/Rodenstock/Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf; https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+    },
+    {
+      "instrument": "EUR 125m Revolving Credit Facility (senior secured, pari passu with TLB)",
+      "amount": "EUR 125m commitment; EUR 89m drawn at 31-Dec-2025 (71% utilised), EUR 36m undrawn (derived). Current (post-2025) drawn amount not available - further diligence required",
+      "ebitda_multiple": "0.8x on EUR 89m drawn (cumulative 0.9x incl. local facilities)",
+      "rate": "not available - further diligence required (Fitch cites a 5% current margin for the capital structure but does not give the RCF margin separately)",
+      "maturity": "Dec-2027 (Fitch). 9fin bonds/loans screener shows 21-May-2028; Fitch is the more recent source and is used here. c.15 months from 27-Sep-2026; becomes a current liability from Dec-2026",
+      "price": "n.a. (revolving facility, not traded)",
+      "yield": "n.a.",
+      "rating": "Fitch senior secured B- / RR4 (Fitch's recovery analysis covers the TLB and RCF together)",
+      "notes": "Commitment was EUR 120m at the 2021 origination; Fitch now reports EUR 125m. Springing maximum net leverage covenant of 9.5x, tested when the RCF is 40% or more drawn (per 2021 terms, 9fin 20-May-2021). On EUR 125m, the 40% trigger is EUR 50m; at EUR 89m drawn (71%) at end-2025, utilisation was well above the trigger, so the covenant should have been live at end-2025 test dates. Whether the 2022 amend and restate or the upsize to EUR 125m changed the threshold, level or utilisation definition is not confirmed. Covenant-basis net leverage and test dates are not available. Fitch assumes the RCF is fully drawn before any distress.",
+      "source": "Fitch Ratings, 'Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable', 06-Jul-2026 (committee 01-Jul-2026), user upload /resources/Rodenstock/Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf; https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026; 9fin article 'Is Rodenstock seeing clearly?', 20-May-2021, https://9fin.com/news/986907b1-e774-4687-90f5-9b20cdd8dcb7; 9fin bonds/loans screener (instrument wRq0mRm4-2)"
+    },
+    {
+      "instrument": "EUR 660m Term Loan B (senior secured, covenant-lite)",
+      "amount": "EUR 660m. Outstanding confirmed at c.EUR 660m as of 16-Sep-2026 (holder percentages in the 9fin holder screen imply a EUR 660m base, e.g. ICG EUR 95.0m = 14.39%)",
+      "ebitda_multiple": "6.1x standalone; cumulative 7.0x incl. local facilities and RCF drawn (Fitch-derived 2025 EBITDA c.EUR108m). For reference: 5.1x standalone on company FY2024 adj. EBITDA EUR 128.6m",
+      "rate": "Floating, E+500bps (Fitch: 'current 5% margin'; 9fin pricing export labels the tranche '5.000%')",
+      "maturity": "21-May-2028 per 9fin screener (Fitch cites June 2028 for the combined TLB). c.20 months from 27-Sep-2026; becomes current from May-2027",
+      "price": "93.18 as of 2026-09-25 (9fin pricing export, user upload)",
+      "yield": "Yield to maturity not available - further diligence required (requires a EURIBOR forward assumption not on file). Indicative simple discount margin: c.E+910bps to 21-May-2028 (analyst calculation: 500bps + (100 - 93.18) / 1.65 years; ignores floor, compounding and amortisation)",
+      "rating": "Fitch B- / RR4 (06-Jul-2026). S&P B- per 9fin screener (as-of date and outlook not available). Moody's: withdrawn 30-Jul-2026 (last Caa1, downgraded 02-Apr-2025)",
+      "notes": "Backed the Apr-2021 Apax/Mubadala buyout and refinanced the 2019 EUR 395m TLB. Security: share pledges, bank accounts and intercompany receivables of material subsidiaries; guarantor coverage minimum 80% of group EBITDA (2021 terms).",
+      "source": "9fin bonds/loans screener (instrument wRq0mRm4-1); 9fin pricing export, user upload /resources/Rodenstock/9fin-pricing-chart.csv (daily, 10-May-2021 to 25-Sep-2026); 9fin Holders and Transactions screen for the EUR660m TLB (updated 16-Sep-2026), user upload /resources/Rodenstock/660m TLB holders.png; Fitch Ratings, 'Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable', 06-Jul-2026 (committee 01-Jul-2026), user upload /resources/Rodenstock/Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf; https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+    },
+    {
+      "instrument": "EUR 150m Term Loan B add-on (senior secured)",
+      "amount": "EUR 150m per 9fin screener and 9fin pricing export label (EUR 170m per the 9fin May-2022 SFA QuickTake notice; see reconciliation)",
+      "ebitda_multiple": "1.4x standalone; cumulative 8.4x incl. local facilities, RCF drawn and EUR 660m TLB",
+      "rate": "Floating, E+500bps",
+      "maturity": "05-Jul-2028 per 9fin screener (Fitch cites June 2028 for the combined TLB). c.21 months from 27-Sep-2026",
+      "price": "93.18 as of 2026-09-25 (identical to the EUR 660m tranche on every one of 1,434 daily observations)",
+      "yield": "Yield to maturity not available - further diligence required. Indicative simple discount margin: c.E+880bps to 05-Jul-2028 (analyst calculation, same method as above)",
+      "rating": "Fitch B- / RR4 (06-Jul-2026); S&P B- per 9fin screener; Moody's withdrawn 30-Jul-2026",
+      "notes": "Issued 05-Jul-2022; purpose tagged 'Acquisition' in the 9fin screener.",
+      "source": "9fin bonds/loans screener (instrument gSGTOHEM-1); 9fin pricing export, user upload /resources/Rodenstock/9fin-pricing-chart.csv (daily, 10-May-2021 to 25-Sep-2026); 9fin article 24-May-2022, https://9fin.com/news/0313a9ba-dba7-4c75-9089-beb3ac400c74"
+    },
+    {
+      "instrument": "Total TLB per Fitch (reconciliation line)",
+      "amount": "EUR 840m (Fitch: 'existing EUR840 million term loan B due June 2028'). Tranche sum per 9fin is EUR 810m (660 + 150), or EUR 830m on the 2022 SFA figure (660 + 170). Unreconciled gap of EUR 30m vs 9fin tranches (EUR 10m vs 2022 SFA)",
+      "ebitda_multiple": "7.7x standalone on Fitch-derived 2025 EBITDA (unreconciled EUR 30m = 0.3x)",
+      "rate": "E+500bps",
+      "maturity": "June 2028 per Fitch (9fin: 21-May-2028 and 05-Jul-2028)",
+      "price": "93.18 as of 2026-09-25",
+      "yield": "See tranche lines",
+      "rating": "Fitch B- / RR4",
+      "notes": "Figures used for leverage in this file take Fitch's EUR 840m as the TLB total, because it is the most recent source and the basis of Fitch's 8.5x leverage. The EUR 30m difference could reflect an unreported incremental tranche, a different EUR 150m/170m tranche size, or Fitch aggregation; none of these is confirmed.",
+      "source": "Fitch Ratings, 'Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable', 06-Jul-2026 (committee 01-Jul-2026), user upload /resources/Rodenstock/Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf; https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+    },
+    {
+      "instrument": "Total senior secured debt (end-2025)",
+      "amount": "EUR 940m (EUR 11m local facilities + EUR 89m RCF drawn + EUR 840m TLB). Net of EUR 28m cash: EUR 912m. Excludes leases and pensions",
+      "ebitda_multiple": "8.7x gross / 8.4x net on Fitch-derived 2025 EBITDA c.EUR108m (analyst calculation). Fitch-reported EBITDA leverage: 8.5x at end-2025, forecast 8.0x in 2026 and c.7.7x in 2027. Fitch downgrade trigger: inability to reduce EBITDA leverage below 7.5x; upgrade: below 6.0x",
+      "rate": "E+500bps (Fitch rating case assumes a 6% margin on refinancing in 2027)",
+      "maturity": "RCF Dec-2027; TLB May-Jul 2028 (June 2028 per Fitch)",
+      "price": "TLBs 93.18 as of 2026-09-25",
+      "yield": "See tranche lines",
+      "rating": "Fitch IDR B- / Stable (Rodenstock Group GmbH, 06-Jul-2026); senior secured B- / RR4",
+      "notes": "The analyst figure of 8.7x differs slightly from Fitch's 8.5x because Fitch's EBITDA and debt adjustments are not published; 22.0% margin on EUR 493m sales is a rounded input.",
+      "source": "Fitch Ratings, 'Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable', 06-Jul-2026 (committee 01-Jul-2026), user upload /resources/Rodenstock/Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf; https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+    },
+    {
+      "instrument": "German pension obligations (unsecured)",
+      "amount": "EUR 230.9m at 31-Dec-2020 (latest balance available; stale). Current balance not available - further diligence required",
+      "ebitda_multiple": "not meaningful (FY2020 balance cannot be matched to 2025 EBITDA)",
+      "rate": "n.a.",
+      "maturity": "n.a. Fitch assumes cash pension contributions of EUR 11-12m a year to 2030, gradually reducing",
+      "price": "n.a.",
+      "yield": "n.a.",
+      "rating": "n.a.",
+      "notes": "Material debt-like claim outside the secured stack; recurring cash drain equal to c.10% of Fitch-derived 2025 EBITDA.",
+      "source": "9fin get_latest_financial_statement (Balance Sheet, FY2020); Fitch Ratings, 'Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable', 06-Jul-2026 (committee 01-Jul-2026), user upload /resources/Rodenstock/Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf; https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+    }
+  ],
+  "capital_structure_summary": {
+    "as_of": "Debt and cash: 31-Dec-2025 (Fitch). Prices: 25-Sep-2026. Holders: 16-Sep-2026.",
+    "ebitda_basis": "Fitch-derived 2025 EBITDA of c.EUR 108m (analyst calculation: 2025 sales EUR 493m x Fitch-adjusted EBITDA margin 22.0%, both per Fitch). Fitch does not state the EBITDA figure directly. This is well below company-reported FY2024 adj. EBITDA of EUR 128.6m; Fitch cites 'lower EBITDA' in 2025 alongside restructuring costs, and Fitch-adjusted figures also typically exclude company add-backs, so the two are not like-for-like. FY2025 company-reported EBITDA not available - further diligence required.",
+    "gross_senior_secured_debt": "EUR 940m (end-2025)",
+    "net_senior_secured_debt": "EUR 912m (end-2025)",
+    "leverage": "Fitch EBITDA leverage 8.5x at end-2025 (forecast 8.0x 2026, c.7.7x 2027). Analyst calculation 8.7x gross / 8.4x net on the derived EBITDA.",
+    "maturity_wall": "EUR 965m of senior secured commitments (EUR 125m RCF + EUR 840m TLB) mature between Dec-2027 and Jul-2028, 15-21 months from 27-Sep-2026. RCF becomes current in Dec-2026. No refinancing has completed as of 27-Sep-2026. Fitch's rating and Stable Outlook assume refinancing 'within the next six months' of 06-Jul-2026, i.e. by c.early Jan-2027.",
+    "covenant": "TLBs covenant-lite. RCF springing net leverage covenant of 9.5x, live when 40% or more drawn (EUR 50m on EUR 125m). RCF was 71% drawn at end-2025, so the test should have been engaged. Indicative headroom (analyst calculation on Fitch-derived EBITDA, not covenant-definition EBITDA): net senior secured leverage c.8.4x vs 9.5x, i.e. EBITDA could fall c.11% before a breach. Covenant-definition EBITDA (likely including add-backs) would increase this headroom but is not available. Actual compliance certificate figures not available - further diligence required.",
+    "recovery": "Fitch recovery analysis: going-concern EBITDA c.EUR 95m x 5.5x distressed multiple = EV c.EUR 523m; less 10% administrative claims = c.EUR 470m; less EUR 11m super senior local facilities = c.EUR 459m available for EUR 965m of senior secured claims (TLB EUR 840m + RCF assumed fully drawn at EUR 125m), implying c.48% recovery (analyst calculation from Fitch parameters; Fitch publishes only the RR4 band, 31-50%). Compares with a TLB price of 93.18 on 25-Sep-2026."
+  },
+  "liquidity": {
+    "as_of": "31-Dec-2025 (Fitch). No more recent figure available.",
+    "cash": "EUR 28m on balance sheet at 31-Dec-2025. Fitch treats EUR 16m as not available for debt service, leaving EUR 12m fully available",
+    "available_facilities": "EUR 125m RCF, EUR 89m drawn at 31-Dec-2025 (71%), EUR 36m undrawn (derived). RCF matures Dec-2027. EUR 11m local facilities (drawn/undrawn not stated). Current drawn amount after 31-Dec-2025 not available - further diligence required",
+    "min_operating_liquidity": "Not disclosed by the company - further diligence required. For reference, Fitch's EUR 16m restricted cash adjustment is its estimate of cash not available for debt service, which can serve as a proxy",
+    "headroom": "EUR 48m at 31-Dec-2025 on Fitch's basis (EUR 12m available cash + EUR 36m undrawn RCF); EUR 64m on reported cash (EUR 28m + EUR 36m). Current headroom not available - further diligence required",
+    "fitch_assessment": "Liquidity 'limited' / 'Constrained Liquidity' key rating driver. FCF historically negative, 'particularly weak' in 2025 (lower EBITDA, higher capex, sizeable interest, material restructuring costs). Fitch expects FCF to remain slightly negative near term, then broadly neutral to slightly positive through 2029. Material underperformance, larger working capital swings or higher capex 'may result in a downgrade to the CCC category'.",
+    "known_2026_cash_calls": "Fitch rating case: restructuring costs c.EUR 10m in 2026 (c.EUR 5m a year in 2027-28); pension contributions EUR 11-12m a year; capex 5.3% of revenue (c.EUR 26m on 2025 sales, analyst calculation); no dividends to 2030.",
+    "covenant_context": "Springing 9.5x net leverage covenant engaged at 40% utilisation (EUR 50m on EUR 125m); utilisation was 71% (EUR 89m) at end-2025, so the test should have been live at end-2025 test dates. Repaying below EUR 50m would require c.EUR 39m, more than 3x Fitch's EUR 12m available cash at end-2025, so the covenant is likely to stay live until the RCF is refinanced (analyst inference, not confirmed). Indicative headroom c.11% EBITDA cushion on Fitch-derived figures; see capital_structure_summary.covenant.",
+    "source": "Fitch Ratings, 'Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable', 06-Jul-2026 (committee 01-Jul-2026), user upload /resources/Rodenstock/Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf; https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+  },
+  "group_structure": "No 9fin org chart exists for Rodenstock. Simplified structure from Fitch (Jul-2026), 9fin articles and Moody's references: Apax Partners funds (c.73%), Mubadala Investment Company (c.24%) and founders/management (c.3%) at the Apr-2021 close (current stakes not confirmed) own the group via Iris HoldCo GmbH (the entity Moody's rated at the 2021 financing). Rodenstock Group GmbH is the Fitch-rated issuer (IDR B-, Stable, 06-Jul-2026). Rodenstock GmbH (Munich) is the operating company. The EUR 840m TLB (EUR 660m + EUR 150m tranches per 9fin) and EUR 125m RCF rank pari passu under a single SFA dated 12-Apr-2021, amended and restated 24-May-2022, secured on share pledges, bank accounts and intercompany receivables of material subsidiaries, with guarantees from group companies representing at least 80% of group EBITDA. EUR 11m local facilities rank ahead (super senior per Fitch). German pension obligations (EUR 230.9m at FY2020) are unsecured. The SFA borrower entity, the intermediate holdco chain between Iris HoldCo GmbH and Rodenstock Group GmbH, the full guarantor list and the restricted group perimeter are not available.",
+  "group_structure_entities": [
+    {
+      "level": 1,
+      "entity": "Apax Partners funds (c.73%), Mubadala Investment Company (c.24%), founders/management (c.3%)",
+      "role": "Shareholders (Apr-2021 close; current stakes not confirmed)",
+      "debt": "None identified"
+    },
+    {
+      "level": 2,
+      "entity": "Iris HoldCo GmbH",
+      "role": "Holding company; Moody's-rated entity at the 2021 financing (Moody's ratings withdrawn 30-Jul-2026)",
+      "debt": "Obligor status under the SFA not confirmed"
+    },
+    {
+      "level": 3,
+      "entity": "Rodenstock Group GmbH",
+      "role": "Fitch-rated issuer (IDR B-, Stable). Relationship to Iris HoldCo GmbH and to the SFA borrower not confirmed",
+      "debt": "Fitch rates the senior secured EUR 840m TLB and EUR 125m RCF at this rating level (B- / RR4); borrower entity not stated in the Fitch commentary"
+    },
+    {
+      "level": 4,
+      "entity": "Rodenstock GmbH (Munich) and material subsidiaries",
+      "role": "Operating companies; guarantors covering at least 80% of group EBITDA (2021 terms)",
+      "debt": "Guarantees and security for TLB/RCF; EUR 11m local facilities (super senior, entity not specified); German pension obligations (unsecured)"
+    }
+  ],
+  "restricted_group": "not available - further diligence required (SFA not held on 9fin; 9fin Loan Legal QuickTake requires the SFA to be supplied to loans@9fin.com)",
+  "holdings": [
+    {
+      "rank": "1",
+      "holder": "Intermediate Capital Group plc",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 95.0m",
+      "amount_held_eur": 94992787,
+      "pct_held": "14.39%",
+      "cumulative_pct": "14.39%"
+    },
+    {
+      "rank": "2",
+      "holder": "Palmer Square Capital Management LLC",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 35.7m",
+      "amount_held_eur": 35651769,
+      "pct_held": "5.40%",
+      "cumulative_pct": "19.79%"
+    },
+    {
+      "rank": "3",
+      "holder": "Trinitas Capital Management LLC",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 32.4m",
+      "amount_held_eur": 32446000,
+      "pct_held": "4.92%",
+      "cumulative_pct": "24.71%"
+    },
+    {
+      "rank": "4",
+      "holder": "Onex Credit Partners LLC",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 27.6m",
+      "amount_held_eur": 27645000,
+      "pct_held": "4.19%",
+      "cumulative_pct": "28.90%"
+    },
+    {
+      "rank": "5",
+      "holder": "CIFC Asset Management LLC",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 24.0m",
+      "amount_held_eur": 24024345,
+      "pct_held": "3.64%",
+      "cumulative_pct": "32.54%"
+    },
+    {
+      "rank": "6",
+      "holder": "Barings LLC",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 20.9m",
+      "amount_held_eur": 20900000,
+      "pct_held": "3.17%",
+      "cumulative_pct": "35.71%"
+    },
+    {
+      "rank": "7",
+      "holder": "Chenavari Investment Management",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 16.5m",
+      "amount_held_eur": 16500000,
+      "pct_held": "2.50%",
+      "cumulative_pct": "38.21%"
+    },
+    {
+      "rank": "8",
+      "holder": "Bain Capital Credit",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 16.4m",
+      "amount_held_eur": 16378000,
+      "pct_held": "2.48%",
+      "cumulative_pct": "40.69%"
+    },
+    {
+      "rank": "9",
+      "holder": "King Street Capital Management",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 16.2m",
+      "amount_held_eur": 16195000,
+      "pct_held": "2.45%",
+      "cumulative_pct": "43.14%"
+    },
+    {
+      "rank": "10",
+      "holder": "CVC Credit Partners LLC",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 13.0m",
+      "amount_held_eur": 13000000,
+      "pct_held": "1.97%",
+      "cumulative_pct": "45.11%"
+    },
+    {
+      "rank": "Total (top 10)",
+      "holder": "Total top 10",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 297.7m",
+      "amount_held_eur": 297732901,
+      "pct_held": "45.11%",
+      "cumulative_pct": "45.11%"
+    },
+    {
+      "rank": "11-21",
+      "holder": "Other identified holders (11)",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 85.7m",
+      "amount_held_eur": 85690809,
+      "pct_held": "13.00%",
+      "cumulative_pct": "58.11%"
+    },
+    {
+      "rank": "Unidentified",
+      "holder": "Holders not identified by 9fin",
+      "instrument": "EUR660m TLB due May-2028",
+      "amount_held": "EUR 276.6m (derived: EUR660m less identified holdings)",
+      "pct_held": "41.89%",
+      "cumulative_pct": "100.00%"
+    },
+    {
+      "rank": "n.a.",
+      "holder": "not available - further diligence required",
+      "instrument": "EUR150m TLB due Jul-2028",
+      "amount_held": "not available - further diligence required",
+      "pct_held": "not available - further diligence required",
+      "cumulative_pct": "not available - further diligence required"
+    },
+    {
+      "rank": "n.a.",
+      "holder": "not available - further diligence required",
+      "instrument": "EUR125m RCF due Dec-2027 (bank lenders)",
+      "amount_held": "not available - further diligence required",
+      "pct_held": "not available - further diligence required",
+      "cumulative_pct": "not available - further diligence required"
+    }
+  ],
+  "holdings_note": "Source: 9fin Holders and Transactions screen for the EUR660m TLB (updated 16-Sep-2026), user upload /resources/Rodenstock/660m TLB holders.png. 21 holders identified, together holding EUR 383.4m (58.11%) of the EUR 660m TLB; the remaining 41.89% is unidentified. No 'date reported' is shown for any holder. Top 10 hold 45.11% (EUR 297.7m). Concentration: ICG alone holds 14.39%, nearly three times the next holder. The top 6 together hold 35.71%, above the one-third needed to block a two-thirds majority lender decision on this tranche, assuming standard LMA majority thresholds (SFA thresholds not confirmed, and voting is typically across all facilities, not per tranche). The holder base is predominantly CLO managers. King Street and Cross Ocean are also on the register (9th and 13th). Holder data for the EUR 150m TLB and RCF lender list are not available.",
+  "trading": {
+    "data_source": "user-uploaded",
+    "data_source_detail": "9fin pricing export, user upload /resources/Rodenstock/9fin-pricing-chart.csv (daily, 10-May-2021 to 25-Sep-2026). 1434 daily observations. The EUR 660m and EUR 150m tranches print at identical prices on every date, so a single line represents both.",
+    "chart_available": true,
+    "latest_price": {
+      "date": "2026-09-25",
+      "value": "93.18",
+      "instrument": "EUR 660m and EUR 150m TLBs (identical)"
+    },
+    "summary_stats": {
+      "first_print": "97.25 on 2021-05-10",
+      "all_time_high": "100.71 on 2022-01-05",
+      "all_time_low": "83.14 on 2023-01-30",
+      "2024_high": "98.74 on 2024-04-24 (day before the Moody's negative outlook)",
+      "2025_high": "98.61 on 2025-01-31",
+      "2025_low": "88.35 on 2025-05-13",
+      "2026_low": "86.64 on 2026-04-03",
+      "2026_high": "93.70 on 2026-06-02",
+      "end_2025": "92.80 on 2025-12-31",
+      "change_vs_21_mar_2025": "-2.30pts (95.48 to 93.18)",
+      "change_vs_2026_low": "+6.54pts (from 86.64 on 2026-04-03)",
+      "change_ytd_2026": "+0.38pts (from 92.80 on 2025-12-31)",
+      "change_week_to_25_sep_2026": "+0.24pts (from 92.93 on 2026-09-18)"
+    },
+    "trend_read": "Price path in four phases: (1) 2021 to early 2022 at or above par; (2) 2022 sell-off to an all-time low of 83.14 (Jan-2023), then recovery to c.98 by early 2024; (3) two company-specific legs down, the Apr-2024 Moody's negative outlook (-4.3pts in two weeks) and the Apr-2025 Caa1 downgrade (-4.3pts in a week, extending to 88.35 by mid-May-2025), with a 5.6pt rebound after FY2024 results; (4) since mid-2025, a lower range of c.89-94 with a spike low of 86.64 in early Apr-2026 that has no identified company catalyst on file. Since Jun-2026 the loans have been flat at 92.4-93.7, with little reaction to the Fitch assignment (+1pt) or the Moody's withdrawal. At 93.18 the loans sit 2.3pts below the 21-Mar-2025 reference (95.48) are up 0.4pts year to date (92.80 at 31-Dec-2025), and are 6.5pts above the Apr-2026 low. Over the last three months the price has been stable, not softening. A price in the low 90s for a loan maturing in c.20 months signals the market is pricing some refinancing risk but not a distressed outcome.",
+    "events": [
+      {
+        "date": "2021-05-21",
+        "label": "LBO financing: EUR660m TLB, RCF",
+        "category": "Refinancing / M&A",
+        "price": "97.25",
+        "chart_callout": false,
+        "source": "https://9fin.com/news/986907b1-e774-4687-90f5-9b20cdd8dcb7",
+        "price_reaction": "First print 97.25 on 10-May-2021, below the 98.5-99.0 OID guidance. Traded above par from Aug-2021 to Jan-2022 (peak 100.71 on 05-Jan-2022)."
+      },
+      {
+        "date": "2022-05-24",
+        "label": "SFA amended; add-on TLB",
+        "category": "Refinancing",
+        "price": "97.53",
+        "chart_callout": false,
+        "source": "https://9fin.com/news/0313a9ba-dba7-4c75-9089-beb3ac400c74"
+      },
+      {
+        "date": "2022-07-05",
+        "label": "EUR150m add-on TLB issued",
+        "category": "Refinancing",
+        "price": "91.71",
+        "chart_callout": true,
+        "source": "9fin bonds/loans screener (instrument gSGTOHEM-1)",
+        "price_reaction": "Fell from 97.2 (early Jun-2022) to 88.6 by 08-Jul-2022; worst 5-day move in the series (-4.9pts to 07-Jul-2022). Coincided with the broad 2022 leveraged loan sell-off, so not attributable to the add-on alone."
+      },
+      {
+        "date": "2022-12-12",
+        "label": "Eyewear division sold to De Rigo",
+        "category": "M&A",
+        "price": "86.62",
+        "chart_callout": false,
+        "source": "https://www.handelsblatt.com/unternehmen/handel-konsumgueter/optik-rodenstock-verkauft-sein-brillengeschaeft/28862108.html",
+        "price_reaction": "No visible reaction (86.7 a week before, 86.6 a week after)."
+      },
+      {
+        "date": "2023-01-30",
+        "label": "All-time low: 83.14",
+        "category": "Price inflection (no company event on file)",
+        "price": "83.14",
+        "chart_callout": true,
+        "source": "9fin pricing export, user upload /resources/Rodenstock/9fin-pricing-chart.csv (daily, 10-May-2021 to 25-Sep-2026)",
+        "price_reaction": "Series low. Recovered to 96.6 by end-Aug-2023 (+4.3pts in Aug-2023 alone); no company event on file explains the Aug-2023 move."
+      },
+      {
+        "date": "2023-06-02",
+        "label": "FY22 results released",
+        "category": "Results",
+        "price": "89.46",
+        "chart_callout": false,
+        "source": "https://www.rodenstock.com/com/en/pressDetail.html?docId=2305438",
+        "price_reaction": "Muted (89.5 on the day, 90.8 by end-Jun-2023); part of the broader H1-2023 recovery."
+      },
+      {
+        "date": "2024-04-25",
+        "label": "Moody's B3, outlook to negative",
+        "category": "Rating action",
+        "price": "98.07",
+        "chart_callout": true,
+        "source": "https://www.moodys.com/research/Moodys-Ratings-changes-Rodenstocks-outlook-to-negative-affirms-B3-ratings-Rating-Action--PR_489101",
+        "price_reaction": "Clear reaction: 98.74 on 24-Apr-2024 (2024 high) to 96.26 on 26-Apr-2024 and 94.45 on 09-May-2024 (-4.3pts in two weeks)."
+      },
+      {
+        "date": "2024-05-15",
+        "label": "FY23 results: EBITDA EUR122m",
+        "category": "Results",
+        "price": "94.99",
+        "chart_callout": false,
+        "source": "https://9fin.com/documents/f9f9382c-fa70-4c3b-b4e3-8a83104e8f82",
+        "price_reaction": "Stabilised around 95 after the outlook change."
+      },
+      {
+        "date": "2025-03-21",
+        "label": "Apax explores private credit refi",
+        "category": "Refinancing",
+        "price": "95.48",
+        "chart_callout": true,
+        "source": "https://9fin.com/news/17b2d373-1ee3-4472-83ee-7d913dc7aad2",
+        "price_reaction": "Loans had already fallen from 98.61 (31-Jan-2025) to 95.48 by the article date. CSV close of 95.48 matches the 95.5 quoted in the article."
+      },
+      {
+        "date": "2025-04-02",
+        "label": "Moody's downgrade to Caa1",
+        "category": "Rating action",
+        "price": "96.17",
+        "chart_callout": true,
+        "source": "https://www.moodys.com/research/Moodys-Ratings-downgrades-Rodenstock-to-Caa1-stable-outlook-Rating-Action--PR_504882",
+        "price_reaction": "96.17 on the day to 91.88 on 09-Apr-2025 (-4.3pts in 5 trading days, second-worst weekly move in the series), then a steady slide to 88.35 on 13-May-2025. The first week coincided with a broad market sell-off in early Apr-2025, so the move is not solely company-specific."
+      },
+      {
+        "date": "2025-05-14",
+        "label": "FY24 results: adj. EBITDA EUR129m",
+        "category": "Results",
+        "price": "88.73",
+        "chart_callout": true,
+        "source": "https://9fin.com/documents/7a2294c0-2311-4119-a3fe-918d2d21fa05",
+        "price_reaction": "Marked the 2025 low (88.35 the day before). Rallied to 94.30 by 02-Jun-2025 (+5.6pts), including +2.2pts on 29-May-2025; no specific event on file for the 29-May jump."
+      },
+      {
+        "date": "2025-06-06",
+        "label": "Refi listed in private credit pipeline",
+        "category": "Refinancing",
+        "price": "94.11",
+        "chart_callout": false,
+        "source": "https://9fin.com/news/198783d6-63a3-4c0e-89a0-b1f62610b406"
+      },
+      {
+        "date": "2025-09-12",
+        "label": "9fin: 'refinancing is ongoing'",
+        "category": "Refinancing",
+        "price": "94.22",
+        "chart_callout": false,
+        "source": "https://9fin.com/news/00556aea-4fd1-4581-b503-f2325f05ee6d",
+        "price_reaction": "Last pipeline mention. Loans drifted from 94.2 to 91.8 by end-Nov-2025 with no completion reported."
+      },
+      {
+        "date": "2026-04-01",
+        "label": "Refi still 'potential' in pipeline",
+        "category": "Refinancing",
+        "price": "89.29",
+        "chart_callout": true,
+        "source": "https://9fin.com/news/ec5af358-411d-4a99-a64d-983613ec0391",
+        "price_reaction": "Loans slid from 91.9 (end-Feb-2026) to 89.0 (31-Mar-2026), then hit 86.64 on 03-Apr-2026 (lowest since Feb-2023). Recovered to 91.4 by 24-Apr-2026. No company-specific event on file explains the trough; FY2025 results date not on file."
+      },
+      {
+        "date": "2026-07-06",
+        "label": "Fitch assigns B- IDR, stable",
+        "category": "Rating action",
+        "price": "92.93",
+        "chart_callout": true,
+        "source": "Fitch Ratings, 'Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable', 06-Jul-2026 (committee 01-Jul-2026), user upload /resources/Rodenstock/Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf; https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026",
+        "price_reaction": "Modest positive reaction: 92.68 (30-Jun-2026) to 93.68 (20-Jul-2026, +1.0pt)."
+      },
+      {
+        "date": "2026-07-30",
+        "label": "Moody's withdraws ratings on request",
+        "category": "Rating action",
+        "price": "93.28",
+        "chart_callout": true,
+        "source": "https://www.moodys.com/research/docid--PR_527402",
+        "price_reaction": "No visible reaction (93.28 on the day, 93.25 a week later)."
+      },
+      {
+        "date": "2026-08-03",
+        "label": "9fin tracker: refi 'stale'",
+        "category": "Refinancing",
+        "price": "93.24",
+        "chart_callout": false,
+        "source": "https://9fin.com/news/c054b243-a4a4-4368-b224-bbdce42cb488",
+        "price_reaction": "No visible reaction; range-bound 92.9-93.4 since."
+      }
+    ],
+    "chart_callout_note": "Events flagged chart_callout=true are recommended for the annotated chart (9 callouts plus the latest-price label); the remainder are for the events table only.",
+    "series_weekly": [
+      {
+        "date": "2021-05-14",
+        "price": 97.25
+      },
+      {
+        "date": "2021-05-21",
+        "price": 97.25
+      },
+      {
+        "date": "2021-05-28",
+        "price": 97.199
+      },
+      {
+        "date": "2021-06-04",
+        "price": 97.284
+      },
+      {
+        "date": "2021-06-11",
+        "price": 97.497
+      },
+      {
+        "date": "2021-06-18",
+        "price": 97.754
+      },
+      {
+        "date": "2021-06-25",
+        "price": 97.855
+      },
+      {
+        "date": "2021-07-02",
+        "price": 98.32
+      },
+      {
+        "date": "2021-07-09",
+        "price": 98.25
+      },
+      {
+        "date": "2021-07-16",
+        "price": 98.5
+      },
+      {
+        "date": "2021-07-23",
+        "price": 98.805
+      },
+      {
+        "date": "2021-07-30",
+        "price": 98.922
+      },
+      {
+        "date": "2021-08-06",
+        "price": 99.262
+      },
+      {
+        "date": "2021-08-13",
+        "price": 99.5
+      },
+      {
+        "date": "2021-08-20",
+        "price": 99.826
+      },
+      {
+        "date": "2021-08-27",
+        "price": 100.077
+      },
+      {
+        "date": "2021-09-03",
+        "price": 100.279
+      },
+      {
+        "date": "2021-09-10",
+        "price": 100.425
+      },
+      {
+        "date": "2021-09-17",
+        "price": 100.539
+      },
+      {
+        "date": "2021-09-24",
+        "price": 100.318
+      },
+      {
+        "date": "2021-10-01",
+        "price": 100.341
+      },
+      {
+        "date": "2021-10-08",
+        "price": 100.415
+      },
+      {
+        "date": "2021-10-15",
+        "price": 100.325
+      },
+      {
+        "date": "2021-10-22",
+        "price": 100.422
+      },
+      {
+        "date": "2021-10-29",
+        "price": 100.484
+      },
+      {
+        "date": "2021-11-05",
+        "price": 100.363
+      },
+      {
+        "date": "2021-11-12",
+        "price": 100.342
+      },
+      {
+        "date": "2021-11-19",
+        "price": 100.391
+      },
+      {
+        "date": "2021-11-26",
+        "price": 100.358
+      },
+      {
+        "date": "2021-12-03",
+        "price": 100.418
+      },
+      {
+        "date": "2021-12-10",
+        "price": 100.554
+      },
+      {
+        "date": "2021-12-17",
+        "price": 100.471
+      },
+      {
+        "date": "2021-12-24",
+        "price": 100.509
+      },
+      {
+        "date": "2021-12-31",
+        "price": 100.14
+      },
+      {
+        "date": "2022-01-07",
+        "price": 100.419
+      },
+      {
+        "date": "2022-01-14",
+        "price": 100.509
+      },
+      {
+        "date": "2022-01-21",
+        "price": 100.4
+      },
+      {
+        "date": "2022-01-28",
+        "price": 100.357
+      },
+      {
+        "date": "2022-02-04",
+        "price": 100.282
+      },
+      {
+        "date": "2022-02-11",
+        "price": 100.159
+      },
+      {
+        "date": "2022-02-18",
+        "price": 99.84
+      },
+      {
+        "date": "2022-02-25",
+        "price": 99.622
+      },
+      {
+        "date": "2022-03-04",
+        "price": 99.543
+      },
+      {
+        "date": "2022-03-11",
+        "price": 97.955
+      },
+      {
+        "date": "2022-03-18",
+        "price": 98.789
+      },
+      {
+        "date": "2022-03-25",
+        "price": 99.003
+      },
+      {
+        "date": "2022-04-01",
+        "price": 99.491
+      },
+      {
+        "date": "2022-04-08",
+        "price": 99.305
+      },
+      {
+        "date": "2022-04-15",
+        "price": 99.299
+      },
+      {
+        "date": "2022-04-22",
+        "price": 99.704
+      },
+      {
+        "date": "2022-04-29",
+        "price": 99.543
+      },
+      {
+        "date": "2022-05-06",
+        "price": 99.23
+      },
+      {
+        "date": "2022-05-13",
+        "price": 97.765
+      },
+      {
+        "date": "2022-05-20",
+        "price": 97.412
+      },
+      {
+        "date": "2022-05-27",
+        "price": 97.5
+      },
+      {
+        "date": "2022-06-03",
+        "price": 97.235
+      },
+      {
+        "date": "2022-06-10",
+        "price": 97.243
+      },
+      {
+        "date": "2022-06-17",
+        "price": 95.567
+      },
+      {
+        "date": "2022-06-24",
+        "price": 93.39
+      },
+      {
+        "date": "2022-07-01",
+        "price": 91.859
+      },
+      {
+        "date": "2022-07-08",
+        "price": 88.576
+      },
+      {
+        "date": "2022-07-15",
+        "price": 88.745
+      },
+      {
+        "date": "2022-07-22",
+        "price": 90.257
+      },
+      {
+        "date": "2022-07-29",
+        "price": 91.339
+      },
+      {
+        "date": "2022-08-05",
+        "price": 92.765
+      },
+      {
+        "date": "2022-08-12",
+        "price": 92.585
+      },
+      {
+        "date": "2022-08-19",
+        "price": 93.321
+      },
+      {
+        "date": "2022-08-26",
+        "price": 93.009
+      },
+      {
+        "date": "2022-09-02",
+        "price": 92.884
+      },
+      {
+        "date": "2022-09-09",
+        "price": 92.839
+      },
+      {
+        "date": "2022-09-16",
+        "price": 92.585
+      },
+      {
+        "date": "2022-09-23",
+        "price": 92.033
+      },
+      {
+        "date": "2022-09-30",
+        "price": 89.665
+      },
+      {
+        "date": "2022-10-07",
+        "price": 89.055
+      },
+      {
+        "date": "2022-10-14",
+        "price": 86.453
+      },
+      {
+        "date": "2022-10-21",
+        "price": 86.059
+      },
+      {
+        "date": "2022-10-28",
+        "price": 86.023
+      },
+      {
+        "date": "2022-11-04",
+        "price": 86.528
+      },
+      {
+        "date": "2022-11-11",
+        "price": 87.047
+      },
+      {
+        "date": "2022-11-18",
+        "price": 87.31
+      },
+      {
+        "date": "2022-11-25",
+        "price": 87.066
+      },
+      {
+        "date": "2022-12-02",
+        "price": 86.992
+      },
+      {
+        "date": "2022-12-09",
+        "price": 86.553
+      },
+      {
+        "date": "2022-12-16",
+        "price": 86.646
+      },
+      {
+        "date": "2022-12-23",
+        "price": 86.506
+      },
+      {
+        "date": "2022-12-30",
+        "price": 86.502
+      },
+      {
+        "date": "2023-01-06",
+        "price": 86.463
+      },
+      {
+        "date": "2023-01-13",
+        "price": 86.665
+      },
+      {
+        "date": "2023-01-20",
+        "price": 85.426
+      },
+      {
+        "date": "2023-01-27",
+        "price": 83.389
+      },
+      {
+        "date": "2023-02-03",
+        "price": 83.34
+      },
+      {
+        "date": "2023-02-10",
+        "price": 84.27
+      },
+      {
+        "date": "2023-02-17",
+        "price": 85.208
+      },
+      {
+        "date": "2023-02-24",
+        "price": 85.206
+      },
+      {
+        "date": "2023-03-03",
+        "price": 86.226
+      },
+      {
+        "date": "2023-03-10",
+        "price": 86.338
+      },
+      {
+        "date": "2023-03-17",
+        "price": 86.439
+      },
+      {
+        "date": "2023-03-24",
+        "price": 85.967
+      },
+      {
+        "date": "2023-03-31",
+        "price": 86.619
+      },
+      {
+        "date": "2023-04-07",
+        "price": 86.237
+      },
+      {
+        "date": "2023-04-14",
+        "price": 86.382
+      },
+      {
+        "date": "2023-04-21",
+        "price": 86.547
+      },
+      {
+        "date": "2023-04-28",
+        "price": 86.928
+      },
+      {
+        "date": "2023-05-05",
+        "price": 87.974
+      },
+      {
+        "date": "2023-05-12",
+        "price": 88.297
+      },
+      {
+        "date": "2023-05-19",
+        "price": 89.115
+      },
+      {
+        "date": "2023-05-26",
+        "price": 89.472
+      },
+      {
+        "date": "2023-06-02",
+        "price": 89.456
+      },
+      {
+        "date": "2023-06-09",
+        "price": 90.527
+      },
+      {
+        "date": "2023-06-16",
+        "price": 90.484
+      },
+      {
+        "date": "2023-06-23",
+        "price": 90.758
+      },
+      {
+        "date": "2023-06-30",
+        "price": 90.767
+      },
+      {
+        "date": "2023-07-07",
+        "price": 90.733
+      },
+      {
+        "date": "2023-07-14",
+        "price": 91.242
+      },
+      {
+        "date": "2023-07-21",
+        "price": 92.002
+      },
+      {
+        "date": "2023-07-28",
+        "price": 91.995
+      },
+      {
+        "date": "2023-08-04",
+        "price": 92.152
+      },
+      {
+        "date": "2023-08-11",
+        "price": 92.722
+      },
+      {
+        "date": "2023-08-18",
+        "price": 94.301
+      },
+      {
+        "date": "2023-08-25",
+        "price": 96.191
+      },
+      {
+        "date": "2023-09-01",
+        "price": 96.787
+      },
+      {
+        "date": "2023-09-08",
+        "price": 96.729
+      },
+      {
+        "date": "2023-09-15",
+        "price": 97.477
+      },
+      {
+        "date": "2023-09-22",
+        "price": 98.087
+      },
+      {
+        "date": "2023-09-29",
+        "price": 97.893
+      },
+      {
+        "date": "2023-10-06",
+        "price": 97.05
+      },
+      {
+        "date": "2023-10-13",
+        "price": 96.42
+      },
+      {
+        "date": "2023-10-20",
+        "price": 96.326
+      },
+      {
+        "date": "2023-10-27",
+        "price": 96.276
+      },
+      {
+        "date": "2023-11-03",
+        "price": 96.82
+      },
+      {
+        "date": "2023-11-10",
+        "price": 96.5
+      },
+      {
+        "date": "2023-11-17",
+        "price": 96.441
+      },
+      {
+        "date": "2023-11-24",
+        "price": 96.51
+      },
+      {
+        "date": "2023-12-01",
+        "price": 96.471
+      },
+      {
+        "date": "2023-12-08",
+        "price": 96.53
+      },
+      {
+        "date": "2023-12-15",
+        "price": 96.639
+      },
+      {
+        "date": "2023-12-22",
+        "price": 96.797
+      },
+      {
+        "date": "2023-12-29",
+        "price": 96.81
+      },
+      {
+        "date": "2024-01-05",
+        "price": 96.82
+      },
+      {
+        "date": "2024-01-12",
+        "price": 96.828
+      },
+      {
+        "date": "2024-01-19",
+        "price": 97.202
+      },
+      {
+        "date": "2024-01-26",
+        "price": 97.703
+      },
+      {
+        "date": "2024-02-02",
+        "price": 97.904
+      },
+      {
+        "date": "2024-02-09",
+        "price": 98.002
+      },
+      {
+        "date": "2024-02-16",
+        "price": 97.929
+      },
+      {
+        "date": "2024-02-23",
+        "price": 97.986
+      },
+      {
+        "date": "2024-03-01",
+        "price": 97.942
+      },
+      {
+        "date": "2024-03-08",
+        "price": 97.85
+      },
+      {
+        "date": "2024-03-15",
+        "price": 98.17
+      },
+      {
+        "date": "2024-03-22",
+        "price": 98.053
+      },
+      {
+        "date": "2024-03-29",
+        "price": 98.045
+      },
+      {
+        "date": "2024-04-05",
+        "price": 98.092
+      },
+      {
+        "date": "2024-04-12",
+        "price": 98.151
+      },
+      {
+        "date": "2024-04-19",
+        "price": 98.2
+      },
+      {
+        "date": "2024-04-26",
+        "price": 96.257
+      },
+      {
+        "date": "2024-05-03",
+        "price": 95.218
+      },
+      {
+        "date": "2024-05-10",
+        "price": 94.466
+      },
+      {
+        "date": "2024-05-17",
+        "price": 94.993
+      },
+      {
+        "date": "2024-05-24",
+        "price": 94.965
+      },
+      {
+        "date": "2024-05-31",
+        "price": 94.705
+      },
+      {
+        "date": "2024-06-07",
+        "price": 95.333
+      },
+      {
+        "date": "2024-06-14",
+        "price": 95.28
+      },
+      {
+        "date": "2024-06-21",
+        "price": 95.54
+      },
+      {
+        "date": "2024-06-28",
+        "price": 95.241
+      },
+      {
+        "date": "2024-07-05",
+        "price": 95.438
+      },
+      {
+        "date": "2024-07-12",
+        "price": 95.523
+      },
+      {
+        "date": "2024-07-19",
+        "price": 95.877
+      },
+      {
+        "date": "2024-07-26",
+        "price": 96.582
+      },
+      {
+        "date": "2024-08-02",
+        "price": 96.587
+      },
+      {
+        "date": "2024-08-09",
+        "price": 96.547
+      },
+      {
+        "date": "2024-08-16",
+        "price": 96.381
+      },
+      {
+        "date": "2024-08-23",
+        "price": 96.249
+      },
+      {
+        "date": "2024-08-30",
+        "price": 96.005
+      },
+      {
+        "date": "2024-09-06",
+        "price": 96.214
+      },
+      {
+        "date": "2024-09-13",
+        "price": 96.177
+      },
+      {
+        "date": "2024-09-20",
+        "price": 96.18
+      },
+      {
+        "date": "2024-09-27",
+        "price": 95.235
+      },
+      {
+        "date": "2024-10-04",
+        "price": 94.862
+      },
+      {
+        "date": "2024-10-11",
+        "price": 94.561
+      },
+      {
+        "date": "2024-10-18",
+        "price": 95.003
+      },
+      {
+        "date": "2024-10-25",
+        "price": 94.855
+      },
+      {
+        "date": "2024-11-01",
+        "price": 94.84
+      },
+      {
+        "date": "2024-11-08",
+        "price": 95.049
+      },
+      {
+        "date": "2024-11-15",
+        "price": 95.678
+      },
+      {
+        "date": "2024-11-22",
+        "price": 95.419
+      },
+      {
+        "date": "2024-11-29",
+        "price": 95.423
+      },
+      {
+        "date": "2024-12-06",
+        "price": 95.568
+      },
+      {
+        "date": "2024-12-13",
+        "price": 96.0
+      },
+      {
+        "date": "2024-12-20",
+        "price": 96.064
+      },
+      {
+        "date": "2024-12-27",
+        "price": 96.258
+      },
+      {
+        "date": "2025-01-03",
+        "price": 96.723
+      },
+      {
+        "date": "2025-01-10",
+        "price": 97.947
+      },
+      {
+        "date": "2025-01-17",
+        "price": 98.537
+      },
+      {
+        "date": "2025-01-24",
+        "price": 98.549
+      },
+      {
+        "date": "2025-01-31",
+        "price": 98.607
+      },
+      {
+        "date": "2025-02-07",
+        "price": 98.228
+      },
+      {
+        "date": "2025-02-14",
+        "price": 98.209
+      },
+      {
+        "date": "2025-02-21",
+        "price": 98.301
+      },
+      {
+        "date": "2025-02-28",
+        "price": 98.197
+      },
+      {
+        "date": "2025-03-07",
+        "price": 98.362
+      },
+      {
+        "date": "2025-03-14",
+        "price": 97.435
+      },
+      {
+        "date": "2025-03-21",
+        "price": 95.477
+      },
+      {
+        "date": "2025-03-28",
+        "price": 96.268
+      },
+      {
+        "date": "2025-04-04",
+        "price": 93.874
+      },
+      {
+        "date": "2025-04-11",
+        "price": 92.352
+      },
+      {
+        "date": "2025-04-18",
+        "price": 91.291
+      },
+      {
+        "date": "2025-04-25",
+        "price": 91.207
+      },
+      {
+        "date": "2025-05-02",
+        "price": 89.574
+      },
+      {
+        "date": "2025-05-09",
+        "price": 88.928
+      },
+      {
+        "date": "2025-05-16",
+        "price": 89.069
+      },
+      {
+        "date": "2025-05-23",
+        "price": 90.89
+      },
+      {
+        "date": "2025-05-30",
+        "price": 93.906
+      },
+      {
+        "date": "2025-06-06",
+        "price": 94.111
+      },
+      {
+        "date": "2025-06-13",
+        "price": 94.105
+      },
+      {
+        "date": "2025-06-20",
+        "price": 93.763
+      },
+      {
+        "date": "2025-06-27",
+        "price": 93.723
+      },
+      {
+        "date": "2025-07-04",
+        "price": 93.5
+      },
+      {
+        "date": "2025-07-11",
+        "price": 93.5
+      },
+      {
+        "date": "2025-07-18",
+        "price": 93.462
+      },
+      {
+        "date": "2025-07-25",
+        "price": 93.234
+      },
+      {
+        "date": "2025-08-01",
+        "price": 93.306
+      },
+      {
+        "date": "2025-08-08",
+        "price": 93.706
+      },
+      {
+        "date": "2025-08-15",
+        "price": 93.972
+      },
+      {
+        "date": "2025-08-22",
+        "price": 94.497
+      },
+      {
+        "date": "2025-08-29",
+        "price": 94.181
+      },
+      {
+        "date": "2025-09-05",
+        "price": 93.355
+      },
+      {
+        "date": "2025-09-12",
+        "price": 94.22
+      },
+      {
+        "date": "2025-09-19",
+        "price": 93.971
+      },
+      {
+        "date": "2025-09-26",
+        "price": 94.021
+      },
+      {
+        "date": "2025-10-03",
+        "price": 94.061
+      },
+      {
+        "date": "2025-10-10",
+        "price": 93.96
+      },
+      {
+        "date": "2025-10-17",
+        "price": 93.124
+      },
+      {
+        "date": "2025-10-24",
+        "price": 92.889
+      },
+      {
+        "date": "2025-10-31",
+        "price": 93.14
+      },
+      {
+        "date": "2025-11-07",
+        "price": 91.923
+      },
+      {
+        "date": "2025-11-14",
+        "price": 91.566
+      },
+      {
+        "date": "2025-11-21",
+        "price": 91.357
+      },
+      {
+        "date": "2025-11-28",
+        "price": 91.75
+      },
+      {
+        "date": "2025-12-05",
+        "price": 92.114
+      },
+      {
+        "date": "2025-12-12",
+        "price": 92.295
+      },
+      {
+        "date": "2025-12-19",
+        "price": 92.506
+      },
+      {
+        "date": "2025-12-26",
+        "price": 92.313
+      },
+      {
+        "date": "2026-01-02",
+        "price": 92.902
+      },
+      {
+        "date": "2026-01-09",
+        "price": 92.56
+      },
+      {
+        "date": "2026-01-16",
+        "price": 92.531
+      },
+      {
+        "date": "2026-01-23",
+        "price": 92.483
+      },
+      {
+        "date": "2026-01-30",
+        "price": 92.274
+      },
+      {
+        "date": "2026-02-06",
+        "price": 91.993
+      },
+      {
+        "date": "2026-02-13",
+        "price": 91.835
+      },
+      {
+        "date": "2026-02-21",
+        "price": 91.831
+      },
+      {
+        "date": "2026-02-28",
+        "price": 91.919
+      },
+      {
+        "date": "2026-03-07",
+        "price": 90.915
+      },
+      {
+        "date": "2026-03-14",
+        "price": 89.72
+      },
+      {
+        "date": "2026-03-21",
+        "price": 89.647
+      },
+      {
+        "date": "2026-03-28",
+        "price": 89.47
+      },
+      {
+        "date": "2026-04-04",
+        "price": 86.639
+      },
+      {
+        "date": "2026-04-11",
+        "price": 87.735
+      },
+      {
+        "date": "2026-04-18",
+        "price": 89.407
+      },
+      {
+        "date": "2026-04-24",
+        "price": 91.438
+      },
+      {
+        "date": "2026-05-02",
+        "price": 91.231
+      },
+      {
+        "date": "2026-05-09",
+        "price": 91.094
+      },
+      {
+        "date": "2026-05-16",
+        "price": 91.653
+      },
+      {
+        "date": "2026-05-23",
+        "price": 92.006
+      },
+      {
+        "date": "2026-05-30",
+        "price": 92.84
+      },
+      {
+        "date": "2026-06-06",
+        "price": 93.233
+      },
+      {
+        "date": "2026-06-13",
+        "price": 92.918
+      },
+      {
+        "date": "2026-06-20",
+        "price": 92.824
+      },
+      {
+        "date": "2026-06-27",
+        "price": 92.654
+      },
+      {
+        "date": "2026-07-04",
+        "price": 92.7
+      },
+      {
+        "date": "2026-07-11",
+        "price": 93.485
+      },
+      {
+        "date": "2026-07-18",
+        "price": 93.593
+      },
+      {
+        "date": "2026-07-25",
+        "price": 93.304
+      },
+      {
+        "date": "2026-08-01",
+        "price": 93.641
+      },
+      {
+        "date": "2026-08-08",
+        "price": 93.325
+      },
+      {
+        "date": "2026-08-15",
+        "price": 93.09
+      },
+      {
+        "date": "2026-08-22",
+        "price": 93.007
+      },
+      {
+        "date": "2026-08-29",
+        "price": 93.313
+      },
+      {
+        "date": "2026-09-05",
+        "price": 93.056
+      },
+      {
+        "date": "2026-09-12",
+        "price": 93.057
+      },
+      {
+        "date": "2026-09-19",
+        "price": 92.933
+      },
+      {
+        "date": "2026-09-25",
+        "price": 93.178
+      }
+    ],
+    "series_note": "Weekly series = last available daily close in each ISO week, taken from the CSV. The full daily series is in the source CSV if a finer chart is required."
+  },
+  "screen_consistency_flag": "The Phase 1 default screen requires a prior-week price move worse than -2.5pts. The uploaded 9fin price series shows +0.24pts for the week to 25-Sep-2026 (92.93 to 93.18) and no 5-day move worse than -0.13pts in the last month. The last 5-day move worse than -2.5pts was -2.85pts to 03/04-Apr-2026. The orchestrating session should confirm which price move qualified Rodenstock for this week's screen (the Phase 1 triage entry cites leverage and maturity, not a price move).",
+  "data_gaps": [
+    "RCF drawn amount, cash and liquidity headroom after 31-Dec-2025: not available. Fitch figures are end-2025. Likely source: FY2025 audited accounts, H1-2026 lender reporting or compliance certificate.",
+    "RCF springing covenant: whether 2021 terms (9.5x net leverage, 40% utilisation trigger) still apply after the 2022 amend and restate and the upsize to EUR 125m; covenant-definition EBITDA; test dates; latest reported covenant leverage. Likely source: SFA, compliance certificate, or 9fin Loan Legal QuickTake (loans@9fin.com, requires SFA).",
+    "TLB quantum reconciliation: Fitch EUR 840m vs 9fin EUR 810m (660 + 150) vs 2022 SFA EUR 830m (660 + 170). EUR 660m tranche confirmed via holder screen; EUR 150m/170m tranche and any further EUR 10-30m unconfirmed. Likely source: agent/lender reporting or FY2025 accounts.",
+    "Maturity date conflicts: RCF Dec-2027 (Fitch) vs 21-May-2028 (9fin screener); TLB June 2028 (Fitch) vs 21-May-2028 and 05-Jul-2028 (9fin). Fitch used as primary for RCF. Likely source: SFA.",
+    "RCF margin and local facilities terms (margin, maturity, borrower, drawn amount): not available. Likely source: SFA, FY2025 accounts.",
+    "Yield to maturity: not calculated (requires EURIBOR forward assumption). Indicative simple discount margins provided instead. Likely source: 9fin or dealer pricing screen with yield analytics.",
+    "FY2025 company-reported EBITDA and Fitch's exact 2025 EBITDA: not available. Leverage multiples use a derived c.EUR 108m (EUR 493m x 22.0%). Likely source: FY2025 results release or accounts; Fitch full credit report.",
+    "Current pension obligation: latest balance EUR 230.9m at FY2020. Likely source: FY2025 audited accounts.",
+    "Minimum operating liquidity: not disclosed. Likely source: management or lender presentation.",
+    "Debt holdings for the EUR 150m TLB and RCF lender group: not available. Likely source: 9fin holder screen for the EUR 150m tranche (user upload) or agent lender list.",
+    "Holder 'date reported' is blank for all 21 EUR 660m TLB holders; holdings may reflect different reporting dates (typically CLO trustee reports). Likely source: 9fin holder detail or CLO trustee reports.",
+    "Catalyst for the Apr-2026 price trough (86.64 on 03-Apr-2026) and the Aug-2023 and late-May-2025 rallies: no company event on file. Likely source: fresh 9fin news search for Mar-Apr 2026, FY2025 results date.",
+    "Org chart, SFA borrower entity, holdco chain between Iris HoldCo GmbH and Rodenstock Group GmbH, guarantor list and restricted group perimeter: not available. Likely source: SFA or Fitch full credit report.",
+    "Current shareholder stakes (Apax, Mubadala, management): only the Apr-2021 split is known. Likely source: Handelsregister filings.",
+    "S&P rating detail (date, outlook, rated entity): only 'B-' per 9fin screener. Likely source: S&P research."
+  ]
+}
