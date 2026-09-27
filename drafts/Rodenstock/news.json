@@ -1,0 +1,335 @@
+{
+  "company": "Rodenstock",
+  "company_id": 1348,
+  "prepared": "2026-09-27",
+  "revision_note": "Revision 2 (27-Sep-2026). Supersedes revision 1. Changes: (1) every recent_news item carries a verified URL (all checked for HTTP 200 on 27-Sep-2026; Rodenstock press links updated to their current canonical paths); (2) management prior careers researched via web search, which also showed that Marcus Desimoni stepped down as CEO effective 30-Jun-2026 and that Dr. Mani Herold left as CFO in Mar-2025 (current CFO is Dr. Martina Bentele, since 01-Feb-2026); (3) refinancing status resolved: NOT refinanced as of 27-Sep-2026 (confirmed by Ciaran; consistent with Fitch report of 06-Jul-2026 read in full from /resources/Rodenstock/); (4) situation overview, catalysts and recommendation rewritten on Fitch's FY2025 data.",
+  "recent_news": [
+    {
+      "date": "2026-08-04",
+      "headline": "CEO Marcus Desimoni has stepped down for personal reasons, effective 30-Jun-2026. The Executive Management Team, supported by the Advisory Board, is running the business in the interim; a succession process has been started. No successor named as of 27-Sep-2026.",
+      "source": "eyebizz (trade press)",
+      "url": "https://www.eyebizz.de/branche/desimoni-nicht-mehr-ceo-bei-rodenstock/",
+      "category": "Management change"
+    },
+    {
+      "date": "2026-08-03",
+      "headline": "9fin European LevFin Pipeline (August 2026): Rodenstock EUR810m TLB refinancing classified 'Stale but Not Forgotten' (no news updates in at least 6 months), not 'Completed'. Consistent with Ciaran's confirmation that no refinancing has taken place.",
+      "source": "9fin",
+      "url": "https://9fin.com/news/c054b243-a4a4-4368-b224-bbdce42cb488",
+      "category": "Refinancing"
+    },
+    {
+      "date": "2026-07-30",
+      "headline": "Moody's withdraws Rodenstock's ratings at the issuer's request (last CFR Caa1, stable). Reason not disclosed. Not linked to any completed refinancing.",
+      "source": "Moody's",
+      "url": "https://www.moodys.com/research/docid--PR_527402",
+      "category": "Rating action"
+    },
+    {
+      "date": "2026-07-06",
+      "headline": "Fitch assigns first-time 'B-' IDR, Outlook Stable; existing EUR840m TLB due Jun-2028 rated 'B-'/'RR4'. Rating conditional on refinancing, or a credible plan, within six months. EBITDA leverage 8.5x at end-2025; RCF EUR89m of EUR125m drawn; FY2025 sales EUR493m.",
+      "source": "Fitch Ratings (full report in /resources/Rodenstock/)",
+      "url": "https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026",
+      "category": "Rating action"
+    },
+    {
+      "date": "2026-04-01",
+      "headline": "9fin European LevFin Pipeline (April 2026): Rodenstock listed under 'Potential Debt Financing' (purpose: refi; timing and size TBC), comment unchanged from Mar-2025",
+      "source": "9fin",
+      "url": "https://9fin.com/news/ec5af358-411d-4a99-a64d-983613ec0391",
+      "category": "Refinancing"
+    },
+    {
+      "date": "2026-03-31",
+      "headline": "Rodenstock acquires Croatian lens distributors NI-VA Lens and DEA Lens Project; financial terms not disclosed",
+      "source": "Rodenstock (company press release)",
+      "url": "https://www.rodenstock.com/company/press/Croatian-lenses-distributor",
+      "category": "M&A"
+    },
+    {
+      "date": "2025-09-30",
+      "headline": "Dr. Martina Bentele (Siemens Energy) appointed CFO, effective 01-Feb-2026, succeeding Dr. Mani Herold",
+      "source": "Rodenstock (company press release)",
+      "url": "https://www.rodenstock.com/company/press/neue-cfo",
+      "category": "Management change"
+    },
+    {
+      "date": "2025-09-12",
+      "headline": "9fin European private credit pipeline: 'A refinancing is ongoing' for Rodenstock (last weekly edition to list the name; dropped from the 19-Sep-2025 edition with no 'Financed' entry)",
+      "source": "9fin",
+      "url": "https://9fin.com/news/00556aea-4fd1-4581-b503-f2325f05ee6d",
+      "category": "Refinancing"
+    },
+    {
+      "date": "2025-06-06",
+      "headline": "9fin European private credit pipeline: Apax in early stages of exploring refinancing options for Rodenstock's EUR810m TLB debt",
+      "source": "9fin",
+      "url": "https://9fin.com/news/198783d6-63a3-4c0e-89a0-b1f62610b406",
+      "category": "Refinancing"
+    },
+    {
+      "date": "2025-05-14",
+      "headline": "FY2024 results: revenue EUR512.4m (+1.2% comparable), adjusted EBITDA EUR128.6m (+EUR6.3m, +5.1%); key account business excl. GrandVision +11%",
+      "source": "Rodenstock (via 9fin; 9fin login required)",
+      "url": "https://9fin.com/documents/7a2294c0-2311-4119-a3fe-918d2d21fa05#page=1",
+      "category": "Results"
+    },
+    {
+      "date": "2025-04-16",
+      "headline": "Executive team restructured: two new EVPs of Sales appointed; CEO Marcus Desimoni also acting as CFO ad interim following Dr. Mani Herold's departure",
+      "source": "Rodenstock (company press release)",
+      "url": "https://www.rodenstock.com/company/press/expansion-executive-management-team",
+      "category": "Management change"
+    },
+    {
+      "date": "2025-04-02",
+      "headline": "Moody's downgrades Rodenstock to Caa1 from B3; stable outlook",
+      "source": "Moody's",
+      "url": "https://www.moodys.com/research/Moodys-Ratings-downgrades-Rodenstock-to-Caa1-stable-outlook-Rating-Action--PR_504882",
+      "category": "Rating action"
+    },
+    {
+      "date": "2025-03-21",
+      "headline": "Rodenstock explores private credit options for EUR810m TLB refi; loans quoted at 95.5",
+      "source": "9fin",
+      "url": "https://9fin.com/news/17b2d373-1ee3-4472-83ee-7d913dc7aad2",
+      "category": "Refinancing"
+    },
+    {
+      "date": "2024-12-19",
+      "headline": "CFO Dr. Mani Herold to leave Rodenstock to become CFO of VTG Group from 01-Apr-2025",
+      "source": "eot-news (trade press, reporting VTG announcement)",
+      "url": "https://eot-news.de/dr-mani-herold-wird-chief-financial-officer-der-vtg-gruppe/",
+      "category": "Management change"
+    },
+    {
+      "date": "2024-04-25",
+      "headline": "Moody's affirms B3 ratings, changes outlook to negative from stable",
+      "source": "Moody's",
+      "url": "https://www.moodys.com/research/Moodys-Ratings-changes-Rodenstocks-outlook-to-negative-affirms-B3-ratings-Rating-Action--PR_489101",
+      "category": "Rating action"
+    },
+    {
+      "date": "2023-06-02",
+      "headline": "FY2022 results: company reports 'robust' results driven by B.I.G. VISION product range growth (headline only on 9fin; figures not captured)",
+      "source": "Rodenstock (company press release)",
+      "url": "https://www.rodenstock.com/company/press/financial-year-2022",
+      "category": "Results"
+    },
+    {
+      "date": "2023-03-08",
+      "headline": "Dr. Mani Herold (ex-Pfleiderer CFO) appointed CFO, effective 01-Apr-2023",
+      "source": "Rodenstock (company press release)",
+      "url": "https://www.rodenstock.com/company/press/new-cfo-herold",
+      "category": "Management change"
+    },
+    {
+      "date": "2023-01-18",
+      "headline": "CFO Marcus Desimoni appointed CEO from 01-Feb-2023, succeeding Anders Hedegaard",
+      "source": "Rodenstock (company press release)",
+      "url": "https://www.rodenstock.com/company/press/new-ceo-desimoni",
+      "category": "Management change"
+    },
+    {
+      "date": "2022-12-12",
+      "headline": "Rodenstock sells eyewear division to De Rigo, refocusing on ophthalmic lenses (deal also reported by Global Legal Chronicle, 20-Dec-2022)",
+      "source": "Handelsblatt",
+      "url": "https://www.handelsblatt.com/unternehmen/handel-konsumgueter/optik-rodenstock-verkauft-sein-brillengeschaeft/28862108.html",
+      "category": "M&A"
+    },
+    {
+      "date": "2022-05-24",
+      "headline": "Senior Facilities Agreement amended and restated (24-May-2022) covering the EUR660m TLB and a EUR170m add-on TLB; 9fin Loan Legal QuickTake available on request",
+      "source": "9fin",
+      "url": "https://9fin.com/news/0313a9ba-dba7-4c75-9089-beb3ac400c74",
+      "category": "Refinancing"
+    },
+    {
+      "date": "2021-05-20",
+      "headline": "Buyout financing: EUR660m 7-year cov-lite TLB and EUR120m RCF backing Apax/Mubadala acquisition from Compass Partners",
+      "source": "9fin",
+      "url": "https://9fin.com/news/986907b1-e774-4687-90f5-9b20cdd8dcb7",
+      "category": "Refinancing / M&A"
+    }
+  ],
+  "news_url_check": "All 21 URLs above tested on 27-Sep-2026 and returned HTTP 200 (the eyebizz link timed out under curl but loaded via WebFetch). The 9fin document link (FY2024 results) redirects to the 9fin login page and opens for a logged-in 9fin user. No public copy of the FY2024 release was found on rodenstock.com. Note for the tearsheet builder: revision 1 of this file already had a URL on every item, but the news table in 270926_rodenstock_tearsheet.html (lines 537-548) does not render the url field. The fix is in the HTML template: wrap each headline in an anchor tag.",
+  "news_excluded_as_routine": [
+    "2023-03-14 'Rodenstock Group committed to Spain' (company press release, no credit relevance)",
+    "2025-02-13 9fin UNGC/OECD compliance framework note (ESG checklist, no violations recorded)",
+    "2025-10 to 2026-04 product award press releases (Silmo d'Or, Optician Awards, Gold Medal Poland, B.I.G. EXACT Sensitive awards, standardisation release)"
+  ],
+  "analysis_pieces": [
+    {
+      "title": "Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable (Fitch Ratings, 06-Jul-2026; committee 01-Jul-2026)",
+      "key_findings": "Primary source for the current credit picture; read in full from /resources/Rodenstock/. (1) Capital structure as rated: existing EUR840m TLB due Jun-2028 (margin 5%), EUR125m RCF due Dec-2027, plus EUR11m of local facilities that Fitch treats as super senior. (2) Refinancing not done: the rating and Stable Outlook are 'predicated on timely refinancing of maturities in December 2027 and June 2028 on market terms'. Failure to refinance, or to present a credible refinancing plan, 'within the next six months' could lead to negative rating action. Fitch's rating case assumes refinancing in 2027 at a 6% margin (vs 5% now). (3) Leverage: EBITDA leverage 8.5x at end-2025, forecast 8.0x in 2026 and 7.7x in 2027, both still above Fitch's 7.5x downgrade sensitivity. Fitch sees 'limited near-term rating headroom' and calls the sponsor's financial policy aggressive. Financial structure sub-score 'ccc-'. (4) Performance: FY2025 sales EUR493m (FY2024: EUR512.4m, company figure). Fitch-adjusted EBITDA margin 22% and gross margin 61%. Fitch expects a low-single-digit sales decline in 2026 from the GrandVision contract phase-out, then 3.0-3.2% annual growth from 2027. Margin forecast 24.4% in 2026 on cost savings already executed. (5) Cash flow: historically negative FCF, 'particularly weak' in 2025 on lower EBITDA, higher capex, sizeable interest and material restructuring costs. Fitch expects slightly negative FCF near term, then neutral to slightly positive to 2029. Restructuring costs of EUR10m in 2026 and c.EUR5m a year in 2027-28. Pension contributions EUR11-12m a year. No dividends to 2030. (6) Liquidity 'limited': cash EUR28m at end-2025, of which EUR16m restricted, so EUR12m freely available. RCF EUR89m of EUR125m drawn (71%). Material underperformance, working capital swings or extra capex 'may result in a downgrade to the CCC category'. (7) Downgrade sensitivities: no refinancing or credible plan within six months; margins below 20%; negative FCF or tighter liquidity; EBITDA leverage not reduced below 7.5x; interest coverage below 1.5x. (8) Recovery: going-concern EBITDA c.EUR95m at a 5.5x multiple, 10% administrative claims deducted, RCF assumed fully drawn; RR4 for the senior secured TLB and RCF. (9) Business: niche position in premium biometric lenses (B.I.G. Vision, 610 patents, 40% of core sales from highly differentiated products), but small next to EssilorLuxottica, Hoya and Zeiss. Germany is 31% of 2025 sales, and weak demand there leads consumers to delay or trade down premium multifocal purchases. Governance assessed as having 'some deficiencies' (no rating impact).",
+      "url": "https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+    },
+    {
+      "title": "Rodenstock explores private credit options for EUR810m TLB refi (9fin, 21-Mar-2025)",
+      "key_findings": "Apax in early-stage talks with banks and private credit funds to refinance EUR810m of TLB debt (EUR660m due May-2028, EUR150m due Jul-2028). Options discussed: a hybrid of syndicated TLB and a junior private credit tranche, or a full large-cap private credit take-out. Both loans priced at E+500bps (2021 and 2022) and were quoted at 95.5. Sources put EBITDA at around EUR135m. Moody's cited FY2023 sales of EUR506m and EBITDA before one-offs of EUR122m. Moody's Apr-2024 outlook change cited credit metrics weaker than expected for at least two years, limited revenue growth despite an expected 2023 turnaround, and the phase-out of the GrandVision contract. Apax and Rodenstock declined to comment. Eighteen months later no refinancing has completed.",
+      "url": "https://9fin.com/news/17b2d373-1ee3-4472-83ee-7d913dc7aad2"
+    },
+    {
+      "title": "European private credit pipeline (9fin, weekly, 06-Jun-2025 to 12-Sep-2025)",
+      "key_findings": "9fin's weekly private credit pipeline carried Rodenstock from June 2025 ('Apax is in the early stages of exploring refinancing options') to 12-Sep-2025 ('A refinancing is ongoing'). It dropped out of the 19-Sep-2025 edition with no 'Financed' entry. Now that the refinancing is confirmed as not done, the drop-out most likely reflects a stalled process rather than a closing.",
+      "url": "https://9fin.com/news/00556aea-4fd1-4581-b503-f2325f05ee6d"
+    },
+    {
+      "title": "European LevFin Pipeline, April 2026 and August 2026 (9fin, with downloadable Excel trackers)",
+      "key_findings": "April 2026: Rodenstock listed under 'Potential Debt Financing' as a refinancing of EUR810m of existing TLB debt, timing TBC, with the comment still sourced to the Mar-2025 article. August 2026 (published 03-Aug-2026, after the Fitch assignment and the Moody's withdrawal): 9fin's master tracker classifies Rodenstock as 'Stale but Not Forgotten' (no news updates in at least 6 months), EUR810m, sponsor Apax, purpose refi, not 'Completed'. This matches Ciaran's confirmation and the Fitch report.",
+      "url": "https://9fin.com/news/c054b243-a4a4-4368-b224-bbdce42cb488"
+    },
+    {
+      "title": "Is Rodenstock seeing clearly? (9fin, 20-May-2021)",
+      "key_findings": "Origination piece for the Apax/Mubadala buyout financing (EUR660m 7-year cov-lite TLB, guided E+475bps, 0% floor, 98.5-99.0 OID; EUR120m RCF). Purchase price EUR1.275bn to Compass, marketed off EUR125m expected 2021 EBITDA (10.2x). Apax c.73%, Mubadala c.24%, founders/management c.3%; EUR610m equity cheque. The RCF carries a 9.5x springing net leverage covenant, tested from 12 months post-closing only if drawn at least 40%. Security: share pledges, bank accounts and intercompany receivables of material subsidiaries; guarantor coverage minimum 80% of group EBITDA. Scale is the recurring structural risk: c.1.9% global market share (2015) against EssilorLuxottica, Hoya and Zeiss. History: 2003 financial difficulties; 2010-11 standstill with RBS and Societe Generale on EUR370m of debt under Bridgepoint, with c.EUR190m of unfunded German pensions; EUR75m shareholder equity injection in Jun-2020. FY2025 EBITDA (c.EUR108m implied by Fitch) is now below the EUR125m the buyout was marketed on.",
+      "url": "https://9fin.com/news/986907b1-e774-4687-90f5-9b20cdd8dcb7"
+    },
+    {
+      "title": "Rodenstock Loan Legal QuickTake Now Available (9fin, 24-May-2022)",
+      "key_findings": "Confirms the Senior Facilities Agreement dated 12-Apr-2021 was amended and restated on 24-May-2022 to add a EUR170m add-on TLB alongside the EUR660m TLB. The covenant QuickTake itself is only available on request (loans@9fin.com, with a copy of the SFA) and was not retrieved. Term debt is reported inconsistently: EUR830m (660 + 170) at the 2022 A&R, EUR810m (660 + 150) in 9fin's 2025 reporting and screener, and EUR840m in Fitch's Jul-2026 report. None of these figures has been reconciled.",
+      "url": "https://9fin.com/news/0313a9ba-dba7-4c75-9089-beb3ac400c74"
+    },
+    {
+      "title": "Watching the Defectives: Europe Distressed/Restructuring Tracker, September 2026 (9fin, 08-Sep-2026)",
+      "key_findings": "Rodenstock is not named in the article text. Tables embedded as images were not checked.",
+      "url": "https://9fin.com/news/506764ff-18b8-4cf2-ba87-ee7035fceb3a"
+    }
+  ],
+  "situation_overview": "Rodenstock's EUR840m TLB (due Jun-2028) and EUR125m RCF (due Dec-2027) have not been refinanced as of 27-Sep-2026. Ciaran has confirmed this directly, and it matches Fitch's 06-Jul-2026 report: Fitch rates the TLB as existing debt, conditions the B- on a refinancing or credible plan within six months (by early Jan-2027), and assumes refinancing only in 2027. Apax has been trying to refinance since Mar-2025. In that time leverage has risen to 8.5x, FCF has been negative, the RCF has been drawn to 71%, and the CEO has left without a named successor.\n\nBusiness and drivers. Rodenstock is a Munich-based ophthalmic lens maker, owned by Apax (with Mubadala) since the Apr-2021 buyout from Compass Partners and lens-only since the eyewear division was sold to De Rigo in Dec-2022. Fitch credits it with a defensible niche in premium biometric lenses: B.I.G. Vision, 610 patents, 40% of core sales from highly differentiated products, a 61% gross margin and a 22% Fitch-adjusted EBITDA margin. It remains a mid-sized player next to EssilorLuxottica, Hoya and Zeiss. Two headwinds dominate. First, Germany (31% of 2025 sales) is weak, and consumers paying out of pocket for premium multifocals are delaying purchases or trading down. Second, the GrandVision supply contract is being phased out, which Fitch expects to reduce sales again in 2026.\n\nRecent performance. The modest improvement reported for FY2024 has not continued. In FY2024 revenue rose 1.2% on a comparable basis to EUR512.4m and company-adjusted EBITDA rose 5.1% to EUR128.6m. FY2025 sales then fell c.3.8% to EUR493m (Fitch). Fitch describes 2025 as a particularly weak year for FCF, driven by lower EBITDA, higher capex, sizeable interest and material restructuring costs. Fitch's 22% margin implies FY2025 EBITDA of c.EUR108m (analyst calculation). This is not directly comparable with the company-adjusted FY2024 figure, but Fitch states explicitly that EBITDA fell. It is also below the EUR125m the 2021 buyout was marketed on. Fitch puts EBITDA leverage at 8.5x at end-2025. That is well above the indicative 6.3x in revision 1 of this file, which covered TLB debt only, excluded RCF drawings and used the higher company-adjusted FY2024 EBITDA. Rodenstock has not published FY2025 results on 9fin or its press page.\n\nActions taken. No deleveraging or balance sheet restructuring is on record under Apax. The sponsor has made no equity injection since the 2021 buyout, and none is reported for the refinancing. Operational measures are under way: Fitch cites cost-cutting already executed, footprint optimisation and restructuring costs of EUR10m in 2026. Despite constrained liquidity, the company made a small bolt-on acquisition in Croatia in Mar-2026 (terms undisclosed). Moody's withdrew its Caa1 rating at the issuer's request on 30-Jul-2026, three weeks after Fitch's assignment. No refinancing took place, so the withdrawal was not tied to a completed transaction; no reason was disclosed. Current ratings are Fitch B- (stable) and S&P B- (per the 9fin screener).\n\nManagement. There has been significant turnover in the finance function during the refinancing process. CFO Dr. Mani Herold (appointed Apr-2023, formerly CFO of Pfleiderer with a debt capital markets background) left for VTG in Apr-2025. The CEO then covered the CFO role until Dr. Martina Bentele joined from Siemens Energy on 01-Feb-2026. CEO Marcus Desimoni stepped down for personal reasons on 30-Jun-2026. The Executive Management Team and the Advisory Board are running the business while a successor is sought. The refinancing is therefore being led by a CFO eight months into the role, with no permanent CEO.\n\nNear-term outlook. Fitch's base case has sales falling at a low-single-digit rate in 2026, the margin rising to 24.4% on cost savings already executed, leverage of 8.0x in 2026 and 7.7x in 2027, and FCF slightly negative near term. Its own forecasts therefore remain above its 7.5x downgrade sensitivity through 2027. Fitch also assumes the refinancing margin rises by c.100bps (6% vs 5%), which would add to an interest burden already weighing on FCF. The TLBs were quoted at 93.2 on 25-Sep-2026, per the 9fin pricing file in /resources/Rodenstock/. They fell from c.96 to c.88 after the Apr-2025 Moody's downgrade and touched 87.7 in Apr-2026. The market is pricing refinancing risk but not a distressed outcome. There are no earnings call transcripts on 9fin, so management's own outlook is limited to the May-2025 FY2024 release.",
+  "key_catalysts": {
+    "liquidity": "Constrained. At end-2025 (Fitch): cash EUR28m, of which EUR16m is restricted, leaving EUR12m freely available. The RCF was EUR89m drawn out of EUR125m, leaving EUR36m undrawn. Accessible liquidity was therefore c.EUR48m (analyst calculation), less than 10% of FY2025 sales of EUR493m. Burn: FCF was negative in 2025 ('particularly weak'), and Fitch expects it to stay slightly negative in the near term. Known cash calls in 2026: restructuring costs of c.EUR10m, pension contributions of EUR11-12m a year, and E+500bps cash interest on c.EUR930m of drawn senior debt. Fitch warns that underperformance, working capital swings or extra capex 'may result in a downgrade to the CCC category'. The 2026 year-to-date liquidity position is not available - further diligence required (source: H1-2026 lender reporting or FY2025 audited accounts). Cross-reference: researcher-capital's liquidity build (capital.json) predates the Fitch report and shows cash and RCF drawings as not available; it should be updated with these figures.",
+    "maturities": [
+      {
+        "instrument": "Revolving Credit Facility (senior secured)",
+        "amount": "EUR125m commitment, EUR89m drawn at end-2025 (Fitch). 9fin 2021 origination figure: EUR120m",
+        "maturity": "Dec-2027 (Fitch). Note: researcher-capital records 21-May-2028 from the 9fin screener; Fitch's more recent figure is preferred but the conflict is unreconciled",
+        "margin": "not available - further diligence required",
+        "months_from_27-Sep-2026": "c.15 (falls due within 12 months, i.e. becomes current, from Dec-2026, c.3 months away)",
+        "status": "NOT refinanced (confirmed by Ciaran 27-Sep-2026; Fitch 06-Jul-2026)"
+      },
+      {
+        "instrument": "Term Loan B (senior secured)",
+        "amount": "EUR840m (Fitch). 9fin shows two tranches: EUR660m due 21-May-2028 and EUR150m due 05-Jul-2028 (EUR810m in total)",
+        "maturity": "Jun-2028 (Fitch); May/Jul-2028 (9fin)",
+        "margin": "E+500bps",
+        "months_from_27-Sep-2026": "c.20-21 (becomes current from May/Jun-2027, c.8-9 months away)",
+        "status": "NOT refinanced. Apax has explored a refinancing since Mar-2025; 9fin tracker marks it 'Stale but Not Forgotten' (Aug-2026). Price 93.2 (25-Sep-2026)."
+      },
+      {
+        "instrument": "Local facilities (prior-ranking)",
+        "amount": "EUR11m (Fitch)",
+        "maturity": "not available - further diligence required",
+        "margin": "not available - further diligence required",
+        "months_from_27-Sep-2026": "not available - further diligence required",
+        "status": "Treated by Fitch as super senior."
+      },
+      {
+        "instrument": "Key dates (non-debt)",
+        "amount": "n.a.",
+        "maturity": "Early Jan-2027: Fitch's six-month refinancing window from 06-Jul-2026 expires. Around Apr/May-2027: FY2026 accounts expected (FY2023 and FY2024 results were published in mid-May); at that point the RCF is current and the TLB is due within c.13 months, so a going-concern disclosure becomes a risk if the debt has not been refinanced (analyst assessment).",
+        "margin": "n.a.",
+        "months_from_27-Sep-2026": "c.3 (Fitch window); c.7-8 (FY2026 accounts)",
+        "status": "Watch for a refinancing launch, an amend-and-extend, or sponsor equity support before early Jan-2027."
+      }
+    ],
+    "covenants": [
+      {
+        "facility": "TLBs (EUR840m per Fitch)",
+        "metric": "None (covenant-lite)",
+        "current_level": "n.a.",
+        "trigger_level": "n.a.",
+        "test_date": "n.a.",
+        "comment": "Covenant-lite at the 2021 launch. The term debt carries no maintenance covenant, so there is no trip risk there."
+      },
+      {
+        "facility": "RCF (EUR125m per Fitch)",
+        "metric": "Net leverage (springing), on the 2021 origination terms",
+        "current_level": "RCF 71% drawn at end-2025 (EUR89m / EUR125m), above the 40% (EUR50m) threshold, so the test is live. Covenant-basis net leverage not available. Fitch's 8.5x gross EBITDA leverage is not the covenant metric: the covenant uses net debt and covenant-defined EBITDA, which normally includes add-backs, so headroom is likely wider than the gross figure implies.",
+        "trigger_level": "9.5x (2021 terms; whether this survived the May-2022 A&R and the RCF resizing to EUR125m is not confirmed)",
+        "test_date": "Tested when drawn 40% or more; test frequency not available - further diligence required (likely quarterly)",
+        "comment": "Live test with unconfirmed headroom. Fitch does not mention a breach, and none is reported. Fitch's 8.5x sits within c.1.0x of the 9.5x level on a gross, unadjusted basis. Source to resolve: compliance certificate, SFA or 9fin Loan Legal QuickTake (loans@9fin.com)."
+      }
+    ]
+  },
+  "management": [
+    {
+      "name": "CEO: vacant",
+      "role": "Chief Executive Officer (vacant since 30-Jun-2026)",
+      "experience": "Marcus Desimoni stepped down for personal reasons effective 30-Jun-2026. The Executive Management Team, supported by the Advisory Board, is leading the group in the interim, and a succession process has been started (eyebizz, 04-Aug-2026: https://www.eyebizz.de/branche/desimoni-nicht-mehr-ceo-bei-rodenstock/). No successor had been announced as of 27-Sep-2026 (web search and Rodenstock press page checked)."
+    },
+    {
+      "name": "Dr. Martina Bentele",
+      "role": "Chief Financial Officer (since 01-Feb-2026)",
+      "experience": "Joined from Siemens Energy AG. She held roles across the Siemens group from 2004, spending the last five years as Chief Accounting Officer and Corporate Controller, where she led the transformation of the accounting and controlling organisation. More than 20 years in strategic and operational financial management. Her appointment announcements do not mention leveraged finance or sponsor-backed experience. She will lead the refinancing. Sources: Rodenstock press release 30-Sep-2025 (https://www.rodenstock.com/company/press/neue-cfo); DOZ, 08-Oct-2025 (https://www.doz-verlag.de/news/dr-martina-bentele-wird-neue-cfo-bei-rodenstock)."
+    },
+    {
+      "name": "Roland Dimbath",
+      "role": "Chief Operations Officer (since Jan-2021)",
+      "experience": "With Rodenstock in various leadership roles since Apr-2006; succeeded Dr. Michael Kleer as COO. He is the longest-serving member of the executive team. Source: DOZ, 15-Jan-2021 (https://www.doz-verlag.de/news/aenderungen-im-management-board)."
+    },
+    {
+      "name": "Marcus Desimoni",
+      "role": "Former CEO (01-Feb-2023 to 30-Jun-2026); CFO from early 2021 to Jan-2023; CFO ad interim Apr-2025 to Jan-2026",
+      "experience": "Listed for context; no longer with the company. The company dates his CFO start to 2020, while trade press reports he started in Jan-2021. As CFO he led the Indo Optical acquisition (May-2022) and the eyewear sale to De Rigo (Dec-2022). Earlier career: CFO of GN Store Nord and GN Hearing, 2016 to 31-Dec-2020; Group CFO of Siemens hearing aids (now Sivantos), 2010-2015; other Siemens roles from 1999; before that a controller at Epcos. More than 15 years in international finance and capital markets when he joined GN. He led the Mar-2025 refinancing exploration and left before it completed. Sources: Rodenstock press release (https://www.rodenstock.com/company/press/new-ceo-desimoni); Hearing Review, 27-Jan-2016 (https://hearingreview.com/inside-hearing/people/marcus-desimoni-announced-new-cfo-gn-store-nord-gn-resound); GN announcement, 30-Sep-2020 (https://www.globenewswire.com/news-release/2020/09/30/2101426/0/en/GN-Store-Nord-A-S-announces-changes-in-financial-leadership.html); DOZ, 15-Jan-2021 (https://www.doz-verlag.de/news/aenderungen-im-management-board)."
+    },
+    {
+      "name": "Dr. Mani Herold",
+      "role": "Former CFO (01-Apr-2023 to Mar-2025); now CFO of VTG Group",
+      "experience": "Listed for context; left Rodenstock to join VTG as CFO from 01-Apr-2025. Before Rodenstock: Group CFO and Labour Director at Pfleiderer, where he repositioned the group in the debt capital markets; Group CFO at Cerdia International; CFO of an international E.ON business unit (2012-2016). Before that, c.15 years in investment banking (M&A and capital markets) at Goldman Sachs and Merrill Lynch in New York, London and Frankfurt, after starting at Price Waterhouse in 1995. PhD and MBA, University of Munich. He was the executive with the most capital markets experience, and he left shortly after the refinancing exploration began. Sources: Rodenstock press release 08-Mar-2023 (https://www.rodenstock.com/company/press/new-cfo-herold); eot-news, 19-Dec-2024 (https://eot-news.de/dr-mani-herold-wird-chief-financial-officer-der-vtg-gruppe/)."
+    },
+    {
+      "name": "Other Executive Management Team members (as of Apr-2025)",
+      "role": "Dr. Dietmar Uttenweiler (EVP Innovation); Catherine Stahl (EVP Marketing and Strategy); Laurent Saada (EVP Sales Europe, from May-2025); Soren Ostergaard (EVP Sales International, from May-2025)",
+      "experience": "Saada: more than 20 years in medical devices at Sonova, Straumann and Johnson & Johnson. Ostergaard: more than 35 years in medtech sales at Sonova, Origio and GN Hearing, and previously Rodenstock's Head of International Sales. Background for Uttenweiler and Stahl: not available - further diligence required. Whether this is still the current team composition is not confirmed. Source: Rodenstock press release 16-Apr-2025 (https://www.rodenstock.com/company/press/expansion-executive-management-team)."
+    },
+    {
+      "name": "Apax Partners",
+      "role": "Majority sponsor (c.73% at Apr-2021 closing)",
+      "experience": "Acquired Rodenstock from Compass Partners in 2021 (EUR1.275bn per 9fin sources; EUR1.5bn EV per later reporting) with a EUR610m equity cheque. Has led the refinancing process since Mar-2025. Fitch describes the sponsor's financial policy as aggressive. No new equity is reported since 2021. Named Apax board or Advisory Board representatives: not available - further diligence required."
+    },
+    {
+      "name": "Mubadala Investment Company",
+      "role": "Co-investor (c.24% at Apr-2021 closing)",
+      "experience": "Abu Dhabi sovereign investor. Current stake and board representation: not available - further diligence required."
+    },
+    {
+      "name": "Founders and management",
+      "role": "Minority shareholders (c.3% at Apr-2021 closing)",
+      "experience": "Individual holders: not available - further diligence required."
+    }
+  ],
+  "recommendation": {
+    "watchlist": true,
+    "rationale": "Add to the restructuring watchlist. The maturity wall and liquidity triggers are both present, and the RCF covenant test is live. First, the maturity wall: c.EUR965m of senior secured commitments (EUR840m TLB due Jun-2028, EUR125m RCF due Dec-2027) has not been refinanced after 18 months of sponsor-led effort. The RCF becomes a current liability in Dec-2026 and Fitch's six-month window ends in early Jan-2027. Refinancing the current quantum means lenders taking on 8.5x leverage in a business whose sales fell c.4% in 2025, whose FCF is negative and whose margin will likely step up by c.100bps on any new deal. Fitch's own forecasts keep leverage above its 7.5x downgrade trigger through 2027. That points to a solution involving sponsor equity, a smaller debt quantum or an amend-and-extend, and so to a lender negotiation. Second, liquidity: only c.EUR48m was accessible at end-2025 (EUR12m unrestricted cash plus EUR36m undrawn RCF), with 2026 restructuring costs, pension contributions and interest still to be funded. Fitch explicitly flags a move to the CCC category. Third, the RCF springing covenant is being tested because the facility is 71% drawn; no breach is reported, but headroom cannot be confirmed. Execution risk is higher because the CEO left on 30-Jun-2026 without a named successor and the CFO has been in post since Feb-2026. Moody's had the company at Caa1 before withdrawing. For reference, Fitch's recovery assumptions (EUR95m going-concern EBITDA at 5.5x, less 10% administrative claims) imply a distressed value of c.EUR470m against c.EUR965m of senior secured claims (analyst calculation). The loans trade at 93.2, so the market is not yet pricing that outcome. Next steps: watch for a refinancing launch, an amend-and-extend or a sponsor equity commitment before early Jan-2027; Fitch's review at the end of its six-month window; FY2025 audited accounts and any 2026 interim figures; and the CEO appointment.",
+    "triggers": [
+      "Leverage / maturity wall that cannot be refinanced: PRESENT. EUR840m TLB (Jun-2028, c.21 months) and EUR125m RCF (Dec-2027, c.15 months) NOT refinanced as of 27-Sep-2026. Leverage 8.5x at end-2025 (Fitch); FCF negative; refinancing explored since Mar-2025 without result; Fitch's six-month refinancing condition expires early Jan-2027, and failure could lead to a downgrade (Fitch notes CCC category risk).",
+      "Liquidity issue: PRESENT (constrained). End-2025: EUR12m unrestricted cash plus EUR36m undrawn RCF = c.EUR48m. FCF 'particularly weak' in 2025 and expected slightly negative near term; RCF 71% drawn; Fitch assesses liquidity as limited. The 2026 position is not available.",
+      "Covenant trip: TEST LIVE, NOT REPORTED AS BREACHED. The TLB is covenant-lite. The RCF's 9.5x springing net leverage covenant (2021 terms) is tested because utilisation is 71%, above the 40% threshold. Covenant-basis leverage and headroom are not available; Fitch's 8.5x gross leverage is within c.1.0x of the trigger on an unadjusted basis."
+    ],
+    "resolved_items": "Refinancing status, flagged as the single biggest open item in revision 1, is resolved: no refinancing has taken place (Ciaran, 27-Sep-2026; Fitch 06-Jul-2026; 9fin tracker Aug-2026)."
+  },
+  "data_gaps": [
+    "Term debt quantum and tranche structure: Fitch EUR840m single TLB due Jun-2028; 9fin EUR660m (21-May-2028) plus EUR150m (05-Jul-2028) = EUR810m; May-2022 A&R SFA EUR660m plus EUR170m add-on. Unreconciled. Likely source: SFA, agent statement or FY2025 audited accounts.",
+    "RCF maturity conflict: Fitch Dec-2027 vs 9fin screener 21-May-2028 (used in researcher-capital's capital.json). RCF size: Fitch EUR125m vs 9fin EUR120m. Fitch is more recent; confirm from the SFA or accounts.",
+    "RCF covenant: whether the 9.5x springing net leverage covenant (2021 terms) still applies after the 2022 A&R and the RCF resizing; current covenant-basis leverage and headroom; test frequency. Likely source: compliance certificate or 9fin Loan Legal QuickTake (loans@9fin.com, requires SFA).",
+    "RCF margin and local facilities (EUR11m) terms and maturity: not available. Likely source: SFA or FY2025 audited accounts.",
+    "2026 liquidity: latest data is end-2025 (Fitch). H1-2026 cash, RCF drawings and burn not available. Likely source: lender reporting or FY2025 accounts (Bundesanzeiger).",
+    "FY2025 full results (company-reported EBITDA, net debt, FCF build): not published on 9fin or the Rodenstock press page. Fitch gives FY2025 sales EUR493m and a 22% Fitch-adjusted margin only; FY2025 EBITDA of c.EUR108m is an analyst calculation, not a reported figure. Likely source: FY2025 audited accounts. researcher-financials should add the Fitch FY2025 data points.",
+    "Reason for Moody's withdrawal (30-Jul-2026): not disclosed. Likely source: Moody's withdrawal notice text.",
+    "CEO successor: none announced as of 27-Sep-2026 (web search). Monitor Rodenstock press page.",
+    "Background of EVPs Dr. Dietmar Uttenweiler and Catherine Stahl, and current Executive Management Team composition: not available. Likely source: company website or LinkedIn.",
+    "Sponsor board / Advisory Board representatives and current Mubadala stake: not available. Likely source: company website, Handelsregister filings.",
+    "Sponsor intentions on equity support for the refinancing: not available. Likely source: market soundings or Ciaran's desk contacts.",
+    "Croatian acquisition (Mar-2026) consideration and funding: not disclosed.",
+    "Earnings call transcripts: none on 9fin for Rodenstock (private company)."
+  ],
+  "sources_checked_this_run": [
+    "raw_9fin_data.json (orchestrator's 9fin pull, 27-Sep-2026)",
+    "Fitch 'Fitch Assigns Rodenstock B- IDR; Outlook Stable' (06-Jul-2026), read in full from /resources/Rodenstock/",
+    "/resources/Rodenstock/9fin-pricing-chart.csv (TLB prices May-2021 to 25-Sep-2026)",
+    "Web search and fetch of Rodenstock press releases (CEO appointment 2023, CFO appointments 2023 and 2025, executive team Apr-2025, Croatian acquisition Mar-2026, press index 2025-2026)",
+    "Trade press: eyebizz (CEO departure, 04-Aug-2026), DOZ (Jan-2021 management changes; Oct-2025 CFO appointment), eot-news (Herold to VTG, 19-Dec-2024), Hearing Review (Desimoni to GN, 27-Jan-2016), GN Store Nord announcement (30-Sep-2020)",
+    "All 21 recent_news URLs checked for HTTP status on 27-Sep-2026",
+    "Revision 1 sources carried forward: 9fin news and document searches, 9fin private credit pipeline editions Jun-Sep 2025, 9fin LevFin Pipeline Apr-2026 and Aug-2026, 9fin Watching the Defectives Sep-2026, Rodenstock FY2024 results release"
+  ]
+}

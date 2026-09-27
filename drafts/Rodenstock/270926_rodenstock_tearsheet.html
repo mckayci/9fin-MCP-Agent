@@ -1,0 +1,603 @@
+<title>Rodenstock</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --accent: #7C77B9;
+  --accent-light: #EDEAF5;
+  --accent-mid: #A9A4D4;
+  --bg: #FFFFFF;
+  --surface: #F6F5FA;
+  --text: #1E1E2E;
+  --text-secondary: #55536A;
+  --text-muted: #8886A0;
+  --border: #D8D6E3;
+  --border-light: #EDEBF3;
+  --good: #2E8B57;
+  --warn: #D4A017;
+  --critical: #C44536;
+  --table-stripe: #FAFAFD;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141425;
+    --surface: #1E1E36;
+    --text: #E8E7F0;
+    --text-secondary: #B0AECA;
+    --text-muted: #7C7A96;
+    --border: #33315A;
+    --border-light: #28264A;
+    --accent-light: #2A2848;
+    --table-stripe: #1A1A30;
+    --good: #4FBF7A;
+    --warn: #E8B832;
+    --critical: #E0615A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141425;
+  --surface: #1E1E36;
+  --text: #E8E7F0;
+  --text-secondary: #B0AECA;
+  --text-muted: #7C7A96;
+  --border: #33315A;
+  --border-light: #28264A;
+  --accent-light: #2A2848;
+  --table-stripe: #1A1A30;
+  --good: #4FBF7A;
+  --warn: #E8B832;
+  --critical: #E0615A;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--text);
+  background: var(--bg);
+  padding: 0 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media print {
+  body { padding: 0 12px; font-size: 9.5px; }
+  .page-break { page-break-before: always; }
+}
+
+.header {
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 18px 12px;
+  margin: 0 -20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.header-left h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 2px; }
+.header-left .subtitle { font-size: 11px; opacity: 0.85; font-weight: 400; }
+
+.header-meta { display: flex; gap: 20px; font-size: 10px; opacity: 0.9; flex-wrap: wrap; }
+.header-meta dt { font-weight: 400; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; font-size: 9px; }
+.header-meta dd { font-weight: 600; margin-top: 1px; }
+
+.ratings-row { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.rating-badge { background: rgba(255,255,255,0.18); border-radius: 3px; padding: 2px 7px; font-size: 10px; font-weight: 600; display: flex; gap: 4px; align-items: center; }
+.rating-badge .agency { opacity: 0.7; font-weight: 400; font-size: 9px; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.full { grid-column: 1 / -1; }
+@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+
+.section { background: var(--surface); border: 1px solid var(--border-light); border-radius: 5px; padding: 10px 12px; }
+.section-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent); margin-bottom: 6px; padding-bottom: 4px; border-bottom: 1.5px solid var(--accent); }
+.section p { color: var(--text-secondary); font-size: 11px; line-height: 1.5; }
+.section p + p { margin-top: 6px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 10px; font-variant-numeric: tabular-nums; }
+th { text-align: left; font-weight: 600; color: var(--text); padding: 4px 6px; border-bottom: 1.5px solid var(--border); font-size: 9.5px; white-space: nowrap; }
+th.num, td.num { text-align: right; }
+td { padding: 3px 6px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); vertical-align: top; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+.total-row td { font-weight: 700; color: var(--text); border-top: 1.5px solid var(--border); border-bottom: none; background: transparent !important; }
+.subtotal-row td { font-weight: 600; color: var(--text); }
+.indent { padding-left: 18px !important; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+@media (max-width: 700px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+.stat-card { text-align: center; padding: 8px 4px; border-radius: 4px; border: 1px solid var(--border-light); background: var(--bg); }
+.stat-card .value { font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+.stat-card.flag .value { color: var(--critical); }
+.stat-card .label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+.tag { display: inline-block; font-size: 9px; font-weight: 600; padding: 1px 5px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.3px; }
+.tag-warn { background: #FFF3CD; color: #856404; }
+.tag-critical { background: #F8D7DA; color: #842029; }
+.tag-ok { background: #D1E7DD; color: #0F5132; }
+.tag-muted { background: #E5E4EE; color: #55536A; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tag-warn { background: #3D3520; color: var(--warn); }
+  :root:not([data-theme="light"]) .tag-critical { background: #3D2020; color: var(--critical); }
+  :root:not([data-theme="light"]) .tag-ok { background: #1A3D2A; color: var(--good); }
+  :root:not([data-theme="light"]) .tag-muted { background: #2A2848; color: var(--text-secondary); }
+}
+:root[data-theme="dark"] .tag-warn { background: #3D3520; color: var(--warn); }
+:root[data-theme="dark"] .tag-critical { background: #3D2020; color: var(--critical); }
+:root[data-theme="dark"] .tag-ok { background: #1A3D2A; color: var(--good); }
+:root[data-theme="dark"] .tag-muted { background: #2A2848; color: var(--text-secondary); }
+
+.catalyst-item { display: flex; gap: 8px; align-items: flex-start; padding: 5px 0; border-bottom: 1px solid var(--border-light); }
+.catalyst-item:last-child { border-bottom: none; }
+.catalyst-item .detail { flex: 1; }
+.catalyst-item .detail strong { color: var(--text); font-weight: 600; }
+
+.news-date { color: var(--text-muted); font-size: 9px; white-space: nowrap; min-width: 62px; }
+
+.org-chart-container { display: flex; flex-direction: column; gap: 6px; font-size: 10px; }
+.org-node { background: var(--bg); border: 1px solid var(--border); border-radius: 3px; padding: 4px 8px; text-align: center; font-weight: 500; color: var(--text); }
+.org-node.issuer { border: 2px solid var(--accent); font-weight: 700; }
+.org-node.unconfirmed { border-style: dashed; color: var(--text-muted); }
+.org-connector { text-align: center; color: var(--text-muted); font-size: 14px; line-height: 1; }
+.org-owners { display: flex; gap: 6px; justify-content: center; }
+.org-owners .org-node { font-size: 9px; flex: 1; max-width: 150px; }
+.org-owners .pct { font-size: 9px; color: var(--accent); font-weight: 700; display: block; }
+
+.rec-box { background: var(--accent-light); border: 1px solid var(--accent-mid); border-radius: 4px; padding: 10px 12px; margin-top: 6px; }
+.rec-box .rec-title { font-weight: 700; color: var(--accent); font-size: 11px; margin-bottom: 4px; }
+
+.footnote { font-size: 9px; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+.na { font-style: italic; color: var(--critical); }
+
+.footer { margin-top: 12px; padding: 8px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 9px; text-align: center; }
+</style>
+
+<div class="header">
+  <div class="header-left">
+    <h1>Rodenstock</h1>
+    <div class="subtitle">Ophthalmic lens manufacturer | Germany | Private (sponsor-owned, LBO)</div>
+    <div class="ratings-row">
+      <div class="rating-badge"><span class="agency">Fitch</span> B- IDR, Stable (06-Jul-26)</div>
+      <div class="rating-badge"><span class="agency">S&amp;P</span> B- (CFR)</div>
+      <div class="rating-badge"><span class="agency">Moody's</span> Withdrawn (last: Caa1, 02-Apr-25)</div>
+    </div>
+  </div>
+  <div class="header-meta">
+    <dl><dt>Sponsor</dt><dd>Apax (~73%) / Mubadala (~24%)</dd></dl>
+    <dl><dt>Sector</dt><dd>Health Care Equipment &amp; Services</dd></dl>
+    <dl><dt>CEO</dt><dd style="color:#FFD9D9">Vacant since 30-Jun-26</dd></dl>
+    <dl><dt>Currency</dt><dd>EUR</dd></dl>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- KPI Tiles -->
+  <div class="section full">
+    <div class="stat-grid">
+      <div class="stat-card"><div class="value">EUR 493m</div><div class="label">FY25 Sales (Fitch, -3.8%)</div></div>
+      <div class="stat-card"><div class="value">22.0%</div><div class="label">FY25 Fitch-Adj. EBITDA Margin</div></div>
+      <div class="stat-card flag"><div class="value">8.5x</div><div class="label">EBITDA Leverage (end-2025)</div></div>
+      <div class="stat-card flag"><div class="value">~EUR 48m</div><div class="label">Liquidity Headroom (end-2025)</div></div>
+    </div>
+  </div>
+
+  <!-- Business Description -->
+  <div class="section">
+    <div class="section-title">Business Description</div>
+    <p>Munich-based manufacturer of ophthalmic lenses, founded 1877, c.5,000 employees, six production sites, sold through opticians and retail chains in 85+ countries. Built around premium individualised lenses: the B.I.G. VISION biometric range (610 patents; Fitch: 40% of core sales from highly differentiated products) and MyCon myopia-control lenses for children (+62% sales, 2024). Strong profitability versus peers &mdash; 61% gross margin, 22% Fitch-adjusted EBITDA margin &mdash; from proprietary technology and lower-cost manufacturing in Eastern Europe/Asia. Sold its eyewear division to De Rigo in Dec-2022, leaving a lenses-only business. Small versus EssilorLuxottica, Hoya and Zeiss, constraining Fitch's competitive-positioning score to 'bb-'.</p>
+    <p><strong>Corporate history:</strong> second period of lender-level stress. Sold by founders to Permira (2003) then Bridgepoint (2006); 2010-11 standstill on EUR370m debt. Compass Partners control 2016-2021. Apax bought the group from Compass in Apr-2021 (EV EUR1.275-1.5bn, c.10.2x 2021 EBITDA) alongside Mubadala (~24%), backed by a EUR610m equity cheque. Facilities amended and upsized May-2022. Apax has been exploring a refinancing since Mar-2025; <strong>none has completed</strong> (confirmed directly, and consistent with Fitch's 06-Jul-2026 report, which rates the existing structure and conditions the rating on refinancing within six months).</p>
+  </div>
+
+  <!-- Situation Overview -->
+  <div class="section">
+    <div class="section-title">Situation Overview</div>
+    <p>The EUR840m TLB (Jun-2028) and EUR125m RCF (Dec-2027) have not been refinanced as of 27-Sep-2026. Apax has been trying since Mar-2025; in that time leverage has risen to 8.5x, FCF has turned negative, the RCF has been drawn to 71%, and the CEO has left with no successor named.</p>
+    <p>FY2024's modest improvement (revenue +1.2% to EUR512.4m, EBITDA +5.1% to EUR128.6m, company basis) did not continue. Fitch reports FY2025 sales of EUR493m (-3.8%) and a 22.0% Fitch-adjusted margin (implies c.EUR108m EBITDA, below the EUR125m the 2021 buyout was marketed on), driven by a soft German market (31% of sales, consumers trading down) and the GrandVision contract phase-out. Fitch expects a further low-single-digit sales decline in 2026 before 3.0-3.2% growth resumes, with the margin recovering to 24.4% on cost savings already executed &mdash; but its own leverage forecast (8.0x in 2026, "towards" 7.7x in 2027) stays above its 7.5x downgrade trigger throughout.</p>
+    <p>No deleveraging or sponsor equity support is on record since 2021. Despite constrained liquidity the company still made a small Croatian bolt-on in Mar-2026 (terms undisclosed). Moody's withdrew its Caa1 rating at the issuer's request (30-Jul-2026), three weeks after Fitch's B- assignment &mdash; not tied to any completed transaction. The loans trade at 93.2 (25-Sep-2026), down from the mid-90s pre-downgrade but stable since June: the market is pricing refinancing risk, not a distressed outcome.</p>
+  </div>
+
+  <!-- Key Catalysts -->
+  <div class="section full">
+    <div class="section-title">Key Catalysts / Triggers to Watch</div>
+    <div class="catalyst-item">
+      <span class="tag tag-critical">Maturity</span>
+      <div class="detail"><strong>EUR965m senior secured stack (EUR125m RCF due Dec-27, c.15 months; EUR840m TLB due Jun-28, c.21 months) confirmed NOT refinanced.</strong> Fitch's rating is conditioned on a refinancing, or credible plan, within six months of 06-Jul-26 (window closes c.early Jan-27). Fitch's own rating case assumes refinancing only happens in 2027, at a 6% margin vs 5% today &mdash; itself evidence the agency does not expect near-term completion.</div>
+    </div>
+    <div class="catalyst-item">
+      <span class="tag tag-critical">Leverage</span>
+      <div class="detail"><strong>8.5x EBITDA leverage at end-2025</strong> (Fitch), forecast 8.0x (2026) and "towards" 7.7x (2027) &mdash; both above Fitch's own 7.5x downgrade sensitivity. FY2025 margin (22.0%) sits only 2pp above Fitch's 20% downgrade trigger.</div>
+    </div>
+    <div class="catalyst-item">
+      <span class="tag tag-warn">Covenant</span>
+      <div class="detail"><strong>RCF springing covenant test is live.</strong> 9.5x net leverage test triggers at &ge;40% drawn (EUR50m of EUR125m); RCF was 71% drawn (EUR89m) at end-2025. No breach reported; covenant-basis headroom not confirmed (Fitch's gross 8.5x sits within c.1.0x of the 9.5x trigger).</div>
+    </div>
+    <div class="catalyst-item">
+      <span class="tag tag-warn">Liquidity</span>
+      <div class="detail"><strong>Constrained: c.EUR48m accessible</strong> (EUR12m unrestricted cash + EUR36m undrawn RCF) at end-2025, under 10% of FY25 sales. FCF "particularly weak" in 2025; Fitch flags possible downgrade to CCC on underperformance, working-capital swings or higher capex.</div>
+    </div>
+    <div class="catalyst-item">
+      <span class="tag tag-muted">Governance</span>
+      <div class="detail"><strong>CEO vacant since 30-Jun-26</strong> (Desimoni departed for personal reasons, no successor named); CFO in post only since Feb-2026. Refinancing execution now rests with a leadership team with under 8 months' combined tenure in their current roles.</div>
+    </div>
+  </div>
+
+  <!-- Revenue Splits -->
+  <div class="section full">
+    <div class="section-title">Revenue Splits (EUR millions) &mdash; full split last available FY2020; FY25 total per Fitch</div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>By Segment</th><th class="num">FY19</th><th class="num">FY20</th><th class="num">FY25</th></tr></thead>
+        <tbody>
+          <tr><td>Lenses</td><td class="num">377.7 (84%)</td><td class="num">344.9 (86%)</td><td class="num na">n/a&sup1;</td></tr>
+          <tr><td>Eyewear <em>(divested Dec-22)</em></td><td class="num">50.3 (11%)</td><td class="num">34.6 (9%)</td><td class="num">&mdash;</td></tr>
+          <tr><td>Others</td><td class="num">21.7 (5%)</td><td class="num">21.5 (5%)</td><td class="num na">n/a&sup1;</td></tr>
+          <tr class="total-row"><td>Total</td><td class="num">449.7</td><td class="num">401.0</td><td class="num">493</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>By Geography</th><th class="num">FY19</th><th class="num">FY20</th><th class="num">FY25</th></tr></thead>
+        <tbody>
+          <tr><td>Germany</td><td class="num">175.6 (39%)</td><td class="num">159.1 (40%)</td><td class="num">~153 (31%)</td></tr>
+          <tr><td>Rest of Europe</td><td class="num">198.6 (44%)</td><td class="num">180.3 (45%)</td><td class="num na">n/a&sup1;</td></tr>
+          <tr><td>Asia</td><td class="num">26.8 (6%)</td><td class="num">17.9 (4%)</td><td class="num na">n/a&sup1;</td></tr>
+          <tr><td>Rest of World</td><td class="num">48.6 (11%)</td><td class="num">43.6 (11%)</td><td class="num na">n/a&sup1;</td></tr>
+          <tr class="total-row"><td>Total</td><td class="num">449.6</td><td class="num">400.9</td><td class="num">493</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <p class="footnote">&sup1; not available - further diligence required; likely source: FY25 audited accounts (Bundesanzeiger) or lender presentation. FY19/20 splits still include the divested Eyewear division (ex-Eyewear, Lenses were c.94-95% of the continuing business). Germany's share fall (40%&rarr;31%) mixes a genuine soft German market with the change in perimeter; not separable with data on file.</p>
+  </div>
+
+  <!-- Summary Financials -->
+  <div class="section full">
+    <div class="section-title">Summary Financials (EUR millions) &mdash; three different bases; do not read as one series</div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr><th></th><th class="num">FY2019</th><th class="num">FY2020</th><th class="num">FY2023</th><th class="num">FY2024</th><th class="num">FY2025</th></tr>
+      </thead>
+      <tbody>
+        <tr style="font-size:9px; color:var(--text-muted)"><td>Source / basis</td><td class="num">9fin</td><td class="num">9fin</td><td class="num">Company PR</td><td class="num">Company PR</td><td class="num" style="font-weight:700; color:var(--critical)">Fitch (Jul-26)</td></tr>
+        <tr><td>Revenue</td><td class="num">449.7</td><td class="num">401.0</td><td class="num">506.1</td><td class="num">512.4</td><td class="num"><strong>493</strong></td></tr>
+        <tr><td>Revenue growth</td><td class="num">5.8%</td><td class="num">(10.8%)</td><td class="num">0.2%</td><td class="num">1.2%</td><td class="num" style="color:var(--critical)">(3.8%)*</td></tr>
+        <tr><td>EBITDA (9fin adj.)</td><td class="num">94.9</td><td class="num">65.7</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td></tr>
+        <tr><td>EBITDA (company-defined)</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num">122.3</td><td class="num">128.6</td><td class="num na">n/a&sup1;</td></tr>
+        <tr><td><strong>EBITDA (Fitch-adj., derived)</strong></td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num"><strong>~108&sup2;</strong></td></tr>
+        <tr><td>EBITDA margin (basis above)</td><td class="num">21.1%</td><td class="num">16.4%</td><td class="num">24.2%</td><td class="num">25.1%</td><td class="num" style="font-weight:700">22.0%</td></tr>
+        <tr><td>Gross margin</td><td class="num">48.2%</td><td class="num">47.3%</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num">61%&sup3;</td></tr>
+        <tr><td><strong>Unlevered FCF</strong></td><td class="num"><strong>58.1</strong></td><td class="num"><strong>44.3</strong></td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td></tr>
+        <tr><td><strong>Levered FCF</strong></td><td class="num"><strong>28.4</strong></td><td class="num"><strong>14.3</strong></td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num na"><em>n.a.&#8308;</em></td></tr>
+        <tr><td>LFCF conversion</td><td class="num">29.9%</td><td class="num">21.8%</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num na"><em>n.a.&#8308;</em></td></tr>
+        <tr class="total-row"><td>Total debt (excl. leases/pensions)</td><td class="num">478.5</td><td class="num">486.0</td><td class="num na">n/a&sup1;</td><td class="num">c.810 (TLBs only)</td><td class="num">c.940&#8309;</td></tr>
+        <tr class="total-row"><td>Cash</td><td class="num">39.0</td><td class="num">74.7</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num">28 (12 avail.)</td></tr>
+        <tr class="total-row"><td>Gross leverage</td><td class="num">5.0x</td><td class="num">7.4x</td><td class="num na">n/a&sup1;</td><td class="num">c.6.3x (TLB-only, indic.)</td><td class="num" style="font-weight:700; color:var(--critical)">8.5x</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="footnote">* Cross-basis comparison (Fitch FY25 vs company-reported FY24); likely a genuine decline (soft Germany, GrandVision phase-out per Fitch) but a scope/definitional component can't be excluded. &sup2; Analyst calculation (22.0% &times; EUR493m); Fitch does not publish absolute EBITDA. Part of the gap to company FY24 EBITDA (EUR128.6m) is likely definitional (Fitch typically nets IFRS16 lease costs; company add-backs have historically run EUR8-24m above 9fin's figure) and part genuine &mdash; Fitch explicitly states 2025 EBITDA was lower. &sup3; Fitch-stated; not comparable to 9fin's 47-49% (FY16-20, different perimeter/classification). &#8308; Fitch states FY25 FCF was negative and "particularly weak" but does not disclose the amount; shown per the negative-conversion display rule. &#8309; EUR840m TLB + EUR89m RCF drawn (Fitch); +EUR11m local facilities not included. <strong>Fitch 2026-30 rating case:</strong> low-single-digit sales decline 2026 (GrandVision phase-out) then 3.0-3.2%/yr growth; margin to 24.4% (2026), "towards" 26% (2029/30); leverage 8.0x (2026), "towards" 7.7x (2027, still above the 7.5x downgrade trigger); capex 5.3% of revenue; refinancing assumed in 2027 at 6% margin; no dividends to 2030. Most recent detailed (line-item) financials available as of 31-Dec-2020; most recent headline financials as of 31-Dec-2025 (Fitch).</p>
+  </div>
+
+  <!-- Capital Structure -->
+  <div class="section full">
+    <div class="section-title">Capital Structure (EUR millions, end-2025 unless stated) &mdash; primary source: Fitch 06-Jul-26; no structured 9fin cap table exists</div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr><th>Instrument</th><th class="num">Amount</th><th class="num">x FY25 EBITDA&sup2;</th><th>Rate</th><th>Maturity</th><th class="num">Price</th><th>Rating (F/S/M)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Local facilities (super senior)</td><td class="num">11</td><td class="num">0.1x</td><td class="num na">n/a&sup1;</td><td class="num na">n/a&sup1;</td><td class="num">n.a.</td><td>NR</td></tr>
+        <tr><td>EUR125m RCF (71% drawn)</td><td class="num">89 drawn / 125 commit.</td><td class="num">0.8x</td><td class="num na">n/a&sup1;</td><td>Dec-2027</td><td class="num">n.a.</td><td>B-/B-/NR&#8309;</td></tr>
+        <tr><td>Term Loan B (per Fitch, single line)</td><td class="num">840</td><td class="num">7.8x</td><td>E+500</td><td>Jun-2028</td><td class="num">93.18</td><td>B-/RR4</td></tr>
+        <tr class="subtotal-row"><td>Total senior secured debt</td><td class="num">940</td><td class="num">8.7x</td><td></td><td>Dec-27/Jun-28</td><td></td><td></td></tr>
+        <tr><td class="indent"><em>less: cash</em></td><td class="num">(28)</td><td class="num na"></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="total-row"><td>Net senior secured debt</td><td class="num">912</td><td class="num">8.4x</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="indent"><em>German pension obligations (unsecured)</em></td><td class="num">230.9 (FY20, stale)</td><td class="num na">n/m</td><td>n.a.</td><td>n.a.</td><td class="num">n.a.</td><td>n.a.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="footnote"><strong>Unreconciled quantum:</strong> Fitch's EUR840m single TLB figure does not tie to the 9fin tranche breakdown (EUR660m due 21-May-28 + EUR150m due 05-Jul-28 = EUR810m) or the 2022 amend-and-restate (EUR660m + EUR170m add-on = EUR830m). EUR660m tranche confirmed via the holder register. Gap of EUR10-30m unresolved; Fitch used as primary since it is the most recent, single source. RCF also shown at EUR125m/Dec-2027 (Fitch) vs EUR120m/21-May-2028 (9fin 2021 origination) &mdash; Fitch preferred as more current. &sup2; FY25 EBITDA basis: analyst-derived ~EUR108m (see Summary Financials). &#8309; Fitch rates the TLB/RCF together at B-/RR4; S&amp;P B- per 9fin screener (date/outlook not confirmed); Moody's withdrawn 30-Jul-26 (last B3 at instrument level, Caa1 CFR). Indicative simple discount margins (analyst calc., ignores floor/amortisation): EUR660m tranche c.E+910bps, EUR150m tranche c.E+880bps to respective maturities. Yield to maturity not calculated (needs a EURIBOR forward curve). <strong>Recovery (Fitch, analyst-derived):</strong> going-concern EBITDA c.EUR95m &times; 5.5x distressed multiple, less 10% admin claims and EUR11m super senior facilities &asymp; EUR459m available for EUR965m of senior secured claims &asymp; 48% recovery (within Fitch's published RR4 band of 31-50%) &mdash; well below the current 93.18 trading price, consistent with the market pricing a going-concern outcome, not distress.</p>
+  </div>
+
+  <!-- Liquidity Build -->
+  <div class="section">
+    <div class="section-title">Liquidity Build (EUR millions, end-2025, Fitch)</div>
+    <table>
+      <tbody>
+        <tr><td>Cash on balance sheet</td><td class="num">28</td></tr>
+        <tr><td>Less: restricted (Fitch, not available for debt service)</td><td class="num">(16)</td></tr>
+        <tr class="subtotal-row"><td>Available cash</td><td class="num">12</td></tr>
+        <tr><td>Undrawn RCF (EUR125m less EUR89m drawn)</td><td class="num">36</td></tr>
+        <tr class="total-row"><td><strong>Total accessible liquidity</strong></td><td class="num"><strong>48</strong></td></tr>
+      </tbody>
+    </table>
+    <p class="footnote">Fitch assesses liquidity as "limited"/"constrained". RCF 71% drawn (springing covenant live, see Catalysts). Known 2026 cash calls (Fitch): restructuring costs c.EUR10m, pension contributions EUR11-12m, capex 5.3% of revenue (c.EUR26m), E+500bps interest on c.EUR930m drawn. No 2026-to-date figure available. Fitch: further underperformance "may result in a downgrade to the CCC category."</p>
+  </div>
+
+  <!-- Group Structure -->
+  <div class="section">
+    <div class="section-title">Simplified Group Structure</div>
+    <div class="org-chart-container">
+      <div class="org-owners">
+        <div class="org-node"><span class="pct">~73%</span>Apax Partners</div>
+        <div class="org-node"><span class="pct">~24%</span>Mubadala</div>
+        <div class="org-node"><span class="pct">~3%</span>Mgmt/Founders</div>
+      </div>
+      <div class="org-connector">|</div>
+      <div class="org-node unconfirmed">Iris HoldCo GmbH <span style="font-weight:400;font-size:8px">(Moody's-rated 2021; withdrawn Jul-26)</span></div>
+      <div class="org-connector">|</div>
+      <div class="org-node issuer">Rodenstock Group GmbH <span style="font-weight:400;font-size:8px">(Fitch-rated: IDR B- Stable)</span></div>
+      <div class="org-connector">|</div>
+      <div class="org-node">Rodenstock GmbH (Munich) + material subsidiaries<br><span style="font-size:8px;color:var(--text-muted)">Guarantors &ge;80% of group EBITDA; EUR11m local facilities (super senior)</span></div>
+    </div>
+    <p class="footnote">No 9fin org chart exists. Structure reconstructed from Fitch (Jul-26) and 9fin articles. Relationship between Iris HoldCo GmbH and the Fitch-rated Rodenstock Group GmbH, and the SFA borrower entity, not confirmed. Security: share pledges, bank accounts, intercompany receivables under one SFA (12-Apr-21, amended and restated 24-May-22). Full guarantor list and restricted group perimeter not available.</p>
+  </div>
+
+  <!-- Management & Sponsor -->
+  <div class="section">
+    <div class="section-title">Management &amp; Sponsor Representation</div>
+    <table>
+      <thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td style="color:var(--critical); font-weight:600">CEO: vacant</td><td>Since 30-Jun-26</td><td>Desimoni departed (personal reasons); Exec team + Advisory Board running the business; no successor named</td></tr>
+        <tr><td>Dr. Martina Bentele</td><td>CFO (since 01-Feb-26)</td><td>Ex-Siemens Energy CAO/Controller; no disclosed leveraged-finance background; leading the refinancing</td></tr>
+        <tr><td>Roland Dimbath</td><td>COO (since 2021)</td><td>Longest-serving exec; with Rodenstock since 2006</td></tr>
+        <tr><td>Apax Partners</td><td>Majority sponsor</td><td>Leading refi process since Mar-25; no new equity since 2021; Fitch calls policy "aggressive"</td></tr>
+        <tr><td>Mubadala</td><td>Co-investor</td><td>Current stake unconfirmed</td></tr>
+      </tbody>
+    </table>
+    <p class="footnote">Former CEO Marcus Desimoni (CFO of GN Store Nord/GN Hearing 2016-20, Siemens hearing aids Group CFO 2010-15) and former CFO Dr. Mani Herold (left Mar-25 for VTG; ex-Pfleiderer CFO, c.15yrs Goldman Sachs/Merrill Lynch) both departed during the refinancing process. Herold, the executive with the most capital-markets experience, left shortly after the Mar-25 refinancing exploration began.</p>
+  </div>
+
+  <!-- Recent News -->
+  <div class="section full">
+    <div class="section-title">Recent News &amp; Events</div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Date</th><th>Event</th></tr></thead>
+      <tbody>
+        <tr><td class="news-date">04 Aug 26</td><td><a href="https://www.eyebizz.de/branche/desimoni-nicht-mehr-ceo-bei-rodenstock/" target="_blank">CEO Desimoni steps down (30-Jun-26); no successor named</a></td></tr>
+        <tr><td class="news-date">03 Aug 26</td><td><a href="https://9fin.com/news/c054b243-a4a4-4368-b224-bbdce42cb488" target="_blank">9fin LevFin pipeline: refi "Stale but Not Forgotten", not "Completed"</a></td></tr>
+        <tr><td class="news-date">30 Jul 26</td><td><a href="https://www.moodys.com/research/docid--PR_527402" target="_blank">Moody's withdraws all ratings on issuer's request (last: Caa1 stable)</a></td></tr>
+        <tr><td class="news-date">06 Jul 26</td><td><a href="https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026" target="_blank">Fitch assigns first-time B- IDR, Stable; existing EUR840m TLB rated B-/RR4</a></td></tr>
+        <tr><td class="news-date">01 Apr 26</td><td><a href="https://9fin.com/news/ec5af358-411d-4a99-a64d-983613ec0391" target="_blank">9fin LevFin pipeline: still "Potential Debt Financing", timing TBC</a></td></tr>
+        <tr><td class="news-date">31 Mar 26</td><td><a href="https://www.rodenstock.com/company/press/Croatian-lenses-distributor" target="_blank">Acquires Croatian lens distributors NI-VA Lens and DEA Lens Project</a></td></tr>
+        <tr><td class="news-date">30 Sep 25</td><td><a href="https://www.rodenstock.com/company/press/neue-cfo" target="_blank">Dr. Martina Bentele (Siemens Energy) named CFO, effective 01-Feb-26</a></td></tr>
+        <tr><td class="news-date">12 Sep 25</td><td><a href="https://9fin.com/news/00556aea-4fd1-4581-b503-f2325f05ee6d" target="_blank">9fin: refi "ongoing" (last pipeline mention; drops out next edition)</a></td></tr>
+        <tr><td class="news-date">14 May 25</td><td><a href="https://9fin.com/documents/7a2294c0-2311-4119-a3fe-918d2d21fa05#page=1" target="_blank">FY24 results: revenue EUR512.4m (+1.2%), adj. EBITDA EUR128.6m (+5.1%)</a></td></tr>
+        <tr><td class="news-date">16 Apr 25</td><td><a href="https://www.rodenstock.com/company/press/expansion-executive-management-team" target="_blank">Exec team restructured; CEO covers CFO role ad interim after Herold's exit</a></td></tr>
+        <tr><td class="news-date">02 Apr 25</td><td><a href="https://www.moodys.com/research/Moodys-Ratings-downgrades-Rodenstock-to-Caa1-stable-outlook-Rating-Action--PR_504882" target="_blank">Moody's downgrades to Caa1 from B3, stable outlook</a></td></tr>
+        <tr><td class="news-date">21 Mar 25</td><td><a href="https://9fin.com/news/17b2d373-1ee3-4472-83ee-7d913dc7aad2" target="_blank">9fin: Apax explores private credit refi of EUR810m TLB; loans quoted 95.5</a></td></tr>
+        <tr><td class="news-date">19 Dec 24</td><td><a href="https://eot-news.de/dr-mani-herold-wird-chief-financial-officer-der-vtg-gruppe/" target="_blank">CFO Dr. Mani Herold to leave for VTG Group (effective 01-Apr-25)</a></td></tr>
+        <tr><td class="news-date">25 Apr 24</td><td><a href="https://www.moodys.com/research/Moodys-Ratings-changes-Rodenstocks-outlook-to-negative-affirms-B3-ratings-Rating-Action--PR_489101" target="_blank">Moody's affirms B3, outlook to negative from stable</a></td></tr>
+        <tr><td class="news-date">12 Dec 22</td><td><a href="https://www.handelsblatt.com/unternehmen/handel-konsumgueter/optik-rodenstock-verkauft-sein-brillengeschaeft/28862108.html" target="_blank">Eyewear division sold to De Rigo; refocus on lenses-only</a></td></tr>
+        <tr><td class="news-date">24 May 22</td><td><a href="https://9fin.com/news/0313a9ba-dba7-4c75-9089-beb3ac400c74" target="_blank">SFA amended and restated; EUR150-170m add-on TLB issued</a></td></tr>
+        <tr><td class="news-date">20 May 21</td><td><a href="https://9fin.com/news/986907b1-e774-4687-90f5-9b20cdd8dcb7" target="_blank">EUR660m 7yr cov-lite TLB + EUR120m RCF priced, backing Apax/Mubadala buyout</a></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="footnote">17 of 21 identified credit-relevant items shown (space); full list with sources in the backing JSON. Excluded as routine: a regional press release, an ESG/compliance note, and five product-award releases (Oct-25 to Apr-26). All links checked live on 27-Sep-2026; the FY24 results link requires a 9fin login.</p>
+  </div>
+
+  <!-- Trading -->
+  <div class="section full">
+    <div class="section-title">Trading: EUR660m / EUR150m TLBs due 2028 (May 2021 - Sep 2026, weekly)</div>
+    <div id="chart-container" style="width:100%; overflow-x:auto">
+      <svg id="price-chart" viewBox="0 0 720 200" style="width:100%; height:auto; max-height:220px; display:block"></svg>
+    </div>
+    <div style="display:flex; justify-content:space-between; font-size:9px; color:var(--text-muted); margin-top:4px">
+      <span>Source: 9fin pricing data (user upload). Both tranches print identically. Last price: 93.18 (25 Sep 2026)</span>
+      <span>Low: 83.14 (30 Jan 23) | High: 100.71 (05 Jan 22)</span>
+    </div>
+    <p class="footnote">Price path: at/above par 2021-early 2022; 2022 leveraged-loan sell-off to an all-time low of 83.14 (Jan-23), recovering to c.98 by early 2024; two company-specific legs down (Apr-24 negative outlook, -4.3pts in 2 weeks; Apr-25 Caa1 downgrade, -4.3pts in a week, extending to 88.35 by mid-May); a further leg to 86.64 (Apr-26, no identified company catalyst, coincides with stalled refi pipeline mentions); range-bound 92-94 since Jun-26 with muted reaction to the Fitch assignment (+1pt) and Moody's withdrawal (no reaction). Current level signals the market is pricing refinancing risk, not a distressed outcome.</p>
+  </div>
+
+  <!-- Debt Holdings -->
+  <div class="section full">
+    <div class="section-title">Debt Holdings: EUR660m TLB (21 holders identified, updated 16-Sep-2026)</div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Holder</th><th class="num">Amount (EUR m)</th><th class="num">% Held</th><th class="num">Cumulative %</th></tr></thead>
+      <tbody>
+        <tr><td>Intermediate Capital Group plc</td><td class="num">95.0</td><td class="num">14.39%</td><td class="num">14.39%</td></tr>
+        <tr><td>Palmer Square Capital Management</td><td class="num">35.7</td><td class="num">5.40%</td><td class="num">19.79%</td></tr>
+        <tr><td>Trinitas Capital Management</td><td class="num">32.4</td><td class="num">4.92%</td><td class="num">24.71%</td></tr>
+        <tr><td>Onex Credit Partners</td><td class="num">27.6</td><td class="num">4.19%</td><td class="num">28.90%</td></tr>
+        <tr><td>CIFC Asset Management</td><td class="num">24.0</td><td class="num">3.64%</td><td class="num">32.54%</td></tr>
+        <tr><td>Barings LLC</td><td class="num">20.9</td><td class="num">3.17%</td><td class="num">35.71%</td></tr>
+        <tr><td>Chenavari Investment Management</td><td class="num">16.5</td><td class="num">2.50%</td><td class="num">38.21%</td></tr>
+        <tr><td>Bain Capital Credit</td><td class="num">16.4</td><td class="num">2.48%</td><td class="num">40.69%</td></tr>
+        <tr><td>King Street Capital Management</td><td class="num">16.2</td><td class="num">2.45%</td><td class="num">43.14%</td></tr>
+        <tr><td>CVC Credit Partners</td><td class="num">13.0</td><td class="num">1.97%</td><td class="num">45.11%</td></tr>
+        <tr class="total-row"><td><strong>Total top 10</strong></td><td class="num"><strong>297.7</strong></td><td class="num"><strong>45.11%</strong></td><td class="num"><strong>45.11%</strong></td></tr>
+        <tr><td><em>Other identified holders (11)</em></td><td class="num">85.7</td><td class="num">13.00%</td><td class="num">58.11%</td></tr>
+        <tr><td><em>Unidentified</em></td><td class="num">276.6</td><td class="num">41.89%</td><td class="num">100.00%</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="footnote">Source: 9fin Holders and Transactions screen (user upload, updated 16-Sep-2026). Predominantly CLO managers. Top 6 hold 35.71% &mdash; close to blocking a two-thirds majority lender vote on standard LMA thresholds (not confirmed from the SFA). Holder data for the EUR150m tranche and RCF lender group not available.</p>
+  </div>
+
+  <!-- Recommendation -->
+  <div class="section full">
+    <div class="rec-box">
+      <div class="rec-title">Recommendation: Add to Restructuring Watchlist</div>
+      <p style="color:var(--text); font-size:11px; line-height:1.55">All three triggers are present. <strong>Maturity wall:</strong> EUR965m of senior secured debt (RCF due Dec-27, TLB due Jun-28) remains unrefinanced after 18 months of sponsor-led effort; Fitch's own six-month refinancing window closes c.early Jan-2027, and its rating case does not expect a deal before 2027, at a higher (6%) margin. <strong>Liquidity:</strong> only c.EUR48m accessible at end-2025, FCF negative, Fitch flags possible downgrade to CCC. <strong>Covenant:</strong> the RCF's 9.5x springing test is live (71% drawn); no breach reported but headroom unconfirmed. Execution risk is compounded by a vacant CEO seat and a CFO eight months into the role leading the refinancing.</p>
+      <p style="color:var(--text); font-size:11px; line-height:1.55; margin-top:6px">Fitch's own recovery analysis implies c.48% recovery on the senior secured stack in a distressed scenario (RR4) &mdash; well below the current 93.2 trading price, meaning the market has not yet priced that outcome. <strong>Next steps:</strong> watch for a refinancing launch, amend-and-extend, or sponsor equity commitment before early Jan-2027; the CEO appointment; FY2025 audited accounts; and Fitch's review at the end of its six-month window.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Prepared 27 Sep 2026 (rev. 2) | Source: Fitch Ratings (06-Jul-26, user upload), 9fin (screener, news, document search, pricing and holder exports, user uploads), company press releases, web search | CMCK Associates &mdash; For internal use only
+</div>
+
+<script>
+(function(){
+  var data = [
+    ["2021-05-14",97.25],["2021-05-21",97.25],["2021-05-28",97.199],["2021-06-04",97.284],
+    ["2021-06-11",97.497],["2021-06-18",97.754],["2021-06-25",97.855],["2021-07-02",98.32],
+    ["2021-07-09",98.25],["2021-07-16",98.5],["2021-07-23",98.805],["2021-07-30",98.922],
+    ["2021-08-06",99.262],["2021-08-13",99.5],["2021-08-20",99.826],["2021-08-27",100.077],
+    ["2021-09-03",100.279],["2021-09-10",100.425],["2021-09-17",100.539],["2021-09-24",100.318],
+    ["2021-10-01",100.341],["2021-10-08",100.415],["2021-10-15",100.325],["2021-10-22",100.422],
+    ["2021-10-29",100.484],["2021-11-05",100.363],["2021-11-12",100.342],["2021-11-19",100.391],
+    ["2021-11-26",100.358],["2021-12-03",100.418],["2021-12-10",100.554],["2021-12-17",100.471],
+    ["2021-12-24",100.509],["2021-12-31",100.14],["2022-01-07",100.419],["2022-01-14",100.509],
+    ["2022-01-21",100.4],["2022-01-28",100.357],["2022-02-04",100.282],["2022-02-11",100.159],
+    ["2022-02-18",99.84],["2022-02-25",99.622],["2022-03-04",99.543],["2022-03-11",97.955],
+    ["2022-03-18",98.789],["2022-03-25",99.003],["2022-04-01",99.491],["2022-04-08",99.305],
+    ["2022-04-15",99.299],["2022-04-22",99.704],["2022-04-29",99.543],["2022-05-06",99.23],
+    ["2022-05-13",97.765],["2022-05-20",97.412],["2022-05-27",97.5],["2022-06-03",97.235],
+    ["2022-06-10",97.243],["2022-06-17",95.567],["2022-06-24",93.39],["2022-07-01",91.859],
+    ["2022-07-08",88.576],["2022-07-15",88.745],["2022-07-22",90.257],["2022-07-29",91.339],
+    ["2022-08-05",92.765],["2022-08-12",92.585],["2022-08-19",93.321],["2022-08-26",93.009],
+    ["2022-09-02",92.884],["2022-09-09",92.839],["2022-09-16",92.585],["2022-09-23",92.033],
+    ["2022-09-30",89.665],["2022-10-07",89.055],["2022-10-14",86.453],["2022-10-21",86.059],
+    ["2022-10-28",86.023],["2022-11-04",86.528],["2022-11-11",87.047],["2022-11-18",87.31],
+    ["2022-11-25",87.066],["2022-12-02",86.992],["2022-12-09",86.553],["2022-12-16",86.646],
+    ["2022-12-23",86.506],["2022-12-30",86.502],["2023-01-06",86.463],["2023-01-13",86.665],
+    ["2023-01-20",85.426],["2023-01-27",83.389],["2023-02-03",83.34],["2023-02-10",84.27],
+    ["2023-02-17",85.208],["2023-02-24",85.206],["2023-03-03",86.226],["2023-03-10",86.338],
+    ["2023-03-17",86.439],["2023-03-24",85.967],["2023-03-31",86.619],["2023-04-07",86.237],
+    ["2023-04-14",86.382],["2023-04-21",86.547],["2023-04-28",86.928],["2023-05-05",87.974],
+    ["2023-05-12",88.297],["2023-05-19",89.115],["2023-05-26",89.472],["2023-06-02",89.456],
+    ["2023-06-09",90.527],["2023-06-16",90.484],["2023-06-23",90.758],["2023-06-30",90.767],
+    ["2023-07-07",90.733],["2023-07-14",91.242],["2023-07-21",92.002],["2023-07-28",91.995],
+    ["2023-08-04",92.152],["2023-08-11",92.722],["2023-08-18",94.301],["2023-08-25",96.191],
+    ["2023-09-01",96.787],["2023-09-08",96.729],["2023-09-15",97.477],["2023-09-22",98.087],
+    ["2023-09-29",97.893],["2023-10-06",97.05],["2023-10-13",96.42],["2023-10-20",96.326],
+    ["2023-10-27",96.276],["2023-11-03",96.82],["2023-11-10",96.5],["2023-11-17",96.441],
+    ["2023-11-24",96.51],["2023-12-01",96.471],["2023-12-08",96.53],["2023-12-15",96.639],
+    ["2023-12-22",96.797],["2023-12-29",96.81],["2024-01-05",96.82],["2024-01-12",96.828],
+    ["2024-01-19",97.202],["2024-01-26",97.703],["2024-02-02",97.904],["2024-02-09",98.002],
+    ["2024-02-16",97.929],["2024-02-23",97.986],["2024-03-01",97.942],["2024-03-08",97.85],
+    ["2024-03-15",98.17],["2024-03-22",98.053],["2024-03-29",98.045],["2024-04-05",98.092],
+    ["2024-04-12",98.151],["2024-04-19",98.2],["2024-04-26",96.257],["2024-05-03",95.218],
+    ["2024-05-10",94.466],["2024-05-17",94.993],["2024-05-24",94.965],["2024-05-31",94.705],
+    ["2024-06-07",95.333],["2024-06-14",95.28],["2024-06-21",95.54],["2024-06-28",95.241],
+    ["2024-07-05",95.438],["2024-07-12",95.523],["2024-07-19",95.877],["2024-07-26",96.582],
+    ["2024-08-02",96.587],["2024-08-09",96.547],["2024-08-16",96.381],["2024-08-23",96.249],
+    ["2024-08-30",96.005],["2024-09-06",96.214],["2024-09-13",96.177],["2024-09-20",96.18],
+    ["2024-09-27",95.235],["2024-10-04",94.862],["2024-10-11",94.561],["2024-10-18",95.003],
+    ["2024-10-25",94.855],["2024-11-01",94.84],["2024-11-08",95.049],["2024-11-15",95.678],
+    ["2024-11-22",95.419],["2024-11-29",95.423],["2024-12-06",95.568],["2024-12-13",96.0],
+    ["2024-12-20",96.064],["2024-12-27",96.258],["2025-01-03",96.723],["2025-01-10",97.947],
+    ["2025-01-17",98.537],["2025-01-24",98.549],["2025-01-31",98.607],["2025-02-07",98.228],
+    ["2025-02-14",98.209],["2025-02-21",98.301],["2025-02-28",98.197],["2025-03-07",98.362],
+    ["2025-03-14",97.435],["2025-03-21",95.477],["2025-03-28",96.268],["2025-04-04",93.874],
+    ["2025-04-11",92.352],["2025-04-18",91.291],["2025-04-25",91.207],["2025-05-02",89.574],
+    ["2025-05-09",88.928],["2025-05-16",89.069],["2025-05-23",90.89],["2025-05-30",93.906],
+    ["2025-06-06",94.111],["2025-06-13",94.105],["2025-06-20",93.763],["2025-06-27",93.723],
+    ["2025-07-04",93.5],["2025-07-11",93.5],["2025-07-18",93.462],["2025-07-25",93.234],
+    ["2025-08-01",93.306],["2025-08-08",93.706],["2025-08-15",93.972],["2025-08-22",94.497],
+    ["2025-08-29",94.181],["2025-09-05",93.355],["2025-09-12",94.22],["2025-09-19",93.971],
+    ["2025-09-26",94.021],["2025-10-03",94.061],["2025-10-10",93.96],["2025-10-17",93.124],
+    ["2025-10-24",92.889],["2025-10-31",93.14],["2025-11-07",91.923],["2025-11-14",91.566],
+    ["2025-11-21",91.357],["2025-11-28",91.75],["2025-12-05",92.114],["2025-12-12",92.295],
+    ["2025-12-19",92.506],["2025-12-26",92.313],["2026-01-02",92.902],["2026-01-09",92.56],
+    ["2026-01-16",92.531],["2026-01-23",92.483],["2026-01-30",92.274],["2026-02-06",91.993],
+    ["2026-02-13",91.835],["2026-02-21",91.831],["2026-02-28",91.919],["2026-03-07",90.915],
+    ["2026-03-14",89.72],["2026-03-21",89.647],["2026-03-28",89.47],["2026-04-04",86.639],
+    ["2026-04-11",87.735],["2026-04-18",89.407],["2026-04-24",91.438],["2026-05-02",91.231],
+    ["2026-05-09",91.094],["2026-05-16",91.653],["2026-05-23",92.006],["2026-05-30",92.84],
+    ["2026-06-06",93.233],["2026-06-13",92.918],["2026-06-20",92.824],["2026-06-27",92.654],
+    ["2026-07-04",92.7],["2026-07-11",93.485],["2026-07-18",93.593],["2026-07-25",93.304],
+    ["2026-08-01",93.641],["2026-08-08",93.325],["2026-08-15",93.09],["2026-08-22",93.007],
+    ["2026-08-29",93.313],["2026-09-05",93.056],["2026-09-12",93.057],["2026-09-19",92.933],
+    ["2026-09-25",93.178]
+  ];
+
+  var svg = document.getElementById("price-chart");
+  var W = 720, H = 200;
+  var pad = {t:16, r:14, b:26, l:32};
+  var cW = W - pad.l - pad.r;
+  var cH = H - pad.t - pad.b;
+
+  var minP = 80, maxP = 102;
+  var range = maxP - minP;
+
+  var d0 = new Date(data[0][0]), d1 = new Date(data[data.length-1][0]);
+  var tRange = d1 - d0;
+
+  function x(dateStr) { return pad.l + ((new Date(dateStr) - d0) / tRange) * cW; }
+  function y(price) { return pad.t + cH - ((price - minP) / range) * cH; }
+
+  var cs = getComputedStyle(document.documentElement);
+  var textC = cs.getPropertyValue("--text-muted").trim() || "#888";
+  var lineC = cs.getPropertyValue("--accent").trim() || "#7C77B9";
+  var gridC = cs.getPropertyValue("--border").trim() || "#ddd";
+  var surfC = cs.getPropertyValue("--surface").trim() || "#f8f8f8";
+  var critC = cs.getPropertyValue("--critical").trim() || "#C44536";
+
+  var g = "";
+
+  var ticks = [80, 85, 90, 95, 100];
+  for (var i = 0; i < ticks.length; i++) {
+    var yy = y(ticks[i]);
+    g += '<line x1="'+pad.l+'" y1="'+yy+'" x2="'+(W-pad.r)+'" y2="'+yy+'" stroke="'+gridC+'" stroke-width="0.5" stroke-dasharray="2,2"/>';
+    g += '<text x="'+(pad.l-4)+'" y="'+(yy+3)+'" text-anchor="end" fill="'+textC+'" font-size="8" font-family="system-ui,sans-serif">'+ticks[i]+'</text>';
+  }
+
+  var years = ["2022-01-01","2023-01-01","2024-01-01","2025-01-01","2026-01-01"];
+  var yLabels = ["2022","2023","2024","2025","2026"];
+  for (var i = 0; i < years.length; i++) {
+    var xx = x(years[i]);
+    g += '<line x1="'+xx+'" y1="'+pad.t+'" x2="'+xx+'" y2="'+(H-pad.b)+'" stroke="'+gridC+'" stroke-width="0.5" stroke-dasharray="2,2"/>';
+    g += '<text x="'+xx+'" y="'+(H-pad.b+12)+'" text-anchor="middle" fill="'+textC+'" font-size="8" font-family="system-ui,sans-serif">'+yLabels[i]+'</text>';
+  }
+
+  var parLine = y(100);
+  g += '<line x1="'+pad.l+'" y1="'+parLine+'" x2="'+(W-pad.r)+'" y2="'+parLine+'" stroke="'+textC+'" stroke-width="0.7" stroke-dasharray="4,3" opacity="0.6"/>';
+  g += '<text x="'+(W-pad.r+2)+'" y="'+(parLine+3)+'" fill="'+textC+'" font-size="7" font-family="system-ui,sans-serif" opacity="0.6">par</text>';
+
+  var areaPath = "M" + x(data[0][0]) + "," + (H-pad.b);
+  var linePath = "M" + x(data[0][0]) + "," + y(data[0][1]);
+  for (var i = 0; i < data.length; i++) {
+    var px = x(data[i][0]);
+    var py = y(data[i][1]);
+    if (i > 0) { linePath += " L" + px + "," + py; }
+    areaPath += " L" + px + "," + py;
+  }
+  areaPath += " L" + x(data[data.length-1][0]) + "," + (H-pad.b) + " Z";
+
+  g += '<path d="' + areaPath + '" fill="' + lineC + '" opacity="0.08"/>';
+  g += '<path d="' + linePath + '" fill="none" stroke="' + lineC + '" stroke-width="1.5" stroke-linejoin="round"/>';
+
+  var callouts = [
+    {date:"2024-04-25", price:98.07, label:"Moody's outlook negative", color: "#D4A017"},
+    {date:"2025-04-02", price:96.17, label:"Moody's downgrade Caa1", color: critC},
+    {date:"2026-04-04", price:86.639, label:"Low: refi stalls", color: critC},
+    {date:"2026-07-06", price:92.93, label:"Fitch B- assigned", color: "#2E8B57"}
+  ];
+  for (var i = 0; i < callouts.length; i++) {
+    var c = callouts[i];
+    var cx = x(c.date), cy = y(c.price);
+    g += '<circle cx="'+cx+'" cy="'+cy+'" r="2.3" fill="'+c.color+'" stroke="'+surfC+'" stroke-width="1"/>';
+    g += '<line x1="'+cx+'" y1="'+(cy-16)+'" x2="'+cx+'" y2="'+(cy-4)+'" stroke="'+c.color+'" stroke-width="0.7"/>';
+    g += '<text x="'+cx+'" y="'+(cy-18)+'" text-anchor="middle" fill="'+c.color+'" font-size="6.5" font-weight="600" font-family="system-ui,sans-serif">'+c.label+'</text>';
+  }
+
+  var last = data[data.length-1];
+  var currX = x(last[0]), currY = y(last[1]);
+  g += '<circle cx="'+currX+'" cy="'+currY+'" r="2.8" fill="'+lineC+'" stroke="'+surfC+'" stroke-width="1"/>';
+  g += '<text x="'+(currX-4)+'" y="'+(currY+14)+'" text-anchor="end" fill="'+lineC+'" font-size="8" font-weight="700" font-family="system-ui,sans-serif">93.18</text>';
+
+  svg.innerHTML = g;
+})();
+</script>
+</content>

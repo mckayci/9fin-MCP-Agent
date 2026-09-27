@@ -1,0 +1,987 @@
+{
+  "company": "Rodenstock",
+  "company_id_9fin": 1348,
+  "prepared": "27-Sep-2026",
+  "revision": "v2, 27-Sep-2026. Supersedes v1. Adds FY2025 from the Fitch rating action commentary 'Fitch Assigns Rodenstock B- IDR; Outlook Stable' (06-Jul-2026, committee 01-Jul-2026), which Ciaran uploaded to /resources/Rodenstock/. Corrects the v1 narrative: FY2025 performance deteriorated against FY2024. It did not continue to improve.",
+  "currency": "EUR millions (as reported by 9fin, the company and Fitch)",
+  "data_vintage_warning": {
+    "flag_for_manual_review": true,
+    "message": "Three data vintages on three different bases. (1) 9fin structured tables, FY2016-FY2020: full P&L, cash flow and balance sheet. The most recent detailed financials available are as of 31-Dec-2020, more than two years old. (2) Company results press releases, FY2022 PF-FY2024: revenue and company-defined EBITDA only. (3) Fitch rating action commentary, FY2025 (published 06-Jul-2026): sales, Fitch-adjusted EBITDA margin, gross margin, leverage, cash and RCF drawings, plus Fitch's 2026-2030 rating case. Fitch does not publish absolute EBITDA. The EUR figure shown is an analyst calculation (margin x sales). No company-reported FY2025 figures and no H1-2026 or LTM figures are held. The FY2025 audited accounts or company results release (usual timing around mid-May) are still needed to rebuild FCF and reconcile the Fitch and company EBITDA definitions.",
+    "most_recent_detailed_financials_as_of": "31-Dec-2020 (FY2020, 9fin structured data)",
+    "most_recent_headline_financials_as_of": "31-Dec-2025 (FY2025, Fitch-adjusted, per Fitch rating action commentary dated 06-Jul-2026)",
+    "most_recent_company_reported_financials_as_of": "31-Dec-2024 (FY2024, company press release dated 14-May-2025)"
+  },
+  "business_description": "Rodenstock is a Munich-based maker of ophthalmic (spectacle) lenses, founded in 1877. It has around 5,000 employees and 6 central production sites, and sells in more than 85 countries through its own offices and distribution partners. Customers are independent opticians and optical retail chains. The business is built around premium individualised progressive lenses: the B.I.G. VISION range uses biometric eye measurements taken with the company's DNEye scanner (DNEye Scanner 3 launched in 2024). Fitch (06-Jul-2026) cites 610 patents and says 40% of core sales come from highly differentiated products with few direct competitors, which supports pricing power and long-standing relationships with independent opticians. Manufacturing is weighted to lower-cost sites in Eastern Europe and Asia, and Fitch puts the gross margin at 61%. The group also sells MyCon myopia-control lenses for children, launched in 2023, with sales up 62% in 2024. Germany is the largest market at 31% of 2025 sales (Fitch), down from c.40% in FY2020, when the perimeter still included eyewear. Fitch describes the German market as soft: premium multifocal lenses carry high out-of-pocket costs, and consumers are delaying purchases or trading down. The group is growing outside Germany, mainly in Latin America. Rodenstock is a mid-cap player (2025 sales EUR493m) next to EssilorLuxottica, Hoya and Zeiss, and Fitch and 9fin both flag scale as a constraint. The eyewear (frames) division was sold to De Rigo in Dec-2022, which left Rodenstock as a lenses-only business.\n\nRecent performance: on the company's comparable basis, revenue was broadly flat at EUR505-512m over FY2022-FY2024. Company-defined EBITDA rose from EUR122.0m to EUR128.6m (25.1% margin) in FY2024, helped by B.I.G. VISION, double-digit growth at Indo Optical and key account growth excluding GrandVision. FY2025 went the other way. Fitch reports 2025 sales of EUR493m, 3.8% below the company's FY2024 figure (the two are on different bases), and a Fitch-adjusted EBITDA margin of 22.0% (implied c.EUR108m). Fitch describes FY2025 free cash flow as particularly weak because of lower EBITDA, higher capex, sizeable interest expense and material restructuring costs. Part of the gap to the company's 25.1% FY2024 margin is definitional (see summary financials notes), but Fitch explicitly states that EBITDA was lower in 2025. Fitch's rating case has a low-single-digit sales decline in 2026 as the GrandVision (GV) supply contract phases out, then growth of 3.0-3.2% a year over 2027-2030. It expects the margin to recover to 24.4% in 2026 and move towards 26% by 2029-2030 on executed cost savings, better mix and footprint optimisation. Reported numbers do not yet show that recovery.\n\nCorporate history: this is Rodenstock's second period of lender-level stress. Financial difficulties led the founding family to sell to Permira in 2003, and Permira sold to Bridgepoint in 2006. In 2010, under Bridgepoint, the group entered a standstill to avoid default on EUR370m of debt, alongside EUR190m of unfunded German pension liabilities. In 2011 lenders RBS and Societe Generale took 49% of the equity and provided EUR35-40m of new money. Compass Partners took a majority stake in 2016 and full control in 2018, then ran an operational restructuring focused on lenses. Existing shareholders injected EUR75m of equity in Jun-2020 in response to the pandemic. In 2021 Apax (c.73%), Mubadala (c.24%) and management (c.3%) bought the company, pre-empting a planned auction, at a reported EV of EUR1.275bn, about 10.2x marketed 2021 EBITDA of EUR125m. The buyout was funded with EUR610m of equity plus a EUR660m TLB and a EUR120m RCF, and the facilities were amended and restated in May-2022 with an add-on TLB. In Mar-2025 9fin reported that Apax was in early talks to refinance the 2028 TLBs. As of Fitch's 06-Jul-2026 report, no refinancing had been completed. Fitch's first-time B- IDR (Stable) assumes a refinancing, or a credible plan, within about six months, covering the EUR125m RCF (EUR89m drawn at end-2025, due Dec-2027) and the EUR840m TLB (due Jun-2028). The current Mubadala stake is not confirmed.",
+  "business_description_sources": [
+    {
+      "title": "Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable (Fitch Ratings, 06-Jul-2026). Local copy: /Users/ciaranmckay/Claude/9fin-agent/resources/Rodenstock/Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable.pdf",
+      "url": "https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+    },
+    {
+      "title": "Rodenstock Financial Statements FY 2024 (company press release, 14-May-2025)",
+      "url": "https://9fin.com/documents/7a2294c0-2311-4119-a3fe-918d2d21fa05#page=1"
+    },
+    {
+      "title": "Rodenstock Financial Statements FY 2023 (company press release, 15-May-2024)",
+      "url": "https://9fin.com/documents/f9f9382c-fa70-4c3b-b4e3-8a83104e8f82#page=1"
+    },
+    {
+      "title": "Rodenstock explores private credit options for EUR810m TLB refi (9fin, 21-Mar-2025)",
+      "url": "https://9fin.com/news/17b2d373-1ee3-4472-83ee-7d913dc7aad2"
+    },
+    {
+      "title": "Is Rodenstock seeing clearly? (9fin, 20-May-2021)",
+      "url": "https://9fin.com/news/986907b1-e774-4687-90f5-9b20cdd8dcb7"
+    },
+    {
+      "title": "Sales by Geography for Rodenstock (9fin)",
+      "url": "https://9fin.com/company/Rodenstock/financials?statements=Sales%20by%20Geography&seriesGroup=Annual"
+    }
+  ],
+  "revenue_splits": {
+    "currency": "EUR millions",
+    "vintage_note": "The most recent full split data is as of 31-Dec-2020. 9fin only holds segment and geography splits for FY2019 and FY2020. The FY2023 and FY2024 company press releases give group totals only. For FY2025 only the group total (Fitch, EUR493m) and Germany's share (31%, Fitch) are available. Likely source for current splits: FY2025 audited accounts (Bundesanzeiger filing) or the lender presentation.",
+    "by_segment": [
+      {
+        "segment": "Lenses",
+        "FY2019": "377.7",
+        "FY2019_pct": "84.0%",
+        "FY2020": "344.9",
+        "FY2020_pct": "86.0%",
+        "FY2022": "not available - further diligence required",
+        "FY2023": "not available - further diligence required",
+        "FY2024": "not available - further diligence required",
+        "FY2025": "not available - further diligence required"
+      },
+      {
+        "segment": "Eyewear (divested Dec-2022)",
+        "FY2019": "50.3",
+        "FY2019_pct": "11.2%",
+        "FY2020": "34.6",
+        "FY2020_pct": "8.6%",
+        "FY2022": "not available - further diligence required",
+        "FY2023": "n.a. (divested)",
+        "FY2024": "n.a. (divested)",
+        "FY2025": "n.a. (divested)"
+      },
+      {
+        "segment": "Others",
+        "FY2019": "21.7",
+        "FY2019_pct": "4.8%",
+        "FY2020": "21.5",
+        "FY2020_pct": "5.4%",
+        "FY2022": "not available - further diligence required",
+        "FY2023": "not available - further diligence required",
+        "FY2024": "not available - further diligence required",
+        "FY2025": "not available - further diligence required"
+      },
+      {
+        "segment": "Total",
+        "FY2019": "449.7",
+        "FY2019_pct": "100.0%",
+        "FY2020": "401.0",
+        "FY2020_pct": "100.0%",
+        "FY2022": "505.3 (company pro forma, total only)",
+        "FY2023": "506.1 (company comparable basis, total only)",
+        "FY2024": "512.4 (company comparable basis, total only)",
+        "FY2025": "493 (Fitch, total only)"
+      }
+    ],
+    "by_segment_note": "NOT REPRESENTATIVE OF THE CURRENT BUSINESS. The Eyewear segment (EUR34.6m, 8.6% of FY2020 sales) was sold to De Rigo in Dec-2022, so Rodenstock is now lenses-only. FY2022-FY2025 totals are shown for reference only and are not split by segment. FY2022-FY2024 are company pro forma / comparable-basis figures and FY2025 is Fitch's figure, so the FY2024 to FY2025 move crosses sources (see summary financials notes). Product mix indicator (Fitch, 2025): 40% of core sales come from highly differentiated products with few direct competitors.",
+    "by_segment_illustrative_ex_eyewear": {
+      "label": "Illustrative continuing-perimeter mix (FY2019/FY2020 excluding Eyewear, analyst calculation from 9fin segment data)",
+      "rows": [
+        {
+          "segment": "Lenses",
+          "FY2019": "377.7",
+          "FY2019_pct": "94.6%",
+          "FY2020": "344.9",
+          "FY2020_pct": "94.1%"
+        },
+        {
+          "segment": "Others",
+          "FY2019": "21.7",
+          "FY2019_pct": "5.4%",
+          "FY2020": "21.5",
+          "FY2020_pct": "5.9%"
+        },
+        {
+          "segment": "Total ex-Eyewear",
+          "FY2019": "399.4",
+          "FY2019_pct": "100.0%",
+          "FY2020": "366.4",
+          "FY2020_pct": "100.0%"
+        }
+      ]
+    },
+    "by_geography": [
+      {
+        "region": "Germany",
+        "FY2019": "175.6",
+        "FY2019_pct": "39.0%",
+        "FY2020": "159.1",
+        "FY2020_pct": "39.7%",
+        "FY2022": "not available - further diligence required",
+        "FY2023": "not available - further diligence required",
+        "FY2024": "not available - further diligence required",
+        "FY2025": "c.153 (implied: 31% x EUR493m, analyst calculation)",
+        "FY2025_pct": "31% (Fitch)"
+      },
+      {
+        "region": "Rest of Europe",
+        "FY2019": "198.6",
+        "FY2019_pct": "44.2%",
+        "FY2020": "180.3",
+        "FY2020_pct": "45.0%",
+        "FY2022": "not available - further diligence required",
+        "FY2023": "not available - further diligence required",
+        "FY2024": "not available - further diligence required",
+        "FY2025": "not available - further diligence required",
+        "FY2025_pct": "not available - further diligence required"
+      },
+      {
+        "region": "Asia",
+        "FY2019": "26.8",
+        "FY2019_pct": "6.0%",
+        "FY2020": "17.9",
+        "FY2020_pct": "4.5%",
+        "FY2022": "not available - further diligence required",
+        "FY2023": "not available - further diligence required",
+        "FY2024": "not available - further diligence required",
+        "FY2025": "not available - further diligence required",
+        "FY2025_pct": "not available - further diligence required"
+      },
+      {
+        "region": "Rest of World",
+        "FY2019": "48.6",
+        "FY2019_pct": "10.8%",
+        "FY2020": "43.6",
+        "FY2020_pct": "10.9%",
+        "FY2022": "not available - further diligence required",
+        "FY2023": "not available - further diligence required",
+        "FY2024": "not available - further diligence required",
+        "FY2025": "not available - further diligence required",
+        "FY2025_pct": "not available - further diligence required"
+      },
+      {
+        "region": "Total",
+        "FY2019": "449.6",
+        "FY2019_pct": "100.0%",
+        "FY2020": "400.9",
+        "FY2020_pct": "100.0%",
+        "FY2022": "505.3 (company pro forma, total only)",
+        "FY2023": "506.1 (company, total only)",
+        "FY2024": "512.4 (company, total only)",
+        "FY2025": "493 (Fitch, total only)",
+        "FY2025_pct": "100%"
+      }
+    ],
+    "by_geography_note": "The FY2019/FY2020 geography splits include the since-divested Eyewear business, which cannot be removed by region from 9fin data. In each of those years the sum of regions differs from reported revenue by EUR0.1m due to rounding. Germany's share fell from 39.7% (FY2020, including eyewear) to 31% (FY2025, Fitch, lenses-only). Fitch attributes this to slow expansion into higher-growth markets outside Germany, but the perimeter change and the soft German market also contribute and cannot be separated with the data available. Germany remains the largest single market, and Fitch describes it as soft, with consumers delaying or trading down premium multifocal purchases.",
+    "sources": [
+      {
+        "title": "Sales by Segment for Rodenstock (9fin)",
+        "url": "https://9fin.com/company/Rodenstock/financials?statements=Sales%20by%20Segment&seriesGroup=Annual"
+      },
+      {
+        "title": "Sales by Geography for Rodenstock (9fin)",
+        "url": "https://9fin.com/company/Rodenstock/financials?statements=Sales%20by%20Geography&seriesGroup=Annual"
+      },
+      {
+        "title": "Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable (06-Jul-2026)",
+        "url": "https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+      }
+    ]
+  },
+  "summary_financials": {
+    "currency": "EUR millions",
+    "headline": "FY2025 was weaker than FY2024. Fitch reports sales of EUR493m (-3.8% against the company's FY2024 figure, cross-basis) and a 22.0% Fitch-adjusted EBITDA margin (implied c.EUR108m). It also reports 8.5x EBITDA leverage, negative FCF, EUR28m cash (EUR12m available per Fitch) and a RCF that is 71% drawn. Part of the drop against the company's FY2024 EUR128.6m / 25.1% is definitional, but Fitch explicitly states that 2025 EBITDA was lower.",
+    "periods": [
+      "FY2018",
+      "FY2019",
+      "FY2020",
+      "FY2022 PF",
+      "FY2023",
+      "FY2024",
+      "FY2025"
+    ],
+    "period_basis_row": {
+      "label": "Source / basis",
+      "values": [
+        "9fin structured",
+        "9fin structured",
+        "9fin structured",
+        "Company PR (pro forma)",
+        "Company PR (comparable)",
+        "Company PR (comparable)",
+        "Fitch-adjusted (Jul-2026)"
+      ],
+      "display_note": "Render as a header row directly under the period labels so the reader sees the basis change between FY2024 and FY2025. Suggest a vertical divider or light shading on the FY2025 column."
+    },
+    "period_sources": {
+      "FY2018": "9fin structured tables (key financials, cash flow, balance sheet)",
+      "FY2019": "9fin structured tables",
+      "FY2020": "9fin structured tables",
+      "FY2022 PF": "FY2023 company press release (15-May-2024): FY2022 pro forma revenue EUR505.3m. FY2022 pro forma recurring EBITDA of EUR122.0m is derived from the stated FY2023 figure of EUR122.3m and the stated increase of EUR0.3m",
+      "FY2023": "FY2023 company press release: revenue EUR506.1m and recurring EBITDA EUR122.3m, pro forma / comparable basis",
+      "FY2024": "FY2024 company press release (14-May-2025): revenue EUR512.4m and adjusted EBITDA EUR128.6m, comparable basis (+EUR6.3m / +5.1% YoY)",
+      "FY2025": "Fitch rating action commentary, 06-Jul-2026 (committee 01-Jul-2026). Stated directly: sales EUR493m, Fitch-adjusted EBITDA margin 22.0%, gross margin 61%, EBITDA leverage 8.5x, cash EUR28m (EUR16m restricted by Fitch, EUR12m fully available), RCF EUR89m drawn of EUR125m, TLB EUR840m, EUR11m local facilities (prior-ranking). Analyst calculations: absolute EBITDA, gross profit, gross/net debt and net leverage",
+      "LTM": "No LTM or H1-2026 figures are held from any source. FY2025 is the latest period available. Likely source: H1-2026 lender report or company interim release"
+    },
+    "rows": [
+      {
+        "label": "Revenue",
+        "values": [
+          "425.1",
+          "449.7",
+          "401.0",
+          "505.3",
+          "506.1",
+          "512.4",
+          "493"
+        ]
+      },
+      {
+        "label": "Revenue growth (YoY)",
+        "values": [
+          "2.5%",
+          "5.8%",
+          "(10.8%)",
+          "not available - further diligence required",
+          "0.2%",
+          "1.2%",
+          "(3.8%) (cross-basis: Fitch FY2025 vs company FY2024)"
+        ]
+      },
+      {
+        "label": "Gross profit",
+        "values": [
+          "208.2",
+          "216.7",
+          "189.7",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "c.301 (implied: 61% x EUR493m)"
+        ]
+      },
+      {
+        "label": "Gross margin",
+        "values": [
+          "49.0%",
+          "48.2%",
+          "47.3%",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "61% (Fitch)"
+        ]
+      },
+      {
+        "label": "EBITDA: 9fin Adjusted",
+        "values": [
+          "81.5",
+          "94.9",
+          "65.7",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required"
+        ]
+      },
+      {
+        "label": "EBITDA: company-defined (recurring / before one-offs / adjusted)",
+        "values": [
+          "not available - further diligence required",
+          "103 (per 9fin 2021 article)",
+          "90 (per 9fin 2021 article)",
+          "122.0",
+          "122.3",
+          "128.6",
+          "not available - further diligence required"
+        ]
+      },
+      {
+        "label": "EBITDA: Fitch-adjusted",
+        "values": [
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "c.108 (implied: 22.0% x EUR493m)"
+        ],
+        "style": "bold"
+      },
+      {
+        "label": "EBITDA margin (on the basis of the populated EBITDA row for each period)",
+        "values": [
+          "19.2% (9fin)",
+          "21.1% (9fin)",
+          "16.4% (9fin)",
+          "24.1% (company)",
+          "24.2% (company)",
+          "25.1% (company)",
+          "22.0% (Fitch)"
+        ]
+      },
+      {
+        "label": "Cash taxes",
+        "values": [
+          "(3.6)",
+          "(5.6)",
+          "(3.5)",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required"
+        ]
+      },
+      {
+        "label": "Change in trade working capital",
+        "values": [
+          "11.0",
+          "(1.6)",
+          "10.9",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required"
+        ]
+      },
+      {
+        "label": "Capex (PP&E and intangibles)",
+        "values": [
+          "(33.0)",
+          "(29.6)",
+          "(28.8)",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "Higher YoY per Fitch; amount not disclosed"
+        ]
+      },
+      {
+        "label": "Unlevered FCF (UFCF)",
+        "values": [
+          "55.9",
+          "58.1",
+          "44.3",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required"
+        ],
+        "style": "bold"
+      },
+      {
+        "label": "Cash interest paid",
+        "values": [
+          "(22.3)",
+          "(23.3)",
+          "(24.0)",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "'Sizeable' per Fitch; amount not disclosed (TLB margin E+500bps)"
+        ]
+      },
+      {
+        "label": "Lease repayments",
+        "values": [
+          "n.a. (pre-IFRS 16, no line reported)",
+          "(6.4)",
+          "(6.0)",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required"
+        ]
+      },
+      {
+        "label": "Levered FCF (LFCF)",
+        "values": [
+          "33.6",
+          "28.4",
+          "14.3",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "Negative (Fitch FCF; 'particularly weak'; amount not disclosed)"
+        ],
+        "style": "bold"
+      },
+      {
+        "label": "UFCF conversion (UFCF / EBITDA)",
+        "values": [
+          "68.6%",
+          "61.2%",
+          "67.4%",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required"
+        ]
+      },
+      {
+        "label": "LFCF conversion (LFCF / EBITDA)",
+        "values": [
+          "41.2%",
+          "29.9%",
+          "21.8%",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "n.a."
+        ],
+        "styled_cells": [
+          {
+            "period": "FY2025",
+            "style": "italic, colour #e74c3c",
+            "reason": "Fitch states FY2025 FCF was negative, so conversion is negative. The exact ratio cannot be calculated because Fitch does not disclose the FCF amount"
+          }
+        ]
+      },
+      {
+        "label": "Memo: pension cash outflows",
+        "values": [
+          "(12.2)",
+          "(17.0)",
+          "(16.3)",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required (Fitch forecasts EUR11-12m p.a. to 2030)"
+        ]
+      },
+      {
+        "label": "Memo: restructuring costs (cash)",
+        "values": [
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "'Material' per Fitch; amount not disclosed"
+        ]
+      },
+      {
+        "label": "Memo: LFCF after pension outflows",
+        "values": [
+          "21.4",
+          "11.4",
+          "(2.0)",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required"
+        ]
+      },
+      {
+        "label": "Memo: reported cash from operating activities",
+        "values": [
+          "66.0",
+          "71.8",
+          "62.8",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required"
+        ]
+      },
+      {
+        "label": "Total debt (excl. leases and pensions)",
+        "values": [
+          "473.2",
+          "478.5",
+          "486.0",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "c.810 (TLBs only, indicative, see note)",
+          "c.929 (TLB 840 + RCF 89 drawn); c.940 incl. EUR11m local facilities"
+        ]
+      },
+      {
+        "label": "Memo: RCF drawn / commitment",
+        "values": [
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "89 / 125 (71% drawn)"
+        ]
+      },
+      {
+        "label": "Cash",
+        "values": [
+          "40.6",
+          "39.0",
+          "74.7",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "28 (EUR16m restricted by Fitch; EUR12m available)"
+        ]
+      },
+      {
+        "label": "Net debt",
+        "values": [
+          "432.6",
+          "439.5",
+          "411.2",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "c.901 (c.917 on Fitch-available cash)"
+        ]
+      },
+      {
+        "label": "Gross leverage (total debt / EBITDA)",
+        "values": [
+          "5.8x",
+          "5.0x",
+          "7.4x",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "c.6.3x (TLBs only / company adj. EBITDA, indicative)",
+          "8.5x (Fitch EBITDA leverage)"
+        ],
+        "style": "bold"
+      },
+      {
+        "label": "Net leverage (net debt / EBITDA)",
+        "values": [
+          "5.3x",
+          "4.6x",
+          "6.3x",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "c.8.3x (analyst calc., Fitch-basis EBITDA)"
+        ]
+      },
+      {
+        "label": "Memo: pension obligations (balance sheet)",
+        "values": [
+          "239.4",
+          "242.4",
+          "230.9",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required",
+          "not available - further diligence required"
+        ]
+      }
+    ],
+    "fitch_rating_case": {
+      "label": "Fitch rating case (forecast, 06-Jul-2026). Fitch's projections, not company guidance. Show as a separate block and do not append it to the actuals table",
+      "periods": [
+        "FY2025A",
+        "FY2026F",
+        "FY2027F",
+        "FY2028F",
+        "FY2029F",
+        "FY2030F"
+      ],
+      "rows": [
+        {
+          "label": "Sales growth",
+          "values": [
+            "Base: EUR493m",
+            "Low-single-digit decline (GV contract phase-out)",
+            "3.0-3.2% avg. (volume and price)",
+            "3.0-3.2% avg.",
+            "3.0-3.2% avg.",
+            "3.0-3.2% avg."
+          ]
+        },
+        {
+          "label": "Fitch-adjusted EBITDA margin",
+          "values": [
+            "22.0%",
+            "24.4%",
+            "Gradual, moderate expansion",
+            "Gradual, moderate expansion",
+            "Towards 26% (per key rating drivers text)",
+            "Towards 26% (per rating-case assumptions)"
+          ]
+        },
+        {
+          "label": "EBITDA leverage",
+          "values": [
+            "8.5x",
+            "8.0x",
+            "Towards 7.7x",
+            "not disclosed by Fitch",
+            "not disclosed by Fitch",
+            "not disclosed by Fitch"
+          ]
+        },
+        {
+          "label": "Capex (% of revenue)",
+          "values": [
+            "Higher YoY; % not disclosed",
+            "5.3%",
+            "5.3%",
+            "5.3%",
+            "5.3%",
+            "5.3%"
+          ]
+        },
+        {
+          "label": "Pension contributions",
+          "values": [
+            "not disclosed by Fitch",
+            "EUR11-12m",
+            "EUR11-12m",
+            "EUR11-12m",
+            "EUR11-12m",
+            "EUR11-12m (gradually reducing)"
+          ]
+        },
+        {
+          "label": "One-off restructuring costs",
+          "values": [
+            "'Material'; amount not disclosed",
+            "EUR10m",
+            "c.EUR5m",
+            "c.EUR5m",
+            "not disclosed by Fitch",
+            "not disclosed by Fitch"
+          ]
+        },
+        {
+          "label": "FCF (Fitch definition)",
+          "values": [
+            "Negative, 'particularly weak'",
+            "Slightly negative ('near term')",
+            "Not specified by year (Fitch: slightly negative near term, then broadly neutral to slightly positive)",
+            "Broadly neutral to slightly positive",
+            "Broadly neutral to slightly positive",
+            "not disclosed by Fitch"
+          ]
+        },
+        {
+          "label": "Other assumptions",
+          "values": [
+            "TLB margin 5%",
+            "No dividends",
+            "Refinancing assumed; margin 6% vs 5% today",
+            "No dividends",
+            "No dividends",
+            "No dividends until 2030"
+          ]
+        }
+      ],
+      "rating_sensitivities": {
+        "downgrade": [
+          "No refinancing executed, or no credible refinancing plan presented, within six months of 06-Jul-2026 (i.e. by around early Jan-2027)",
+          "Fitch-adjusted EBITDA margin below 20% (FY2025: 22.0%), or sustained erosion of sales",
+          "Negative FCF and/or tightening liquidity (FY2025 FCF was already negative)",
+          "Inability to reduce EBITDA leverage below 7.5x (FY2025: 8.5x; Fitch's own 2027 forecast is 'towards 7.7x')",
+          "Interest coverage below 1.5x (FY2025 coverage not disclosed)"
+        ],
+        "upgrade": [
+          "Organic sales development with Fitch-adjusted EBITDA margin above 25%",
+          "Low-single-digit FCF margins",
+          "EBITDA leverage below 6.0x",
+          "Interest coverage above 2.0x"
+        ],
+        "observation": "Fitch's own rating case gets leverage only to 'towards 7.7x' in 2027, still above its 7.5x downgrade sensitivity. The 22.0% FY2025 margin sits 2pp above the 20% margin trigger. The Stable Outlook therefore depends on the forecast EBITDA recovery and the refinancing both being delivered, which is consistent with Fitch's own wording that there is 'limited near-term rating headroom'.",
+        "recovery_reference": "Fitch recovery analysis: going-concern EBITDA c.EUR95m at a 5.5x distressed multiple, 10% administrative claims, RCF assumed fully drawn, and EUR11m local facilities treated as super senior. This gives RR4 for the TLB and RCF"
+      }
+    },
+    "fcf_basis": "FY2018-FY2020 are calculated from the EBITDA build using 9fin structured data: 9fin Adjusted EBITDA, less taxes paid, plus/minus change in trade working capital, less capex (PP&E plus intangibles) = UFCF. UFCF less interest paid less lease repayments = LFCF. No build is possible for FY2022-FY2024 because the company press releases give only revenue and EBITDA. For FY2025 the only FCF evidence is qualitative: Fitch states FCF was negative and 'particularly weak' because of lower EBITDA, higher capex, sizeable interest and material restructuring costs. FY2025 LFCF conversion is therefore shown as 'n.a.' in italic #e74c3c. Fitch's FCF definition (after interest, tax, working capital, pensions, restructuring and capex) differs from the prescribed UFCF/LFCF build, so it is a directional indicator only. The FY2018-FY2020 positive LFCF is pre-LBO. Gross debt then was c.EUR480m against c.EUR929m at end-2025, so those years are not representative of current cash generation. That is consistent with Fitch's statement that the company has 'historically generated negative FCF', which most plausibly refers to the post-2021 LBO capital structure.",
+    "notes": [
+      "THREE BASES, NOT ONE SERIES: FY2018-FY2020 use 9fin structured 'Adjusted EBITDA'. FY2022 PF-FY2024 use company-defined EBITDA ('recurring' / 'before one-offs' for FY2022-FY2023, 'adjusted' for FY2024) from press releases. FY2025 uses Fitch-adjusted EBITDA. The table keeps these in separate rows so they are not blended. Movements across the FY2024/FY2025 boundary compare two different definitions and should be read as directional only.",
+      "REVENUE, FY2025 vs FY2024 (EUR493m vs EUR512.4m, -EUR19.4m / -3.8%): basis used is Fitch's FY2025 figure against the company's FY2024 comparable-basis figure. Fitch does not state its revenue basis or give a FY2024 comparator. Rating agencies do not normally adjust revenue in the way they adjust EBITDA, so this most likely reflects a genuine decline in reported sales. Fitch's own text supports that: it describes the German market (31% of sales) as soft with consumers trading down, and forecasts a further decline in 2026 from the GrandVision contract phase-out, which Moody's had already flagged as a drag. A scope or definitional component cannot be ruled out, because the company's 'comparable basis' may include pro forma or constant-currency adjustments, and FX on Latin American sales could also contribute. Conclusion: treat FY2025 as a genuine decline of about 4%. The exact like-for-like change needs the company's FY2025 results.",
+      "EBITDA MARGIN, FY2025 Fitch 22.0% vs FY2024 company 25.1% (implied c.EUR108m vs EUR128.6m, -c.EUR20m): this is part definitional and part genuine, and the split cannot be quantified from the sources held. Definitional: (a) Fitch's corporate methodology generally treats IFRS 16 lease costs as operating costs, reducing EBITDA against company figures that include the IFRS 16 uplift. The PDF does not state this for Rodenstock, but for scale FY2019-FY2020 lease repayments were EUR6.0-6.4m, or c.1.3-1.5pp of sales then (9fin, stale). (b) Company-defined EBITDA has historically run well above 9fin's adjusted figure: EUR103m vs EUR94.9m in FY2019 and EUR90m vs EUR65.7m in FY2020, a gap of EUR8-24m. That points to material company add-backs, which Fitch may not accept. Genuine: Fitch explicitly attributes FY2025's weak FCF partly to 'lower EBITDA', and its 2026 margin recovery rests on cost savings that were executed after the fact. Restructuring costs do not explain the gap, because Fitch treats them as a separate cash item below EBITDA in its rating case.",
+      "c.EUR135m EBITDA (Mar-2025, 9fin sources): v1 carried this as an indicative Mar-25 column. It is removed from the table. It was a sources-quoted run-rate, and the FY2025 outcome on Fitch's basis (c.EUR108m) is well below it, although the definitions also differ.",
+      "LEVERAGE STEP-UP, c.6.3x (FY2024, indicative) to 8.5x (FY2025, Fitch): this is not like-for-like. The FY2024 figure is TLBs only (EUR810m per 9fin) over company-defined EBITDA. The FY2025 figure includes EUR89m of RCF drawings and a EUR840m TLB, over Fitch-adjusted EBITDA. On the debt side alone, end-2025 gross debt of c.EUR929m over the FY2024 company EBITDA of EUR128.6m would still be c.7.2x (analyst calculation, mixed periods, illustrative only). Leverage has risen regardless of which EBITDA definition is used.",
+      "FY2025 DEBT AND LEVERAGE ARITHMETIC: gross debt c.EUR929m = TLB EUR840m + RCF drawn EUR89m (Fitch). Fitch also references EUR11m of local facilities as prior-ranking debt but does not state whether they are fully drawn (c.EUR940m if included). Net debt c.EUR901m uses total cash of EUR28m, or c.EUR917m on Fitch's available cash of EUR12m. Analyst gross leverage of c.8.6x (c.EUR929m / c.EUR108m) is close to, but not identical to, Fitch's 8.5x. The difference likely reflects rounding of the 22.0% margin and Fitch's precise debt definition, which the commentary does not disclose. Leases and pensions are excluded throughout.",
+      "CROSS-REFERENCE WITH researcher-capital (capital.json, which is sourced from the 9fin screener and 2021-2025 articles): Fitch's end-2025 / Jul-2026 figures differ from capital.json on several points. (1) TLB: Fitch EUR840m due Jun-2028 vs capital.json EUR660m (May-2028) + EUR150m add-on (Jul-2028) = EUR810m. The 2022 QuickTake's EUR170m add-on would give EUR830m, which is still not EUR840m. (2) RCF: Fitch EUR125m due Dec-2027, EUR89m drawn, vs capital.json EUR120m due May-2028 with drawn amount unknown. (3) EUR11m local facilities ranking ahead of the TLB are not in capital.json. (4) Cash: capital.json has no figure after FY2020; Fitch gives EUR28m at end-2025. The Fitch figures are more recent. The differences may reflect an amendment or upsizing since 2022, or a point-in-time difference, and should be reconciled against the facilities agreement or lender reporting before the capital structure table is finalised.",
+      "RCF SPRINGING COVENANT, cross-reference only: capital.json records a 9.5x net leverage springing covenant tested when the RCF is 40% or more drawn. At EUR89m / EUR125m (71%) the test would apply if those terms still hold. On Fitch-basis figures net leverage is c.8.3x, which implies c.13% EBITDA headroom (EBITDA would need to fall to c.EUR95m before breaching 9.5x at net debt of c.EUR901m). Covenant EBITDA is normally the company-defined figure with add-backs, so actual headroom is likely wider. It is not confirmed and needs the compliance certificate.",
+      "PERIMETER: FY2018-FY2020 include the Eyewear division, sold in Dec-2022. FY2022-FY2025 are lenses-only. The 61% FY2025 gross margin (Fitch) against 47-49% in FY2016-FY2020 (9fin) reflects the eyewear exit and possibly different cost classification, and is not like-for-like.",
+      "IFRS 16: lease repayments appear in the cash flow from FY2019, consistent with IFRS 16 adoption. FY2018 EBITDA is therefore likely stated before the IFRS 16 uplift.",
+      "PENSIONS: cash contributions (EUR12.2m-17.0m a year over FY2018-FY2020; Fitch forecasts EUR11-12m a year to 2030) sit outside the prescribed UFCF/LFCF formula but are a recurring cash cost. Pension obligations were EUR230.9m at FY2020 and are excluded from the debt and leverage figures shown. No current balance is available.",
+      "LIQUIDITY (Fitch, end-2025): cash of EUR28m, of which EUR12m is available after Fitch's EUR16m restriction, plus EUR36m of undrawn RCF (EUR125m less EUR89m). That gives c.EUR48m of Fitch-basis liquidity before any minimum operating cash requirement. Fitch assesses liquidity as 'limited' and says underperformance, larger working capital swings or higher capex could lead to a downgrade into the 'CCC' category.",
+      "Balance sheet context (FY2020): total equity was EUR(313.0)m, deeply negative, reflecting the LBO structure plus the legacy pension deficit. No later balance sheet is available."
+    ],
+    "display_rules": {
+      "negative_fcf_conversion": "display as 'n.a.' in italic, colour #e74c3c (applies to FY2025 LFCF conversion)",
+      "negatives": "shown in parentheses",
+      "not_available_cells": "'not available - further diligence required'",
+      "basis_labelling": "Show the 'Source / basis' row under the period headers. Keep the three EBITDA rows separate. Show the Fitch rating case as its own block below the actuals",
+      "disclaimer": "Most recent detailed financials available as of 31-Dec-2020 (9fin). Most recent headline financials available as of 31-Dec-2025 (Fitch-adjusted, published 06-Jul-2026)"
+    },
+    "full_structured_history_FY2016_FY2020": {
+      "periods": [
+        "FY2016",
+        "FY2017",
+        "FY2018",
+        "FY2019",
+        "FY2020"
+      ],
+      "currency": "EUR millions",
+      "source": "9fin get_latest_key_financial_table and get_latest_financial_statement (Cash Flow), company_id 1348",
+      "rows": [
+        {
+          "label": "Revenue",
+          "values": [
+            "408.0",
+            "414.9",
+            "425.1",
+            "449.7",
+            "401.0"
+          ]
+        },
+        {
+          "label": "Gross profit",
+          "values": [
+            "201.9",
+            "196.1",
+            "208.2",
+            "216.7",
+            "189.7"
+          ]
+        },
+        {
+          "label": "Gross margin",
+          "values": [
+            "49.5%",
+            "47.3%",
+            "49.0%",
+            "48.2%",
+            "47.3%"
+          ]
+        },
+        {
+          "label": "Adjusted EBITDA",
+          "values": [
+            "75.6",
+            "82.3",
+            "81.5",
+            "94.9",
+            "65.7"
+          ]
+        },
+        {
+          "label": "Adjusted EBITDA margin",
+          "values": [
+            "18.5%",
+            "19.8%",
+            "19.2%",
+            "21.1%",
+            "16.4%"
+          ]
+        },
+        {
+          "label": "Cash taxes",
+          "values": [
+            "(3.9)",
+            "(6.1)",
+            "(3.6)",
+            "(5.6)",
+            "(3.5)"
+          ]
+        },
+        {
+          "label": "Change in trade working capital",
+          "values": [
+            "1.1",
+            "0.6",
+            "11.0",
+            "(1.6)",
+            "10.9"
+          ]
+        },
+        {
+          "label": "Capex",
+          "values": [
+            "(33.5)",
+            "(28.4)",
+            "(33.0)",
+            "(29.6)",
+            "(28.8)"
+          ]
+        },
+        {
+          "label": "UFCF",
+          "values": [
+            "39.3",
+            "48.4",
+            "55.9",
+            "58.1",
+            "44.3"
+          ]
+        },
+        {
+          "label": "Cash interest paid",
+          "values": [
+            "(18.1)",
+            "(17.6)",
+            "(22.3)",
+            "(23.3)",
+            "(24.0)"
+          ]
+        },
+        {
+          "label": "Lease repayments",
+          "values": [
+            "n.a. (pre-IFRS 16)",
+            "n.a. (pre-IFRS 16)",
+            "n.a. (pre-IFRS 16)",
+            "(6.4)",
+            "(6.0)"
+          ]
+        },
+        {
+          "label": "LFCF",
+          "values": [
+            "21.2",
+            "30.8",
+            "33.6",
+            "28.4",
+            "14.3"
+          ]
+        },
+        {
+          "label": "UFCF conversion",
+          "values": [
+            "52.0%",
+            "58.8%",
+            "68.6%",
+            "61.2%",
+            "67.4%"
+          ]
+        },
+        {
+          "label": "LFCF conversion",
+          "values": [
+            "28.0%",
+            "37.4%",
+            "41.2%",
+            "29.9%",
+            "21.8%"
+          ]
+        },
+        {
+          "label": "Memo: pension cash outflows",
+          "values": [
+            "(12.8)",
+            "(12.3)",
+            "(12.2)",
+            "(17.0)",
+            "(16.3)"
+          ]
+        },
+        {
+          "label": "Memo: LFCF after pension outflows",
+          "values": [
+            "8.4",
+            "18.5",
+            "21.4",
+            "11.4",
+            "(2.0)"
+          ]
+        },
+        {
+          "label": "Total debt",
+          "values": [
+            "481.0",
+            "464.9",
+            "473.2",
+            "478.5",
+            "486.0"
+          ]
+        },
+        {
+          "label": "Cash",
+          "values": [
+            "31.2",
+            "32.0",
+            "40.6",
+            "39.0",
+            "74.7"
+          ]
+        },
+        {
+          "label": "Net debt",
+          "values": [
+            "449.9",
+            "432.9",
+            "432.6",
+            "439.5",
+            "411.2"
+          ]
+        },
+        {
+          "label": "Net leverage",
+          "values": [
+            "6.0x",
+            "5.3x",
+            "5.3x",
+            "4.6x",
+            "6.3x"
+          ]
+        },
+        {
+          "label": "Interest coverage (9fin)",
+          "values": [
+            "2.9x",
+            "3.3x",
+            "2.3x",
+            "6.2x",
+            "1.7x"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "title": "Fitch Assigns Rodenstock 'B-' IDR; Outlook Stable (Fitch Ratings, 06-Jul-2026). Local copy in /resources/Rodenstock/",
+        "url": "https://www.fitchratings.com/research/corporate-finance/fitch-assigns-rodenstock-b-idr-outlook-stable-06-07-2026"
+      },
+      {
+        "title": "Financial Table for Rodenstock (Annual) (9fin)",
+        "url": "https://9fin.com/company/Rodenstock/financials?statements=9fin%20Financials&seriesGroup=Annual"
+      },
+      {
+        "title": "Cash Flow for Rodenstock (Annual) (9fin)",
+        "url": "https://9fin.com/company/Rodenstock/financials?statements=Cash%20Flow&seriesGroup=Annual"
+      },
+      {
+        "title": "Rodenstock Financial Statements FY 2023 (company press release)",
+        "url": "https://9fin.com/documents/f9f9382c-fa70-4c3b-b4e3-8a83104e8f82#page=1"
+      },
+      {
+        "title": "Rodenstock Financial Statements FY 2024 (company press release)",
+        "url": "https://9fin.com/documents/7a2294c0-2311-4119-a3fe-918d2d21fa05#page=1"
+      },
+      {
+        "title": "Rodenstock explores private credit options for EUR810m TLB refi (9fin)",
+        "url": "https://9fin.com/news/17b2d373-1ee3-4472-83ee-7d913dc7aad2"
+      },
+      {
+        "title": "Is Rodenstock seeing clearly? (9fin, 20-May-2021), source of the FY2019/FY2020 company EBITDA before one-offs",
+        "url": "https://9fin.com/news/986907b1-e774-4687-90f5-9b20cdd8dcb7"
+      }
+    ]
+  },
+  "data_gaps": [
+    "Company-reported FY2025 results (revenue, company-defined adjusted EBITDA) are not held, so the FY2024 to FY2025 move can only be measured across two bases (company vs Fitch). Likely source: Rodenstock FY2025 results release (usually mid-May), FY2025 audited accounts (Bundesanzeiger) or the lender reporting package. On 9fin, the orchestrating session should re-check document search for a FY2025 results document.",
+    "Fitch's absolute EBITDA, FY2024 Fitch-adjusted comparator, debt definition and interest coverage are not disclosed in the rating action commentary. The EUR108m EBITDA is an analyst calculation. Likely source: Fitch full rating report or presale (subscription).",
+    "FY2025 FCF line items (cash taxes, working capital, capex, cash interest, lease repayments, restructuring and pension cash) are not available. Fitch gives only a qualitative statement that FCF was negative. Likely source: FY2025 audited cash flow statement or lender reporting.",
+    "FY2022-FY2024 gross profit, FCF build, net debt and cash are not available. Likely source: audited accounts.",
+    "No LTM or H1-2026 financials are held. The Fitch forecast of a 2026 margin recovery to 24.4% has no actual data behind it yet. Likely source: H1-2026 lender report or interim release.",
+    "FY2021 financials are not available on 9fin. Likely source: FY2021 audited accounts.",
+    "Debt instrument sizing conflict: Fitch has a EUR840m TLB due Jun-2028 and a EUR125m RCF due Dec-2027, against 9fin/capital.json EUR810m (660 + 150) TLBs due May/Jul-2028 and a EUR120m RCF due May-2028. The EUR11m local facilities (prior-ranking) are not captured in capital.json and their drawn status is unclear. Likely source: amended SFA, agent notices or lender reporting. Orchestrating session to reconcile with researcher-capital.",
+    "RCF springing covenant (9.5x net leverage, tested at 40% or more drawn per 2021 terms): RCF was 71% drawn at end-2025, so a test is likely live. Covenant EBITDA and the actual test result are not available. Likely source: latest compliance certificate.",
+    "Current pension obligation is not available (EUR230.9m at FY2020). Likely source: FY2025 audited accounts or Fitch full rating report.",
+    "Segment and geography revenue splits are not available after FY2020, apart from Germany at 31% of FY2025 sales (Fitch). Likely source: FY2025 audited accounts or lender presentation.",
+    "Fitch's minor inconsistency on timing: the key rating drivers text says margins move towards 26% 'by 2029', while the rating-case assumptions say 'by 2030'. Similarly, FCF is described as 'broadly neutral to slightly positive through 2029' in one place and 'neutral to only slightly positive until 2029' in another. Both wordings are shown and neither is resolved."
+  ]
+}
