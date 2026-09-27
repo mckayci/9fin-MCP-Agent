@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wagamama — Restructuring Tearsheet — 27-Sep-2026</title>
+<style>
+  :root{
+    --accent:#7C77B9;
+    --accent-dark:#5f5a97;
+    --accent-light:#f1efff;
+    --ink:#1c1c26;
+    --sub:#55566b;
+    --line:#dcdbe8;
+    --neg:#e74c3c;
+    --bg:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#e9e9ee;font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);}
+  .page{
+    width:210mm;min-height:297mm;padding:11mm 13mm 9mm 13mm;margin:0 auto 8mm auto;
+    background:var(--bg);position:relative;page-break-after:always;
+  }
+  .page:last-child{page-break-after:auto;}
+  @media print{
+    body{background:#fff;}
+    .page{margin:0;box-shadow:none;}
+  }
+  @page{size:A4;margin:0;}
+
+  .masthead{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid var(--accent);padding-bottom:5px;margin-bottom:7px;}
+  .masthead h1{font-size:22px;margin:0;color:var(--ink);letter-spacing:.2px;}
+  .masthead .tag{font-size:10.5px;color:var(--sub);margin-top:2px;}
+  .masthead .meta{text-align:right;font-size:9.5px;color:var(--sub);line-height:1.5;}
+  .masthead .meta b{color:var(--ink);}
+
+  .headerblock{display:grid;grid-template-columns:repeat(4,1fr);gap:5px 14px;font-size:9.1px;margin-bottom:7px;padding:6px 10px;background:var(--accent-light);border-radius:4px;}
+  .headerblock div span.lbl{display:block;color:var(--sub);font-size:8.2px;text-transform:uppercase;letter-spacing:.4px;}
+  .headerblock div span.val{display:block;font-weight:600;margin-top:1px;}
+
+  .reco-badge{display:flex;align-items:center;gap:10px;border:1.5px solid var(--accent);border-radius:4px;padding:5px 10px;margin-bottom:8px;background:#fff;}
+  .reco-badge .pill{background:var(--accent);color:#fff;font-size:9.5px;font-weight:700;padding:4px 10px;border-radius:3px;letter-spacing:.3px;white-space:nowrap;}
+  .reco-badge .txt{font-size:9.3px;color:var(--sub);line-height:1.35;}
+  .reco-badge .txt b{color:var(--ink);}
+
+  h2.sec{font-size:12px;color:var(--accent-dark);border-left:4px solid var(--accent);padding-left:7px;margin:9px 0 5px 0;text-transform:uppercase;letter-spacing:.4px;}
+  h3.sub{font-size:10.2px;color:var(--ink);margin:6px 0 3px 0;font-weight:700;}
+
+  p, li{font-size:9.1px;line-height:1.4;color:var(--ink);margin:3px 0;}
+  .note{font-size:8.4px;color:var(--sub);font-style:italic;line-height:1.4;}
+  .callout{border:1px solid var(--accent);background:var(--accent-light);border-radius:4px;padding:8px 10px;margin:8px 0;}
+  .callout .cttl{font-size:9px;font-weight:700;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.3px;margin-bottom:3px;}
+
+  table{width:100%;border-collapse:collapse;margin:5px 0 8px 0;font-size:8.6px;}
+  th{background:var(--accent);color:#fff;font-weight:600;text-align:left;padding:4px 6px;font-size:8.3px;}
+  td{padding:3.5px 6px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:nth-child(even) td{background:#fafaff;}
+  td.num, th.num{text-align:right;white-space:nowrap;}
+  td a{color:var(--accent-dark);text-decoration:none;}
+  .bold-row td{font-weight:700;border-top:1.5px solid var(--accent);}
+  .neg{color:var(--neg);font-style:italic;}
+
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;}
+  .footer{position:absolute;bottom:6mm;left:13mm;right:13mm;font-size:7.6px;color:#9a9aad;border-top:1px solid var(--line);padding-top:4px;display:flex;justify-content:space-between;}
+  svg text{font-family:"Helvetica Neue",Arial,sans-serif;}
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 ============ -->
+<div class="page">
+  <div class="masthead">
+    <div>
+      <h1>Wagamama</h1>
+      <div class="tag">UK pan-Asian casual dining &mdash; Waga BondCo Limited (£330m 8.5% SSNs 2030)</div>
+    </div>
+    <div class="meta">
+      Prepared for internal use &mdash; CMCK Associates<br>
+      Last updated: <b>27-Sep-2026</b><br>
+      Coverage: B2 (Moody's, neg.) / B (S&amp;P, neg.)
+    </div>
+  </div>
+
+  <div class="headerblock">
+    <div><span class="lbl">Sector / Industry</span><span class="val">Consumer Discretionary &mdash; Restaurants</span></div>
+    <div><span class="lbl">Country</span><span class="val">United Kingdom (98% of revenue)</span></div>
+    <div><span class="lbl">Company Type</span><span class="val">Private, sponsor-owned bond issuer</span></div>
+    <div><span class="lbl">Ticker</span><span class="val">n/a &mdash; unlisted</span></div>
+    <div><span class="lbl">Ownership / Sponsor</span><span class="val">Apollo Global Management (via TRG)</span></div>
+    <div><span class="lbl">Last Update Date</span><span class="val">27-Sep-2026</span></div>
+    <div><span class="lbl">Coverage Status</span><span class="val">9fin covered; S&amp;P report reviewed 25-Jun-26</span></div>
+    <div><span class="lbl">Restricted Group</span><span class="val">Waga BondCo / Wagamama (Holdings) Ltd</span></div>
+  </div>
+
+  <div class="reco-badge">
+    <div class="pill">WATCHLIST — MONITOR</div>
+    <div class="txt"><b>No trigger currently active.</b> Liquidity is the primary live concern (conditional S&amp;P "adequate" rating, negative FOCF through FY26) and the RCF's springing covenant is approaching activation (27.6% drawn vs. 40% threshold) &mdash; both warrant quarterly monitoring. No near-term maturity wall (SSNs due Jun-2030).</div>
+  </div>
+
+  <h2 class="sec">Business Description</h2>
+  <p>Wagamama is the UK's largest pan-Asian casual dining chain, operating a single "wagamama" brand across noodle- and rice-based dishes, small plates and drinks, positioned as an affordable, health-focused alternative within UK casual dining. The first restaurant opened in Bloomsbury, London in 1992. As at FY2025 year-end, the estate comprised 166 owned UK &amp; Ireland restaurants, six owned US sites, and 54 franchised sites (primarily Europe and the Middle East), plus an early-stage 50%-owned India joint venture.</p>
+  <p><b>Revenue mix:</b> 95&ndash;98% of revenue is generated by UK &amp; Ireland company-operated restaurants. Dine-in remains the largest channel; delivery (Deliveroo since 2016, Uber Eats added Q2 2026) represents c.19&ndash;21% of UK sales, guided by management to reach c.25% on a run-rate basis by end-2026. Average main-meal price was £15.49 (FY2024), reflecting a deliberate value/volume positioning. Under IFRS 8 the group discloses one reportable operating segment.</p>
+  <p><b>Corporate history:</b> The Restaurant Group plc (TRG) acquired Wagamama in 2018 at c.12.2x EBITDA, making it TRG's largest brand within a wider multi-brand estate (Frankie &amp; Benny's, Chiquito, Brunning &amp; Price, TRG Concessions) that was progressively rationalised through the following years. Apollo Global Management completed a take-private of TRG on 22-Dec-2023 (c.£701m EV, c.9x EBITDA). In January 2025, as part of a refinancing, Apollo split TRG into three standalone, separately-financed divisions &mdash; <b>Wagamama</b>, <b>Pubs</b> (Brunning &amp; Price) and <b>Concessions</b> &mdash; each sitting under Rock BidCo Limited. Wagamama's restricted group issued £330m of 8.5% Senior Secured Notes due 2030 to refinance a prior sterling unitranche facility. In July 2026, TRG sold its Concessions division (38 airport sites, c.&euro;240m revenue) to Areas Group; Wagamama continues to trade in UK airports as a franchisee of Areas.</p>
+
+  <div class="callout">
+    <div class="cttl">The Wagamama / TRG perimeter</div>
+    <p style="margin:0;">The £330m SSNs and £55m RCF sit in a <b>Wagamama-only financing silo</b> (issuer: Waga BondCo Limited; guarantors: Wagamama (Holdings) Limited and Wagamama Limited), legally and structurally separate from TRG's Pubs and Concessions silos &mdash; confirmed independently by both 9fin's org chart/OM and S&amp;P's recovery analysis. Apollo owns all three silos in parallel via Rock BidCo (~98.1%), not through a TRG-controlled chain sitting over Wagamama. That said, <b>operational integration persists</b>: Mark Chambers is CFO of TRG <i>and</i> CEO of Wagamama, both he and TRG CEO Andy Hornby present under TRG titles on bondholder calls, and TRG Holdings continues to recharge Wagamama for shared services (c.£9&ndash;12m/year) under an <b>uncapped</b> restricted-payments basket &mdash; a value-leakage risk flagged by 9fin's legal analysis. No shareholder loan/PIK is currently on file above the restricted group, but Waga Topco and Waga Midco sit structurally outside it, which is latent (unconfirmed) headroom for one to sit there invisibly to reported leverage. See Group Structure (p.2) for the full chart.</p>
+  </div>
+
+  <h2 class="sec">Situation Overview</h2>
+  <p>2025 was a weak trading year: S&amp;P-adjusted EBITDA fell to £79.6m (16.6% margin) from £88.5m in 2024, and revenue contracted 4.2% to £480.5m, partly reflecting the transfer of four airport sites into the TRG Concessions business ahead of its eventual sale. 9fin's November 2025 analysis attributed the pressure to a "bleak UK economic environment": food inflation of 5.6% (Oct-2025), weak consumer confidence, and higher labour costs from the October 2024 Budget's employer NIC and national living wage increases. Management deliberately held pricing flat through 2025 to protect volumes, which compressed margins further.</p>
+  <p>H1 FY26 results (reported 8-Sep-2026) showed sales +4.7% YoY but EBITDA <b>-23.5% YoY</b>, driven by the annualising cost of value-reset initiatives and the final quarter of NIC increases; net leverage rose 0.3x to 5.2x (pre-IFRS16, PF basis). Management described the business as having "reached an inflection point," citing dine-in volume growth (+3.4% in Q2), a new Uber Eats delivery partnership (delivery like-for-like +21.6% since rollout), and guided to a return to EBITDA growth in Q3 26, strengthening further in Q4 26. This is broadly consistent with, though slightly more optimistic than, S&amp;P's base case of 3&ndash;4% revenue growth and margin recovery to 17.0&ndash;17.5% in 2026.</p>
+  <p>The main deleveraging action to date is the January 2025 refinancing and corporate split itself, which ended the prior TRG intercompany cash-sweep arrangement (previously priced at SONIA+800bps and understating Wagamama's true standalone interest cost). Following the Concessions sale, management flagged on the Q2 26 call a "further review of group central costs," with the TRG head-office recharge expected to reduce into FY27.</p>
+  <p>Both 9fin and S&amp;P expect 2026 to remain a transition year with recovery weighted to H2. S&amp;P forecasts lease-inclusive leverage of 6.2&ndash;6.5x in 2026 (from 6.9x in 2025), improving to 5.7&ndash;6.1x in 2027, with free operating cash flow after leases staying negative (£6&ndash;10m outflow) in 2026 before turning roughly neutral in 2027 &mdash; the primary basis for S&amp;P's negative outlook (25-Jun-2026).</p>
+  <p class="note">Note on leverage bases: figures quoted across sources are not directly comparable. The screen/9fin unadjusted pre-IFRS16 basis gives 7.5x; the company's own PF-adjusted basis (which governs the RCF covenant) gives 5.19x net; S&amp;P's lease-inclusive adjusted basis gives 6.9x (FY25) easing to 6.2&ndash;6.5x (FY26e). Do not blend these &mdash; see Summary Financials (p.3) for full detail.</p>
+
+  <h2 class="sec">Key Catalysts</h2>
+  <div class="twocol">
+    <div>
+      <h3 class="sub">Liquidity</h3>
+      <p>£43.7m as at 30-Jun-2026 (£3.9m cash + £39.8m undrawn RCF; £15.2m of £55m drawn, 27.6%). S&amp;P's 31-Mar-2026 snapshot showed materially stronger liquidity (£8.9m cash, £52.5m RCF availability) &mdash; a real deterioration of c.£5m cash and c.£12.7m of incremental RCF drawdown within one quarter, predating S&amp;P's "adequate" call. S&amp;P flags this adequacy as explicitly conditional on FOCF after leases improving from -£20.8m (FY25) to the -£6m to -£10m guided for FY26.</p>
+    </div>
+    <div>
+      <h3 class="sub">Upcoming Maturities</h3>
+      <p>£330m 8.5% SSNs due <b>15-Jun-2030</b> (c.45 months out); £55m super senior RCF due Jan-2030. No maturity wall within the standard 18&ndash;24 month screening window &mdash; the covenant and liquidity triggers below are the near-term watch items.</p>
+    </div>
+  </div>
+  <h3 class="sub">Covenant Headroom / Tests</h3>
+  <p>The RCF carries a springing net leverage covenant of <b>8.3x</b>, tested quarterly only once drawings exceed <b>40%</b> of the £55m facility (£22.0m). At 30-Jun-2026 drawings stood at £15.2m (27.6%) &mdash; approximately <b>£6.8m of further drawdown</b> would cross the threshold and activate testing. If tested, headroom appears wide on the covenant-relevant company basis (5.19x actual vs. 8.3x trigger); S&amp;P separately estimates "headroom of at least 20%" over the next 12 months. Neither 9fin nor S&amp;P currently expects an actual breach &mdash; the risk being monitored is test <i>activation</i>, not failure, given negative FOCF.</p>
+
+  <div class="footer"><span>Wagamama &mdash; Restructuring Tearsheet</span><span>Page 1 of 4</span></div>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="page">
+  <h2 class="sec" style="margin-top:0;">Management &amp; Sponsor Representation</h2>
+  <table>
+    <tr><th>Name</th><th>Role</th><th>Relevant Experience</th></tr>
+    <tr><td>Andy Hornby</td><td>CEO, The Restaurant Group (TRG); presents Wagamama's quarterly bondholder results</td><td>Oxford (English Literature), Harvard MBA. Boston Consulting Group; Asda (retail MD; MD, George clothing); CEO of HBOS; CEO of Alliance Boots; CEO of Coral; co-COO of GVC Holdings. Appointed TRG CEO Aug-2019, leading the group through Covid-19, the 2023 Apollo take-private and the 2025 reorganisation.</td></tr>
+    <tr><td>Mark Chambers</td><td>CFO of TRG <b>and</b> CEO of Wagamama (dual role since Jun-2025)</td><td>20+ years in leisure/hospitality, c.15 of which in finance roles. Previously CEO of TRG's Leisure &amp; Concessions division. TRG CFO designate from Jul-2023, formal Group CFO from Sep-2023; added Wagamama CEO title Jun-2025 following Thomas Heier's departure.</td></tr>
+    <tr><td>Thomas Heier</td><td>Former CEO, Wagamama (stepped down May-2025)</td><td>Led Wagamama for four years prior to departure; exit coincided with a wider senior-team reshuffle at TRG.</td></tr>
+    <tr><td>Apollo Global Management Inc.</td><td>Sponsor / controlling owner</td><td>Acquired TRG via scheme of arrangement, completed Dec-2023 (c.£468m cash equity to BidCo); TRG delisted from the LSE 21-Dec-2023. Also owns TRG Holdings, the shared-services entity that recharges Wagamama under the post-2025 TSA.</td></tr>
+  </table>
+  <p class="note">Andy Hornby's and Mark Chambers' biographical detail sourced via web search cross-check (not 9fin-hosted); no independent verification beyond press coverage &mdash; further diligence via Companies House director filings recommended if needed for a live situation.</p>
+
+  <h2 class="sec">Capital Structure</h2>
+  <p class="note">Cap table as of 30-Jun-2026 (9fin), cross-checked against S&amp;P's 25-Jun-2026 Research Update. Issuer for both instruments: Waga BondCo Limited.</p>
+  <table>
+    <tr><th>Instrument</th><th class="num">Amount O/S</th><th class="num">x EBITDA</th><th>Rate</th><th>Maturity</th><th class="num">Price (25-Sep-26)</th><th class="num">YTW/YTM</th><th>Rating (Moody's/S&amp;P)</th></tr>
+    <tr><td>£55m Super Senior RCF</td><td class="num">£15.2m drawn / £55.0m total</td><td class="num">n/a (facility)</td><td>SONIA + 400bps</td><td>Jan-2030</td><td class="num">n/a</td><td class="num">n/a</td><td>Unrated; ranks super senior ahead of SSNs</td></tr>
+    <tr><td>£330m Senior Secured Notes</td><td class="num">£330.0m</td><td class="num">n/a (see below)</td><td>Fixed 8.500%</td><td>15-Jun-2030</td><td class="num">85.221</td><td class="num">n/a</td><td>B2 (CFR) / <b>B</b>, Recovery Rating 3 (55%)</td></tr>
+    <tr class="bold-row"><td>Gross Debt</td><td class="num">£345.2m</td><td class="num">5.25x (co. PF basis)</td><td colspan="5"></td></tr>
+    <tr><td>less: Cash &amp; equivalents</td><td class="num">(£3.9m)</td><td colspan="6"></td></tr>
+    <tr class="bold-row"><td>Net Debt</td><td class="num">£341.3m</td><td class="num">5.19x (co. PF basis)</td><td colspan="5"></td></tr>
+  </table>
+  <p class="note"><b>Three non-comparable leverage bases &mdash; do not blend:</b> (1) screen/unadjusted pre-IFRS16: <b>7.5x</b> net on LTM EBITDA £45.3m; (2) company PF-adjusted (governs the 8.3x RCF covenant): <b>5.19x net / 5.25x gross</b> on PF EBITDA £65.7m (add-backs incl. £10.0m TRG Group costs, £9.4m cost savings, £4.3m new-site impact, £5.4m delivery dual-aggregator, rent adj.); (3) S&amp;P-adjusted (post-IFRS16, EBITDAR-inclusive): <b>6.9x FY25a</b>, 6.2&ndash;6.5x FY26e, 5.7&ndash;6.1x FY27f on EBITDA £79.6m FY25a. Fitch: not rated / not on file. RCF pricing: SONIA+400bps per OM; springing 8.3x covenant tested only once &gt;40% drawn. Both instruments issued in the Jan-2025 refinancing, replacing a prior sterling unitranche (SONIA+650bps). SSN price is the latest clean price in the uploaded daily series (25-Sep-2026); YTW/YTM not available for either instrument &ndash; further diligence required (SSN: no yield calc run off price/coupon/maturity; source would be a desk run or Bloomberg/MarketAxess. RCF: unlisted bank facility, no price/yield series exists).</p>
+
+  <h2 class="sec">Liquidity Build</h2>
+  <div class="twocol">
+    <div>
+      <p class="note" style="margin-bottom:2px;">As of 30-Jun-2026 (9fin cap table)</p>
+      <table>
+        <tr><th>Item</th><th class="num">£m</th></tr>
+        <tr><td>Cash and cash equivalents</td><td class="num">3.9</td></tr>
+        <tr><td>Undrawn RCF</td><td class="num">39.8</td></tr>
+        <tr><td>Drawn RCF (of £55.0m, 27.6%)</td><td class="num">15.2</td></tr>
+        <tr class="bold-row"><td>Total liquidity</td><td class="num">43.7</td></tr>
+      </table>
+    </div>
+    <div>
+      <p class="note" style="margin-bottom:2px;">S&amp;P 12m sources vs. uses, from 31-Mar-2026 (&gt;1.2x cover; "adequate")</p>
+      <table>
+        <tr><th>Sources</th><th class="num">£m</th><th>Uses</th><th class="num">£m</th></tr>
+        <tr><td>Cash on B/S</td><td class="num">8.9</td><td>Capex</td><td class="num">25&ndash;30</td></tr>
+        <tr><td>RCF availability</td><td class="num">52.5</td><td>Working capital</td><td class="num">up to 5</td></tr>
+        <tr><td>Cash FFO</td><td class="num">20&ndash;25</td><td>Seasonal WC swings</td><td class="num">~10</td></tr>
+      </table>
+    </div>
+  </div>
+  <p class="note">Minimum operating liquidity requirement: not available &ndash; further diligence required (no formal minimum-cash covenant identified in 9fin's covenant data or the S&amp;P report; likely source: full OM liquidity/minimum-cash basket text). Liquidity has deteriorated materially between the two reference dates above &mdash; S&amp;P's "adequate" call predates the Q2 2026 weakness. RCF headroom to the 40% covenant-activation threshold: £6.8m of further drawdown capacity as at 30-Jun-2026.</p>
+
+  <h2 class="sec">Group Structure</h2>
+  <svg viewBox="0 0 700 300" style="width:100%;max-height:280px;">
+    <!-- Apollo -->
+    <rect x="230" y="6" width="240" height="30" rx="3" fill="#fff" stroke="#55566b" stroke-width="1"/>
+    <text x="350" y="21" text-anchor="middle" font-size="9" font-weight="700">Apollo-managed funds (~98.1%)</text>
+    <text x="350" y="31" text-anchor="middle" font-size="7.2" fill="#55566b">+ Conversion VC ~1.1%, other partners</text>
+    <line x1="350" y1="36" x2="350" y2="52" stroke="#55566b" stroke-width="1"/>
+    <!-- Rock BidCo -->
+    <rect x="270" y="52" width="160" height="26" rx="3" fill="#fff" stroke="#55566b" stroke-width="1"/>
+    <text x="350" y="69" text-anchor="middle" font-size="9" font-weight="700">Rock BidCo Limited</text>
+    <line x1="350" y1="78" x2="350" y2="90" stroke="#55566b" stroke-width="1"/>
+    <line x1="115" y1="90" x2="585" y2="90" stroke="#55566b" stroke-width="1"/>
+    <line x1="115" y1="90" x2="115" y2="100" stroke="#55566b" stroke-width="1"/>
+    <line x1="350" y1="90" x2="350" y2="100" stroke="#55566b" stroke-width="1"/>
+    <line x1="585" y1="90" x2="585" y2="100" stroke="#55566b" stroke-width="1"/>
+
+    <!-- Column 1: TRG legacy/Concessions -->
+    <rect x="20" y="100" width="190" height="30" rx="3" fill="#fff" stroke="#55566b" stroke-width="1"/>
+    <text x="115" y="115" text-anchor="middle" font-size="8.3" font-weight="700">Rock BidCo Holdings /</text>
+    <text x="115" y="125" text-anchor="middle" font-size="8.3" font-weight="700">The Restaurant Group Ltd</text>
+    <line x1="115" y1="130" x2="115" y2="142" stroke="#55566b" stroke-width="1"/>
+    <rect x="20" y="142" width="190" height="34" rx="3" fill="#f4f4f4" stroke="#55566b" stroke-width="1"/>
+    <text x="115" y="157" text-anchor="middle" font-size="8" font-weight="700">TRG (Holdings) / C&amp;B chain</text>
+    <text x="115" y="169" text-anchor="middle" font-size="7.2" fill="#55566b">Concessions &ndash; sold to Areas Group Jul-26</text>
+    <line x1="115" y1="176" x2="115" y2="188" stroke="#55566b" stroke-width="1"/>
+    <rect x="20" y="188" width="190" height="24" rx="3" fill="#f4f4f4" stroke="#55566b" stroke-width="1"/>
+    <text x="115" y="203" text-anchor="middle" font-size="7.4">Separately financed &ndash; own term loan/RCF</text>
+
+    <!-- Column 2: Wagamama (restricted group highlighted) -->
+    <rect x="270" y="100" width="160" height="26" rx="3" fill="#fff" stroke="#55566b" stroke-width="1"/>
+    <text x="350" y="117" text-anchor="middle" font-size="8.3" font-weight="700">Waga Topco / Midco Ltd</text>
+    <line x1="350" y1="126" x2="350" y2="140" stroke="#55566b" stroke-width="1"/>
+    <rect x="250" y="140" width="200" height="150" rx="5" fill="none" stroke="#7C77B9" stroke-width="1.6" stroke-dasharray="4,3"/>
+    <text x="350" y="135" text-anchor="middle" font-size="7.6" font-weight="700" fill="#5f5a97">RESTRICTED GROUP</text>
+    <rect x="265" y="150" width="170" height="28" rx="3" fill="#f1efff" stroke="#7C77B9" stroke-width="1"/>
+    <text x="350" y="167" text-anchor="middle" font-size="8.3" font-weight="700">Wagamama (Holdings) Ltd</text>
+    <text x="350" y="176" text-anchor="middle" font-size="6.8" fill="#55566b">Parent Guarantor &mdash; B2/B rated (CFR)</text>
+    <line x1="350" y1="178" x2="350" y2="190" stroke="#55566b" stroke-width="1"/>
+    <rect x="265" y="190" width="170" height="34" rx="3" fill="#f1efff" stroke="#7C77B9" stroke-width="1"/>
+    <text x="350" y="205" text-anchor="middle" font-size="8.3" font-weight="700">Waga BondCo Limited</text>
+    <text x="350" y="216" text-anchor="middle" font-size="6.8" fill="#55566b">ISSUER: £330m 8.5% SSNs + £55m RCF</text>
+    <line x1="350" y1="224" x2="350" y2="236" stroke="#55566b" stroke-width="1"/>
+    <rect x="265" y="236" width="170" height="34" rx="3" fill="#f1efff" stroke="#7C77B9" stroke-width="1"/>
+    <text x="350" y="251" text-anchor="middle" font-size="8.3" font-weight="700">Wagamama Limited</text>
+    <text x="350" y="262" text-anchor="middle" font-size="6.8" fill="#55566b">Guarantor + non-guarantor subs (UK opco)</text>
+
+    <!-- Column 3: Pubs -->
+    <rect x="490" y="100" width="190" height="30" rx="3" fill="#fff" stroke="#55566b" stroke-width="1"/>
+    <text x="585" y="115" text-anchor="middle" font-size="8.3" font-weight="700">Pubs PledgeCo /</text>
+    <text x="585" y="125" text-anchor="middle" font-size="8.3" font-weight="700">Pubs HoldCo Limited</text>
+    <line x1="585" y1="130" x2="585" y2="142" stroke="#55566b" stroke-width="1"/>
+    <rect x="490" y="142" width="190" height="34" rx="3" fill="#f4f4f4" stroke="#55566b" stroke-width="1"/>
+    <text x="585" y="159" text-anchor="middle" font-size="8" font-weight="700">Pubs subsidiaries</text>
+    <text x="585" y="170" text-anchor="middle" font-size="7.2" fill="#55566b">Brunning &amp; Price brand</text>
+    <line x1="585" y1="176" x2="585" y2="188" stroke="#55566b" stroke-width="1"/>
+    <rect x="490" y="188" width="190" height="24" rx="3" fill="#f4f4f4" stroke="#55566b" stroke-width="1"/>
+    <text x="585" y="203" text-anchor="middle" font-size="7.4">Separately financed &ndash; own term loan/RCF</text>
+
+    <text x="350" y="292" text-anchor="middle" font-size="7.4" fill="#55566b">TRG Holdings (shared services) recharges Wagamama ~£9&ndash;12m/yr under an uncapped Services Agreement &mdash; monitored value-leakage channel</text>
+  </svg>
+  <p class="note">Source: 9fin org chart (dated 20-Jan-2025), drawn from the Final OM's "Summary of our Corporate and Debt Structure," independently corroborated by S&amp;P's recovery analysis. No org chart is separately on file for The Restaurant Group (TRG) in 9fin post-delisting.</p>
+
+  <div class="footer"><span>Wagamama &mdash; Restructuring Tearsheet</span><span>Page 2 of 4</span></div>
+</div>
+
+<!-- ============ PAGE 3 ============ -->
+<div class="page">
+  <h2 class="sec" style="margin-top:0;">Debt Holdings</h2>
+  <p class="note">Source: holder register uploaded by Ciarán (£330m SSNs due 2030 only; 35 holders total; no holder-level data exists for the £55m RCF as an undisclosed bank facility).</p>
+  <table>
+    <tr><th>Rank</th><th>Holder</th><th>Instrument</th><th class="num">Amount Held (£)</th><th class="num">% of Instrument</th><th class="num">Cumulative %</th></tr>
+    <tr><td>1</td><td>RL360</td><td>£330m SSNs 2030</td><td class="num">24,561,537</td><td class="num">7.44%</td><td class="num">7.44%</td></tr>
+    <tr><td>2</td><td>Eurizon</td><td>£330m SSNs 2030</td><td class="num">22,465,645</td><td class="num">6.81%</td><td class="num">14.25%</td></tr>
+    <tr><td>3</td><td>FundsNetwork</td><td>£330m SSNs 2030</td><td class="num">17,516,166</td><td class="num">5.31%</td><td class="num">19.56%</td></tr>
+    <tr><td>4</td><td>Aberdeen Group plc</td><td>£330m SSNs 2030</td><td class="num">15,154,504</td><td class="num">4.59%</td><td class="num">24.15%</td></tr>
+    <tr><td>5</td><td>Lord Abbett</td><td>£330m SSNs 2030</td><td class="num">13,085,457</td><td class="num">3.97%</td><td class="num">28.12%</td></tr>
+    <tr><td>6</td><td>Schroders</td><td>£330m SSNs 2030</td><td class="num">11,554,625</td><td class="num">3.50%</td><td class="num">31.62%</td></tr>
+    <tr><td>7</td><td>Invesco</td><td>£330m SSNs 2030</td><td class="num">8,371,631</td><td class="num">2.54%</td><td class="num">34.16%</td></tr>
+    <tr><td>8</td><td>J.P. Morgan Asset Management</td><td>£330m SSNs 2030</td><td class="num">5,921,943</td><td class="num">1.79%</td><td class="num">35.95%</td></tr>
+    <tr><td>9</td><td>Aegon / Scottish Equitable plc</td><td>£330m SSNs 2030</td><td class="num">3,641,051</td><td class="num">1.10%</td><td class="num">37.05%</td></tr>
+    <tr><td>10</td><td>Pictet</td><td>£330m SSNs 2030</td><td class="num">3,083,666</td><td class="num">0.93%</td><td class="num">37.98%</td></tr>
+    <tr class="bold-row"><td colspan="3">Total (top 10)</td><td class="num">£125,356,225</td><td class="num">37.98%</td><td class="num">&mdash;</td></tr>
+  </table>
+  <p class="note">Holder base is fragmented beyond the top 10 (35 holders in total, tailing off below 0.9% each), consistent with a broadly syndicated sterling HY issue rather than a club deal &mdash; relevant context for any future consent-solicitation or restructuring scenario.</p>
+
+  <h2 class="sec">Revenue Splits</h2>
+  <h3 class="sub">By geography</h3>
+  <table>
+    <tr><th>Period</th><th class="num">UK &amp; Ireland (£m)</th><th class="num">International (£m)</th><th class="num">Group Total (£m)</th><th class="num">UK &amp; Ireland %</th></tr>
+    <tr><td>FY2024 (52wk to 29-Dec-24)</td><td class="num">487.2</td><td class="num">14.3</td><td class="num">501.5</td><td class="num">97.1%</td></tr>
+    <tr><td>FY2025 (52wk to 28-Dec-25)</td><td class="num">461.7</td><td class="num">18.8</td><td class="num">480.5</td><td class="num">96.1%</td></tr>
+    <tr><td>H1 2025 (26wk to Jun-25)</td><td class="num">224.9</td><td class="num">9.8</td><td class="num">234.7</td><td class="num">95.8%</td></tr>
+    <tr><td>H1 2026 (26wk to Jun-26)</td><td class="num">232.3</td><td class="num">7.2</td><td class="num">239.5</td><td class="num">97.0%</td></tr>
+  </table>
+  <p class="note">FY2025 UK revenue includes a c.£25&ndash;30m reduction from transferring four airport sites to TRG's Concessions business; underlying UK revenue grew modestly excluding this. Franchise/royalty revenue not separately quantified in disclosure &ndash; not available &ndash; further diligence required (likely source: direct management/IR data request).</p>
+  <h3 class="sub">By segment</h3>
+  <p>Wagamama discloses one IFRS 8 operating segment; no statutory segment P&amp;L exists. Non-statutory splits: delivery c.19&ndash;21% of sales historically, guided to c.25% run-rate by end-2026 following the Uber Eats rollout (balance dine-in/takeaway). Estate mix: 175 owned sites (169 UK&amp;I, 6 US), 56 franchise sites, 2 India JV sites as at Q2 2026 (vs. 169/56/1 at Q2 2025).</p>
+
+  <h2 class="sec">Summary Financials</h2>
+  <table>
+    <tr><th>(£m, pre-IFRS16 unless stated)</th><th class="num">FY2023</th><th class="num">FY2024</th><th class="num">FY2025</th><th class="num">LTM (28-Jun-26)</th></tr>
+    <tr><td>Revenue</td><td class="num">463.5</td><td class="num">501.5</td><td class="num">480.5</td><td class="num">485.4</td></tr>
+    <tr><td>Gross profit margin</td><td class="num">16.6%</td><td class="num">16.2%</td><td class="num">18.5%</td><td class="num">18.3%</td></tr>
+    <tr><td>Adj. EBITDA (pre-IFRS16)</td><td class="num">55.4</td><td class="num">60.8</td><td class="num">53.7</td><td class="num">45.3</td></tr>
+    <tr><td>Adj. EBITDA margin (pre-IFRS16)</td><td class="num">12.0%</td><td class="num">12.1%</td><td class="num">11.2%</td><td class="num">9.3%</td></tr>
+    <tr><td>Adj. EBITDA (IFRS16)</td><td class="num">55.9</td><td class="num">83.0</td><td class="num">83.1</td><td class="num">73.7</td></tr>
+    <tr><td>Capex (net)</td><td class="num">(24.6)</td><td class="num">(35.9)</td><td class="num">(26.0)</td><td class="num">(31.3)</td></tr>
+    <tr><td>Net debt (pre-IFRS16)</td><td class="num">421.3</td><td class="num">472.9</td><td class="num">610.5</td><td class="num">341.3</td></tr>
+    <tr class="bold-row"><td>Net leverage (pre-IFRS16)</td><td class="num">7.6x</td><td class="num">7.8x</td><td class="num">11.4x</td><td class="num">7.5x</td></tr>
+    <tr><td>Net leverage (IFRS16, incl. leases)</td><td class="num">11.3x</td><td class="num">8.4x</td><td class="num">6.3x</td><td class="num">7.2x</td></tr>
+  </table>
+  <p class="note">LTM leverage of 7.5x matches this week's screen exactly. FY2025's pre-IFRS16 spike to 11.4x is a 9fin data quirk around the Jan-2025 refinancing (one-off proceeds sitting on the balance sheet at print) rather than a genuine step-change &mdash; treat LTM (Jun-26) as the most reliable current read. See p.2 for the three non-comparable leverage bases in full.</p>
+
+  <h3 class="sub">Free Cash Flow Build (S&amp;P-adjusted basis)</h3>
+  <table>
+    <tr><th>(£m)</th><th class="num">FY2023</th><th class="num">FY2024</th><th class="num">FY2025</th></tr>
+    <tr><td>EBITDA (S&amp;P-adjusted)</td><td class="num">96.4</td><td class="num">88.5</td><td class="num">79.6</td></tr>
+    <tr><td>less: Cash taxes paid</td><td class="num">(0.7)</td><td class="num">0.0</td><td class="num">0.0</td></tr>
+    <tr><td>+/&ndash; Change in NWC</td><td class="num">(36.5)</td><td class="num">(13.9)</td><td class="num">(14.5)</td></tr>
+    <tr><td>less: Capex</td><td class="num">(26.8)</td><td class="num">(40.2)</td><td class="num">(27.2)</td></tr>
+    <tr class="bold-row"><td>Unlevered FCF (UFCF)</td><td class="num">32.4</td><td class="num">34.4</td><td class="num">37.8</td></tr>
+    <tr><td>less: Cash interest paid</td><td class="num">(10.0)</td><td class="num">(11.3)</td><td class="num">(40.8)</td></tr>
+    <tr><td>less: Lease repayments</td><td class="num">(7.1)</td><td class="num">(4.9)</td><td class="num">(17.8)</td></tr>
+    <tr class="bold-row"><td>Levered FCF (LFCF)</td><td class="num">15.3</td><td class="num">18.2</td><td class="num">(20.8)</td></tr>
+    <tr><td>UFCF / EBITDA conversion</td><td class="num">33.6%</td><td class="num">38.9%</td><td class="num">47.5%</td></tr>
+    <tr><td>LFCF / EBITDA conversion</td><td class="num">15.9%</td><td class="num">20.6%</td><td class="num neg"><i>n.a.</i></td></tr>
+  </table>
+  <p class="note">FY2025 NWC and cash interest include one-off items tied to the Jan-2025 refinancing (£14.6m intercompany cash-sweep settlement; part-year TRG intercompany interest at SONIA+800bps) &mdash; not representative of a normalised run rate. Management's FY2026 cash-interest guidance (~£28m) is materially below S&amp;P's own FY2026e forecast (£40.1m); this gap is not resolved from sources reviewed and would benefit from direct IR clarification. Management-guided FY2026 (pre-IFRS16): cash interest ~£28m, capex ~£28&ndash;30m, cash tax ~£3&ndash;3.5m. S&amp;P forecasts FOCF after leases of -£6m to -£10m (FY26e), improving to roughly neutral (FY27f).</p>
+
+  <div class="footer"><span>Wagamama &mdash; Restructuring Tearsheet</span><span>Page 3 of 4</span></div>
+</div>
+
+<!-- ============ PAGE 4 ============ -->
+<div class="page">
+  <h2 class="sec" style="margin-top:0;">Trading Data &mdash; £330m 8.5% SSNs due 2030</h2>
+  <svg viewBox="0 0 700 250" style="width:100%;max-height:230px;">
+    <line x1="40" y1="20" x2="40" y2="200" stroke="#dcdbe8" stroke-width="1"/>
+    <line x1="40" y1="200" x2="680" y2="200" stroke="#dcdbe8" stroke-width="1"/>
+    <line x1="40" y1="36.4" x2="680" y2="36.4" stroke="#eeedf5" stroke-width="1"/>
+    <text x="34" y="39" text-anchor="end" font-size="7.5" fill="#55566b">100</text>
+    <line x1="40" y1="75.7" x2="680" y2="75.7" stroke="#eeedf5" stroke-width="1"/>
+    <text x="34" y="78.5" text-anchor="end" font-size="7.5" fill="#55566b">95</text>
+    <line x1="40" y1="115.1" x2="680" y2="115.1" stroke="#eeedf5" stroke-width="1"/>
+    <text x="34" y="118" text-anchor="end" font-size="7.5" fill="#55566b">90</text>
+    <line x1="40" y1="154.5" x2="680" y2="154.5" stroke="#eeedf5" stroke-width="1"/>
+    <text x="34" y="157.5" text-anchor="end" font-size="7.5" fill="#55566b">85</text>
+    <line x1="40" y1="193.8" x2="680" y2="193.8" stroke="#eeedf5" stroke-width="1"/>
+    <text x="34" y="196.5" text-anchor="end" font-size="7.5" fill="#55566b">80</text>
+
+    <text x="40" y="214" font-size="7.5" fill="#55566b">Jan-25</text>
+    <text x="206" y="214" font-size="7.5" fill="#55566b">Jul-25</text>
+    <text x="399" y="214" font-size="7.5" fill="#55566b">Jan-26</text>
+    <text x="589" y="214" font-size="7.5" fill="#55566b">Jul-26</text>
+
+    <path d="M 40.0,32.4 L 44.2,40.3 L 46.3,38.6 L 50.5,40.0 L 52.6,38.3 L 54.7,34.1 L 58.9,34.8 L 61.0,34.4 L 65.2,34.0 L 67.3,32.9 L 69.4,32.8 L 73.6,34.4 L 75.7,32.5 L 79.9,32.4 L 82.0,35.0 L 84.1,38.8 L 88.3,42.9 L 90.4,46.7 L 94.6,51.0 L 96.7,47.8 L 98.9,45.2 L 103.1,43.8 L 105.2,48.1 L 109.4,54.0 L 111.5,56.0 L 113.6,66.6 L 117.8,68.2 L 119.9,64.5 L 124.1,63.7 L 126.2,61.4 L 128.3,60.8 L 132.5,59.6 L 134.6,53.4 L 138.8,51.3 L 140.9,54.4 L 143.0,52.1 L 147.2,50.8 L 149.3,47.6 L 153.5,44.7 L 155.6,42.4 L 157.7,43.5 L 161.9,41.5 L 164.0,42.8 L 168.2,43.7 L 170.3,42.9 L 172.4,41.6 L 176.6,43.1 L 178.7,43.3 L 182.9,44.8 L 185.0,45.9 L 187.1,47.2 L 191.3,46.6 L 193.4,48.3 L 197.6,48.7 L 199.7,47.9 L 201.8,48.7 L 206.0,51.4 L 208.1,51.3 L 212.3,51.5 L 214.4,51.7 L 216.6,50.9 L 220.8,52.6 L 222.9,54.4 L 227.1,55.1 L 229.2,54.5 L 231.3,54.7 L 235.5,56.0 L 237.6,53.4 L 241.8,53.0 L 243.9,52.8 L 246.0,52.5 L 250.2,53.2 L 252.3,51.4 L 256.5,50.4 L 258.6,52.3 L 260.7,45.9 L 264.9,51.2 L 267.0,54.5 L 271.2,56.2 L 273.3,82.0 L 275.4,72.7 L 279.6,75.6 L 281.7,76.7 L 285.9,76.6 L 288.0,77.5 L 290.1,76.6 L 294.3,77.1 L 296.4,79.1 L 300.6,81.3 L 302.7,81.6 L 304.8,81.5 L 309.0,88.2 L 311.1,94.0 L 315.3,105.2 L 317.4,109.4 L 319.5,112.4 L 323.7,108.0 L 325.8,107.4 L 330.0,105.9 L 332.2,102.7 L 334.3,104.4 L 338.5,107.5 L 340.6,112.9 L 344.8,128.0 L 346.9,126.3 L 349.0,129.8 L 353.2,134.0 L 355.3,129.1 L 359.5,125.9 L 361.6,122.0 L 363.7,117.9 L 367.9,117.2 L 370.0,116.0 L 374.2,116.9 L 376.3,117.2 L 378.4,117.4 L 382.6,112.3 L 384.7,103.5 L 388.9,102.3 L 391.0,101.0 L 393.1,100.9 L 397.3,100.9 L 399.4,101.5 L 403.6,91.9 L 405.7,89.8 L 407.8,97.9 L 412.0,110.2 L 414.1,116.2 L 418.3,120.7 L 420.4,122.6 L 422.5,120.0 L 426.7,119.5 L 428.8,121.9 L 433.0,124.1 L 435.1,123.0 L 437.2,121.9 L 441.4,120.9 L 443.5,125.2 L 447.8,130.4 L 449.9,132.2 L 452.0,127.5 L 455.1,128.8 L 457.2,129.0 L 459.3,132.0 L 462.5,143.0 L 464.6,143.5 L 466.7,152.0 L 469.8,153.1 L 471.9,154.3 L 474.0,155.4 L 477.2,154.8 L 479.3,151.7 L 481.4,158.9 L 484.5,163.2 L 486.6,160.5 L 488.7,166.8 L 491.9,166.1 L 494.0,162.2 L 496.1,164.8 L 499.2,164.8 L 501.3,157.5 L 503.4,156.1 L 506.6,157.3 L 508.7,148.5 L 510.8,148.2 L 514.0,146.3 L 523.4,148.1 L 525.5,146.6 L 528.7,148.4 L 530.8,146.4 L 532.9,158.6 L 536.0,160.3 L 538.1,175.8 L 540.2,184.3 L 543.4,185.0 L 545.5,187.6 L 547.6,183.6 L 550.7,183.1 L 552.8,178.2 L 554.9,176.6 L 558.1,175.2 L 560.2,157.4 L 562.3,158.3 L 565.5,159.8 L 567.6,159.2 L 569.7,156.5 L 572.8,155.9 L 574.9,149.3 L 577.0,146.5 L 580.2,148.0 L 582.3,145.7 L 584.4,145.2 L 587.5,145.1 L 589.6,142.2 L 591.7,142.0 L 594.9,142.0 L 597.0,151.0 L 599.1,149.2 L 602.2,149.2 L 604.3,149.0 L 606.4,149.2 L 609.6,149.1 L 611.7,149.9 L 613.8,153.7 L 616.9,152.6 L 619.0,154.2 L 621.1,166.1 L 624.3,166.9 L 626.4,167.4 L 628.5,168.4 L 631.7,169.6 L 633.8,167.3 L 635.9,169.7 L 639.0,171.1 L 641.1,169.9 L 643.2,170.1 L 646.4,170.6 L 648.5,171.2 L 650.6,171.9 L 653.7,172.0 L 655.8,171.4 L 657.9,169.8 L 661.1,169.8 L 663.2,154.3 L 665.3,156.6 L 668.4,163.6 L 670.5,158.7 L 672.6,150.3 L 675.8,146.7 L 677.9,145.0 L 680.0,152.7"
+      fill="none" stroke="#7C77B9" stroke-width="1.6"/>
+
+    <!-- annotations -->
+    <circle cx="81.0" cy="34.5" r="2.2" fill="#5f5a97"/>
+    <line x1="81.0" y1="34.5" x2="81.0" y2="10" stroke="#9a9aad" stroke-width="0.7"/>
+    <text x="81.0" y="8" text-anchor="middle" font-size="6.6" fill="#333">SSNs priced at par</text>
+
+    <circle cx="363.7" cy="117.9" r="2.2" fill="#5f5a97"/>
+    <line x1="363.7" y1="117.9" x2="363.7" y2="95" stroke="#9a9aad" stroke-width="0.7"/>
+    <text x="363.7" y="93" text-anchor="middle" font-size="6.6" fill="#333">9fin flags negative FCF</text>
+
+    <circle cx="418.3" cy="120.7" r="2.2" fill="#5f5a97"/>
+    <line x1="418.3" y1="120.7" x2="440" y2="60" stroke="#9a9aad" stroke-width="0.7"/>
+    <text x="440" y="58" text-anchor="middle" font-size="6.6" fill="#333">Moody's outlook negative</text>
+
+    <circle cx="545.5" cy="187.6" r="2.2" fill="#e74c3c"/>
+    <line x1="545.5" y1="187.6" x2="495" y2="222" stroke="#9a9aad" stroke-width="0.7"/>
+    <text x="495" y="230" text-anchor="middle" font-size="6.6" fill="#333">Series low, 20-May-26</text>
+
+    <circle cx="583.3" cy="145.2" r="2.2" fill="#5f5a97"/>
+    <line x1="583.3" y1="145.2" x2="583.3" y2="60" stroke="#9a9aad" stroke-width="0.7"/>
+    <text x="583.3" y="58" text-anchor="middle" font-size="6.6" fill="#333">S&amp;P outlook negative</text>
+
+    <circle cx="662.1" cy="155.5" r="2.2" fill="#5f5a97"/>
+    <line x1="662.1" y1="155.5" x2="662.1" y2="115" stroke="#9a9aad" stroke-width="0.7"/>
+    <text x="655" y="108" text-anchor="end" font-size="6.6" fill="#333">Q2 EBITDA down 23.5%</text>
+
+    <circle cx="680.0" cy="152.7" r="2.6" fill="#1c1c26"/>
+    <text x="676" y="167" text-anchor="end" font-size="7.2" font-weight="700">85.2 (25-Sep-26)</text>
+  </svg>
+  <p class="note">Source: daily clean-price series uploaded by Ciarán (24-Jan-2025 to 25-Sep-2026). Series high 100.5 (03-Mar-25); series low 80.8 (20-May-26). Note: price rose c.1.8pts on the 8-Sep-26 results day despite the weak EBITDA print &mdash; not a clean negative read-through, likely reflecting prior pricing-in of deterioration.</p>
+
+  <h2 class="sec">Recent News</h2>
+  <table>
+    <tr><th>Date</th><th>Description</th><th>Source</th></tr>
+    <tr><td>08-Sep-26</td><td>H1/Q2 FY26 results: sales +4.7% YoY, EBITDA -23.5% YoY, net leverage +0.3x to 5.2x</td><td><a href="https://9fin.com/news/6623e2ed-a8f9-4807-beec-ea51b7d9ed98">9fin Earnings Flash</a></td></tr>
+    <tr><td>16-Jul-26</td><td>TRG completes sale of Concessions division (38 airport sites, c.&euro;240m revenue) to Areas Group; Wagamama continues under franchise</td><td><a href="https://www.restaurantonline.co.uk/Article/2026/07/16/the-restaurant-group-sells-concessions-division-to-areas-group/">Restaurant Online</a></td></tr>
+    <tr><td>25-Jun-26</td><td>S&amp;P revises outlook to Negative from Stable; 'B' ratings affirmed, Recovery Rating 3 (55%)</td><td><a href="https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101688286">S&amp;P Global Ratings</a></td></tr>
+    <tr><td>19-Jan-26</td><td>Moody's affirms B2 CFR; outlook changed to Negative</td><td><a href="https://www.moodys.com/research/docid--PR_518286">Moody's</a></td></tr>
+    <tr><td>07-May-26</td><td>FY2025 / Q1 2026 results: FY25 EBITDA -25.1% YoY, leverage +1.9x to 6.2x; Q1 26 EBITDA -35.6% YoY, leverage -1.3x to 4.9x</td><td><a href="https://9fin.com/news/04d6d2d8-aef4-465d-90df-163f7b9cf576">9fin Earnings Flash</a></td></tr>
+    <tr><td>22-May-25</td><td>Thomas Heier steps down as Wagamama CEO amid wider TRG senior-team reshuffle; succeeded by Mark Chambers</td><td><a href="https://www.restaurantonline.co.uk/Article/2025/05/22/thomas-heier-to-step-down-as-wagamama-ceo-after-four-years-amid-shake-up-of-groups-wider-senior-team/">Restaurant Online</a></td></tr>
+    <tr><td>28-Nov-25</td><td>9fin publishes "Wagamama, turning noodles into ramen" credit analysis; bonds trading at 89.1, negative FY25 levered FCF expected</td><td><a href="https://9fin.com/news/f040912d-e02f-4246-a7e0-747162f18440">9fin Analysis</a></td></tr>
+    <tr><td>05-Mar-25</td><td>S&amp;P assigns 'B' issuer rating, Stable outlook (final, post-issuance)</td><td><a href="https://disclosure.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3333053">S&amp;P Global Ratings</a></td></tr>
+    <tr><td>04-Mar-25</td><td>£330m 8.5% Senior Secured Notes due 2030 priced and settled (Waga BondCo Ltd)</td><td><a href="https://9fin.com/documents/d7205f5a-061c-4c45-9e1e-b4b4e68d0651">9fin Final OM</a></td></tr>
+    <tr><td>20-Jan-25</td><td>Corporate reorganisation announced: TRG splits into Wagamama, Pubs and Concessions, each separately financed; Moody's assigns first-time B2 CFR</td><td><a href="https://9fin.com/news/1f37a8fd-6e8a-4b00-87de-a5fbc468c828">9fin Credit QuickTake</a></td></tr>
+  </table>
+
+  <h2 class="sec">Recommendation</h2>
+  <p><b>Add to restructuring watchlist: Yes &mdash; Monitor, not escalate.</b> None of the three key triggers is currently active, but two warrant active quarterly monitoring:</p>
+  <p><b>1. Covenant trip &mdash; approaching, not active.</b> The RCF's 8.3x springing covenant is untested (27.6% drawn vs. the 40% activation threshold), and neither 9fin nor S&amp;P expects an actual breach if tested (S&amp;P estimates at least 20% headroom). Only c.£6.8m of further drawdown would activate testing, and management has confirmed the RCF will carry a year-end balance in FY26 due to working-capital seasonality &mdash; a live, quarterly-monitorable item.</p>
+  <p><b>2. Leverage / maturity wall &mdash; not currently active.</b> The £330m SSNs do not mature until June 2030, well outside the 18&ndash;24 month screening window. S&amp;P's leverage trajectory shows limited near-term deleveraging momentum (6.9x FY25 to 6.2&ndash;6.5x FY26e), so this is one to revisit as 2028&ndash;2029 refinancing planning begins, not now.</p>
+  <p><b>3. Liquidity &mdash; the primary live concern.</b> Liquidity is rated "adequate" by S&amp;P but explicitly conditional on FOCF after leases improving from -£20.8m (FY25); cash on balance sheet is thin (£3.9m), making the business structurally reliant on RCF headroom through the trading cycle. If the guided H2 26 EBITDA recovery does not materialise, liquidity is the trigger most likely to deteriorate first, and would also pull the covenant test into range.</p>
+  <p><b>On the TRG/Wagamama perimeter specifically:</b> no evidence of further corporate reorganisation or re-consolidation of Wagamama's reporting into TRG since the January 2025 split was found in 9fin's document set, the S&amp;P report, or the Q2 26 bondholder transcript &mdash; the legal Restricted Group remains confined to Wagamama. Operational and management integration with TRG persists (shared CEO/CFO titles, ongoing TRG head-office recharges under an uncapped basket), and 9fin's Jan-2025 legal analysis on value leakage and structural subordination risk has not been superseded by anything found in this review. Both remain live structural considerations for bondholders even though the operating credit story is separable from TRG's other divisions. Revisit each quarter against: (i) whether the guided Q3/Q4 26 EBITDA growth materialises; (ii) RCF drawings vs. the 40% covenant threshold; (iii) any further rating action (both agencies currently negative outlook).</p>
+
+  <div class="footer"><span>Wagamama &mdash; Restructuring Tearsheet</span><span>Page 4 of 4</span></div>
+</div>
+
+</body>
+</html>
