@@ -66,7 +66,7 @@ Reference materials for a specific company you are researching
 Contains work in progress and temporary files
 
 /Templates
-Contains reusable templates and frameworks. `weekly_screen_email_template.md` is the template for the Phase 3 covering email. `recipient_names.csv` maps email addresses to first names for the email greeting.
+Contains reusable templates and frameworks. `weekly_screen_email_template.md` is the template for the Phase 3 covering email. `recipient_names.csv` maps email addresses to first names for the email greeting. `gold_standard_wagamama_tearsheet.html` (and `.pdf`) is a real, fully worked-up Phase 2 tearsheet kept as the reference for the depth and sourcing rigor every tearsheet should match.
 
 /Precedent Emails
 Saved list with emails that have been sent out
@@ -112,6 +112,8 @@ Before launching the screener subagent, make one direct 9fin call yourself (e.g.
 
 ### Phase 2 — One-Page Tearsheet (per name Ciarán selects)
 
+Before writing content, check `/Templates/gold_standard_wagamama_tearsheet.html` for the depth and sourcing rigor to match — every figure attributed to a specific source, conflicting leverage bases called out rather than blended, data gaps stated with what would resolve them, and commentary written like a colleague briefing another. Treat this as the quality bar, not a content template to copy from for a different company.
+
 Before launching the three parallel Phase 2 researcher subagents (capital, financials, news), make one direct 9fin call yourself to confirm the connector is still live in this session, per Step 0.5 above. Do this even if Phase 1 already confirmed it in the same session, since the connection isn't guaranteed to still be live later on.
 
 Build a one-page, printable output per company using this structure:
@@ -149,18 +151,18 @@ Handling the auditor's report (`/drafts/{companyname}/audit_report.json`):
 - If the auditor resolves everything cleanly (via the priority rule or a successful clarification round), the tearsheet shows only the correct figure — no visible trace of what was caught.
 
 ### Phase 3 — Delivery
-1. Build each tearsheet as an HTML file styled for A4 portrait (as in Phase 2). Then convert to a single combined PDF:
-   - Use Puppeteer (via `npx puppeteer`) or `wkhtmltopdf` to render each HTML tearsheet to PDF at A4 portrait (210mm x 297mm).
-   - If multiple companies were taken to Phase 2, combine into one PDF with one page per company, using a page break between each. The combined PDF should be named `ddmmyy_weekly_screen.pdf` and saved to `/outputs`.
-   - If only one company, the single tearsheet PDF is the attachment, named per the standard file convention.
-   - The HTML artifact may still be published for interactive viewing, but the email attachment must be a PDF.
-2. Draft the covering email using the template at `/Templates/weekly_screen_email_template.md`. Populate all bracketed fields with the actual screen criteria, results, and recommendation rationale. Follow the greeting rules in the template:
+1. Build each tearsheet as an HTML file styled for A4 portrait (as in Phase 2).
+   - If multiple companies were taken to Phase 2, combine into one HTML file with one page per company, using a page break between each. Name it `ddmmyy_weekly_screen.html`.
+   - If only one company, use that company's tearsheet HTML directly, named per the standard file convention.
+2. Render a PDF from that same HTML with `render_pdf.js` and save it to `/outputs` (`ddmmyy_weekly_screen.pdf` for multiple companies, or the standard single-company filename). This is no longer emailed, but stays as the durable local record of what was sent, independent of the artifact's own lifecycle.
+3. Publish that HTML file as a Claude artifact. **Claude artifacts are private by default** — set this one to "anyone with the link can view" before it goes anywhere near the email, or the recipient hits a sign-in wall instead of the report. Try this yourself in the built-in browser if it's already signed into Ciarán's claude.ai account; if it isn't, or the sharing control can't be reached, stop and ask Ciarán to enable link sharing from the artifact page before the email is confirmed. Note this trades the PDF's total containment (only the recipient ever had the file) for reach-by-link (anyone who gets or guesses the URL can open it) — the tearsheet contains licensed 9fin data and rating-agency content, so treat the link the same way you'd treat the PDF: internal use only, not for onward forwarding or posting.
+4. Draft the covering email using the template at `/Templates/weekly_screen_email_template.md`. Populate all bracketed fields with the actual screen criteria, results, recommendation rationale, and the artifact link from step 3. Follow the greeting rules in the template:
    - 1 recipient: "Hi [First Name],"
    - 2 recipients: "Hi [First Name 1], [First Name 2],"
    - 3+ recipients: "Hi team,"
    - To resolve first names from email addresses, check `/Templates/recipient_names.csv`. If no mapping exists, ask Ciarán to confirm the name, then save the mapping to the CSV for future runs.
-3. Attach the combined PDF (not a link to an artifact) to the email.
-4. Confirm the email content and recipient with Ciarán before sending each time. This is a standing constraint, not a one-off setup step, and holds even once the workflow is otherwise routine.
+5. The email carries the artifact link in the body — no PDF attachment.
+6. Confirm the email content, recipient, and that the artifact link actually opens (link sharing is on) with Ciarán before sending each time. This is a standing constraint, not a one-off setup step, and holds even once the workflow is otherwise routine.
 
 ## Tools / Data Sources (9fin MCP 2)
 - Screener: company screener filters, bond/loan screener filters
@@ -169,7 +171,7 @@ Handling the auditor's report (`/drafts/{companyname}/audit_report.json`):
 - Capital structure: latest debt cap table, debt instruments & covenants table, covenant basket text
 - Ownership/structure: org chart
 - News & transcripts: latest news, document search, document content
-- Gmail (for delivery of the final PDF)
+- Gmail (for sending the covering email with the artifact link)
 - Puppeteer (for HTML-to-PDF conversion), installed as a project dependency (`package.json`) and reused via `render_pdf.js`. If `node_modules` is ever missing, run `npm install` from the project root (not a temp/scratchpad directory) so it persists for future runs instead of re-downloading every time.
 
 ## Screening Criteria (confirmed defaults)

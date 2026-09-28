@@ -16,7 +16,7 @@ We ran the following screen:
 
 which returned [x] potential targets. We refined the list and decided that [y] companies may be worth doing further work; these were: [name of companies].
 
-Attached is a combined pdf of the potential targets. We thought [Number 1 target] was most interesting for [explain reason, tied to the three key triggers: covenant trip, maturity wall, or liquidity].
+The full tearsheet(s) are here: [artifact link]. We thought [Number 1 target] was most interesting for [explain reason, tied to the three key triggers: covenant trip, maturity wall, or liquidity].
 
 Let us know if helpful to find a time to discuss.
 

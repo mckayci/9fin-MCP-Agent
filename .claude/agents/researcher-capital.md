@@ -124,4 +124,5 @@ Write your output as a JSON file to the path specified in your prompt (e.g. `/dr
 - If a data field is missing after checking both 9fin and the resources folder, include it with value "not available - further diligence required" and note the likely source in `data_gaps`
 - Never infer or fabricate a figure
 - Always check the resources folder for user-uploaded data before relying solely on 9fin, and before marking a field unavailable
+- Before writing, check `/Templates/gold_standard_wagamama_tearsheet.html` for the depth and sourcing rigor your section should match — it is a quality bar, not a template to copy content from
 </content>

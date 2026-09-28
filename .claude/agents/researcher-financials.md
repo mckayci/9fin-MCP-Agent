@@ -83,6 +83,9 @@ Write your output as a JSON file to the path specified in your prompt (e.g. `/dr
 ```
 
 ## Rules
+- Before writing, check `/Templates/gold_standard_wagamama_tearsheet.html` for the depth and sourcing rigor your section should match — it is a quality bar, not a template to copy content from
+
+## Rules
 - If a data field is missing after checking both 9fin and the resources folder, include it with value "not available - further diligence required" and note the likely source in `data_gaps`
 - If most-recent financials are more than two years old, flag to user for manual review. They may be able to drop more recent reports into the resources folder
 - If outputting financials that are more than 2 years old, add a disclaimer indicating "Most recent financials available as of [x]"
