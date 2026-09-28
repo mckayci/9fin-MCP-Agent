@@ -6,6 +6,11 @@ Built with [Claude Code](https://claude.com/claude-code) and the 9fin MCP server
 
 For a fuller walkthrough of the workflow and the thinking behind it, see the supporting presentation: [9fin MCP Agent Supporting Materials.pdf](docs/Presentation/9fin%20MCP%20Agent%20Supporting%20Materials.pdf)
 
+## Demo Videos
+
+- [Weekly Screen](https://www.loom.com/share/424adae9a07048709a4ea7f401f90c53) - the scheduled Sunday-night run, sourced from 9fin's European Weekly Stressed and Distressed Data Report
+- [Manual Screen](https://www.loom.com/share/d10ae87e7d7d4c1fbe3cc43901ca2522) - an ad hoc run against the 9fin bond/loan screener with custom criteria
+
 ## Project Purpose
 
 Restructuring investment banking teams need to stay on top of newly stressed European corporate credits. This workflow automates the repetitive parts of that process: screening for price drops, pulling financial data, assessing whether a company is a genuine restructuring candidate, and producing a formatted summary that a senior banker can read in five minutes before a client call.
