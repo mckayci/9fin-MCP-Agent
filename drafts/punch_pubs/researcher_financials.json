@@ -1,0 +1,176 @@
+{
+  "company": "Punch Pubs",
+  "currency": "GBP",
+  "as_of": "2026-09-28",
+  "most_recent_financials_date": "2026-07-31",
+  "most_recent_financials_note": "Most recent financials available as of 31-Jul-2026 (Punch Finance plc Q3 FY26 Quarterly Bondholder Report and unaudited Condensed Consolidated Financial Information, covering the 40 weeks / 12-week Q3 period ended 17-May-2026). This is within the 2-year freshness window, so no manual-review flag is required, but note the ~10-week lag between period-end (17-May-26) and issue date (31-Jul-26) that is standard for Punch's quarterly bondholder reporting cycle.",
+  "business_description": {
+    "text": "Punch Pubs (formerly Punch Taverns) is the seventh-largest UK pub operator, comprising 1,310 pubs across England, Scotland and Wales as of 17-May-2026 (Q3 FY26). The estate is 92% freehold or long-leasehold (>50 years remaining), drink-led (c.77% of FY25 revenue), and skewed to suburban/community locations (81% of the estate) rather than the high street or late-night market, which management and 9fin both frame as reducing exposure to city-centre footfall and late-night trading risk relative to peers. The group operates no directly-managed pubs; instead it runs two 'asset-light' operating models via independent, largely live-in publicans: (1) Leased & Tenanted (L&T) - 900 pubs (69% of estate) at 17-May-2026 - where Punch leases the pub to a tenant and earns rent plus 'tied' drink sales (c.97% of L&T pubs operate under tie agreements, where the tenant pays below-market rent in exchange for committing to buy the majority of drinks from Punch at above-market prices); and (2) Pub Partnerships (PP, formerly 'Management Partnership'/Laine, aggregated into one PP segment from FY2024 under IFRS 8) - 410 pubs (31% of estate) - where the publican runs day-to-day operations under a limited company structure, Punch retains all sales revenue and covers all costs, and pays the publican a percentage-based fee. PP pubs carry higher revenue and EBITDA per site but push the maintenance/capex burden onto Punch rather than the tenant, and the group has been actively converting L&T sites to PP (60 transfers in the 40 weeks to 17-May-2026 vs 22 in the prior-year period) because PP delivers higher outlet-level EBITDA.",
+    "corporate_history": "Punch has a 'draughty' restructuring history relevant to a fresh look at credit risk: in 2011 the group (then Punch Taverns) entered a restructuring that lasted three years and ended in a debt-for-equity swap cutting the company's debt pile by GBP 600m, centred on unwinding its whole-business securitisation (WBS) structure - a structure UK peers Greene King, Mitchells & Butlers and Stonegate remain tied into today. Punch refinanced out of the WBS in 2021 (at a cost, given a make-whole redemption charge), and shortly afterwards, in December 2021, Fortress Investment Group acquired 100% of the group's equity from Patron Capital Partners for an enterprise value of approximately GBP 1.0bn (property then valued at c.GBP 850-879m, c.93% freehold/long-leasehold). The group's ultimate parent and controlling entity is CF Cooper Holdings LP, a Cayman Islands limited partnership in which no single partner holds more than 50% of the economics. Since the Fortress acquisition: in June 2025 Punch tendered for its existing GBP 600m Senior Secured Notes due 2026 and issued GBP 640m of new 7.875% Senior Secured Notes due December 2030 (also repaying RCF drawings and upsizing the RCF from GBP 70m to GBP 85m); in February 2026 it placed a further GBP 50m private tap of the same 7.875% 2030 notes, priced at 102.75% of par (i.e. at a premium), with proceeds used to repay RCF drawings and fund bolt-on freehold pub acquisitions.",
+    "sources": [
+      {"title": "Financial Table for Punch Pubs (Annual)", "url": "https://9fin.com/company/Punch%20Pubs/financials?statements=9fin%20Financials&seriesGroup=Annual", "publisher": "9fin"},
+      {"title": "Punch Pubs Results Presentation Q3 2026", "url": "https://9fin.com/documents/4aec0899-bec2-498c-8f3a-b62ecf1837de", "publisher": "9fin"},
+      {"title": "Punch Pubs Financial Statements Q3 2026", "url": "https://9fin.com/documents/1e3788d4-6afc-468c-9629-e5fdc9630114", "publisher": "9fin"},
+      {"title": "Punch Pubs — Credit QuickTake (9fin)", "url": "https://9fin.com/news/43ed427e-04a1-47c3-a8cb-68e406117428", "publisher": "9fin", "date": "2025-05-20"},
+      {"title": "Deal Prediction — Punch Taverns on tap for a bond market comeback (9fin)", "url": "https://9fin.com/news/e4484154-cb79-446d-af54-c5bca47a7a12", "publisher": "9fin", "date": "2024-09-03"},
+      {"title": "Punch Pubs Final Offering Memorandum GBP 640 7.875% Senior Secured Notes 2030", "url": "https://9fin.com/documents/d903c2b9-4074-4701-a918-281aba5e55ab", "publisher": "9fin", "date": "2025-05-21"},
+      {"title": "Pricing of GBP 50,000,000 of Additional 7.875% Senior Secured Notes due 2030", "url": "https://9fin.com/documents/e83aaec3-e396-43dc-b6db-c74128153b27", "publisher": "9fin (Punch Finance plc press release)", "date": "2026-02-12"},
+      {"title": "Punch Pubs: Q2 2026 Transcript & Playback", "url": "https://9fin.com/transcripts/aa09ae60-4353-4187-bc76-7345a638aed4", "publisher": "9fin", "date": "2026-05-08"}
+    ]
+  },
+  "business_model_and_property_focus": {
+    "operating_model_split": {
+      "as_of": "2026-05-17 (Q3 FY26)",
+      "leased_and_tenanted_pubs": 900,
+      "pub_partnership_pubs": 410,
+      "total_pubs": 1310,
+      "leased_and_tenanted_pct": "68.7%",
+      "pub_partnership_pct": "31.3%",
+      "trend": "L&T share of the estate has fallen steadily as Punch converts sites to PP: 940/328 (74.1%/25.9%) at 18-May-2025 -> 924/342 (73.0%/27.0%) at 10-Aug-2025 -> 906/358 (71.7%/28.3%) at 30-Nov-2025 -> 922/376 (71.0%/29.0%) at 22-Feb-2026 -> 900/410 (68.7%/31.3%) at 17-May-2026.",
+      "note": "Punch operates no directly-managed pubs. Management describes both models as 'low central overhead' and 'labour-like' (i.e. operated by independent entrepreneur-publicans rather than direct employees), which the company positions as a structural cost advantage and a partial insulation from national living wage / labour cost inflation versus fully-managed peers.",
+      "source": {"title": "Punch Pubs Results Presentation Q3 2026", "url": "https://9fin.com/documents/4aec0899-bec2-498c-8f3a-b62ecf1837de", "publisher": "9fin"}
+    },
+    "freehold_leasehold_mix": {
+      "as_of_17_may_2026": {"freehold_pct": "89%", "long_leasehold_pct": "3%", "short_leasehold_lt_50yrs_pct": "8%", "combined_freehold_or_long_leasehold_pct": "92%", "total_pubs": 1310},
+      "historical_trend": [
+        {"date": "2021-12 (Fortress acquisition)", "freehold_or_long_leasehold_pct": "~93%", "property_value_gbp_m": "850-879", "source": "9fin Credit QuickTake, 20-May-2025 and 9fin Deal Prediction, 03-Sep-2024"},
+        {"date": "2024-05 (approx.)", "freehold_pct": "92%", "property_value_gbp_m": 910, "ltv_pct": "68.9%", "total_pubs": 1250, "source": "9fin Deal Prediction, 03-Sep-2024"},
+        {"date": "2025-02-23", "freehold_pct": "96%", "property_value_gbp_m": 992, "ltv_pct": "64.5%", "total_pubs": 1264, "source": "9fin Credit QuickTake, 20-May-2025, citing Preliminary OM"},
+        {"date": "2026-05-17 (Q3 FY26)", "freehold_or_long_leasehold_pct": "92%", "property_value_gbp_m": 1079.4, "ltv_pct": "62.8%", "total_pubs": 1310, "source": "Punch Pubs Results Presentation Q3 2026"}
+      ],
+      "data_note": "The precise freehold-only percentage (as opposed to freehold + long leasehold combined) has been reported inconsistently across periods (96% freehold quoted at Feb-2025 in the 9fin Credit QuickTake vs 89% freehold / 92% freehold-plus-long-leasehold at May-2026 in the company's own Q3 FY26 pack) - likely reflects a methodology/definition change or reclassification of some sites from freehold to long-leasehold rather than a real disposal of freehold stock. Flagging as a data point to sense-check against the FY2025 Annual Report (Companies House) or Savills valuation if precision matters for a live situation.",
+      "property_security": "The GBP 690m of Senior Secured Notes (GBP 640m issued Jun-2025 + GBP 50m tap Feb-2026) are secured, among other collateral, by a fixed first equitable charge over the freehold pub estate and over leasehold real property with more than 25 years remaining. Management stated on the Q2 FY26 call that the freehold pub estate underpinning this security was valued by Savills in 2025 and has a current property valuation of approximately GBP 1.1bn.",
+      "sources": [
+        {"title": "Punch Pubs Results Presentation Q3 2026", "url": "https://9fin.com/documents/4aec0899-bec2-498c-8f3a-b62ecf1837de", "publisher": "9fin"},
+        {"title": "Punch Pubs — Credit QuickTake (9fin)", "url": "https://9fin.com/news/43ed427e-04a1-47c3-a8cb-68e406117428", "publisher": "9fin", "date": "2025-05-20"},
+        {"title": "Punch Pubs — Bond Legal QuickTake (9fin)", "url": "https://9fin.com/news/7768eb86-d221-46fc-91ee-b5ba6e429c7a", "publisher": "9fin", "date": "2025-05-20"},
+        {"title": "Punch Pubs: Q2 2026 Transcript & Playback", "url": "https://9fin.com/transcripts/aa09ae60-4353-4187-bc76-7345a638aed4", "publisher": "9fin", "date": "2026-05-08"}
+      ]
+    },
+    "capex_and_disposal_programme": {
+      "net_capex_by_year_gbp_m": {"FY2022": -30.3, "FY2023": -19.6, "FY2024": -14.0, "FY2025": -27.4, "LTM_17May26": -49.8},
+      "capex_trend_commentary": "Net capex (as reported in 9fin's key financial table) has stepped up sharply in FY2025 and especially the LTM period to 17-May-2026, reversing the FY2023-24 decline. Per the Q3 FY26 results presentation, the increase is 'primarily due to the increased rate of transfers to Pub Partnerships' (60 transfers in the 40 weeks to 17-May-2026 vs 22 in the prior-year period; historically each L&T-to-PP conversion has cost c.GBP 205,000 per site), compounded by a step-up in bolt-on freehold pub acquisitions funded by the Feb-2026 GBP 50m note tap (e.g. 15 pubs acquired for GBP 10.8m in Q3 FY26 alone; a further 24 pubs agreed for GBP 19.2m since the Q3 FY26 quarter-end, including sites from RedCat Hospitality).",
+      "capex_definition_note": "9fin's 'Capex' line in the key financial table does not consistently net the same cash-flow-statement components across all years: for FY2022 it equals (site acquisitions + property investments - disposal proceeds), but for FY2024 and FY2025 it equals (property investments - disposal proceeds) only, excluding site acquisitions, which appear to be tracked as a separate M&A-style outflow in those years (FY2024 acquisitions GBP -25.2m; FY2025 GBP -20.0m; LTM to 17-May-26 GBP -36.2m per the Q3 FY26 cash flow statement). This is flagged as a methodology inconsistency in 9fin's own data rather than resolved by inference; the underlying cash flow statement line items are shown in the summary_financials fcf_build notes below and should be used in preference to the blended 'Capex' metric where precision matters.",
+      "disposal_programme": {
+        "2020_to_feb_2025": {"pubs_disposed": 172, "net_proceeds_gbp_m": 92.6, "multiple_of_fy19_disposal_ebitda": "21.4x", "average_annual_proceeds_gbp_m": 16.8, "period": "18-Aug-2019 to 23-Feb-2025", "source": "9fin Credit QuickTake, 20-May-2025"},
+        "fy2023_disposals_gbp_m": 11.2,
+        "fy2024_disposals_guided_gbp_m": "12 (guided)",
+        "recent_quarters": {
+          "40_weeks_to_17_may_2026": {"properties_sold": 6, "net_proceeds_gbp_m": 3.1, "premium_to_book_value_gbp_m": 1.0},
+          "40_weeks_to_18_may_2025_prior_year_comparative": {"properties_sold": 19, "net_proceeds_gbp_m": 8.4, "premium_to_book_value_gbp_m": 1.0}
+        },
+        "commentary": "Disposal proceeds have historically been a modest but meaningful cash source (averaging c.GBP 16.8m/year, 2019-2025) generated from selling underperforming/surplus pubs at attractive multiples (21.4x FY19 disposal EBITDA), supporting positive free cash flow without eroding group EBITDA materially. However, the pace has slowed sharply in FY2026 (GBP 3.1m from 6 pubs in the 40 weeks to 17-May-2026, down from GBP 8.4m from 19 pubs a year earlier) as management has pivoted toward net freehold acquisitions (funded by the Feb-2026 note tap) rather than net disposals. A prior 9fin analysis (Sep-2024) estimated c.GBP 100m of disposals would be needed to reach 6.0x net leverage from the then-7.2x level, and judged this 'unlikely to move the needle' at the GBP 10-15m/year pace guided at the time - management's own preference, per that analysis, is to delever through EBITDA growth rather than asset sales."
+      },
+      "sources": [
+        {"title": "Punch Pubs Results Presentation Q3 2026", "url": "https://9fin.com/documents/4aec0899-bec2-498c-8f3a-b62ecf1837de", "publisher": "9fin"},
+        {"title": "Punch Pubs Financial Statements Q3 2026", "url": "https://9fin.com/documents/1e3788d4-6afc-468c-9629-e5fdc9630114", "publisher": "9fin"},
+        {"title": "Punch Pubs — Credit QuickTake (9fin)", "url": "https://9fin.com/news/43ed427e-04a1-47c3-a8cb-68e406117428", "publisher": "9fin", "date": "2025-05-20"},
+        {"title": "Deal Prediction — Punch Taverns on tap for a bond market comeback (9fin)", "url": "https://9fin.com/news/e4484154-cb79-446d-af54-c5bca47a7a12", "publisher": "9fin", "date": "2024-09-03"}
+      ]
+    },
+    "property_intensity_industry_commentary": {
+      "management_commentary": "On the Q2 FY26 bondholder call (08-May-2026), CFO Steve Dando explicitly tied the freehold-heavy, non-managed operating model to margin and inflation resilience: 'you're seeing the benefit of Punch's model, which is a relatively cost-light model. We don't have any managed pubs. We only have lease and tenanted and pub partnerships, which I think protects us on the cost side... A third of our EBITDA comes from rental income, which increases by RPI and CPI each year. And we also uplift our annual prices of drinks, which is pegged to CPI. So on inflation being higher, that doesn't give me a lot of concern, just because of the way our model works.' The same call linked the freehold estate directly to financing capacity: the GBP 690m of notes are 'secured against the Freehold pub estate, which was valued by Savills in 2025, and has a current property valuation of approximately GBP 1.1 billion.'",
+      "9fin_analysis_commentary": "9fin's May-2025 Credit QuickTake frames the freehold-backed estate as a core credit positive ('asset-coverage is still touted as a key selling point for lenders') supporting the Loan-to-Value metric (64.5% at the time) as an alternative leverage lens to EBITDA-based leverage, and notes disposal proceeds from freehold sales have historically supported free cash flow generation. 9fin's Sep-2024 Deal Prediction piece benchmarked Punch's LTV (68.9% at the time) favourably against Stonegate's Platinum Group carve-out (c.70.5% LTV) and unfavourably (i.e. lower risk) than Stonegate's overall estate (86% LTV), and noted Punch's structural advantage of holding all assets inside a single restricted group versus Stonegate's carve-out into an unrestricted Platinum Group subsidiary.",
+      "risk_side_of_the_freehold_pp_shift": "9fin's Credit QuickTake also flags that the strategic shift from L&T to Pub Partnerships increases earnings volatility and shifts the maintenance capex burden from the tenant onto Punch itself - i.e. property intensity cuts both ways: it provides collateral value and rental-income inflation protection, but as the PP share of the estate rises, Punch (not an external tenant) increasingly bears the capex load of maintaining that freehold estate, which is visible in the FY2025/LTM capex step-up detailed above.",
+      "sources": [
+        {"title": "Punch Pubs: Q2 2026 Transcript & Playback", "url": "https://9fin.com/transcripts/aa09ae60-4353-4187-bc76-7345a638aed4", "publisher": "9fin", "date": "2026-05-08"},
+        {"title": "Punch Pubs — Credit QuickTake (9fin)", "url": "https://9fin.com/news/43ed427e-04a1-47c3-a8cb-68e406117428", "publisher": "9fin", "date": "2025-05-20"},
+        {"title": "Deal Prediction — Punch Taverns on tap for a bond market comeback (9fin)", "url": "https://9fin.com/news/e4484154-cb79-446d-af54-c5bca47a7a12", "publisher": "9fin", "date": "2024-09-03"}
+      ]
+    },
+    "further_diligence_note": "9fin does not host a standalone independent property/RICS valuation report or the underlying Savills 2025 valuation document itself (only management's reference to it on the Q2 FY26 call). If precision on the freehold estate's independent valuation, or a granular freehold-vs-leasehold pub count (as opposed to the percentage splits reported), is required for a live situation, the likely sources are: (i) Companies House full statutory accounts for Punch Pubs Group Limited (which would carry a property, plant & equipment note with a freehold/leasehold split by net book value) and (ii) a direct request to Punch's investor relations / bondholder reporting team for the underlying Savills valuation report."
+  },
+  "revenue_splits": {
+    "by_geography": {
+      "data": "Not available on 9fin. 9fin's 'Sales by Geography' financial-statement tool returned no data for this company.",
+      "explanation": "Punch's own FY2025/Q3 FY26 segmental disclosures state explicitly: 'The Group operates and originates solely in the United Kingdom.' There is therefore no sub-UK geographic revenue split disclosed by the company (e.g. no England/Scotland/Wales breakdown of revenue, only of pub count by region shown in investor decks: South East/London 311 pubs, North East 261, Midlands/East Anglia 251, North West 234, South West 202, Scotland 30, Wales 21 pubs, as at 17-May-2026).",
+      "data_gap": "Sub-UK regional revenue split (as opposed to pub count) is not available - further diligence required. Likely source: internal management reporting only, as this is not required or provided in statutory or bondholder disclosure.",
+      "source": {"title": "Punch Pubs Results Presentation Q3 2026", "url": "https://9fin.com/documents/4aec0899-bec2-498c-8f3a-b62ecf1837de", "publisher": "9fin"}
+    },
+    "by_segment_operating_model": {
+      "note": "L&T and PP segment figures below are as reported under IFRS 8 (Pub Partnership segment includes the formerly separately-disclosed Management Partnership and Laine divisions, aggregated from FY2024 comparatives onward per the FY2025 Annual Report; FY2023 and earlier are not available on this combined PP basis).",
+      "periods": ["FY2024 (52wk to 11-Aug-24)", "FY2025 (52wk to 10-Aug-25)", "YTD FY26 (40wk to 17-May-26)"],
+      "rows": [
+        {"label": "L&T revenue (GBP m)", "values": [125.4, 129.5, 95.7]},
+        {"label": "PP revenue (GBP m)", "values": [198.1, 208.4, 179.0]},
+        {"label": "Total revenue (GBP m)", "values": [323.5, 337.9, 274.7]},
+        {"label": "PP % of total revenue", "values": ["61.2%", "61.7%", "65.2%"]},
+        {"label": "L&T EBITDA before non-underlying items (GBP m)", "values": ["not available - further diligence required (FY24 segment EBITDA not disclosed in documents reviewed)", 72.6, 55.5]},
+        {"label": "PP EBITDA before non-underlying items (GBP m)", "values": ["not available - further diligence required (FY24 segment EBITDA not disclosed in documents reviewed)", 57.2, 45.1]},
+        {"label": "PP % of EBITDA before central costs (i.e. excluding unallocated corporate overhead)", "values": ["not available for FY24", "44.1%", "44.9%"]}
+      ],
+      "commentary": "Although PP comprised only 25-31% of the pub estate by count across the periods shown, it already generates c.61-65% of group revenue and (per the May-2025 Credit QuickTake, on an FY2024 estate mix) c.40% of EBITDA before non-underlying items, reflecting materially higher revenue and EBITDA per site under the PP model versus L&T.",
+      "sources": [
+        {"title": "Punch Pubs Financial Statements Q3 2026", "url": "https://9fin.com/documents/1e3788d4-6afc-468c-9629-e5fdc9630114", "publisher": "9fin"},
+        {"title": "Punch Pubs Annual Report FY 2025", "url": "https://9fin.com/documents/87d401e8-fd72-472f-a9c2-e018c6081f71", "publisher": "9fin", "date": "2025-12-02"}
+      ]
+    },
+    "by_revenue_type": {
+      "periods": ["FY2022", "FY2023", "FY2024", "FY2025", "LTM (17-May-26)"],
+      "rows": [
+        {"label": "Drink revenue (GBP m)", "values": [218.5, 243.2, 251.5, 260.9, 278.5]},
+        {"label": "Food revenue (GBP m)", "values": [28.0, 32.9, 33.7, 37.7, 41.9]},
+        {"label": "Rental income (GBP m)", "values": [29.6, 28.4, 29.1, 29.6, 29.1]},
+        {"label": "Other revenue (GBP m)", "values": [8.3, 9.0, 9.2, 9.7, 11.4]},
+        {"label": "Total revenue (GBP m)", "values": [284.4, 313.5, 323.5, 337.9, 360.9]},
+        {"label": "Drink % of total", "values": ["76.8%", "77.6%", "77.7%", "77.2%", "77.2%"]}
+      ],
+      "commentary": "Drink revenue has consistently represented c.77-78% of group revenue, consistent with management's description of Punch as a 'wet-led' (drinks-focused) community pub estate with limited food-led/destination-dining exposure. Rental income (drawn from L&T tenants) has been broadly flat at c.GBP 28-30m/year even as total revenue has grown, consistent with the L&T share of the estate shrinking as sites convert to PP (PP tenants do not pay Punch rent in the same way, since Punch retains all PP sales revenue directly).",
+      "source": {"title": "Sales by Segment for Punch Pubs (Annual)", "url": "https://9fin.com/company/Punch%20Pubs/financials?statements=Sales%20by%20Segment&seriesGroup=Annual", "publisher": "9fin"}
+    }
+  },
+  "summary_financials": {
+    "periods": ["FY2023 (52wk to 13-Aug-23)", "FY2024 (52wk to 11-Aug-24)", "FY2025 (52wk to 10-Aug-25)", "LTM (17-May-26)"],
+    "basis_note": "Figures below use 9fin's 'Adjusted/Underlying EBITDA' basis (which for Punch is already stated on an IFRS 16 lease-inclusive basis - 9fin's key financial table shows identical 'Adjusted EBITDA' and 'Adjusted EBITDA (IFRS 16)' values in every period from FY2022 onward, i.e. there is no separate pre/post-IFRS16 EBITDA distinction to blend here, unlike some peers). Net debt and leverage are shown on both a pre-IFRS16 (bank/bond-debt-only) and IFRS16 (lease-inclusive) basis, as these do differ materially and should not be blended.",
+    "rows": [
+      {"label": "Revenue (GBP m)", "values": [313.5, 323.5, 337.9, 360.9]},
+      {"label": "Gross profit / gross margin", "values": ["not available - further diligence required (9fin does not disclose a distinct 'cost of sales' / gross profit line for Punch; income statement moves directly from Revenue to Operating costs before D&A to EBITDA)", "not available", "not available", "not available"]},
+      {"label": "Adjusted/Underlying EBITDA (GBP m)", "values": [81.9, 91.1, 98.4, 103.1]},
+      {"label": "Adjusted/Underlying EBITDA margin", "values": ["26.1%", "28.2%", "29.1%", "28.6%"]},
+      {"label": "Statutory EBITDA (before underlying adjustments, GBP m)", "values": [79.1, 88.6, 95.9, 99.0]},
+      {"label": "Net capex (GBP m)", "values": [-19.6, -14.0, -27.4, -49.8]},
+      {"label": "Net debt, pre-IFRS16 (GBP m)", "values": [609.7, 625.7, 631.0, 677.4]},
+      {"label": "Net leverage, pre-IFRS16 (x Adj. EBITDA)", "values": ["7.4x", "6.9x", "6.4x", "6.6x"]},
+      {"label": "Net debt, IFRS16 lease-inclusive (GBP m)", "values": [683.4, 697.1, 706.3, 749.3]},
+      {"label": "Net leverage, IFRS16 lease-inclusive (x Adj. EBITDA)", "values": ["8.3x", "7.7x", "7.2x", "7.3x"]},
+      {"label": "Interest coverage (EBITDA / net interest, x)", "values": ["1.7x", "1.9x", "1.8x", "1.6x"]},
+      {"label": "Loan-to-value (net debt / property value)", "values": ["not available for FY23 on this exact date basis", "68.9% (approx., per 9fin Sep-2024 article; not the exact FY24 year-end print)", "62.4% (at 10-Aug-25, per Q3 FY26 IR pack)", "62.8% (at 17-May-26)"]}
+    ],
+    "leverage_cross_check_note": "LTM net leverage of 6.6x (pre-IFRS16) / 7.3x (IFRS16) matches the figures already on the target_list from the 27-Sep-2026 screen ('6.6x secured / 7.3x incl. leases') and the Q3 FY26 like-for-like quarterly EBITDA growth of +5.8% (25.7 vs 24.3 in the prior-year 12-week quarter) also ties out exactly to the target_list's Q3 EBITDA commentary - both figures are corroborated, not restated.",
+    "gross_profit_data_gap": "Gross profit is not available - further diligence required. 9fin's income statement for Punch goes directly from Revenue to a single 'Operating costs before depreciation and amortisation' line to EBITDA, with no intermediate cost-of-sales/gross-profit subtotal disclosed. The likely source for a true gross-margin figure (e.g. drink/food gross margin before overheads) would be Punch's full statutory accounts at Companies House or a direct management data request; 9fin's Bond Legal QuickTake references drink/food/publican-fee costs representing 66% of total costs in FY24 (with pub operating costs and wages the remaining 34%), which is the closest proxy available but is not a true gross margin calculation.",
+    "fcf_basis": "Calculated from EBITDA using the CLAUDE.md formula (EBITDA - Cash Taxes +/- Changes in NWC - Capex = UFCF; UFCF - Cash Interest - Lease Repayments = LFCF), built from 9fin's Adjusted/Underlying EBITDA, the 'Change in trade working capital' and 'Capex' lines from 9fin's key financial table, and the 'Interest paid' (financing activities) plus 'Payment of interest on lease liabilities' (operating activities) and 'Repayment of capital element of lease liability' (financing activities) lines from 9fin's cash flow statement / the Q3 FY26 condensed cash flow statement.",
+    "fcf_build": {
+      "periods": ["FY2023", "FY2024", "FY2025", "LTM (17-May-26)"],
+      "rows": [
+        {"label": "Adjusted/Underlying EBITDA (GBP m)", "values": [81.9, 91.1, 98.4, 103.1]},
+        {"label": "less: Cash taxes paid (GBP m)", "values": [0.1, 0.0, 0.0, 0.0]},
+        {"label": "+/- Change in net working capital (GBP m)", "values": [0.6, 6.4, 5.1, -1.5]},
+        {"label": "less: Net capex (GBP m)", "values": [-19.6, -14.0, -27.4, -49.8]},
+        {"label": "Unlevered FCF (UFCF) (GBP m)", "values": [63.0, 83.5, 76.1, 51.8]},
+        {"label": "less: Cash interest paid - bond/RCF (GBP m)", "values": [-39.2, -40.2, -38.9, -48.2]},
+        {"label": "less: Cash interest paid - leases (GBP m)", "values": ["included in combined lease-payment line below (not split out in FY23 disclosure)", -5.0, -5.8, -5.1]},
+        {"label": "less: Lease repayments - capital element (GBP m)", "values": [-9.9, -4.7, -3.9, -5.1]},
+        {"label": "Levered FCF (LFCF) (GBP m)", "values": [13.9, 33.6, 27.5, -6.6]},
+        {"label": "UFCF / EBITDA conversion", "values": ["77.0%", "91.7%", "77.3%", "50.2%"]},
+        {"label": "LFCF / EBITDA conversion", "values": ["17.0%", "36.9%", "27.9%", "n.a."]}
+      ],
+      "negative_conversion_flag": "LTM (to 17-May-26) LFCF is negative (GBP -6.6m); per house convention this should display as \"n.a.\" in italic red (#e74c3c) in the tearsheet, with the underlying negative figure retained here for transparency.",
+      "cash_tax_note": "Cash taxes paid are not separately disclosed as a distinct operating cash flow line in either the annual 9fin cash flow statement or the Q3 FY26 condensed cash flow statement for FY2024, FY2025 or the LTM period (only a small 'Income tax received' inflow of GBP 0.1m appears in the FY2023 column of 9fin's cash flow data; no equivalent line exists in later periods). This has been treated as nil/negligible in the build above, consistent with the group's income statement tax charge appearing to be predominantly a deferred (non-cash) tax charge (the deferred tax liability on the balance sheet rose from GBP 24.6m at FY2024 to GBP 32.3m by Q3 FY26). This is flagged as an assumption, not a confirmed nil - Companies House full statutory accounts (which include a tax note reconciling the charge to cash paid) would be the source to confirm the exact cash tax paid figure.",
+      "capex_step_up_commentary": "The sharp fall in LTM FCF conversion (UFCF/EBITDA down from 77.3% at FY2025 to 50.2% LTM; LFCF turning negative) is driven almost entirely by the near-doubling of net capex (GBP -27.4m FY2025 to GBP -49.8m LTM) combined with a step-up in cash interest (GBP -44.7m FY2025 to GBP -53.3m LTM, reflecting the higher 7.875% coupon on the enlarged GBP 690m note balance following the Feb-2026 GBP 50m tap, versus the lower average cost of the prior GBP 600m notes they replaced). This capex step-up is a direct consequence of the L&T-to-PP conversion acceleration and the bolt-on freehold acquisition programme detailed in the business_model_and_property_focus section above, not of underlying trading weakness - Underlying EBITDA itself grew to a series high of GBP 103.1m LTM. This nuance (capex-funded, not EBITDA-driven, cash flow deterioration) is worth flagging explicitly given Ciarán's specific brief to sense-check the prior 'Pass' recommendation.",
+      "sources": [
+        {"title": "Financial Table for Punch Pubs (Annual)", "url": "https://9fin.com/company/Punch%20Pubs/financials?statements=9fin%20Financials&seriesGroup=Annual", "publisher": "9fin"},
+        {"title": "Cash Flow for Punch Pubs (Annual)", "url": "https://9fin.com/company/Punch%20Pubs/financials?statements=Cash%20Flow&seriesGroup=Annual", "publisher": "9fin"},
+        {"title": "Punch Pubs Financial Statements Q3 2026", "url": "https://9fin.com/documents/1e3788d4-6afc-468c-9629-e5fdc9630114", "publisher": "9fin"}
+      ]
+    }
+  },
+  "capital_structure_cross_check_note_for_auditor": "Per the Q3 FY26 (17-May-2026) balance sheet: Secured Notes GBP 690.0m (GBP 640.0m issued Jun-2025 + GBP 50.0m tap Feb-2026, both due 30-Dec-2030), RCF GBP 85.0m total facility with GBP nil drawn, cash GBP 12.6m, net debt GBP 677.4m, LTV 62.8%. This is a different (more recent) balance sheet date than researcher-capital may be working from if they have used a different quarter's cap table - flag any date mismatch rather than blending. Rating referenced in the target_list and 9fin's May-2025 Credit QuickTake is B3 (Moody's) / B- (S&P); this researcher has not independently re-verified the rating as at 28-Sep-2026 and defers to researcher-capital on current ratings.",
+  "data_gaps": [
+    "Sub-UK geographic revenue split - not available; company discloses UK-only geographic segment. Likely source: none exists publicly; would require a direct management data request.",
+    "Gross profit / gross margin - not available in 9fin's income statement (no cost-of-sales subtotal disclosed). Likely source: Companies House full statutory accounts for Punch Pubs Group Limited, or direct management data request.",
+    "L&T vs PP segment EBITDA split for FY2024 - not found in documents reviewed (only FY2025 and 40-week FY26 splits were available in the Q3 FY26 financial statements). Likely source: FY2024 Annual Report notes (not reviewed in this pass) or Companies House filing.",
+    "Cash taxes paid, exact figure for FY2024/FY2025/LTM - no explicit cash-flow-statement line disclosed; treated as nil/negligible in the FCF build above based on the tax charge appearing predominantly deferred. Likely source: Companies House full statutory accounts tax note.",
+    "Precise freehold-only percentage (as distinct from freehold + long-leasehold combined) shows an apparent inconsistency between the 96% figure quoted in the Feb-2025 Preliminary OM (via 9fin's May-2025 Credit QuickTake) and the 89% freehold / 92% freehold-plus-long-leasehold figures in the company's own Q3 FY26 (May-2026) investor pack. Likely source: FY2025 Annual Report property note or a direct request for the underlying Savills 2025 valuation.",
+    "Independent (Savills 2025) property valuation report itself is referenced by management on the Q2 FY26 call but is not separately hosted on 9fin. Likely source: direct request to Punch investor relations."
+  ]
+}

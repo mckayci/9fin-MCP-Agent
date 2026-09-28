@@ -1,0 +1,198 @@
+{
+  "company": "Punch Pubs",
+  "sponsor": "Fortress Investment Group",
+  "prepared_for": "Phase 2 tearsheet - ad hoc deep dive requested 28-Sep-2026",
+  "context_note": "Last screened 27-Sep-2026: 'Pass' (trading improving, Q3 EBITDA +5.8%, Feb-26 add-on priced at a premium, RCF undrawn, nothing matures before 2030). This research re-checks that view following a creditor comment that pubs 'have been struggling'.",
+
+  "recent_news": [
+    {
+      "date": "2026-09-23",
+      "headline": "Stonegate in talks with Heineken to sell hundreds of pubs 'as debts mount' (sector read-across, not Punch)",
+      "source": "Food Manufacturer / 9fin news feed",
+      "url": "https://www.foodmanufacture.co.uk/Article/2026/09/23/stonegate-could-sell-hundreds-of-pubs-to-heineken-as-debts-mount/"
+    },
+    {
+      "date": "2026-09-18",
+      "headline": "Stonegate Q3 FY26 earnings flash: sales -8.6% YoY, EBITDA +8.4% YoY, net leverage -0.2x to 8.1x (peer comparator, not Punch)",
+      "source": "9fin",
+      "url": "https://9fin.com/news/216b2cc6-395e-41e7-bee0-cd631db333f4"
+    },
+    {
+      "date": "2026-08-24",
+      "headline": "UK Treasury brings in expert to review business rates for pubs and hotels",
+      "source": "9fin European Morning Coffee digest",
+      "url": "https://9fin.com/news/bd828e4b-0d9d-435a-a22b-0dfdd553a97a"
+    },
+    {
+      "date": "2026-08-13",
+      "headline": "9fin sector explainer 'How do pubs make money?' - Punch flagged as most freehold-heavy (92%) and least labour-exposed of the four major UK pubcos; Stonegate flagged as most leveraged (7.9x, 88% LTV) and exploring a 300-pub sale as part of a wider restructuring/refinancing plan",
+      "source": "9fin Educational",
+      "url": "https://9fin.com/news/b529e1ac-4941-420b-b316-653094c49495"
+    },
+    {
+      "date": "2026-07-31",
+      "headline": "Punch Pubs Q3 FY26 earnings flash: sales +8.6% YoY, EBITDA +5.8% YoY, net leverage -0.1x to 6.6x",
+      "source": "9fin",
+      "url": "https://9fin.com/news/0cd93274-5621-4493-9770-e1fe23748877"
+    },
+    {
+      "date": "2026-07-31",
+      "headline": "Q3 2026 Financial Statements (40 weeks to 17-May-26) published: revenue £274.7m, underlying EBITDA £75.9m, liquidity £97.6m, LTV 62.8%",
+      "source": "9fin document library",
+      "url": "https://9fin.com/documents/1e3788d4-6afc-468c-9629-e5fdc9630114"
+    },
+    {
+      "date": "2026-07-09",
+      "headline": "Fitch affirms Stonegate at CCC+ (peer comparator, not Punch)",
+      "source": "Fitch Ratings",
+      "url": "https://www.fitchratings.com/research/corporate-finance/fitch-affirms-stonegate-at-ccc-09-07-2026"
+    },
+    {
+      "date": "2026-06-19",
+      "headline": "Punch Finance plc directorate change: Edward (Ed) Bashforth, Commercial Projects Director, resigns from the board effective 19-Jun-2026 after almost two decades with the company",
+      "source": "TISE (Punch Finance plc RNS)",
+      "url": "https://tisegroup.com/market/news/359845"
+    },
+    {
+      "date": "2026-05-26",
+      "headline": "Punch Finance plc directorate change: Andrew (Andy) Spencer (CEO) and Matt Ward (incoming CFO) appointed to the board, effective 21-May-2026",
+      "source": "TISE (Punch Finance plc RNS)",
+      "url": "https://tisegroup.com/market/news/359014"
+    },
+    {
+      "date": "2026-05-11",
+      "headline": "Matt Ward starts as new CFO (ex-CFO, Village Hotels; prior senior finance roles at Greene King); Steve Dando (CFO for 15 years) moves to newly-created Chief Financial Strategist role",
+      "source": "The Caterer / Morning Advertiser",
+      "url": "https://www.thecaterer.com/news/punch-pubs-appoints-matt-ward-as-cfo-as-steve-dando-moves-to-strategist-role"
+    },
+    {
+      "date": "2026-05-08",
+      "headline": "Punch Pubs Q2 FY26 earnings flash: sales +11.3% YoY, EBITDA +8.1% YoY, net leverage +0.3x to 6.7x",
+      "source": "9fin",
+      "url": "https://9fin.com/news/a0c5b92f-dcea-45e7-a069-b8ad62e80371"
+    },
+    {
+      "date": "2026-02-23",
+      "headline": "Punch Finance plc admitted to the Official List (TISE) following the £640m/£690m 7.875% SSN 2030 issuance and £50m tap",
+      "source": "TISE",
+      "url": "https://tisegroup.com/market/news/356365"
+    },
+    {
+      "date": "2026-02-13",
+      "headline": "New deal: Punch Pubs £50m private tap of the 7.875% Senior Secured Notes due 2030, priced at a premium to fund bolt-on freehold acquisitions",
+      "source": "9fin",
+      "url": "https://9fin.com/data/instruments/zB1kc6L1-1"
+    },
+    {
+      "date": "2025-06-05",
+      "headline": "Punch Pubs issues £640m 7.875% Senior Secured Notes due Dec-2030, refinancing the £600m SSNs due 2026 and repaying £33m of RCF drawings",
+      "source": "9fin Bond Legal QuickTake",
+      "url": "https://9fin.com/news/7768eb86-d221-46fc-91ee-b5ba6e429c7a"
+    }
+  ],
+
+  "analysis_pieces": [
+    {
+      "title": "How do pubs make money? (9fin Educational, 13-Aug-2026)",
+      "key_findings": "Sector-wide piece comparing the UK's four largest pubcos (Stonegate, Punch, Greene King, M&B). Punch is the most freehold-heavy (92% of 1,298-1,310 pubs on freehold/long-leasehold), has fully exited whole-business securitisation, and is structurally insulated from National Living Wage/NIC increases because its L&T tenants and Pub Partnership operators - not Punch itself - bear labour costs. Punch's LTV was 64% (Aug-2025) versus Stonegate's ~88% (H1 26, lease-adjusted). Stonegate is the most leveraged (7.9x H1 26) and structurally complex (Unique WBS plus an unrestricted Platinum Group), with revenue falling 6.9% YoY in H1 26 and only marginal disposal progress (GBP52m of proceeds against GBP3.7bn of debt); management there has 'stated a clear path to deleveraging' but progress is described as marginal. Debt maturities across all four pubcos run 2029-35, so 9fin's own view is that no operator in this sub-sector faces a genuine near-term refinancing wall. Punch's 7.875% 2030 SSNs were quoted at 2.2% spread-to-worst / 6.6% YTW versus Stonegate's 10.75% 2029 SSNs at 5.6% STW - the pricing gap itself signals the market differentiates sharply between the two credits. Sector-wide cost themes flagged: National Living Wage rose 4.1% to GBP12.71/hr from April 2026, NIC rose from 13.8% to 15% from April 2025 (c.GBP2,500 additional annual cost per FTE for operators that bear labour directly); nearly two pubs a day closed in Q1 2026; Gen Z drinking materially less (structural, not cyclical). A 20% cut to business rates for pubs was announced by government in July 2026 (partial offset).",
+      "url": "https://9fin.com/news/b529e1ac-4941-420b-b316-653094c49495"
+    },
+    {
+      "title": "Punch Pubs - Credit QuickTake (9fin, 20-May-2025)",
+      "key_findings": "Seventh-largest UK pub operator (1,264 sites at the time), 90% wet-led, 81% suburban/community. LTM sales GBP326.7m, pro forma run-rate adjusted underlying EBITDA GBP111m (34% margin) as of Feb-2025. Strategic shift from Leased & Tenanted to the higher-EBITDA Pub Partnership model continuing (PP is 25% of pubs but ~40% of EBITDA). Between 2020 and Feb-2025, Punch disposed of 172 pubs for GBP92.6m net proceeds at a 21.4x EBITDA multiple, evidencing disposal optionality from its freehold base. Key risks flagged: earnings volatility from the PP shift (loses the stability of L&T rental income, ~GBP28m/year), execution risk on the L&T-to-PP conversion pipeline, wet-led exposure to changing consumer/health trends, 100% UK geographic concentration, and supplier concentration (Carlsberg-Britvic ~31% of drinks supply costs).",
+      "url": "https://9fin.com/news/43ed427e-04a1-47c3-a8cb-68e406117428"
+    },
+    {
+      "title": "Punch Pubs - Bond Legal QuickTake (9fin, 20-May-2025)",
+      "key_findings": "Covers the 2025 refinancing of the GBP600m 2026 SSNs into the GBP640m 7.875% SSNs due Dec-2030. Senior secured leverage covenant threshold (SSNL) set at 6.5x, described by 9fin's legal team as 'punchy' but in line with the prior 2021 notes. Super Senior RCF (GBP85m) expected undrawn at issuance, plus day-one capacity for a further GBP15m of incremental super senior debt. No non-guarantor debt cap, but high initial guarantor coverage (day one Guarantors represented 97.7% of revenue / 98.5% of Adjusted Underlying EBITDA). J.Crew blocker included, limiting (but not eliminating) drop-down/asset-stripping risk to Material IP. Security is a first-priority equitable charge over the freehold estate; the RCF ranks super senior. No maintenance financial covenant tied to RCF utilisation is captured in 9fin's covenant extraction for this instrument (unlike some comparable UK consumer credits) - this appears to be an incurrence-only covenant package typical of a straightforward HY bond, with any springing test (if one exists) likely to sit in the separate RCF facility agreement, which is not in 9fin's document set.",
+      "url": "https://9fin.com/news/7768eb86-d221-46fc-91ee-b5ba6e429c7a"
+    },
+    {
+      "title": "Restructuring the Watchlist - Legal Analysis of European Distressed Tracker, September 2026 (9fin, 23-Sep-2026)",
+      "key_findings": "9fin's own monthly distress tracker for September 2026 adds five names (Awaze, Iberconsa, Hilding Anders, Landal, Wagamama). Neither Punch nor Stonegate appears among this month's additions to the Watchlist or In Progress categories. This is a useful, independent cross-check: as of the most current 9fin distress screening available, Punch is not flagged by 9fin's own restructuring desk, and no new addition for Stonegate is recorded this month either (though Stonegate's underlying credit metrics - see news table - are weaker and it may already sit on an earlier month's list, which was not in scope of this pull).",
+      "url": "https://9fin.com/news/d757be3f-bc8c-487e-a62b-e9957709060f"
+    }
+  ],
+
+  "situation_overview": "Punch Pubs is a UK community pub operator (1,310 pubs as of the 40 weeks to 17-May-26) owned by Fortress Investment Group since December 2021. The business is 90% drink-led and skewed to suburban/community sites, insulating it from the high-street, late-night and destination-dining pressures affecting managed operators. Trading has improved consistently through FY26: revenue for the 40 weeks to 17-May-26 was GBP274.7m (+9.1% YoY), underlying EBITDA was GBP75.9m (+6.6% YoY), and the subsequent Q3 FY26 earnings flash (to end-July) showed sales +8.6% YoY and EBITDA +5.8% YoY, with net leverage improving 0.1x to 6.6x on a secured basis (7.3x on an IFRS 16 basis per 9fin's financial database). Growth has been driven by like-for-like price/volume gains, continued conversion of pubs from the Leased & Tenanted model to the higher-margin Pub Partnership model (60 conversions in the 40-week period versus 22 a year earlier), and bolt-on freehold acquisitions (50 pubs for GBP36.2m in the period, funded from a GBP50m private tap of the 2030 notes priced at a premium in February 2026). Quarter four trading to 12-Jul-26 was described by management as strong, with an additional boost from elevated England World Cup viewing (Pub Partnership like-for-like sales +59% over the seven England match days). Group loan-to-value stood at 62.8% as of 17-May-26 (property assets GBP1,079.4m against net debt of GBP677.4m), reflecting the Savills-valued, 92%-freehold-or-long-leasehold estate. The GBP640m (now GBP690m after the tap) 7.875% Senior Secured Notes were only refinanced in June 2025 and mature Dec-2030; the GBP85m super senior RCF was fully undrawn as at the Q3 FY26 balance sheet date. The one credit-relevant management change this year is at CFO level: Matt Ward (ex-CFO, Village Hotels; prior senior finance roles at Greene King) took over as CFO on 11-May-26, with 15-year incumbent Steve Dando moving into a newly created Chief Financial Strategist role rather than departing outright - a retention-oriented transition rather than a distress signal. Near-term outlook, per management's own commentary on the Q2 FY26 call, is for continued benefit from like-for-like growth, Pub Partnership conversions, bolt-on M&A and cost optimisation, with no mention of refinancing pressure, covenant concerns or trading deterioration.",
+
+  "sector_context": {
+    "creditor_comment_assessment": "The creditor's characterisation of pubs as 'struggling' is best read as a sector-wide narrative driven primarily by Stonegate and by macro cost pressures, not as a Punch-specific signal. Stonegate (TDR Capital) is the clearer distress story: Q3 FY26 (18-Sep-26) showed sales -8.6% YoY, net leverage still at 8.1x (versus Punch's 6.6x), an ~88% lease-adjusted LTV (versus Punch's 62.8%), a CCC+ Fitch rating (affirmed 09-Jul-26) against Punch's B3/B- CFR, a whole-business-securitisation-plus-unrestricted-subsidiary structure that 9fin's own legal team has flagged as complex, and, as of 23-Sep-26, reported talks with Heineken to sell hundreds of pubs 'as debts mount' (Food Manufacturer). Stonegate is also under scrutiny for its treatment of tenants (The Times, 15-Jul-26). Beyond Stonegate specifically, there is a genuine sector-wide cost headwind: National Living Wage +4.1% and employer NIC +1.2pt took effect through 2025-26, adding an estimated GBP2,500 per FTE for operators that employ staff directly; nearly two pubs a day closed nationally in Q1 2026; and HM Treasury announced in August 2026 that it is reviewing business rates for pubs and hotels (following a partially offsetting 20% business rates cut for pubs announced in July 2026). These pressures are real, but they bite hardest on managed/food-led operators who directly employ staff and carry higher fixed costs (Greene King, M&B, and Stonegate's remaining managed estate) - not on Punch, whose 90%-drink-led, independently-operated model means staffing costs sit with tenants and Pub Partnership operators, not with Punch itself.",
+    "freehold_resilience": "Freehold ownership is the single clearest differentiator identified across the sector research. Punch is the most freehold-heavy of the four major UK pubcos (92% freehold/long-leasehold), giving it (i) a materially lower LTV (62.8%) and therefore more headroom before any property revaluation or lending-market stress becomes binding, (ii) demonstrated disposal optionality - GBP92.6m of net proceeds from 172 pub disposals between 2020 and Feb-2025 at a 21.4x EBITDA multiple - that leaseholders do not have, and (iii) an asset base (Savills-valued at GBP1,079.4m against GBP690m of secured notes) that materially over-collateralises the debt stack. Stonegate, by contrast, carries ~88% lease-adjusted LTV and has made only marginal disposal progress relative to its ~GBP3.7-3.8bn of gross debt, and its Platinum Pubs freehold portfolio (944 tied plus 90 free-of-tie pubs) was carved out into an unrestricted subsidiary in Jan-2024 rather than retained and monetised within the restricted group - reducing, not adding to, direct creditor recourse to that freehold value. In short: freehold ownership at Punch is a source of resilience and refinancing/disposal flexibility; the wider sector narrative of stress is concentrated in operators (Stonegate in particular) with higher leverage, higher LTV, and more encumbered or securitised structures."
+  },
+
+  "key_catalysts": {
+    "liquidity": "GBP97.6m of available liquidity as at 17-May-26 (Q3 FY26), comprising GBP12.6m cash and GBP85.0m fully undrawn on the super senior RCF - up from GBP94.0m at FY25 year-end (10-Aug-25). No indication of cash burn; operating cash flow for the 40-week period was GBP64.1m. Source: Punch Pubs Q3 2026 Financial Statements and Results Presentation (9fin, 31-Jul-2026), https://9fin.com/documents/1e3788d4-6afc-468c-9629-e5fdc9630114 and https://9fin.com/documents/4aec0899-bec2-498c-8f3a-b62ecf1837de.",
+    "maturities": [
+      {
+        "instrument": "GBP690m 7.875% Senior Secured Notes (GBP640m issued Jun-2025 plus GBP50m tap Feb-2026)",
+        "amount": "GBP690m outstanding",
+        "date": "30-Dec-2030 (c. 51 months from this review)",
+        "source": "9fin debt instruments & covenants table, https://9fin.com/legals/covenant-data?Company%5B0%5D=Punch%20Pubs"
+      },
+      {
+        "instrument": "Super Senior Revolving Credit Facility",
+        "amount": "GBP85m, fully undrawn",
+        "date": "Jun-2030",
+        "source": "9fin get_latest_captable, cap table as of 17-May-2026 (researcher-capital), https://9fin.com/company/Punch%20Pubs/cap-tables/7259c887-3e09-4f29-a3cc-5113aa643235"
+      }
+    ],
+    "covenants": [
+      {
+        "metric": "Senior Secured Net Leverage Ratio (SSNL) - incurrence covenant gating further ratio debt/RP capacity, not a periodic maintenance test",
+        "current_level": "6.6x (secured, Q3 FY26 per 9fin financials) / 6.4x-6.9x net leverage across FY23-FY25 on a declining trend",
+        "trigger_level": "6.5x (no-worse-than test for incurring further ratio debt under the notes indenture)",
+        "test_date": "Tested only on incurrence of new debt/restricted payments, not on a fixed periodic date; RCF is fully undrawn so no springing maintenance covenant (if one exists in the separate RCF facility agreement, which 9fin's document set does not cover) is currently live",
+        "assessment": "Actual leverage (6.6x) currently sits marginally above the 6.5x incurrence gate, which would restrict Punch's ability to incur further ratio debt or make certain restricted payments outside existing baskets - a capacity constraint, not a default or maintenance breach. This is not, on the evidence available, a covenant trip.",
+        "source": "9fin debt instruments & covenants table, https://9fin.com/legals/covenant-data?Company%5B0%5D=Punch%20Pubs; 9fin key financial table, https://9fin.com/company/Punch%20Pubs/financials?statements=9fin%20Financials&seriesGroup=Annual"
+      }
+    ]
+  },
+
+  "management": [
+    {
+      "name": "Andy (Andrew) Spencer",
+      "role": "Chief Executive Officer (since 2024); appointed to the Punch Finance plc board 21-May-2026",
+      "experience": "Career started at Allied Domecq; held senior roles at Greene King Pub Partners and Greene King's Metropolitan Pub Co, and at Brewhouse & Kitchen, before joining Punch as Managing Director of Operations. Over two decades in UK hospitality across both leased & tenanted and managed pub models. Verified via WebSearch cross-reference (Equilar ExecAtlas / The Caterer / Morning Advertiser) against 9fin transcript identification of Spencer as CEO on the Q2 FY26 earnings call."
+    },
+    {
+      "name": "Matt Ward",
+      "role": "Chief Financial Officer (from 11-May-2026); appointed to the Punch Finance plc board 21-May-2026",
+      "experience": "Previously CFO at Village Hotels. Prior senior finance roles at Greene King (including Finance Director for Partnership and Ventures, and Group M&A Director) and other leisure/retail businesses. Verified via WebSearch cross-reference (The Caterer, 'Punch Pubs appoints Matt Ward as CFO as Steve Dando moves to strategist role'; Morning Advertiser, 13-Apr/11-May-2026) against the 9fin-sourced Punch Finance plc directorate change filing of 26-May-2026."
+    },
+    {
+      "name": "Steve Dando",
+      "role": "Chief Financial Strategist (newly created role from May-2026; CFO for the prior 15 years)",
+      "experience": "Joined Punch in 2003; qualified with the Institute of Chartered Accountants of England & Wales; began his career at PwC; previously Chairman at Matthew Clark and at Bromford Housing Group; served as interim CEO of Punch in 2017. The move to Chief Financial Strategist was described by CEO Andy Spencer as retaining 'invaluable experience and counsel' rather than a departure. Verified via WebSearch cross-reference (The Caterer / Morning Advertiser) against the 9fin Q2 FY26 transcript, which still listed Dando as CFO on the 8-May-2026 call, consistent with the reported 11-May-2026 handover date."
+    },
+    {
+      "name": "Taylor Hunter",
+      "role": "Chairman",
+      "experience": "not available - further diligence required. WebSearch confirms Taylor Hunter as current Chairman of Punch Pubs & Co (referenced in Insider Media/Just Drinks/MCA Insight reporting on the Fortress acquisition and subsequent chairman appointment), but detailed career background sits behind a paywall (MCA Insight) and was not otherwise available. Likely source to resolve: Companies House officer filings for Punch Pubs Group Limited / Punch Finance plc, or a direct LinkedIn/press search."
+    },
+    {
+      "name": "Ed (Edward) Bashforth",
+      "role": "Former Commercial Projects Director and Company Secretary; resigned from the Punch Finance plc board effective 19-Jun-2026",
+      "experience": "Joined Punch in 2007 and served for almost two decades, most recently as Commercial Projects Director (and Company Secretary, per the Q2 FY26 transcript). Departure characterised by CEO Andy Spencer as recognising 'a significant and positive contribution' rather than as a distress-related exit. Source: TISE directorate change filing (19-Jun-2026), https://tisegroup.com/market/news/359845, cross-referenced with Morning Advertiser reporting."
+    },
+    {
+      "name": "Fortress Investment Group (sponsor)",
+      "role": "Sole institutional sponsor since December 2021 (acquired Punch from Patron Capital and May Capital in an equity-funded deal)",
+      "experience": "Cyril Courbage, Managing Director at Fortress, was named publicly in connection with the original acquisition. Current, named Fortress representation on the Punch Finance plc board is not available - further diligence required; the 9fin-sourced directorate change filings (May/Jun-2026) name only management appointees (Spencer, Ward) and a management departure (Bashforth), not any sponsor-side director. Likely source to resolve: Companies House officer filings."
+    }
+  ],
+
+  "recommendation": {
+    "watchlist": false,
+    "rationale": "None of the three key triggers is present or clearly approaching for Punch Pubs on the evidence gathered. Liquidity is stable and improving (GBP97.6m available, RCF fully undrawn, up from GBP94.0m at FY25 year-end). The GBP690m 2030 notes were only refinanced in June 2025 and mature in December 2030 (c.51 months out), well outside the 18-24 month maturity-wall window CLAUDE.md flags for concern, and the company has demonstrated continued capital markets access on favourable terms (the Feb-2026 GBP50m tap priced at a premium to fund accretive bolt-on M&A, not to plug a liquidity gap). Leverage (6.6x secured / 7.3x IFRS 16) sits marginally above the 6.5x incurrence-covenant gate in the notes, which constrains further debt incurrence and restricted payments but is not a maintenance covenant and is not in breach; leverage has in fact been on a declining trend since FY22 (7.7x) and improved further intra-quarter in Q3 FY26. The creditor's 'struggling' comment is better explained by the wider UK pub/consumer-discretionary narrative - specifically Stonegate's much higher leverage (8.1x), higher LTV (~88%), CCC+ rating, tenant-treatment scrutiny and reported Heineken sale talks 'as debts mount' - and by sector-wide National Living Wage/NIC/business-rates cost inflation that disproportionately affects managed, food-led and heavily leased operators. Punch's freehold-heavy (92%), drink-led, independently-operated model is structurally insulated from most of that specific cost pressure, and 9fin's own September 2026 distress tracker does not add Punch (or, this month, Stonegate) to its restructuring watchlist. The one material development since the 27-Sep-2026 assessment is a CFO transition (Matt Ward replacing Steve Dando, effective 11-May-2026), which reads as a planned succession rather than a distress signal. Recommendation: maintain 'Pass', but monitor sector cost inflation (NLW/NIC/business rates outcome of the Treasury review announced Aug-2026) and Stonegate's Heineken process as a leading indicator for the broader UK pub sub-sector, given Punch's comparative resilience could still be tested if cost pressures broaden or consumer spend deteriorates further.",
+    "triggers": ["None of the three triggers (covenant trip, unrefinanceable maturity/leverage wall, liquidity issue) is currently present or clearly approaching for Punch Pubs specifically. Sector-level cost/consumer-spend pressure is noted as a watch item, concentrated in peer Stonegate rather than in Punch."]
+  },
+
+  "data_gaps": [
+    "Whether the GBP85m super senior RCF carries its own springing maintenance covenant (e.g., a leverage test triggered above a drawn threshold, as seen at comparable UK consumer credits) - not visible in 9fin's document set for this deal; would need the RCF facility agreement itself.",
+    "Taylor Hunter (Chairman) - detailed career background not available; MCA Insight article behind paywall. Likely source: Companies House officer filings or a direct press/LinkedIn search.",
+    "Current named Fortress Investment Group board representative (if any) on Punch Finance plc / Punch Pubs Group Limited - not available in the 9fin-sourced directorate change filings reviewed (May/Jun-2026), which cover management moves only. Likely source: Companies House officer filings.",
+    "No resources/punch_pubs folder was found under /Users/ciaranmckay/Claude/9fin-agent/resources/ at the time of this research (checked directly) - if Ciaran has holder data or uploaded news for Punch, it has not yet been added to that folder.",
+    "9fin's distress tracker check (Restructuring the Watchlist, Sep-2026) confirms no new addition for Punch or Stonegate this month, but does not confirm whether Stonegate was already on an earlier month's Watchlist/In Progress list - that would require pulling prior months' trackers, which was out of scope for this pull."
+  ]
+}
