@@ -1,0 +1,162 @@
+{
+  "company": "Merlin Entertainments",
+  "9fin_company_id": 790,
+  "currency": "GBP millions unless stated",
+  "as_of": "28-Sep-2026",
+  "financials_recency_flag": "Not stale. Latest 9fin financials are LTM to 27-Jun-2026 (H1 2026 results, reported 10-Sep-2026); latest full FY is FY2025 (year ended 27-Dec-2025, reported 24-Mar-2026). No disclaimer required.",
+
+  "business_description": "Merlin Entertainments is the world's third-largest location-based family entertainment company by visitors, operating 131 attractions across 22 countries as at FY2025 year-end, welcoming 60.5 million guests and generating £1,999m of revenue in FY2025 (source: 9fin key financial table, LTM/Annual series, cited https://9fin.com/company/Merlin%20Entertainments/financials; Q4 2025 earnings transcript, 24-Mar-2026, https://9fin.com/transcripts/b3a20b0a-50a2-434f-804c-9cb25200715d). The estate is organised around three brand groups: LEGOLAND Parks (11 resorts including the newly opened Legoland Shanghai; c.43% of LTM Sep-2024 revenue), Gateway/Midway Attractions (branded, predominantly indoor city-centre and mall-based attractions including Madame Tussauds, SEA LIFE, the Dungeons, and the London Eye; c.36%), and Resort Theme Parks (six outdoor parks including Alton Towers, Thorpe Park, Chessington, Warwick Castle and Gardaland; c.21%) (source: 9fin Credit QuickTake, 27-Jan-2025, https://9fin.com/news/1ebca1ec-45f4-4026-b167-75048b5f8bc9). Merlin holds the exclusive worldwide LEGOLAND brand licence from KIRKBI (the Lego founding family's holding company) until at least 2075, paying a low single-digit percentage of revenue royalty (source: same Credit QuickTake).\n\nRevenue is generated predominantly from visitor admissions and in-attraction commercial spend (c.82% of revenue), with accommodation (c.14%) and other income (c.4%) making up the balance (source: 9fin Credit QuickTake, 27-Jan-2025). Geographically the group reported under four regions through FY2025 (North America, UK, Continental Europe, Asia Pacific); from FY2026 Europe and Asia Pacific were combined into a single 'International' segment for reporting purposes (source: Q1 2026 earnings review, 29-May-2026, https://9fin.com/news/59bc9a23-02c6-4009-80b4-be183b0e6ffd).\n\nCorporate history: Merlin was taken private in October 2019 by a consortium led by KIRKBI and Blackstone (co-investors since 2005 under a prior management buy-out), joined by Canada Pension Plan Investment Board (CPPIB/CPP Investments) as a new investor in the 2019 deal, at an enterprise value of c.£5.9bn (c.12x the then £494m underlying EBITDA), funded with £3.3bn of new debt that took leverage from c.4x (2018) to c.7.5x post-acquisition per S&P (source: 9fin analysis 'Merlin faces short window to deal with SUNs', 3-Nov-2025, https://9fin.com/news/d204d377-5c3d-48df-8286-84faaff6b63d). Current ownership: KIRKBI 47.49%, Blackstone 31.99%, CPP Investments 15.5% (source: 9fin Credit QuickTake, 27-Jan-2025); the balance (c.5%) is not itemised in sources reviewed — not available - further diligence required (likely source: Annual Report shareholder register note). In September 2025 Merlin sold its 29 Lego/Legoland Discovery Centres to sister company The Lego Group (also KIRKBI-owned) for c.£200-216m, completing 27-Feb-2026 (source: 9fin news and FY25 earnings review, 25-Mar-2026, https://9fin.com/news/968e1b7e-cbb6-4631-b93c-a9e5bc909bc0). FY2025 accounts also recognised a £262m impairment on the Madame Tussauds brand, reflecting a conservative valuation reset given weaker North American/Asian trading (source: Q4 2025 transcript). Most recently, Merlin confirmed on 10-Sep-2026 a £657m senior secured term loan (led by Monarch and GoldenTree, with Oaktree Capital also participating) to refinance its £627-630m of senior unsecured notes due Nov-2027, secured on a portfolio of previously unencumbered UK assets — see pf_credit_metrics and uk_asset_context below for full detail (source: 9fin news, 10-Sep-2026 and 17-Sep-2026).",
+
+  "revenue_splits": {
+    "by_geography": {
+      "basis": "GBPm, FY2022-FY2025 reported under the pre-2026 four-region structure (North America, UK, Continental Europe, Asia Pacific); H1 2026 shown separately under the new three-segment structure (North America, UK, International = Europe + Asia Pacific combined from FY2026).",
+      "source": "9fin Sales by Geography statement (https://9fin.com/company/Merlin%20Entertainments/financials?statements=Sales%20by%20Geography), cross-checked against Q4 2025 earnings transcript (24-Mar-2026) and Q2 26 earnings review (10-Sep-2026, https://9fin.com/news/7bbf2ed4-3a88-48dd-aaf8-3752b643a9d3)",
+      "table": [
+        {"period": "FY2022", "United Kingdom": 593, "Continental Europe": 468, "North America": 710, "Asia Pacific": 235, "Other": 0, "Total": 2006, "UK % of total": "29.6%"},
+        {"period": "FY2023", "United Kingdom": 648, "Continental Europe": 519, "North America": 671, "Asia Pacific": 287, "Other": 0, "Total": 2125, "UK % of total": "30.5%"},
+        {"period": "FY2024", "United Kingdom": 620, "Continental Europe": 517, "North America": 627, "Asia Pacific": 283, "Other": 10, "Total": 2057, "UK % of total": "30.1%"},
+        {"period": "FY2025", "United Kingdom": 599, "Continental Europe": 522, "North America": 577, "Asia Pacific": 285, "Other": 16, "Total": 1999, "UK % of total": "30.0%"},
+        {"period": "H1 2026 (new 3-segment basis)", "North America": 260, "United Kingdom": 239, "International (Europe+APAC)": 314, "Total": 813, "UK % of total": "29.4%", "note": "Not directly comparable to FY2022-25 rows above given the FY2026 segment restructuring (Europe and Asia Pacific merged into 'International')."}
+      ]
+    },
+    "by_segment": {
+      "revenue_by_nature": {
+        "basis": "GBPm, revenue by type of income",
+        "source": "9fin Sales by Segment statement, https://9fin.com/company/Merlin%20Entertainments/financials?statements=Sales%20by%20Segment",
+        "table": [
+          {"period": "FY2021", "Visitor revenue": 1009, "Accommodation revenue": 194, "Other revenue": 58, "Total": 1261},
+          {"period": "FY2022", "Visitor revenue": 1630, "Accommodation revenue": 300, "Other revenue": 76, "Total": 2006},
+          {"period": "FY2023", "Visitor revenue": 1748, "Accommodation revenue": 297, "Other revenue": 80, "Total": 2125},
+          {"period": "FY2024", "Visitor revenue": 1704, "Accommodation revenue": 286, "Other revenue": 67, "Total": 2057},
+          {"period": "FY2025", "Visitor revenue": 1644, "Accommodation revenue": 277, "Other revenue": 78, "Total": 1999}
+        ]
+      },
+      "revenue_by_brand_group": {
+        "basis": "% of LTM Sep-2024 revenue — point-in-time only; no consistent multi-year 9fin time series for this cut was returned",
+        "source": "9fin Credit QuickTake, 27-Jan-2025, https://9fin.com/news/1ebca1ec-45f4-4026-b167-75048b5f8bc9",
+        "table": [
+          {"segment": "LEGOLAND Parks", "pct_of_revenue_LTM_Sep24": "43%", "description": "10 outdoor theme parks, 14 hotels, 4 holiday villages across 8 countries"},
+          {"segment": "Gateway (Midway) Attractions", "pct_of_revenue_LTM_Sep24": "36%", "description": "126 predominantly indoor attractions incl. Madame Tussauds, SEA LIFE, the Dungeons, London Eye, Discovery Centres (LDCs subsequently sold, Feb-2026)"},
+          {"segment": "Resort Theme Parks", "pct_of_revenue_LTM_Sep24": "21%", "description": "5 outdoor parks incl. Alton Towers, Thorpe Park, Chessington, Warwick Castle, Gardaland, Heide Park; 10 hotels, 2 holiday villages"}
+        ],
+        "data_gap": "A multi-year (FY2022-FY2025) time series for this brand-group cut was not returned by 9fin's structured financial statement tools — not available - further diligence required (likely source: Annual Report segmental note, which discloses LEGOLAND Parks / Midway (Gateway) Attractions / Resort Theme Parks segment revenue and EBITDA each year)."
+      }
+    }
+  },
+
+  "summary_financials": {
+    "periods": ["FY2023", "FY2024", "FY2025", "LTM (27-Jun-2026)"],
+    "source": "9fin latest key financial table and financial statements (Income Statement, Cash Flow), company_id 790, dated 27-Jun-2026 / 30-Jun-2026 cap table, https://9fin.com/company/Merlin%20Entertainments/financials",
+    "rows": [
+      {"label": "Revenue", "values": [2125, 2057, 1999, 1938]},
+      {"label": "Gross profit", "values": [1737, 1675, 1621, 1579]},
+      {"label": "Gross profit margin", "values": ["81.7%", "81.4%", "81.1%", "81.5%"]},
+      {"label": "Reported EBITDA (unadjusted, post-IFRS16)", "values": ["not available - further diligence required", 540, 521, 527], "note": "FY2023 reported/unadjusted EBITDA not returned in the 9fin income statement pull. FY2024/25/LTM sourced from 9fin income statement 'EBITDA' row."},
+      {"label": "Adjusted (Underlying) EBITDA, post-IFRS16", "values": [675, 573, 571, 568]},
+      {"label": "Adjusted EBITDA margin, post-IFRS16", "values": ["31.8%", "27.9%", "28.6%", "29.3%"]},
+      {"label": "Adjusted EBITDA, pre-IFRS16", "values": ["not available - further diligence required", "not available - further diligence required", "not available - further diligence required", "not available - further diligence required"], "note": "9fin's key financial table only returns Adjusted EBITDA on a post-IFRS16 (lease-capitalised) basis for Merlin; a separate pre-IFRS16 adjusted EBITDA series was not returned. Historical 'EBITDA at issuance' figures embedded in the covenant/debt instruments table (e.g. c.£593-601m at Feb-2024/Jun-2023 bond pricings) are stale point-in-time figures and not a reliable current LTM proxy. Likely source: Annual Report / OM Adjusted EBITDA reconciliation note."},
+      {"label": "Capex (net)", "values": [-298, -357, -271, -257]},
+      {"label": "Net debt, pre-IFRS16 (excl. lease liabilities)", "values": [3548, 3744, 3848, 3778]},
+      {"label": "Net debt, post-IFRS16 (incl. lease liabilities)", "values": [5181, 5378, 5468, 5416]},
+      {"label": "Net leverage, post-IFRS16 (reported/covenant basis)", "values": ["7.7x", "9.4x", "9.6x", "9.5x"]},
+      {"label": "Net leverage, pre-IFRS16", "values": ["not available - further diligence required", "not available - further diligence required", "not available - further diligence required", "not available - further diligence required"], "note": "Cannot be independently derived without a pre-IFRS16 adjusted EBITDA figure (see above); 9fin's own leverage multiples for Merlin are calculated on the post-IFRS16 EBITDA basis only."},
+      {"label": "Gross secured leverage (co. reported)", "values": ["not available - further diligence required", "not available - further diligence required", "5.9x (FY25, per 9fin FY25 review)", "5.7x"]},
+      {"label": "Net secured leverage (co. reported)", "values": ["not available - further diligence required", "not available - further diligence required", "5.6x (FY25, per 9fin FY25 review)", "5.5x"]},
+      {"label": "Interest coverage, post-IFRS16 (Adj. EBITDA / finance costs)", "values": ["1.7x", "1.6x", "1.6x", "1.5x"]}
+    ],
+    "fcf_build": {
+      "basis": "Calculated from 9fin's EBITDA build: Adjusted EBITDA (post-IFRS16) less cash tax paid, +/- change in net working capital, less capex = Unlevered FCF (UFCF); UFCF less cash interest paid less finance-lease capital repayments = Levered FCF (LFCF). All inputs sourced from 9fin's Cash Flow statement and key financial table (company_id 790).",
+      "periods": ["FY2023", "FY2024", "FY2025", "LTM (27-Jun-2026)"],
+      "rows": [
+        {"label": "Adjusted EBITDA (post-IFRS16)", "values": [675, 573, 571, 568]},
+        {"label": "less: Cash tax (paid)/received", "values": [-55, -42, 27, -9]},
+        {"label": "+/- Change in net working capital", "values": [-42, 44, -39, -12]},
+        {"label": "less: Capex", "values": [-298, -357, -271, -257]},
+        {"label": "Unlevered FCF (UFCF)", "values": [280, 218, 288, 290], "bold": true},
+        {"label": "less: Cash interest paid", "values": [-326, -297, -347, -349]},
+        {"label": "less: Finance lease capital repayments", "values": [-37, -46, -45, -45]},
+        {"label": "Levered FCF (LFCF)", "values": [-83, -125, -104, -104], "bold": true},
+        {"label": "UFCF / EBITDA conversion", "values": ["41.5%", "38.0%", "50.4%", "51.1%"]},
+        {"label": "LFCF / EBITDA conversion", "values": ["n.a.", "n.a.", "n.a.", "n.a."], "display_note": "All periods show negative LFCF; per spec, display as italic red (#e74c3c) 'n.a.' rather than the negative percentage. Underlying negative values: -12.3%, -21.8%, -18.2%, -18.3% respectively."}
+      ]
+    },
+    "fcf_basis": "Calculated from EBITDA build using 9fin's reported cash flow statement line items (cash tax paid, working capital movement, capex, cash interest paid, finance lease capital repayments). Merlin has been structurally levered-FCF-negative in every period shown, consistent with 9fin's own analysis ('we expect Merlin to continue to burn over £100m levered FCF in each of the next two years', 9fin analysis 3-Nov-2025)."
+  },
+
+  "pf_credit_metrics": {
+    "context": "On 10-Sep-2026 Merlin confirmed a new £657m senior secured term loan ($396m + €418m tranches, led by Monarch and GoldenTree Asset Management, with Oaktree Capital also participating) to refinance its $410m 6.625% and €370m 4.500% senior unsecured notes due Nov-2027 (c.£627-630m equivalent). The facility is priced at 650bps over the relevant benchmark (SOFR/EURIBOR), matures in 6 years with a springing maturity that pulls the date forward to before 2030 if the SUNs are not otherwise refinanced, and is secured pari passu alongside the existing senior secured debt. Transaction expected to close by end-2026; as at the last 9fin cap table (30-Jun-2026) the transaction had not yet closed and is NOT reflected in the reported capital structure below — all PF figures are pre-close estimates. Sources: 9fin news 10-Sep-2026 (https://9fin.com/news/b9ef800a-31a3-4e7d-9597-8492eac34786), 9fin analysis 10-Sep-2026 (https://9fin.com/news/7bbf2ed4-3a88-48dd-aaf8-3752b643a9d3), 9fin news 17-Sep-2026 (https://9fin.com/news/d2468584-df61-4bbb-99c2-19d9a2fc68de).",
+
+    "ltm_ebitda": {
+      "reported_adjusted_post_IFRS16": "£568m (LTM to 27-Jun-2026; this is also the figure the company labels 'Underlying EBITDA' on the 9fin cap table and the basis used for the RCF's springing covenant test)",
+      "reported_unadjusted_post_IFRS16": "£527m (LTM; statutory 'EBITDA' per 9fin income statement, i.e. before add-back of restructuring/exceptional items — e.g. FY2025 unadjusted EBITDA of £521m vs adjusted £571m, a £50m restructuring-cost add-back per 9fin's FY25 review, 25-Mar-2026)",
+      "covenant_basis": "Same £568m adjusted figure appears to underpin the company's own reported 'senior secured net leverage' (5.5x = £3,140m net secured debt / £568m), which 9fin's analysis treats as comfortably inside the RCF's springing 10.0x Consolidated Senior Secured Debt Ratio covenant (tested only if RCF drawings exceed 40%; drawn 40/428 = 9.3% at 30-Jun-2026, well below the trigger)",
+      "pre_vs_post_IFRS16": "Only a post-IFRS16 (lease-capitalised) adjusted EBITDA figure was returned by 9fin's tools for the current LTM period. A separate pre-IFRS16 adjusted EBITDA is not available - further diligence required (likely source: Annual Report / OM Adjusted EBITDA reconciliation note). Historical at-issuance EBITDA figures of c.£567-601m (Jun-2023 to Feb-2025 bond pricings) are stale and pre-date the FY2025/H1 2026 deterioration, so cannot be used as a reliable current pre-IFRS16 LTM proxy.",
+      "adjusted_ebitda_caveat": "9fin's own 10-Sep-2026 analysis separately flags that a 'cleaner' going-forward EBITDA, stripping out the now-disposed Legoland Discovery Centres (sold Feb-2026, no longer supporting debt service), is likely c.£535m rather than £568m — this lower figure implies c.10.1x net leverage on an unchanged net debt base, versus the 9.5x reported. This £535m figure is a 9fin analyst estimate, not a company-disclosed number."
+    },
+
+    "cash_interest_pre_vs_pf": {
+      "current_ltm_cash_interest_paid": "£349m (LTM to 27-Jun-2026, per 9fin cash flow statement 'Interest paid')",
+      "coupon_being_refinanced": "4.500% (€370m tranche) / 6.625% ($410m tranche) on the notes due Nov-2027 — roughly £35m of annual coupon on the c.£627-630m being refinanced, per 9fin's own estimate",
+      "new_facility_coupon": "Not disclosed by the company. 9fin's 10-Sep-2026 analysis assumes 'at least 10%', in line with other CCC+/Caa1-rated European senior secured private credit paper, implying c.£65m of annual interest on the £657m new facility. This is a 9fin analyst estimate, not a disclosed coupon — flagged accordingly.",
+      "estimated_incremental_annual_interest": "c.£30m per year (9fin back-of-envelope estimate: c.£65m new facility interest vs c.£35m coupon on notes refinanced)",
+      "pf_cash_interest_estimate": "c.£379m per year (£349m current LTM cash interest + c.£30m estimated incremental interest). This is CMCK's own calculation combining a reported current-period actual with a 9fin analyst estimate for the incremental piece; the underlying new-facility rate is undisclosed by the company, so treat this PF figure as indicative only."
+    },
+
+    "pf_interest_cover": {
+      "current_reported": "1.5x (Adj. EBITDA £568m / finance costs £380m per 9fin income statement, matching 9fin's own reported 'Interest coverage (IFRS16)' of 1.5x LTM)",
+      "pf_estimate": "c.1.4x-1.5x (£568m Adj. EBITDA / c.£379-410m estimated PF cash interest or finance costs, depending on whether the £30m incremental interest is added to the cash-paid base of £349m or the P&L finance-cost base of £380m). Both bases point to modest further compression from the current 1.5x. This is a CMCK calculation built on the 9fin coupon estimate above, not a disclosed figure — treat as indicative only, further diligence required for the actual new-facility terms once the transaction documentation is filed."
+    },
+
+    "pf_leverage": {
+      "current_total_net_leverage_post_IFRS16": "9.5x (£5,416m net debt / £568m Adj. EBITDA, LTM 27-Jun-2026, per 9fin cap table)",
+      "current_secured_net_leverage": "5.5x (£3,140m net secured debt / £568m Adj. EBITDA, per 9fin cap table)",
+      "pf_total_net_leverage_estimate": "c.9.5x-9.7x, broadly unchanged from the current 9.5x. The £657m new secured facility is intended as a like-for-like refinancing of the c.£627-630m of SUNs being taken out, so gross/net debt should move only modestly (by the size of any OID, fees, or incremental new money, none of which is disclosed). On 9fin's own 'cleaner' £535m EBITDA basis (ex-LDC), this would imply c.10.1x-10.3x — consistent with 9fin's own commentary that leverage is 'estimated now at around 10x' post-transaction.",
+      "pf_secured_net_leverage_estimate": "c.6.6x-6.8x (CMCK calculation: current £3,140m net secured debt + c.£657m new secured facility ≈ £3,797m, over £568m Adj. EBITDA), up materially from the current 5.5x reported secured leverage. This priming effect (unsecured debt being replaced by new secured debt ranking alongside the existing SSNs/TLBs) is the reason 9fin's 17-Sep-2026 article reports the 2030s, 2031s and 2032s falling 2-5 points on the announcement even as the SUNs rallied toward par — the market's read that relative recoveries for the existing secured stack are diluted. This PF secured leverage estimate is a CMCK calculation from disclosed inputs, not a company or agency-confirmed figure; further diligence recommended once the transaction closes and a post-close cap table is available.",
+      "caveat": "None of the PF leverage or PF interest cover figures above are company-disclosed pro forma figures. They are CMCK calculations built from the last reported (pre-close) cap table plus the deal terms and 9fin analyst estimates set out in the sources cited. The transaction was not yet closed as at the last available 9fin cap table date (30-Jun-2026) or as at today (28-Sep-2026); expected close is by end-2026."
+    },
+
+    "lfcf_pf_negative_flag": {
+      "current_ltm_lfcf": "-£104m (see summary_financials.fcf_build above)",
+      "pf_lfcf_estimate": "c.-£130m to -£140m (current -£104m LTM LFCF less the c.£30m estimated incremental annual cash interest from the refinancing). LFCF is negative on both a current and PF basis — per spec, display as italic red (#e74c3c) 'n.a.' for the conversion ratio rather than a negative percentage.",
+      "is_lfcf_negative_pf": true
+    }
+  },
+
+  "uk_asset_context": {
+    "uk_share_of_revenue": {
+      "FY2022": "29.6% (£593m / £2,006m)",
+      "FY2023": "30.5% (£648m / £2,125m)",
+      "FY2024": "30.1% (£620m / £2,057m)",
+      "FY2025": "30.0% (£599m / £1,999m)",
+      "H1_2026": "29.4% (£239m / £813m, new 3-segment basis)",
+      "source": "9fin Sales by Geography statement and Q2 26 earnings review, 10-Sep-2026, https://9fin.com/news/7bbf2ed4-3a88-48dd-aaf8-3752b643a9d3"
+    },
+    "uk_share_of_ebitda": {
+      "FY2024": "35.4% (£203m UK segment underlying EBITDA / £573m group Adj. EBITDA)",
+      "FY2025": "35.9% (£205m UK segment underlying EBITDA / £571m group Adj. EBITDA)",
+      "H1_2026": "UK segment underlying EBITDA £48m (down 26.2% YoY, margin compressed from 26.0% to 20.4%); note the sum of disclosed regional segment EBITDA for H1 26 (NA £84m + UK £48m + International £72m = £204m) exceeds the group-reported £170m underlying EBITDA, implying c.£34m of unallocated central/corporate costs not shown in the regional cut. UK's share of the £204m pre-central-cost segment total is 23.5%.",
+      "source": "9fin Q4 2025 transcript (24-Mar-2026) and 9fin Q2 26 earnings review (10-Sep-2026, https://9fin.com/news/7bbf2ed4-3a88-48dd-aaf8-3752b643a9d3)",
+      "note": "UK consistently contributes a higher share of group EBITDA than revenue, reflecting a higher-margin mix (FY2025 UK EBITDA margin 34.3% vs group 28.6%)."
+    },
+    "uk_real_estate_and_new_collateral": {
+      "new_secured_facility_collateral": "The £657m new secured term loan (confirmed 10-Sep-2026) is secured against a portfolio of previously unencumbered UK assets specifically identified as the London Eye, SEA LIFE London, Shrek's Adventure! London, and the UK Dungeons. The company stated it retains full ownership and management of these assets. Source: 9fin news 10-Sep-2026 (https://9fin.com/news/b9ef800a-31a3-4e7d-9597-8492eac34786) and 17-Sep-2026 (https://9fin.com/news/d2468584-df61-4bbb-99c2-19d9a2fc68de).",
+      "important_correction_vs_freehold_assumption": "9fin's own June-2026 pre-deal analysis of Merlin's unencumbered-asset options states that these specific Gateway attractions — Madame Tussauds, the Dungeons, Discovery Centres and the London Eye — sit on LEASED sites, not freehold land (source: 'How might Merlin tackle upcoming SUN maturities?', 19-Jun-2026, https://9fin.com/news/22e48f42-cd8c-4d57-8958-51a0e50501d9). This means the new collateral pool is very unlikely to be freehold real estate in the way a mortgage security package would be; it is more likely security over the operating entities, leasehold interests, brand/IP value and cash flows of these specific London attractions. This has not been independently confirmed from primary deal documentation (not yet filed/available on 9fin at the time of this review) — not available - further diligence required (likely source: the new facility's security/collateral agreement once filed, or a 9fin legal analysis of the transaction once documentation is public).",
+      "freehold_vs_leased_estate_generally": "Per the same 9fin analysis (19-Jun-2026), Merlin's owned freehold estate is concentrated in LEGOLAND Parks internationally (with several leased exceptions), Gardaland, Chessington, and a handful of smaller Gateway sites. By contrast, Alton Towers, Thorpe Park, Heide Park and Warwick Castle (all Resort Theme Parks) are LEASED from LondonMetric, and the Legoland Windsor Hotel (though not necessarily the park itself, which is not separately itemised in sources reviewed) is also leased. This is a material correction to the common assumption that Merlin's flagship UK theme parks are freehold-owned: per 9fin's sourced review of the OM's property schedule, most are not. Legoland Windsor Park's freehold/leasehold status specifically was not itemised in the sources reviewed — not available - further diligence required.",
+      "unencumbered_asset_estimate": "9fin's analysis estimated c.£0.7bn of unencumbered fixed assets sitting at non-guarantor subsidiary level (as of Q1 2026, applying a 69%/31% guarantor/non-guarantor asset split to £2.3bn of group PP&E) that could in principle support further structurally senior debt — relevant context for what capacity may remain after this £657m facility. Source: 9fin analysis, 19-Jun-2026.",
+      "disclosed_valuation_of_collateral_or_freehold_estate": "not available - further diligence required. No specific £ valuation for the London Eye/SEA LIFE London/Shrek's Adventure/UK Dungeons collateral pool, nor for the Alton Towers/Thorpe Park/Chessington/Warwick Castle/Legoland Windsor freehold or leasehold estate, was found in the 9fin sources reviewed. Likely source: the 2032 SSNs Offering Memorandum property schedule (pages 177-179, referenced by 9fin but not independently valued in the excerpts retrieved), a third-party real estate appraisal prepared for the new facility, or the FY2025 Annual Report's PP&E note (which shows £2,319m net PP&E at FY2025 but does not break this out by individual site or freehold/leasehold status in the data pulled)."
+    }
+  },
+
+  "data_gaps": [
+    "Pre-IFRS16 adjusted EBITDA (current LTM) — not returned by 9fin's key financial table; likely source: Annual Report / OM Adjusted EBITDA reconciliation note.",
+    "Pre-IFRS16 net leverage ratio (current LTM) — cannot be derived without the above; same likely source.",
+    "FY2023 reported/unadjusted (pre-exceptional) EBITDA — not returned by 9fin's income statement pull for that year.",
+    "Multi-year (FY2022-FY2025) revenue and EBITDA time series by brand-group segment (LEGOLAND Parks / Gateway Attractions / Resort Theme Parks) — only a single point-in-time % split (LTM Sep-2024) was available; likely source: Annual Report segmental note.",
+    "New £657m facility's actual coupon/margin terms — not disclosed by the company; 9fin's 650bps-over-benchmark figure (sourcing article) and the 10%+ all-in rate assumption (9fin analysis) are both third-party estimates, not confirmed terms. Likely source: transaction credit agreement once filed, or company disclosure at close.",
+    "Post-close (PF) capital structure and cap table — the transaction is expected to close by end-2026 but had not closed as at the last available 9fin cap table (30-Jun-2026); all PF metrics in this file are CMCK estimates built on pre-close data. Likely source: 9fin cap table update once available.",
+    "Ownership stake for the balance (c.5%) beyond KIRKBI 47.49% / Blackstone 31.99% / CPP Investments 15.5% — likely source: Annual Report shareholder register / org chart.",
+    "£ valuation of the new facility's UK collateral pool (London Eye, SEA LIFE London, Shrek's Adventure! London, UK Dungeons) and of the wider freehold/leasehold UK real estate estate — likely source: OM property schedule, new facility security agreement, or a third-party valuation/appraisal.",
+    "Freehold vs leasehold status of Legoland Windsor Park specifically (as distinct from the Legoland Windsor Hotel, which is disclosed as leased) — likely source: OM property schedule pages 177-179 (2032 SSNs OM) in full, not fully returned in the excerpts retrieved.",
+    "H1 2026 c.£34m gap between the sum of disclosed regional segment EBITDA and group-reported underlying EBITDA (unallocated central/corporate costs) — not itemised in sources reviewed; likely source: Half Year Review segmental reconciliation note."
+  ]
+}

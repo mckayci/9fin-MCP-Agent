@@ -1,0 +1,40 @@
+{
+  "status": "clean",
+  "pass": "second (final) pass, post-reverification",
+  "auto_resolved": [],
+  "discrepancies": [],
+  "researchers_to_reverify": {},
+  "verification_notes": {
+    "round_1_items_confirmed_resolved": [
+      {
+        "item": "Resources-folder holdings data (EUR TLB and USD 2031 SSN)",
+        "finding": "Confirmed applied. capital.json's holdings section now sources full top-10 holder tables for the EUR 1,020m TLB (34 holders, updated 22-Sep-2026) and the USD 500m 2031 SSN (26 holders, updated 24-Sep-2026) directly from the two uploaded PNGs, replacing the stale news-sourced CLO figures. Values spot-checked against the images and match exactly (e.g. CVC Credit Partners 4.76%/EUR91.46m; Artisan Partners 6.66%/$33.28m)."
+      },
+      {
+        "item": "Resources-folder trading data (pricing CSV)",
+        "finding": "Confirmed applied. capital.json's trading section, capital_structure price fields, and impact_on_unrefinanced_ssns.price_reaction now source from resources/Merlin/9fin-pricing-chart.csv. I independently recomputed every figure directly from the raw CSV (event-date closes, the 25-Sep-vs-18-Sep weekly change, the 28-Sep-vs-9-Sep since-announcement change, and full-series highs/lows for all four covered instruments) and all match capital.json exactly: latest close 28-Sep-2026 SSN2032 63.379 / SSN2031 63.345 / TLB EUR 69.83 / TLB USD 68.512; weekly changes -6.5 / -7.53 / -5.9 / -1.14pts; series highs 102.637 (28-Feb-25) / 104.073 (01-Aug-24) / 100.407 (22-May-24) / 100.50 (22-Jul-24); series lows all at or within 0.01pt of the 28-Sep-2026 close. No transcription errors found."
+      },
+      {
+        "item": "Ranking of the new GBP657m facility",
+        "finding": "Resolved and now consistent across all three files. capital.json's priming_analysis was rewritten to clearly separate CONFIRMED fact (pari passu / 'secured alongside' on the shared collateral pool, plus exclusive security over the new UK assets -- sourced to Merlin's RNS and 9fin's 17-Sep-2026 article) from the unconfirmed super-senior-covenant-basket read, which is now explicitly labelled 'INFERENCE, not confirmed by any 9fin source reviewed' throughout (including in the top-level 'ranking' field of the NEW TERM FACILITY instrument entry and in impact_on_unrefinanced_ssns). news.json's ranking_vs_existing_debt ('ranks alongside (pari passu with)...') and financials.json's pf_credit_metrics.context ('secured pari passu alongside the existing senior secured debt') both already stated the same pari passu position and required no change. All three files now agree on the confirmed ranking; the priming/super-senior possibility is presented only as a clearly labelled, single-source inference."
+      },
+      {
+        "item": "Borrower entity for the new facility",
+        "finding": "Resolved. news.json's borrower_entity field was corrected to state that the RNS names Merlin Entertainments Limited only as the announcing/group entity, not as an explicit borrower or obligor designation, and now says 'borrower entity not disclosed - further diligence required (facility agreement)'. This matches capital.json's existing 'not disclosed by 9fin sources reviewed' position. No remaining conflict."
+      },
+      {
+        "item": "USD Term Loan B amount (USD 1.37bn cap table vs USD 1,385.0m CSV header)",
+        "finding": "Resolved via a reasoned, consistently-applied, and clearly labelled decision rather than a live conflict. capital.json now explains the gap as most likely explained by standard 1% p.a. TLB amortisation since origination (USD 1,385m x 99% = USD 1,371.15m, rounding to the USD 1.37bn cap table figure), flags this explanation as CMCK's inference rather than a confirmed 9fin fact, and states an explicit decision to use the cap table figure (USD 1.37bn / GBP 1,029m equiv) for all debt-quantum, leverage and aggregate calculations, treating the CSV's USD 1,385.0m purely as an instrument identifier. This treatment is applied consistently everywhere the figure appears (pf_capital_structure, capital_structure table, data_gaps). No numeric inconsistency remains within or across files."
+      }
+    ],
+    "new_item_identified_this_pass": {
+      "item": "EUR 1,020m TLB holder-table percentage denominator",
+      "status": "Unresolved -- not a cross-file/cross-source discrepancy and not something a further reverification round would fix, so not sent back per the one-round rule. Flagged here for visibility only.",
+      "finding": "I independently recomputed the implied denominator from the raw PNG figures: CVC Credit Partners' EUR91,460,000 / 4.76% implies an instrument size of ~EUR1.921bn; PGIM's EUR54,317,000 / 2.83% implies ~EUR1.919bn -- both consistently pointing to an implied base of roughly EUR1.92bn, not the stated EUR1,020m facility size (9fin cap table). By contrast, the USD 500m 2031 SSN holder table reconciles exactly (top-10 amounts sum to USD136.8m against a reported cumulative 27.36%, and USD136.8m / USD500m = 27.36%). This looks like a genuine anomaly in how 9fin's 'Holders and Transactions' UI computed the % column for this specific (EUR TLB) instrument in the screenshot -- possibly a blended/cross-currency TLB denominator -- rather than any inconsistency between capital.json, financials.json or news.json. researcher-capital has already transcribed the figures faithfully from the primary source and flagged the anomaly transparently in both holdings.data_quality_flag and data_gaps, consistent with the 'mark it, don't infer' rule. No further action recommended other than the diligence path already noted (9fin support query on the % of instrument methodology for this deal).",
+      "conflicting_values_for_reference": [
+        {"source": "resources/Merlin/1,020m TLB.png (9fin Holders and Transactions, 22-Sep-2026)", "value": "Top-10 holder %'s sum to 19.97% of instrument"},
+        {"source": "Same image, amounts column, divided by 9fin cap table's stated EUR1,020.0m facility size", "value": "Top-10 holder amounts (EUR383.3m) sum to 37.6% of EUR1,020m -- and per-row division of amount by stated % implies a ~EUR1.92bn denominator, not EUR1,020m"}
+      ]
+    }
+  }
+}

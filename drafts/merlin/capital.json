@@ -1,0 +1,355 @@
+{
+  "company": "Merlin Entertainments",
+  "company_id": 790,
+  "as_of": "2026-09-28",
+
+  "pf_capital_structure": {
+    "note": "9fin has not itself published a post-transaction cap table (deal not yet closed as of 28-Sep-2026; press release targets close by year-end 2026). The PF column below is CMCK's own arithmetic, built by adding the new facility (per Merlin's 10-Sep-2026 press release) to and removing the 2027 SUNs from 9fin's 30-Jun-2026 cap table (cap_table_uuid ef7a2022-6095-4ed3-9a65-f4e973b095a0). Treat PF totals as an approximation: actual figures at close will differ for FX, fees and accrued interest not modelled here.",
+    "ebitda_basis": "GBP 568.0m Underlying EBITDA (IFRS 16), LTM to 30-Jun-2026, per 9fin latest cap table (as-of 2026-06-30). 9fin's own 10-Sep-2026 article (Merlin refis SUNs as temporary fix) separately flags a 'cleaner' going-forward EBITDA of ~GBP 535m excluding the divested Legoland Discovery Centres, which would imply ~10.1x net leverage on a going-forward basis -- both bases are shown below where relevant.",
+    "instruments": [
+      {
+        "instrument": "RCF (Revolving Credit Facility)",
+        "currency_amount": "GBP 428m facility (GBP 40m drawn / GBP 388m undrawn)",
+        "amount_gbp_m": 40,
+        "ranking": "Senior secured, pari passu with TLBs and SSNs on existing collateral",
+        "rate": "SONIA/EURIBOR + margin (margin not disclosed)",
+        "maturity": "May-2029",
+        "borrower_guarantor": "Motion Finco S.a.r.l. (Issuer) / Motion Finco LLC (US Co-Borrower); guaranteed within restricted group",
+        "collateral": "Existing SSN/TLB shared collateral package",
+        "current_vs_pf": "Unchanged by this transaction",
+        "source": "9fin latest cap table, as of 30-Jun-2026"
+      },
+      {
+        "instrument": "Term Loan B - EUR tranche",
+        "currency_amount": "EUR 1.02bn outstanding (GBP 879m equiv), per 9fin latest cap table as of 30-Jun-2026 -- matches the EUR 1,020.0m label in the user-uploaded pricing CSV exactly, so no outstanding-vs-issue-size ambiguity on this tranche",
+        "amount_gbp_m": 879,
+        "ranking": "Senior secured, pari passu with SSNs",
+        "rate": "EURIBOR + 375bps",
+        "maturity": "Nov-2029",
+        "borrower_guarantor": "Motion Finco S.a.r.l.",
+        "collateral": "Existing SSN/TLB shared collateral package",
+        "current_vs_pf": "Unchanged by this transaction",
+        "price_28_sep_2026": "69.83, per user-uploaded resources/Merlin/9fin-pricing-chart.csv (series low)",
+        "source": "9fin latest cap table, as of 30-Jun-2026; cross-checked against resources/Merlin/9fin-pricing-chart.csv"
+      },
+      {
+        "instrument": "Term Loan B - USD tranche",
+        "currency_amount": "USD 1.37bn outstanding (GBP 1,029m equiv), per 9fin latest cap table as of 30-Jun-2026",
+        "amount_gbp_m": 1029,
+        "outstanding_vs_csv_header_note": "The user-uploaded 9fin pricing CSV (resources/Merlin/9fin-pricing-chart.csv) labels this instrument 'USD 1,385.0m Term Loan B due 2029' in its column header. This is USD 15m (c.1.1%) above the USD 1.37bn outstanding shown in 9fin's 30-Jun-2026 cap table. CMCK's reading: USD 1,385.0m is most likely the original issue size used by 9fin to identify/tag the instrument in its pricing feed, not the current outstanding balance -- USD 1,385m x 99% = USD 1,371.15m, which rounds to the USD 1.37bn cap table figure, consistent with a standard 1%-per-annum mandatory TLB amortisation schedule. This is CMCK's plausible explanation, not confirmed by a specific 9fin amortisation schedule or SFA excerpt reviewed in this session -- flagged as an inference. DECISION: the cap table outstanding (USD 1.37bn / GBP 1,029m equiv, as of 30-Jun-2026) is used for all debt-quantum and leverage figures in this file; the CSV's USD 1,385.0m label is treated as an instrument identifier only, not a debt-quantum input.",
+        "ranking": "Senior secured, pari passu with SSNs",
+        "rate": "SOFR + 350bps",
+        "maturity": "Nov-2029",
+        "borrower_guarantor": "Motion Finco S.a.r.l. / Motion Finco LLC",
+        "collateral": "Existing SSN/TLB shared collateral package",
+        "current_vs_pf": "Unchanged by this transaction",
+        "price_28_sep_2026": "68.512, per user-uploaded resources/Merlin/9fin-pricing-chart.csv (series low)",
+        "source": "9fin latest cap table, as of 30-Jun-2026; cross-checked against resources/Merlin/9fin-pricing-chart.csv column header"
+      },
+      {
+        "instrument": "Senior Secured Notes due 2030 (EUR)",
+        "currency_amount": "EUR 700m (GBP 603m equiv)",
+        "amount_gbp_m": 603,
+        "ranking": "Senior secured, pari passu with TLBs/RCF on existing collateral",
+        "rate": "7.375% fixed",
+        "maturity": "Jun-2030",
+        "borrower_guarantor": "Motion Finco S.a.r.l., issued 07-Jun-2023, NC3",
+        "collateral": "Defined 'Collateral' under SSN indenture (existing secured package)",
+        "current_vs_pf": "Unaffected/not refinanced by this transaction",
+        "price_28_sep_2026": "not covered by the user-uploaded pricing CSV; indicative only from 9fin news text (~75.8-80.63 in Aug-Sep 2026)",
+        "source": "9fin latest cap table (30-Jun-2026) and get_debt_instruments_and_covenants_table"
+      },
+      {
+        "instrument": "Senior Secured Notes due 2031 (USD)",
+        "currency_amount": "USD 500m (GBP 378m equiv)",
+        "amount_gbp_m": 378,
+        "ranking": "Senior secured, pari passu with TLBs/RCF",
+        "rate": "7.375% fixed",
+        "maturity": "Feb-2031",
+        "borrower_guarantor": "Motion Finco S.a.r.l., issued 06-Feb-2024, NC3",
+        "collateral": "Defined 'Collateral' under SSN indenture",
+        "current_vs_pf": "Unaffected/not refinanced by this transaction",
+        "price_28_sep_2026": "63.345, per user-uploaded resources/Merlin/9fin-pricing-chart.csv (series low)",
+        "source": "9fin latest cap table (30-Jun-2026) and get_debt_instruments_and_covenants_table; price cross-checked against resources/Merlin/9fin-pricing-chart.csv"
+      },
+      {
+        "instrument": "Senior Secured Notes due 2032 (USD)",
+        "currency_amount": "USD 410m (GBP 311m equiv)",
+        "amount_gbp_m": 311,
+        "ranking": "Senior secured, pari passu with TLBs/RCF",
+        "rate": "8.375% fixed",
+        "maturity": "Feb-2032",
+        "borrower_guarantor": "Motion Finco S.a.r.l., issued 11-Feb-2025, NC3",
+        "collateral": "Defined 'Collateral' under SSN indenture",
+        "current_vs_pf": "Unaffected/not refinanced by this transaction",
+        "price_28_sep_2026": "63.379, per user-uploaded resources/Merlin/9fin-pricing-chart.csv (within 0.01pt of series low)",
+        "source": "9fin latest cap table (30-Jun-2026) and get_debt_instruments_and_covenants_table; price cross-checked against resources/Merlin/9fin-pricing-chart.csv"
+      },
+      {
+        "instrument": "GROSS SECURED DEBT (current, pre-transaction)",
+        "amount_gbp_m": 3240,
+        "ebitda_multiple_gross": "5.7x",
+        "ebitda_multiple_net": "5.5x (net GBP 3,140m)",
+        "source": "9fin latest cap table, as of 30-Jun-2026"
+      },
+      {
+        "instrument": "NEW TERM FACILITY (private credit refinancing) -- PF ADDITION",
+        "currency_amount": "USD 396m + EUR 418m tranches, ~GBP 657m equivalent",
+        "amount_gbp_m": 657,
+        "ranking": "CONFIRMED (Merlin press release 10-Sep-2026 and 9fin's 17-Sep-2026 article): senior secured, 'secured alongside' / 'sits alongside' the Group's existing senior secured financing on the shared collateral pool -- i.e. pari passu with the SSNs/TLBs on that pool as far as sources state -- PLUS exclusive additional security over the previously-unencumbered UK asset portfolio not available to existing SSN/TLB holders. INFERENCE (not confirmed by any 9fin source): buyside commentary describes the economic effect on the rest of the stack as being 'primed', and CMCK's own covenant-basket reading (see priming_analysis below) flags a specific indenture basket that could in principle grant the new facility super senior priority (not just parity) on the shared collateral. No 9fin source states the new facility actually has contractual priority over the SSNs/TLBs on the shared pool -- treat the pari passu characterisation as the documented position and the super-senior read as an open, labelled inference.",
+        "rate": "650bps margin over relevant benchmark (SOFR/EURIBOR); 9fin's own analysis separately assumes an all-in coupon of 'at least 10%' by comparison with other CCC+/Caa1-rated European secured paper (its estimate, not a disclosed rate)",
+        "maturity": "6 years from close (implies ~2032), with a springing maturity bringing the due date forward to before 2030 if the company fails to refinance its debt (mechanics of the trigger not fully disclosed in 9fin sources reviewed)",
+        "borrower_guarantor": "Not disclosed by 9fin sources reviewed -- likely Motion Finco S.a.r.l./Motion Finco LLC given 'secured alongside' existing facilities, but not confirmed",
+        "collateral": "Existing SSN/TLB shared collateral, plus exclusive new collateral: London Eye, SEA LIFE London, Shrek's Adventure! London, and the UK Dungeons (London, York, Edinburgh)",
+        "lead_lenders": "Monarch and GoldenTree Asset Management (9fin sources); Oaktree Capital also named as a participating private credit fund in earlier reporting; a portion of the facility reserved for existing creditors to participate",
+        "status": "Commitment documentation signed 10-Sep-2026; completion subject to customary closing conditions, expected by end of 2026",
+        "source": "Merlin press release 10-Sep-2026 (doc ae93bb0a); 9fin articles 'Merlin confirms GBP657m secured refi of 2027 SUNs' (10-Sep-2026), 'Goldentree and Monarch lead Merlin refi as bonds and CDS take different rides' (17-Sep-2026)"
+      },
+      {
+        "instrument": "Senior Notes due 2027 (USD, unsecured) -- REPAID/REFINANCED PF",
+        "currency_amount": "USD 410m (GBP 311m equiv)",
+        "amount_gbp_m": 311,
+        "rate": "6.625% fixed",
+        "maturity": "Nov-2027 (to be repaid at close of new facility, expected year-end 2026)",
+        "ranking": "Unsecured",
+        "current_vs_pf": "Removed from the stack once the New Term Facility closes",
+        "source": "9fin latest cap table, as of 30-Jun-2026"
+      },
+      {
+        "instrument": "Senior Notes due 2027 (EUR, unsecured) -- REPAID/REFINANCED PF",
+        "currency_amount": "EUR 370m (GBP 319m equiv)",
+        "amount_gbp_m": 319,
+        "rate": "4.500% fixed",
+        "maturity": "Nov-2027 (to be repaid at close of new facility, expected year-end 2026)",
+        "ranking": "Unsecured",
+        "current_vs_pf": "Removed from the stack once the New Term Facility closes",
+        "source": "9fin latest cap table, as of 30-Jun-2026"
+      },
+      {
+        "instrument": "Lease liabilities (IFRS 16)",
+        "amount_gbp_m": 1638,
+        "current_vs_pf": "Not addressed by this transaction",
+        "source": "9fin latest cap table, as of 30-Jun-2026"
+      }
+    ],
+    "pf_totals_cmck_calculation": {
+      "pf_gross_secured_debt_gbp_m": 3897,
+      "pf_gross_secured_x_ebitda": "6.9x (CMCK calc: GBP 3,240m current gross secured + GBP 657m new facility, / GBP 568m LTM EBITDA)",
+      "pf_net_secured_debt_gbp_m": 3797,
+      "pf_net_secured_x_ebitda": "6.7x (CMCK calc, assumes cash broadly unchanged)",
+      "pf_gross_debt_gbp_m": 5543,
+      "pf_gross_x_ebitda": "9.8x (CMCK calc: GBP 5,516m current gross debt - GBP 630m SUNs repaid + GBP 657m new facility, / GBP 568m EBITDA)",
+      "pf_net_debt_gbp_m": 5443,
+      "pf_net_x_ebitda": "9.6x (CMCK calc; broadly flat versus the current 9.5x net figure, since the new facility is only modestly larger than the SUN balance it replaces -- the transaction resolves the 2027 maturity wall but does not by itself deleverage the group)",
+      "caveat": "Not a 9fin-sourced figure. 9fin's own 10-Sep-2026 analysis separately estimates annual interest expense could rise by ~GBP 30m post-refinancing (higher coupon on new facility versus the 4.5%/6.625% SUNs it replaces), and flags a 'cleaner' EBITDA basis (~GBP 535m, excluding disposed Legoland Discovery Centres) that would imply ~10.1x net leverage rather than the 9.5x currently reported."
+    }
+  },
+
+  "priming_analysis": {
+    "new_exclusive_collateral": {
+      "assets": ["London Eye", "SEA LIFE London", "Shrek's Adventure! London", "UK Dungeons (London, York, Edinburgh)"],
+      "description": "Per Merlin's 10-Sep-2026 press release, these are 'previously unencumbered' UK visitor attractions that do not secure the existing SSNs or TLBs. The group retains full ownership and operation of these assets; only a security interest is being granted to the new lenders.",
+      "disclosed_value": "Not disclosed by 9fin sources reviewed. Likely source to resolve: Merlin's SFA/new facility agreement collateral valuation, or a 9fin follow-up asset-level analysis if published.",
+      "likely_pledging_entities_inferred": "Not confirmed by 9fin as the specific pledging entities for this deal, but the Jan-2025 SSN offering memorandum's restricted-subsidiary schedule (doc 1f6d082c-4f6c-4790-aa86-7a28a8f06019, p.588) lists 'London Eye Holdings Limited' (co. no. 05686179), 'London Eye Management Services Limited' (02896849), 'Merlin Entertainments (SEA LIFE) Limited' (02182098) and 'Merlin Entertainments (Dungeons) Limited' (03671067) as existing group subsidiaries -- plausible candidates for where this collateral sits, flagged explicitly as an inference, not a 9fin-confirmed fact."
+    },
+    "ranking_vs_existing_ssns_tlb": {
+      "confirmed_by_sources": "CONFIRMED, and stated as the headline characterisation: per Merlin's own 10-Sep-2026 press release, the New Term Facility 'will be secured alongside the Group's current senior secured financing' -- i.e. shares the pre-existing collateral pool with the SSNs and TLBs, consistent with a pari passu ranking on that pool. 9fin's 17-Sep-2026 article independently describes the new debt as sitting 'alongside its existing secured debt'. Separately, and also confirmed, the new facility benefits from exclusive security over the previously-unencumbered UK asset portfolio (London Eye, SEA LIFE London, Shrek's Adventure! London, UK Dungeons) that the SSNs/TLB do not have any claim on.",
+      "market_commentary_vs_confirmed_ranking": "9fin's 17-Sep-2026 article quotes buyside sources describing the resulting effect on the rest of the secured stack as being 'primed' by the Monarch/GoldenTree financing. This is qualitative market commentary about the economic/recovery effect of adding more secured debt plus exclusive collateral -- it is not itself a statement that the new facility has contractual priority (as opposed to parity) on the shared collateral pool.",
+      "pari_passu_or_senior_inference": "INFERENCE, not confirmed by any 9fin source reviewed: the covenant mechanism identified below (Permitted Collateral Liens basket (b) in the SSN indenture) would allow up to the greater of GBP 601m / 100% LTM EBITDA of new secured debt to be granted 'super senior priority status in respect of the right to receive proceeds from an enforcement of the Collateral' -- i.e., priority in a waterfall, not just parity. The GBP 657m new facility is close to (modestly above) that GBP 601m/100% EBITDA cap, so if this specific basket was used, at least part of the new facility could in principle rank ahead of the SSNs/TLB for collateral enforcement proceeds. No 9fin news or document source reviewed states that this basket was actually the mechanism used, or that the new facility is contractually senior (rather than pari passu) on the shared collateral -- this remains CMCK's inference from covenant text cross-referenced against deal size only, and should not be read as a confirmed ranking.",
+      "exclusive_collateral": "CONFIRMED: on the new UK asset portfolio, the new lenders have security with no equivalent claim available to existing SSN/TLB holders -- this portion is structurally exclusive, not merely pari or senior."
+    },
+    "covenant_basket_permitting_transaction": {
+      "source_document": "USD 410m 7.375%/8.375% SSN indentures (2030/2031/2032 series), covenant basket text pulled via get_covenant_basket_texts, document_uuid 1f6d082c-4f6c-4790-aa86-7a28a8f06019 (2032s OM) -- broadly consistent language repeats across the 2030/2031 OMs per get_debt_instruments_and_covenants_table",
+      "relevant_baskets": [
+        {
+          "name": "Permitted Collateral Liens -- basket (b) (super senior capacity)",
+          "text_summary": "Permits Liens securing Indebtedness under specified Ratio Debt / Credit Facility clauses, up to the greater of GBP 601m and 100% of LTM EBITDA, to be elevated to 'super senior priority status' for enforcement-proceeds purposes on the Collateral -- a fixed-capacity basket, not leverage-ratio-tested.",
+          "relevance": "GBP 601m / 100% of the GBP 568m LTM EBITDA basis is very close to the GBP 657m new facility size, making this the most plausible mechanism for granting the new lenders priority on the shared collateral pool without breaching the indenture's ratio-based tests (see next basket)."
+        },
+        {
+          "name": "Permitted Collateral Liens -- Secured Leverage Ratio test",
+          "text_summary": "Additional secured debt on the Collateral pari passu with (or senior to) the SSNs otherwise requires the Consolidated Senior Secured Debt Ratio to be no greater than 4.75x.",
+          "relevance": "Current gross secured leverage is already 5.7x (9fin cap table, 30-Jun-2026), i.e. above the 4.75x ratio test -- so a straightforward ratio-based incurrence of new pari/senior secured debt on the shared Collateral does not appear available, reinforcing the inference that the fixed-capacity super-senior basket above (not the ratio test) was the mechanism used."
+        },
+        {
+          "name": "Permitted Liens -- General Basket / Secured Leverage Ratio (for the NEW, non-Collateral UK assets)",
+          "text_summary": "Liens on property that is not part of the indenture's defined 'Collateral' fall outside the Negative Pledge entirely and can be granted either under a General Basket (greater of GBP 181m / 30% LTM EBITDA) or subject to a 6.00x Consolidated Total Debt Ratio / 2.00x FCCR test.",
+          "relevance": "Because the London Eye/SEA LIFE/Shrek's/Dungeons portfolio was previously unencumbered and outside the defined Collateral, granting security over it to the new lenders does not require any amendment to the SSN indenture's Negative Pledge -- it is a straightforward Permitted Lien on non-Collateral assets, which is consistent with the deal proceeding without a disclosed SSN indenture amendment or consent solicitation."
+        }
+      ],
+      "consent_required": "Not confirmed by 9fin sources reviewed either way. Based on the covenant basket analysis above, both legs of the transaction (super-senior capacity on shared Collateral, and a fresh Lien on previously non-Collateral assets) appear to fit within existing indenture/SFA basket capacity, which would mean formal SSN or TLB holder consent was not structurally required. This is CMCK's reading of the covenant text, not a 9fin-confirmed fact -- flagged explicitly as an inference. Likely source to firm this up: the closing documentation / any consent solicitation memorandum, once available on 9fin."
+    },
+    "springing_maturity_on_ssns_tlb": {
+      "existing_mechanism": "Per 9fin's 09-Jun-2026 article ('Merlin hires Kirkland amid 2027 refi pressure', citing 9fin's own LME analysis), the existing senior secured debt carries a springing maturity covenant: all senior secured debt becomes current unless the 2027 SUNs are refinanced or repaid before 15-Jul-2027 (RCF) and before 15-Aug-2027 (TLBs and SSNs).",
+      "does_this_deal_remove_it": "Not yet confirmed post-close (transaction is not yet closed as of 28-Sep-2026; targeted for year-end 2026). If the new facility closes and repays the SUNs as intended, this should satisfy the springing-maturity condition and remove the risk of the RCF/TLBs/SSNs accelerating to current maturities in 2027. This is an expected outcome based on the mechanism as described, not a 9fin-confirmed post-close fact -- flagged as inference pending completion."
+    }
+  },
+
+  "impact_on_unrefinanced_ssns": {
+    "instruments_not_refinanced": ["EUR 700m SSN due Jun-2030", "USD 500m SSN due Feb-2031", "USD 410m SSN due Feb-2032", "EUR 1.02bn TLB due Nov-2029", "USD 1.37bn TLB due Nov-2029"],
+    "collateral_recovery_dilution": "CONFIRMED: the new facility gains access to the existing shared collateral pool (pari passu on Merlin's and 9fin's own wording -- see priming_analysis.ranking_vs_existing_ssns_tlb) plus exclusive security over the new UK asset portfolio that SSN/TLB holders cannot access. Both effects dilute the SSNs'/TLB's relative claim on enforcement proceeds versus the pre-transaction position, even under a pari passu reading, simply because more secured debt (GBP 657m) now competes for the same collateral, and a further pool of assets sits entirely outside the SSNs'/TLB's reach. The additional possibility that the new facility also has priority (not just parity) via the super-senior covenant basket is an unconfirmed inference (see priming_analysis) that would, if true, worsen this dilution further.",
+    "secured_leverage_change": "Gross secured leverage rises from 5.7x (current, GBP 3,240m / GBP 568m EBITDA) to an estimated 6.9x PF (CMCK calc, GBP 3,897m / GBP 568m EBITDA) once the new GBP 657m facility is added -- more secured debt now sits pari passu with (and, per an unconfirmed inference, possibly ahead of) the SSNs, competing for the same shared collateral plus the exclusive new UK asset pool.",
+    "maturity_profile": "The new facility's stated 6-year tenor (~2032) sits roughly alongside/after the 2030-2032 SSN maturities, so it does not obviously mature ahead of the SSNs on its face. However, it carries its own springing maturity that could bring its due date forward to before 2030 if Merlin fails to refinance its debt -- the exact trigger (which debt, by what date) is not fully disclosed in the 9fin sources reviewed, so whether this could in practice pull the new facility's maturity ahead of, or keep it behind, the SSNs cannot be confirmed without the closing documentation.",
+    "price_reaction": {
+      "summary": "SSNs and TLBs fell materially through late August and again sharply from mid-to-late September 2026 as the private credit deal was negotiated, confirmed, and then digested by holders concerned about collateral dilution. Prices in this section are now sourced primarily from the user-uploaded resources/Merlin/9fin-pricing-chart.csv (daily closes, USD 410m 8.375% SSN 2032 / USD 500m 7.375% SSN 2031 / EUR 1,020m TLB 2029 / USD TLB 2029), superseding the qualitative news-text price mentions used in the prior draft of this file.",
+      "data_points": [
+        {"date": "2025-08-20", "event": "S&P downgrades Merlin to CCC+", "ssn_2032": 87.554, "ssn_2031": 85.878, "tlb_eur": 91.029, "tlb_usd": 87.092, "note": "9fin news text on the same day separately quoted the SSN 2032 at 86.36 (yield 11.41%) -- a small (c.1.2pt) discrepancy versus the CSV's 87.554 close, most likely an intraday-vs-close or data-vintage difference. Per the standing resources-upload-beats-9fin priority rule, the CSV figure (87.554) is used as primary; the news-quoted 86.36/11.41% yield is retained in the capital_structure table only as a labelled historical reference."},
+        {"date": "2026-06-09", "event": "9fin flags springing maturity risk", "ssn_2032": 80.68, "ssn_2031": 81.375, "tlb_eur": 85.525, "tlb_usd": 82.332},
+        {"date": "2026-08-25", "event": "Secured bonds fall on maturity fears", "ssn_2032": 75.727, "ssn_2031": 75.413, "tlb_eur": 80.858, "tlb_usd": 80.148},
+        {"date": "2026-08-27", "event": "Merlin mandates PJT on refinancing", "ssn_2032": 76.34, "ssn_2031": 75.976, "tlb_eur": 80.288, "tlb_usd": 80.626},
+        {"date": "2026-08-28", "event": "Private credit refi proposal surfaces", "ssn_2032": 76.401, "ssn_2031": 77.125, "tlb_eur": 80.259, "tlb_usd": 80.235},
+        {"date": "2026-09-08", "event": "CLOs flagged holding SUN positions", "ssn_2032": 74.531, "ssn_2031": 75.957, "tlb_eur": 78.039, "tlb_usd": 78.587},
+        {"date": "2026-09-09", "event": "Pre-announcement reference level", "ssn_2032": 75.264, "ssn_2031": 76.103, "tlb_eur": 77.511, "tlb_usd": 78.705},
+        {"date": "2026-09-10", "event": "Merlin confirms GBP657m secured refi", "ssn_2032": 75.613, "ssn_2031": 75.938, "tlb_eur": 80.872, "tlb_usd": 80.65},
+        {"date": "2026-09-11", "event": "Q2 earnings flash: leverage 9.5x", "ssn_2032": 74.867, "ssn_2031": 76.141, "tlb_eur": 78.847, "tlb_usd": 80.052},
+        {"date": "2026-09-14", "event": "S&P places secured debt on watch", "ssn_2032": 74.616, "ssn_2031": 74.589, "tlb_eur": 77.834, "tlb_usd": 76.648},
+        {"date": "2026-09-15", "event": "SSNs drop sharply on priming concerns", "ssn_2032": 69.623, "ssn_2031": 72.475, "tlb_eur": 76.378, "tlb_usd": 75.251},
+        {"date": "2026-09-16", "event": "Moody's downgrades secured notes to Caa2", "ssn_2032": 69.382, "ssn_2031": 71.08, "tlb_eur": 76.734, "tlb_usd": 74.676},
+        {"date": "2026-09-17", "event": "GoldenTree, Monarch confirmed as leads", "ssn_2032": 70.875, "ssn_2031": 71.125, "tlb_eur": 76.164, "tlb_usd": 74.487},
+        {"date": "2026-09-18", "event": "Prior-week reference (Fri close)", "ssn_2032": 70.375, "ssn_2031": 71.152, "tlb_eur": 76.368, "tlb_usd": 73.915},
+        {"date": "2026-09-25", "event": "Latest-week reference (Fri close)", "ssn_2032": 63.875, "ssn_2031": 63.618, "tlb_eur": 70.469, "tlb_usd": 72.777},
+        {"date": "2026-09-28", "event": "Latest available close (as of report date)", "ssn_2032": 63.379, "ssn_2031": 63.345, "tlb_eur": 69.83, "tlb_usd": 68.512}
+      ],
+      "weekly_change_to_25_sep_2026": {
+        "definition": "Friday close 25-Sep-2026 minus Friday close 18-Sep-2026, both sourced from the CSV",
+        "ssn_2032_pts": -6.5,
+        "ssn_2031_pts": -7.53,
+        "tlb_eur_pts": -5.9,
+        "tlb_usd_pts": -1.14,
+        "note_vs_task_brief": "The coordinator's brief referenced SSNs down c.7-8pts and the TLB down c.4.7pts in the week to 25-Sep-2026. The CSV-derived weekly move for the SSN 2031 (-7.53pts) sits within that range; the SSN 2032 (-6.5pts) is close. Neither individual TLB tranche matches c.4.7pts on a Friday-to-Friday basis (EUR tranche -5.9pts, USD tranche only -1.14pts, reflecting a delayed but sharper fall in the USD TLB between 23-Sep and 28-Sep); a simple average of the two TLB tranches (-3.5pts) is also not an exact match. CMCK could not identify an alternative CSV-consistent window that reproduces exactly 4.7pts for either TLB tranche. The figures reported here are read directly off the uploaded CSV and are the authoritative numbers for this file; the brief's approximate figure is flagged as a discrepancy rather than silently overridden."
+      },
+      "change_since_pre_announcement_9_sep_to_latest_28_sep": {
+        "definition": "Latest close 28-Sep-2026 minus 9-Sep-2026 close (last trading day before the 10-Sep-2026 refinancing confirmation)",
+        "ssn_2032_pts": -11.885,
+        "ssn_2031_pts": -12.758,
+        "tlb_eur_pts": -7.681,
+        "tlb_usd_pts": -10.193,
+        "commentary": "All four instruments are materially lower than their pre-announcement level despite the SUN maturity wall being resolved -- consistent with the market pricing collateral dilution/priming risk (see priming_analysis) ahead of the near-term earnings/refinancing catalyst."
+      },
+      "series_high_low_jan_2024_to_28_sep_2026": {
+        "ssn_2032": {"high": 102.637, "high_date": "2025-02-28", "low": 63.375, "low_date": "2026-09-24"},
+        "ssn_2031": {"high": 104.073, "high_date": "2024-08-01", "low": 63.345, "low_date": "2026-09-28"},
+        "tlb_eur": {"high": 100.407, "high_date": "2024-05-22", "low": 69.83, "low_date": "2026-09-28"},
+        "tlb_usd": {"high": 100.5, "high_date": "2024-07-22", "low": 68.512, "low_date": "2026-09-28"},
+        "commentary": "As of the latest available close (28-Sep-2026), the SSN 2031, TLB EUR and TLB USD are all trading at their series low over the Jan-2024 to Sep-2026 window; the SSN 2032 is within 0.01pt of its series low (set the prior session, 24-Sep-2026). All four instruments have lost roughly a third of their face value from 2024/2025 highs."
+      }
+    },
+    "ssn_holder_organisation": "A group of holders of Merlin's ~GBP 3.2bn of secured debt (which includes the SSNs and TLBs, not disclosed as SSN-only) has been organised with Gibson Dunn as legal adviser since at least 25-Aug-2026, ahead of the private credit deal being finalised (consistently referenced across 9fin articles dated 25-Aug, 27-Aug, 28-Aug, 08-Sep and 10-Sep-2026). No 9fin source reviewed in this session confirms a separate ad hoc group specific to the 2030/2031/2032 SSNs formed after the deal's 10-Sep-2026 confirmation, nor any organised opposition or litigation threat -- flagged as a gap, likely resolved by further 9fin news/document search closer to the transaction's year-end close."
+  },
+
+  "capital_structure": [
+    {"instrument": "RCF due 2029 (GBP 428m facility)", "amount": "GBP 40m drawn / GBP 388m undrawn", "ebitda_multiple": "included in 5.7x gross secured", "rate": "SONIA/EURIBOR + margin (not disclosed)", "maturity": "May-2029", "price": "not available - further diligence required (RCF not covered by the user-uploaded pricing CSV, which only spans the two USD SSNs and the two TLB tranches; RCFs are not typically traded/quoted)", "yield": "not available - further diligence required", "rating": "not individually rated; see secured instrument ratings below"},
+    {"instrument": "Term Loan B - EUR 1.02bn", "amount": "GBP 879m equiv", "ebitda_multiple": "included in 5.7x gross secured", "rate": "EURIBOR + 375bps", "maturity": "Nov-2029", "price": "69.83 as of 28-Sep-2026 (latest available close, per user-uploaded resources/Merlin/9fin-pricing-chart.csv); series low over Jan-2024-Sep-2026 window, per the same file", "yield": "not computed. Floating-rate instrument: a standard fixed-coupon YTM formula is not meaningful without the current EURIBOR reference rate, which is not provided in the CSV. The 30.17pt discount to par as of 28-Sep-2026 is the key credit signal instead.", "rating": "secured instruments downgraded to Caa2 by Moody's (16-Sep-2026); Motion Midco secured debt 'B-' placed on CreditWatch Negative by S&P (14-Sep-2026)"},
+    {"instrument": "Term Loan B - USD 1.37bn (outstanding per 9fin cap table, 30-Jun-2026; CSV identifies the instrument as USD 1,385.0m, likely original issue size before amortisation -- see pf_capital_structure note)", "amount": "GBP 1,029m equiv", "ebitda_multiple": "included in 5.7x gross secured", "rate": "SOFR + 350bps", "maturity": "Nov-2029", "price": "68.512 as of 28-Sep-2026 (latest available close, per user-uploaded pricing CSV); series low over Jan-2024-Sep-2026 window", "yield": "not computed (floating-rate instrument, current SOFR reference rate not provided in the CSV); 31.49pt discount to par as of 28-Sep-2026 is the key credit signal instead", "rating": "see above"},
+    {"instrument": "Senior Secured Notes due 2030 (EUR 700m)", "amount": "GBP 603m equiv", "ebitda_multiple": "included in 5.7x gross secured", "rate": "7.375% fixed", "maturity": "Jun-2030", "price": "not covered by the user-uploaded pricing CSV (which spans the USD 500m 2031s, USD 410m 2032s, and both TLB tranches, but not the EUR 700m 2030s). Indicative levels from 9fin news text only: ~75.8-80.63 in Aug-Sep 2026 (not an exact/dated EOD price)", "yield": "not available - further diligence required", "rating": "B2/B+ at issuance (Jun-2023); company CFR now Caa1 (Moody's, affirmed 16-Sep-2026), secured instruments Caa2 (Moody's); Motion Midco secured 'B-' CreditWatch Negative (S&P, 14-Sep-2026)"},
+    {"instrument": "Senior Secured Notes due 2031 (USD 500m)", "amount": "GBP 378m equiv", "ebitda_multiple": "included in 5.7x gross secured", "rate": "7.375% fixed", "maturity": "Feb-2031", "price": "63.345 as of 28-Sep-2026 (latest available close, per user-uploaded pricing CSV); series low over Jan-2024-Sep-2026 window, set on the latest available date itself", "yield": "approx. 19.2% YTM, ANALYST ESTIMATE (CMCK calc, simple approximation: [coupon + (100-price)/years-to-maturity] / [(100+price)/2], using price 63.345, coupon 7.375%, ~4.4 years to the 15-Feb-2031 maturity from 28-Sep-2026). Not a 9fin-sourced or precisely-discounted YTM figure -- indicative only.", "rating": "B2/B+ at issuance (Feb-2024); see current ratings above"},
+    {"instrument": "Senior Secured Notes due 2032 (USD 410m)", "amount": "GBP 311m equiv", "ebitda_multiple": "included in 5.7x gross secured", "rate": "8.375% fixed", "maturity": "Feb-2032", "price": "63.379 as of 28-Sep-2026 (latest available close, per user-uploaded pricing CSV). Historical reference: quoted 86.36 to yield 11.41% on 20-Aug-2025 per 9fin news text (vs 87.554 close on the same date per the CSV -- see impact_on_unrefinanced_ssns.price_reaction for the discrepancy note; CSV used as primary per priority rule)", "yield": "approx. 18.6% YTM, ANALYST ESTIMATE (CMCK calc, same simple approximation method as the 2031s, using price 63.379, coupon 8.375%, ~5.4 years to the 15-Feb-2032 maturity from 28-Sep-2026). Historical: 11.41% as of 20-Aug-2025 per 9fin news (stale, pre-refinancing-episode figure, not comparable on a like-for-like calc basis).", "rating": "B2/B at issuance (Feb-2025); see current ratings above"},
+    {"instrument": "Senior Notes due 2027 (USD 410m, unsecured)", "amount": "GBP 311m equiv", "ebitda_multiple": "unsecured, not included in secured multiple", "rate": "6.625% fixed", "maturity": "Nov-2027 (to be repaid via new facility, expected year-end 2026)", "price": "not covered by the user-uploaded pricing CSV (unsecured 2027 SUNs are not one of the four instruments in the file). Indicative level from 9fin news text only: ~98.08 as of 10-Sep-2026", "yield": "not available - further diligence required", "rating": "not individually disclosed in sources reviewed"},
+    {"instrument": "Senior Notes due 2027 (EUR 370m, unsecured)", "amount": "GBP 319m equiv", "ebitda_multiple": "unsecured, not included in secured multiple", "rate": "4.500% fixed", "maturity": "Nov-2027 (to be repaid via new facility, expected year-end 2026)", "price": "not covered by the user-uploaded pricing CSV. Indicative level from 9fin news text only: ~99.84 as of 10-Sep-2026", "yield": "not available - further diligence required", "rating": "not individually disclosed in sources reviewed"},
+    {"instrument": "Lease liabilities (IFRS 16)", "amount": "GBP 1,638m", "ebitda_multiple": "included in 9.7x gross total", "rate": "n/a", "maturity": "various", "price": "n/a", "yield": "n/a", "rating": "n/a"}
+  ],
+  "capital_structure_pricing_source_note": "Prices for the USD 410m 2032 SSN, USD 500m 2031 SSN, EUR 1,020m TLB and USD TLB are now sourced from the user-uploaded resources/Merlin/9fin-pricing-chart.csv (daily closes, Jan-2024 to 28-Sep-2026), per the standing resources-upload-beats-9fin priority rule. The EUR 700m 2030 SSN and both unsecured 2027 SUNs are not covered by that file and remain sourced from qualitative 9fin news text only, explicitly flagged as such.",
+
+  "liquidity": {
+    "cash": "GBP 100m as of 30-Jun-2026 (9fin cap table)",
+    "available_facilities": "GBP 428m RCF; GBP 40m drawn, GBP 388m undrawn as of 30-Jun-2026; GBP 22m of letters of credit outstanding against the facility",
+    "min_operating_liquidity_requirement": "not available - further diligence required (likely source: Senior Facilities Agreement minimum liquidity/covenant text, not returned by the covenant datapoints tool for the RCF, or company treasury policy disclosure in the annual report)",
+    "headroom": "Reported total liquidity of GBP 466m (= GBP 100m cash + GBP 388m undrawn RCF - GBP 22m LCs) per 9fin cap table notes, 30-Jun-2026. The RCF's springing covenant (Consolidated Senior Secured Debt Ratio <=10.0x) only tests if drawings exceed 40% of the GBP 428m facility (i.e. >GBP 171m drawn); at GBP 40m drawn (9.3% utilisation) headroom to that trigger is wide, and even if triggered, current secured leverage of 5.5x net is comfortably inside the 10.0x test.",
+    "pf_liquidity_note": "Not available - the transaction has not yet closed (expected year-end 2026). Proceeds of the GBP 657m New Term Facility are earmarked for repaying the ~GBP 630m 2027 SUNs plus 'general corporate purposes and...costs and expenses' per the 10-Sep-2026 press release, implying a modest net liquidity contribution beyond the SUN repayment itself, but no disclosed PF cash/facility figures exist yet."
+  },
+
+  "group_structure": "Ownership: Blackstone and CPP Investments (CPPIB), together with KIRKBI A/S (the LEGO family holding company), own Motion JVco Limited, which sits above Motion Topco Limited (with a minority management stake) and Motion Midco Limited. Motion Bondco DAC sits alongside Midco as the issuer of the Existing Senior Notes (the 2027 SUNs) -- structurally outside the Senior Secured Notes Restricted Group. The Senior Secured Notes Restricted Group begins at Motion Acquisition Limited (MAL, a notes guarantor), which sits above Motion Finco S.a.r.l. (the SSN/SFA issuer), Motion Finco 2 S.a.r.l. (Lux Finco 2, guarantor), Motion Finco LLC (the US co-borrower) and Merlin Entertainments Limited (MEL, guarantor). Below Motion Finco S.a.r.l. sit the operating subsidiaries, split into guarantor and non-guarantor subsidiaries, and Merlin Entertainments Group U.S. Holdings Inc. (the US Issuer of the Existing 2031 Notes), which itself has its own guarantor/non-guarantor subsidiaries. Chart source: 9fin org chart (company_id 790), sourced from the Jan-2025 USD 410m 2032 SSN preliminary offering memorandum (document_uuid 1f6d082c-4f6c-4790-aa86-7a28a8f06019, page 55; orgchart dated 26-Jan-2025). IMPORTANT CAVEAT: this chart pre-dates the Sep-2026 private credit refinancing and therefore does not show the New Term Facility or confirm which specific entity holds/pledges the newly-encumbered UK asset portfolio (London Eye, SEA LIFE London, Shrek's Adventure! London, UK Dungeons) -- see priming_analysis.new_exclusive_collateral for CMCK's inferred candidate entities from the same OM's subsidiary schedule. An updated org chart reflecting the closed transaction is not yet available on 9fin.",
+
+  "holdings": {
+    "note": "A resources upload now exists at /resources/Merlin/ (capital M), uploaded c.22:30 on 28-Sep-2026, after the initial research pass. Per the standing priority rule (resources upload beats 9fin), the two 9fin 'Holders and Transactions' screenshots in that folder are used as the primary source for the EUR 1,020m TLB and the USD 500m 2031 SSN below, replacing the news-sourced CLO figures from the prior draft. Coverage is still partial: no holder data exists (from either 9fin or the resources upload) for the RCF, the EUR 700m 2030 SSN, the USD 410m 2032 SSN, the USD TLB tranche, the unsecured 2027 SUNs, or the new private credit facility.",
+    "data_quality_flag": "For the EUR 1,020m TLB table, the sum of the 9fin-reported 'top 10' % of instrument figures (19.97%) does not reconcile with the sum of the top-10 holder amounts expressed as a % of the EUR 1,020m stated facility size (EUR 383.3m / EUR 1,020m = 37.6%). Per-row amounts imply a denominator of roughly EUR 1.9-1.95bn, not EUR 1,020m (e.g. CVC's EUR 91.46m at 4.76% implies a ~EUR 1.92bn base). This is transcribed faithfully from the primary-source image without attempting to force a reconciliation; flagged for further diligence via 9fin support on what denominator its 'Holders and Transactions' % of instrument figure actually uses for this deal (possibly a cross-currency/blended TLB grouping). By contrast, the USD 500m 2031 SSN table reconciles cleanly: top-10 amounts sum to USD 136.8m against the sum of reported %'s of 27.36%, and USD 136.8m / USD 500m = 27.36% exactly -- no discrepancy on that instrument.",
+    "top_10_by_instrument": {
+      "eur_1020m_tlb_due_2029": {
+        "source": "User-uploaded resources/Merlin/1,020m TLB.png -- 9fin 'Holders and Transactions', updated 22-Sep-2026, 34 holders found",
+        "instrument_total": "EUR 1,020.0m (per 9fin cap table outstanding, 30-Jun-2026)",
+        "holders": [
+          {"rank": 1, "holder": "CVC Credit Partners LLC", "pct_of_instrument": "4.76%", "cumulative_pct": "4.76%", "amount_eur": 91460000},
+          {"rank": 2, "holder": "PGIM", "pct_of_instrument": "2.83%", "cumulative_pct": "7.59%", "amount_eur": 54317000},
+          {"rank": 3, "holder": "Five Arrows Managers LLP", "pct_of_instrument": "2.32%", "cumulative_pct": "9.91%", "amount_eur": 44600000},
+          {"rank": 4, "holder": "Carlyle Investment Management LLC", "pct_of_instrument": "2.02%", "cumulative_pct": "11.93%", "amount_eur": 38774000},
+          {"rank": 5, "holder": "KKR Financial Advisors LLC", "pct_of_instrument": "1.92%", "cumulative_pct": "13.85%", "amount_eur": 36776884},
+          {"rank": 6, "holder": "Blackstone Inc.", "pct_of_instrument": "1.59%", "cumulative_pct": "15.44%", "amount_eur": 30473047},
+          {"rank": 7, "holder": "Investcorp B.S.C.", "pct_of_instrument": "1.32%", "cumulative_pct": "16.76%", "amount_eur": 25386000},
+          {"rank": 8, "holder": "Onex Credit Partners LLC", "pct_of_instrument": "1.21%", "cumulative_pct": "17.97%", "amount_eur": 23281452},
+          {"rank": 9, "holder": "Sculptor Capital Management", "pct_of_instrument": "1.19%", "cumulative_pct": "19.16%", "amount_eur": 22791666},
+          {"rank": 10, "holder": "Arini Capital Management", "pct_of_instrument": "0.81%", "cumulative_pct": "19.97%", "amount_eur": 15465000}
+        ],
+        "top_10_total": {"amount_eur": 383325049, "cumulative_pct_of_instrument_per_9fin_labels": "19.97%", "note": "See data_quality_flag above on why this % does not tie to EUR 383.3m / EUR 1,020m"}
+      },
+      "usd_500m_ssn_due_2031": {
+        "source": "User-uploaded resources/Merlin/USD 500m SSNs.png -- 9fin 'Holders and Transactions', updated 24-Sep-2026, 26 holders found",
+        "instrument_total": "USD 500.0m (per 9fin cap table, 30-Jun-2026)",
+        "holders": [
+          {"rank": 1, "holder": "Artisan Partners", "pct_of_instrument": "6.66%", "cumulative_pct": "6.66%", "amount_usd": 33276700},
+          {"rank": 2, "holder": "Lord Abbett", "pct_of_instrument": "6.31%", "cumulative_pct": "12.97%", "amount_usd": 31574048},
+          {"rank": 3, "holder": "BlackRock", "pct_of_instrument": "4.43%", "cumulative_pct": "17.40%", "amount_usd": 22126729},
+          {"rank": 4, "holder": "New York Life Investments", "pct_of_instrument": "2.64%", "cumulative_pct": "20.04%", "amount_usd": 13209656},
+          {"rank": 5, "holder": "SPDR ETFs", "pct_of_instrument": "2.56%", "cumulative_pct": "22.60%", "amount_usd": 12810549},
+          {"rank": 6, "holder": "Nuveen Securities", "pct_of_instrument": "1.76%", "cumulative_pct": "24.36%", "amount_usd": 8817922},
+          {"rank": 7, "holder": "AllianceBernstein", "pct_of_instrument": "0.95%", "cumulative_pct": "25.31%", "amount_usd": 4742880},
+          {"rank": 8, "holder": "Hartford Funds", "pct_of_instrument": "0.78%", "cumulative_pct": "26.09%", "amount_usd": 3892795},
+          {"rank": 9, "holder": "Eurizon", "pct_of_instrument": "0.70%", "cumulative_pct": "26.79%", "amount_usd": 3517261},
+          {"rank": 10, "holder": "PIMCO", "pct_of_instrument": "0.57%", "cumulative_pct": "27.36%", "amount_usd": 2829155}
+        ],
+        "top_10_total": {"amount_usd": 136797695, "cumulative_pct_of_instrument": "27.36%", "note": "Reconciles cleanly: USD 136,797,695 / USD 500,000,000 = 27.36%, matching the sum of the reported per-row percentages exactly."}
+      }
+    },
+    "instruments_with_no_holder_data": ["RCF due 2029", "EUR 700m SSN due 2030", "USD 410m SSN due 2032", "USD TLB tranche due 2029 (only the EUR tranche was in the resources upload)", "Unsecured 2027 SUNs (USD and EUR)", "New Term Facility (private credit refinancing)"],
+    "legacy_9fin_news_context": "Retained for context only (superseded as primary source by the resources upload above for the TLB): a 20-Aug-2025 9fin article separately reported aggregate CLO holdings of USD 1.08bn (US CLOs) and EUR 644.2m (European CLOs) across the Term Loan B, with Carlyle (USD 126.3m), UBS AM (USD 106.8m) and AGL (USD 87.2m) named as the largest US CLO holders, and CVC (EUR 82.7m), KKR (EUR 45.7m) and Sculptor (EUR 43.1m) the largest European CLO holders at that (over a year stale) date. A 08-Sep-2026 article also flagged TPG Credit's Northwoods CLO platform holding ~EUR 10m of the EUR 370m unsecured 2027 SUNs, and CVC's Cordatus CLO platform selling >USD 8m of the same notes at a price of 96 at end-June 2026 -- this remains the only holdings colour available for the unsecured 2027 notes, as no resources-upload or 9fin holder table covers them."
+  },
+
+  "trading": {
+    "data_source": "user-uploaded",
+    "note": "A resources upload now exists at /resources/Merlin/9fin-pricing-chart.csv (daily closes, 24-Jan-2024 to 28-Sep-2026) covering four instruments: USD 410m 8.375% SSN due 2032, USD 500m 7.375% SSN due 2031, EUR 1,020m TLB due 2029 (margin labelled 3.750% = EURIBOR+375bps), and USD 1,385.0m-labelled TLB due 2029 (margin labelled 3.500% = SOFR+350bps; see pf_capital_structure note on the USD 1.37bn outstanding vs USD 1,385.0m CSV label). This is now the primary trading data source for these four instruments, per the standing priority rule. It does NOT cover the RCF, the EUR 700m 2030 SSN, or either unsecured 2027 SUN -- those remain 'not available - further diligence required (resources upload does not include this instrument)', with qualitative 9fin news-text price mentions retained only in the capital_structure table where available. Full detail (weekly/since-announcement changes, series highs/lows, per-event dated prices) is in impact_on_unrefinanced_ssns.price_reaction above; this section mirrors the event/price mapping for convenience.",
+    "instruments_covered": ["USD 410m 8.375% SSN due 2032", "USD 500m 7.375% SSN due 2031", "EUR 1,020m TLB due 2029", "USD TLB due 2029 (labelled USD 1,385.0m in the CSV; USD 1.37bn per 9fin cap table outstanding)"],
+    "events": [
+      {"date": "2025-08-20", "label": "S&P downgrades Merlin to CCC+", "ssn_2032": 87.554, "ssn_2031": 85.878, "tlb_eur": 91.029, "tlb_usd": 87.092},
+      {"date": "2026-06-09", "label": "9fin flags springing maturity risk", "ssn_2032": 80.68, "ssn_2031": 81.375, "tlb_eur": 85.525, "tlb_usd": 82.332},
+      {"date": "2026-08-25", "label": "Secured bonds fall on maturity fears", "ssn_2032": 75.727, "ssn_2031": 75.413, "tlb_eur": 80.858, "tlb_usd": 80.148},
+      {"date": "2026-08-27", "label": "Merlin mandates PJT on refinancing", "ssn_2032": 76.34, "ssn_2031": 75.976, "tlb_eur": 80.288, "tlb_usd": 80.626},
+      {"date": "2026-08-28", "label": "Private credit refi proposal surfaces", "ssn_2032": 76.401, "ssn_2031": 77.125, "tlb_eur": 80.259, "tlb_usd": 80.235},
+      {"date": "2026-09-08", "label": "CLOs flagged holding SUN positions", "ssn_2032": 74.531, "ssn_2031": 75.957, "tlb_eur": 78.039, "tlb_usd": 78.587},
+      {"date": "2026-09-10", "label": "Merlin confirms GBP657m secured refi", "ssn_2032": 75.613, "ssn_2031": 75.938, "tlb_eur": 80.872, "tlb_usd": 80.65},
+      {"date": "2026-09-11", "label": "Q2 earnings flash: leverage 9.5x", "ssn_2032": 74.867, "ssn_2031": 76.141, "tlb_eur": 78.847, "tlb_usd": 80.052},
+      {"date": "2026-09-14", "label": "S&P places secured debt on watch", "ssn_2032": 74.616, "ssn_2031": 74.589, "tlb_eur": 77.834, "tlb_usd": 76.648},
+      {"date": "2026-09-15", "label": "SSNs drop sharply on priming concerns", "ssn_2032": 69.623, "ssn_2031": 72.475, "tlb_eur": 76.378, "tlb_usd": 75.251},
+      {"date": "2026-09-16", "label": "Moody's downgrades secured notes Caa2", "ssn_2032": 69.382, "ssn_2031": 71.08, "tlb_eur": 76.734, "tlb_usd": 74.676},
+      {"date": "2026-09-17", "label": "GoldenTree, Monarch confirmed as leads", "ssn_2032": 70.875, "ssn_2031": 71.125, "tlb_eur": 76.164, "tlb_usd": 74.487}
+    ],
+    "weekly_change_to_25_sep_2026": {"ssn_2032_pts": -6.5, "ssn_2031_pts": -7.53, "tlb_eur_pts": -5.9, "tlb_usd_pts": -1.14, "definition": "Friday close 25-Sep-2026 vs Friday close 18-Sep-2026"},
+    "change_since_pre_announcement_9_sep_2026": {"ssn_2032_pts": -11.885, "ssn_2031_pts": -12.758, "tlb_eur_pts": -7.681, "tlb_usd_pts": -10.193, "definition": "28-Sep-2026 close vs 9-Sep-2026 close (last trading day before the 10-Sep-2026 refinancing confirmation)"},
+    "series_high_low": {
+      "ssn_2032": {"high": 102.637, "high_date": "2025-02-28", "low": 63.375, "low_date": "2026-09-24"},
+      "ssn_2031": {"high": 104.073, "high_date": "2024-08-01", "low": 63.345, "low_date": "2026-09-28"},
+      "tlb_eur": {"high": 100.407, "high_date": "2024-05-22", "low": 69.83, "low_date": "2026-09-28"},
+      "tlb_usd": {"high": 100.5, "high_date": "2024-07-22", "low": 68.512, "low_date": "2026-09-28"}
+    },
+    "latest_price": {
+      "date": "2026-09-28",
+      "ssn_2032": 63.379,
+      "ssn_2031": 63.345,
+      "tlb_eur": 69.83,
+      "tlb_usd": 68.512,
+      "commentary": "SSN 2031, TLB EUR and TLB USD are all at their series low (Jan-2024 to Sep-2026 window) as of the latest available close; SSN 2032 is within 0.01pt of its own series low."
+    }
+  },
+
+  "data_gaps": [
+    "Price and YTW/YTM for the RCF, the EUR 700m 2030 SSN, and both unsecured 2027 SUNs: not covered by the resources-upload pricing CSV (which spans only the two USD SSNs and the two TLB tranches) and not available via the 9fin connector (licensing restriction). Only dated, qualitative price mentions in 9fin news text could be sourced for the 2030 SSN and the 2027 SUNs; the RCF is not a traded/quoted instrument. Likely source: an expanded resources-folder pricing upload covering these instruments.",
+    "Floating-rate YTM for the two TLB tranches: not computed, since the current SOFR/EURIBOR reference rate is not provided in the pricing CSV and a fixed-coupon approximation is not meaningful for a floater. Likely source: a resources upload or 9fin data point giving the current reference rate, to support a proper discount-margin calculation.",
+    "EUR 1,020m TLB top-10 holder table denominator discrepancy: the sum of 9fin's reported 'top 10' % of instrument figures (19.97%) does not reconcile with top-10 amounts as a % of the stated EUR 1,020m facility size (37.6%), implying 9fin's percentage base for this instrument in the uploaded screenshot may not be EUR 1,020m. Likely source: 9fin support/methodology note on the 'Holders and Transactions' % calculation for cross-currency or blended TLB deals.",
+    "Holder data for the RCF, EUR 700m 2030 SSN, USD 410m 2032 SSN, USD TLB tranche, both unsecured 2027 SUNs, and the new private credit facility: no top-10 table available from either the resources upload (which only covers the EUR TLB and USD 2031 SSN) or 9fin (only partial, dated CLO-manager mentions in news text for the TLB aggregate and one SUN tranche). Likely source: further resources-folder uploads of trustee/holder reports for these instruments.",
+    "Minimum operating liquidity requirement: not disclosed in 9fin cap table or covenant datapoints reviewed. Likely source: SFA minimum liquidity covenant / treasury policy disclosure in the annual report.",
+    "Borrower/guarantor entity and exact pricing/margin for the New Term Facility: not disclosed by 9fin sources reviewed beyond the 650bps margin and ~6-year tenor reported by 9fin's 17-Sep-2026 article. Likely source: closing documentation / SFA amendment once available on 9fin.",
+    "Disclosed value of the newly-pledged UK asset portfolio (London Eye, SEA LIFE London, Shrek's Adventure! London, UK Dungeons): not disclosed in sources reviewed. Likely source: closing documentation or a 9fin asset-level follow-up analysis.",
+    "Confirmation of whether the new facility ranks pari passu or senior (e.g. via the super-senior covenant basket) on the shared collateral pool, and whether SSN/TLB holder consent was formally required: 9fin sources confirm only a pari passu ('secured alongside') characterisation; any priority/super-senior ranking and the consent question remain CMCK inferences from covenant text, not confirmed facts. Likely source: closing documentation / any consent solicitation memorandum.",
+    "Confirmation that the springing maturity on the RCF/TLBs/SSNs (15-Jul/15-Aug-2027 triggers) is actually satisfied/removed once the new facility closes: transaction not yet closed as of 28-Sep-2026. Likely source: post-close 9fin news/document update.",
+    "PF cash, RCF drawn/undrawn and headroom after the transaction closes: not yet available (deal targeted to close by year-end 2026). Likely source: post-close 9fin cap table update or company Q4/FY26 reporting.",
+    "Original issue size vs current outstanding on the USD TLB tranche: 9fin cap table shows USD 1.37bn outstanding (30-Jun-2026) vs USD 1,385.0m in the pricing CSV's instrument label; CMCK's inference (consistent with standard 1% p.a. TLB amortisation) is that USD 1,385.0m is the original issue size, but this is not confirmed by a specific 9fin amortisation schedule. Likely source: SFA amortisation schedule or a 9fin debt-instruments pull that includes TLB issuance data (not returned by get_debt_instruments_and_covenants_table, which only covered the three SSN bonds)."
+  ]
+}
