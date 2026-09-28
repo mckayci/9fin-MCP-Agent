@@ -4,6 +4,8 @@ An AI-powered weekly screening workflow that identifies potential European restr
 
 Built with [Claude Code](https://claude.com/claude-code) and the 9fin MCP server.
 
+For a fuller walkthrough of the workflow and the thinking behind it, see the supporting presentation: [9fin MCP Agent Supporting Materials.pdf](docs/Presentation/9fin%20MCP%20Agent%20Supporting%20Materials.pdf)
+
 ## Project Purpose
 
 Restructuring investment banking teams need to stay on top of newly stressed European corporate credits. This workflow automates the repetitive parts of that process: screening for price drops, pulling financial data, assessing whether a company is a genuine restructuring candidate, and producing a formatted summary that a senior banker can read in five minutes before a client call.
@@ -16,8 +18,9 @@ The system screens for three key restructuring triggers:
 
 ## Use Cases
 
-- **Weekly screening** - automated Sunday evening run that screens European corporates rated BB/B/CCC with meaningful price declines, triages the results, and waits for analyst input on which names to progress
-- **Ad hoc screening** - manually triggered with custom criteria (different regions, rating bands, price thresholds, or sectors)
+- **Weekly screening** - automated Sunday evening run that sources names directly from 9fin's most recently published European Weekly Stressed and Distressed Data Report (watchlist entrants and top weekly price losers), triages the results, and waits for analyst input on which names to progress
+- **Ad hoc screening** - manually triggered run against the 9fin bond/loan screener with custom criteria (different regions, rating bands, price thresholds, or sectors)
+- **Ad hoc deep dives** - off-cycle Phase 2 workup on a specific name (e.g. following market color or a creditor comment), even where the prior weekly call was "pass"
 - **Company tearsheets** - one-page, print-ready summaries for selected targets covering business description, financials, capital structure, trading, holders, and a clear recommendation
 - **Email delivery** - covering email with a link to a shared Claude artifact sent to the team, summarising the week's findings
 
@@ -25,11 +28,17 @@ The system screens for three key restructuring triggers:
 
 ### Phase 1: Weekly Screen
 
-1. Query 9fin's screener (default: European corporates, BB/B/CCC rated, with >2.5pt weekly price decline)
-2. Pull business description, key financials, leverage, trading levels, and credit rating for each result
-3. Check each name against the running target list for continuity across weeks
-4. Build a triage table with a recommendation for each name ("further work" or "pass") tied to the three triggers
-5. Present the triage table and wait for the analyst to select which names to take forward
+The source of names depends on how the run is triggered:
+
+- **Scheduled Sunday-night run** - sources names directly from the most recently published 9fin European Weekly Stressed and Distressed Data Report: this week's entrants to 9fin's distressed and restructuring watchlist, plus the top weekly price losers across the European market, taken as published with no additional filtering. The bond/loan screener has no way to filter on week-over-week price movement, which is the actual signal this run exists to catch, so the weekly report is the better-fitted source for this cadence.
+- **Manually triggered run** - queries the 9fin bond/loan screener instead, either with the confirmed default criteria (priced, corporate, Europe, BB/B/CCC rated) or with custom criteria the analyst supplies for that run (region, rating band, price threshold, sector, minimum size, etc.)
+
+Both paths then continue the same way:
+
+1. Pull business description, key financials, leverage, trading levels, and credit rating for each name identified
+2. Check each name against the running target list for continuity across weeks (reappearing names are only fully reworked if something material has changed since the prior assessment)
+3. Build a triage table with a recommendation for each name ("further work" or "pass") tied to the three triggers
+4. Present the triage table and wait for the analyst to select which names to take forward
 
 ### Phase 2: Company Tearsheet
 
@@ -107,6 +116,7 @@ Annotated instrument-price trading chart with credit events called out against t
 /resources          Company-specific reference materials (holder data, pricing CSVs)
 /drafts             Work in progress
 /Precedent Emails   Archive of sent emails
+/docs/Presentation  Supporting presentation on the workflow (PDF)
 /.claude/agents     Sub-agent definitions (screener, researchers)
 ```
 
@@ -114,7 +124,8 @@ Annotated instrument-price trading chart with credit events called out against t
 
 All company data is sourced via 9fin's MCP server:
 
-- Company and bond/loan screener filters
+- Document search (primary source for the scheduled weekly run - the European Weekly Stressed and Distressed Data Report)
+- Company and bond/loan screener filters (manual runs only)
 - Business descriptions and financial statements
 - Capital structure and covenant data
 - Org charts and ownership structure
