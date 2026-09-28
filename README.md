@@ -6,6 +6,8 @@ Built with [Claude Code](https://claude.com/claude-code) and the 9fin MCP server
 
 For a fuller walkthrough of the workflow and the thinking behind it, see the supporting presentation: [9fin MCP Agent Supporting Materials.pdf](docs/Presentation/9fin%20MCP%20Agent%20Supporting%20Materials.pdf)
 
+New to the agent? Start with the [User Guide](outputs/9fin_agent_user_guide.pdf) - a detailed, visual walkthrough of the architecture, workflow phases, and how to trigger a run (also available as [HTML source](docs/user_guide/9fin_agent_user_guide.html)).
+
 ## Demo Videos
 
 - [Weekly Screen](https://www.loom.com/share/424adae9a07048709a4ea7f401f90c53) - the scheduled Sunday-night run, sourced from 9fin's European Weekly Stressed and Distressed Data Report
