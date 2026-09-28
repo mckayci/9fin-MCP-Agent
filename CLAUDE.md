@@ -86,9 +86,10 @@ At the end of each run, update `/target_list` with this week's names, recommenda
 
 ### Phase 1 — Weekly Screen
 
-**Step 0 — Determine which criteria to run**
-- **Scheduled Sunday-night run**: use the confirmed default criteria below without asking. Proceed straight to step 1.
-- **Manually triggered run**: ask Ciarán whether to run the confirmed default criteria as-is, or supply his own criteria for this run. If he wants to specify criteria, offer the fields below as suggestions (any he doesn't set falls back to the default value) rather than requiring a full list from scratch:
+**Step 0 — Determine which source and criteria to run**
+- **Scheduled Sunday-night run**: source names from the most recently published 9fin European Weekly Stressed and Distressed Data Report (see "Step 1 — Scheduled run" below), not the bond/loan screener. Proceed straight to step 1 without asking.
+  - Why: the screener filters on static criteria (rating, sector, size) and has no way to filter on week-over-week price movement, which is the actual signal the Sunday-night screen exists to catch. The weekly report already computes that movement natively, so it is the better-fitted source for this cadence. The confirmed default criteria (rating BB/B/CCC, corporate, Europe, priced) are not applied on top of the report's lists — the report's own scope stands as-is.
+- **Manually triggered run**: unchanged. Ask Ciarán whether to run the confirmed default criteria as-is via the bond/loan screener, or supply his own criteria for this run. If he wants to specify criteria, offer the fields below as suggestions (any he doesn't set falls back to the default value) rather than requiring a full list from scratch:
   - Status (default: priced)
   - Borrower type (default: corporate)
   - Region (default: Europe)
@@ -100,10 +101,20 @@ At the end of each run, update `/target_list` with this week's names, recommenda
 - A one-off manual set of criteria applies to that run only; it does not overwrite the confirmed defaults unless Ciarán says to make it the new default.
 
 **Step 0.5 — Confirm 9fin is live before delegating**
-Before launching the screener subagent, make one direct 9fin call yourself (e.g. `get_company_screener_filters` or `get_bonds_loans_screener_filters`) in this orchestrating session. Only launch the subagent once that call succeeds. A subagent launched before the 9fin connector is confirmed live in this session can come up with no 9fin tools at all and will silently fail the entire pass rather than erroring loudly partway through. If the direct call fails, stop and tell Ciarán the connector isn't reachable rather than launching the subagent anyway.
+Before launching the screener subagent, make one direct 9fin call yourself in this orchestrating session, matched to the source Step 1 will actually use: a document-search call (e.g. `search_documents` or `list_documents`) for a scheduled run, or `get_company_screener_filters` / `get_bonds_loans_screener_filters` for a manual, screener-based run. Only launch the subagent once that call succeeds. A subagent launched before the 9fin connector is confirmed live in this session can come up with no 9fin tools at all and will silently fail the entire pass rather than erroring loudly partway through. If the direct call fails, stop and tell Ciarán the connector isn't reachable rather than launching the subagent anyway.
 
+**Step 1 — Scheduled run: source names from the weekly report**
+1. Search 9fin's documents (`search_documents` / `list_documents`, then `get_document_content`) for the most recently published European Weekly Stressed and Distressed Data Report. If nothing dated within the last 8 days is found, stop and ask Ciarán rather than falling back to the screener or guessing.
+2. From that report, pull two lists, taken as published with no additional rating/borrower-type/region/status filtering:
+   - Entrants to 9fin's distressed and restructuring watchlist this week
+   - Top weekly losers across the European market (the report's own threshold, currently ≥1pt), regardless of whether the name is already on the watchlist
+3. De-duplicate the two lists into a single set of names and continue into Step 2 below.
+
+**Step 1 — Manual run: query the screener**
 1. Query 9fin's company screener using the criteria determined in Step 0.
-2. For each company returned, pull via 9fin: business description, key financials, leverage, bond/loan trading levels, credit rating.
+
+**Steps 2 onward (both paths)**
+2. For each company identified, pull via 9fin: business description, key financials, leverage, bond/loan trading levels, credit rating.
 3. Check the name against `/target_list` per "Continuity Across Weeks" above.
 4. Produce a short triage table: company name, one-line business description, key leverage/rating stat, and a 2-line recommendation.
    - Recommend "further work" if at least one of the three key triggers (covenant trip, an unrefinanceable leverage/maturity wall, or a liquidity issue) is present or approaching. Otherwise recommend "pass."
@@ -165,17 +176,17 @@ Handling the auditor's report (`/drafts/{companyname}/audit_report.json`):
 6. Confirm the email content, recipient, and that the artifact link actually opens (link sharing is on) with Ciarán before sending each time. This is a standing constraint, not a one-off setup step, and holds even once the workflow is otherwise routine.
 
 ## Tools / Data Sources (9fin MCP 2)
-- Screener: company screener filters, bond/loan screener filters
+- Screener: company screener filters, bond/loan screener filters (manual runs only, see Phase 1 Step 0/1)
 - Company resolution: company lookup
 - Financials: latest key financials table, latest financial statement
 - Capital structure: latest debt cap table, debt instruments & covenants table, covenant basket text
 - Ownership/structure: org chart
-- News & transcripts: latest news, document search, document content
+- News & transcripts: latest news, document search, document content (document search/content is the primary source for the scheduled run, via the weekly European Weekly Stressed and Distressed Data Report)
 - Gmail (for sending the covering email with the artifact link)
 - Puppeteer (for HTML-to-PDF conversion), installed as a project dependency (`package.json`) and reused via `render_pdf.js`. If `node_modules` is ever missing, run `npm install` from the project root (not a temp/scratchpad directory) so it persists for future runs instead of re-downloading every time.
 
 ## Screening Criteria (confirmed defaults)
-Used automatically for the scheduled Sunday-night run. For a manually triggered run, see Phase 1, Step 0.
+Used for a manually triggered run that runs the screener as-is (Phase 1, Step 0). The scheduled Sunday-night run no longer applies these criteria; it sources names directly from the weekly report per Phase 1, Step 1, with no additional filtering.
 - Status: priced
 - Borrower type: corporate
 - Region: Europe

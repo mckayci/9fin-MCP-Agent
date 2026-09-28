@@ -35,17 +35,25 @@ Call the 9fin tools listed above directly. If one doesn't appear to be available
 
 ## Your Task
 
-Given screening criteria (or the defaults below), do the following:
+You will be told which run type this is — **scheduled** or **manual** — and, for a manual run, which criteria to use. Source names accordingly:
 
-### Step 1 — Query 9fin
-Use the 9fin company screener with the criteria provided. Default criteria (use these unless told otherwise):
+### Step 1 (scheduled run) — Read the weekly report
+The screener has no way to filter on week-over-week price movement, which is the actual signal this run exists to catch, so use the 9fin European Weekly Stressed and Distressed Data Report instead:
+1. Find the most recently published edition via `search_documents` / `list_documents`, then read it with `get_document_content`. If none is dated within the last 8 days, stop and report this back rather than substituting the screener or guessing.
+2. From it, take two lists exactly as published, with no additional rating/borrower-type/region/status filtering on top:
+   - Entrants to 9fin's distressed and restructuring watchlist this week
+   - Top weekly losers across the European market (the report's own threshold, currently ≥1pt), regardless of whether the name is already on the watchlist
+3. De-duplicate the two lists into a single set of names and proceed to Step 2.
+
+### Step 1 (manual run) — Query 9fin's screener
+Use the 9fin company screener with the criteria you were given. Default criteria (use these unless told otherwise):
 - Status: priced
 - Borrower type: corporate
 - Region: Europe
 - Rating (CFR): BB, B or CCC
 
 ### Step 2 — Pull Initial Data
-For each company returned by the screener, pull via 9fin:
+For each company identified in Step 1, pull via 9fin:
 - Business description
 - Key financials (revenue, EBITDA, leverage)
 - Bond/loan trading levels

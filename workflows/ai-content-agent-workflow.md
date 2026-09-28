@@ -21,12 +21,14 @@ The end product should let Ciarán, or his MD, get up to speed on a target name 
 
 The workflow runs in one of two ways:
 
-| Trigger | When | Screening criteria used |
+| Trigger | When | Source |
 |---|---|---|
-| **Scheduled** | Every Sunday evening | Confirmed default criteria (Section 4), applied automatically, no questions asked |
-| **Manual** | Whenever Ciarán asks for a run | Agent asks whether to use the defaults or a custom set for that run; suggests fields if Ciarán wants to customise |
+| **Scheduled** | Every Sunday evening | Most recently published 9fin European Weekly Stressed and Distressed Data Report, applied automatically, no questions asked (Section 3, Phase 1) |
+| **Manual** | Whenever Ciarán asks for a run | Bond/loan screener. Agent asks whether to use the confirmed default criteria (Section 4) or a custom set for that run; suggests fields if Ciarán wants to customise |
 
 A custom set of criteria used for a manual run applies to that run only. It does not become the new default unless Ciarán explicitly says so.
+
+**Why the scheduled run uses the report instead of the screener:** the screener filters on static criteria (rating, sector, size) but has no way to filter on week-over-week price movement, which is the actual signal the Sunday-night screen exists to catch — a screener query run Sunday night cannot tell you what moved that week. The weekly report already computes that movement natively (its own watchlist entrants and ≥1pt weekly losers), so it is the better-fitted source for that cadence. The confirmed default criteria (rating BB/B/CCC, corporate, Europe, priced) are not reapplied on top of the report's lists.
 
 ---
 
@@ -37,18 +39,20 @@ A custom set of criteria used for a manual run applies to that run only. It does
 **Goal:** Identify which names, out of everything 9fin returns, are worth Ciarán's time this week.
 
 **Steps:**
-1. Confirm which criteria to use (scheduled = defaults; manual = ask, per Section 2).
-2. Before delegating to the screener subagent, confirm the 9fin connector is live in this orchestrating session by making one direct 9fin call yourself (e.g. `get_company_screener_filters` or `get_bonds_loans_screener_filters`). Only launch the subagent once that call succeeds — see Section 6, "9fin connector not live for a subagent."
-3. Use 9fin get bond loans screener filters to pull criteria options
-4. Ask user to select available options
-5. Query 9fin's company and bond/loan screeners against those criteria.
-6. For each name returned, pull: business description, key financials, leverage, bond/loan trading levels, credit rating.
-7. Check the name against `/target_list`. If it appeared in a prior week:
+1. Determine the source for this run (scheduled = weekly report; manual = ask, per Section 2).
+2. Before delegating to the screener subagent, confirm the 9fin connector is live in this orchestrating session by making one direct 9fin call yourself, matched to the source this run will use: a document-search call (e.g. `search_documents` or `list_documents`) for a scheduled run, or `get_company_screener_filters` / `get_bonds_loans_screener_filters` for a manual, screener-based run. Only launch the subagent once that call succeeds — see Section 6, "9fin connector not live for a subagent."
+3. **Scheduled run** — search 9fin's documents for the most recently published European Weekly Stressed and Distressed Data Report and read its content (`search_documents`/`list_documents`, then `get_document_content`). If none is dated within the last 8 days, stop and ask Ciarán rather than falling back to the screener. From the report, take two lists as published, with no additional rating/borrower-type/region/status filtering:
+   - Entrants to 9fin's distressed and restructuring watchlist this week
+   - Top weekly losers across the European market (the report's own ≥1pt threshold), regardless of watchlist status
+   De-duplicate the two lists into one name set.
+4. **Manual run** — use 9fin's bond/loan screener filters to pull criteria options, ask Ciarán to select from the available options (or confirm defaults), then query 9fin's company and bond/loan screeners against those criteria.
+5. For each name identified (from either path), pull: business description, key financials, leverage, bond/loan trading levels, credit rating.
+6. Check the name against `/target_list`. If it appeared in a prior week:
    - Carry forward the prior recommendation and note the date it was last assessed
    - Only redo the full assessment if something material has changed since (price move, rating action, news, new financials)
    - If nothing material has changed, note "no material change since [date]" instead of repeating the workup
-8. Build a triage table (see output spec below).
-9. Present the triage table to Ciarán and stop. Wait for his instruction on which names, if any, to progress to Phase 2.
+7. Build a triage table (see output spec below).
+8. Present the triage table to Ciarán and stop. Wait for his instruction on which names, if any, to progress to Phase 2.
 
 **Output — Triage Table:**
 
@@ -161,6 +165,8 @@ If none apply, recommend "pass" and state why briefly. Every recommendation stat
 
 ## 4. Screening Criteria (confirmed defaults)
 
+Used for a manually triggered run that runs the screener as-is (Section 3, Phase 1). The scheduled Sunday-night run no longer applies these criteria; it sources names directly from the weekly report, taken as published with no additional filtering.
+
 | Field | Default |
 |---|---|
 | Status | Priced |
@@ -192,6 +198,7 @@ All written output (triage table commentary, tearsheet commentary, email copy) f
 | A data field is missing or 9fin returns nothing for it | Mark it "not available - further diligence required" and note the likely source that would resolve it. Never leave a blank cell and never infer a figure. |
 | A name repeats from a prior week with no material change | Carry forward the prior view; note "no material change since [date]." Do not silently redo full diligence. |
 | The screener returns an error, or an unusual/ambiguous result | Stop and ask Ciarán rather than improvising or guessing at intent. |
+| No European Weekly Stressed and Distressed Data Report dated within the last 8 days can be found (scheduled run) | Stop and ask Ciarán rather than falling back to the screener or proceeding with a stale report. |
 | Ciarán gives an instruction that doesn't fit the existing scope of a given week's run | Stop and ask, rather than extending the process on the fly. |
 | 9fin connector not live for a subagent | Confirmed by a failed direct 9fin call in the orchestrating session before delegating (Phase 1 Step 2, Phase 2 Step 1). Do not launch the screener or researcher subagents until the connector is confirmed live — a subagent launched too early can get no 9fin tools at all and will silently fail its whole pass rather than erroring loudly. |
 | The Phase 2.5 auditor flags a discrepancy between researchers, or against a resources upload | Apply the priority-rule resolution if the auditor supplied one. Otherwise relay its question to the specific researcher for one round of reverification (Phase 2.5). If still unresolved after that round, show both figures with sources on the tearsheet rather than picking one. |
