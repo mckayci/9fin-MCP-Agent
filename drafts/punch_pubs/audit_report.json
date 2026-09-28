@@ -1,0 +1,25 @@
+{
+  "status": "clean",
+  "auto_resolved": [],
+  "discrepancies": [],
+  "researchers_to_reverify": {},
+  "audit_notes": {
+    "pass_type": "Confirmation pass (second invocation) - re-read all three files fresh from disk rather than assuming the prior round's fixes were applied correctly.",
+    "confirmed_fixes": [
+      {
+        "item": "RCF maturity date",
+        "verification": "news.json's key_catalysts.maturities entry for the GBP85m Super Senior RCF now reads date: 'Jun-2030', sourced to '9fin get_latest_captable, cap table as of 17-May-2026 (researcher-capital)'. Matches capital.json's capital_structure entry for the same facility (maturity: 'Jun-2030') exactly. No longer shows as unavailable. Correctly and consistently applied."
+      },
+      {
+        "item": "Debt holdings GBP690m denominator",
+        "verification": "capital.json's debt_holdings.instrument now reads 'Combined GBP 690.0m 7.875% Senior Secured Notes due 2030 (£640m original tranche + £50m Feb-2026 fungible tap; source file is titled \"640m GBP SSNs Holders\" but the underlying data covers the combined tranche)', and basis_note now states the determination as confirmed (with the auditor's back-solved arithmetic reproduced) rather than as an unresolved inference. Top 10 holder amounts/percentages are unchanged (still match the source PNG on re-check: Fidelity 7.01%/GBP48,359,125 through BNY 1.80%/GBP12,443,866, 43 holders, 30-Aug-2026 snapshot). Correctly and consistently applied."
+      },
+      {
+        "item": "GBP50m tap issue date",
+        "verification": "capital.json's £50m tranche entry now cites the issuer's own pricing press release (9fin document e83aaec3-e396-43dc-b6db-c74128153b27, dated 12-Feb-2026, pricing at 102.75%, matching the cap table's 2.75%-premium note) as primary-source confirmation of 12-Feb-2026 as the pricing/issue date, with settlement disclosed as scheduled for 20-Feb-2026. The bonds/loans screener's 19-Feb-2026 figure is explained (one day before the disclosed settlement date) rather than left as an unexplained conflict. data_gap_note, the trading.events entry (now a single '2026-02-12' date with a note on the 20-Feb settlement), and the top-level data_gaps array are all updated consistently with this resolution - no stale '12-Feb vs 19-Feb, unresolved' language remains anywhere in the file. financials.json's independent source citation of the same press release (dated 2026-02-12) is consistent with this. news.json's recent_news item dated 2026-02-13 is a news-feed publish date for 9fin's coverage of the deal, not a competing 'issue date' claim, and does not conflict. Correctly and consistently applied."
+      }
+    ],
+    "no_new_inconsistencies_found": "Re-checked the surrounding fields that the edits touched (capital.json's £640m/£50m capital_structure entries, debt_holdings block, trading block, and data_gaps array; news.json's key_catalysts.maturities) against financials.json and against each other. No new mismatches were introduced by the edits. Previously-confirmed non-issues remain valid on this fresh read: freehold percentage (different vintages/definitions, not a same-point-in-time conflict), leverage basis (7.27x/6.57x in capital.json vs 7.3x/6.6x in financials.json are the same underlying figures at different rounding, correctly kept as separate secured/total bases), and balance sheet reference date (both researcher-capital and researcher-financials confirmed on 17-May-2026, cash/net debt/LTV tie out exactly across both files).",
+    "resources_folder": "/Users/ciaranmckay/Claude/9fin-agent/resources/Punch/ (9fin-pricing-chart.csv and '640m GBP SSNs Holders.png') remains the only resources content for this name; both files were re-read directly for this pass and continue to support the figures now shown in capital.json."
+  }
+}

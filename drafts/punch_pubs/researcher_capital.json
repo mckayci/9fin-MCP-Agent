@@ -1,0 +1,170 @@
+{
+  "company": "Punch Pubs",
+  "company_id_9fin": 1157,
+  "sponsor": "Fortress Investment Group (funds managed by Fortress)",
+  "as_of": "Cap table dated 17-May-2026 (9fin); latest results Q3 FY26 (31-Jul-2026)",
+  "capital_structure": [
+    {
+      "instrument": "£85m Super Senior Revolving Credit Facility due 2030",
+      "amount": "GBP 85.0m total commitment; GBP 0.0m drawn (fully undrawn)",
+      "ebitda_multiple": "0.0x (undrawn; not included in secured/total leverage build as drawn debt)",
+      "rate": "Floating, SONIA + 275bps; margin ratchets 225-275bps based on consolidated senior secured leverage ratio",
+      "maturity": "Jun-2030",
+      "price": "not available - further diligence required (9fin licensing restriction on Latest Price; loan facility, not typically quoted)",
+      "yield": "not available - further diligence required (same restriction; also not a traded instrument)",
+      "rating": "Not separately rated (super senior facility; CFR below)",
+      "source": "9fin get_latest_captable, cap table as of 17-May-2026, https://9fin.com/company/Punch%20Pubs/cap-tables/7259c887-3e09-4f29-a3cc-5113aa643235"
+    },
+    {
+      "instrument": "£640m Senior Secured Notes due 2030",
+      "amount": "GBP 640.0m outstanding",
+      "ebitda_multiple": "6.69x gross secured (combined with £50m tap; see note below) / 6.57x net secured",
+      "rate": "Fixed, 7.875%",
+      "maturity": "30-Dec-2030",
+      "price": "102.336 (clean price, as of 26-Sep-2026 -- latest date in the uploaded price series)",
+      "yield": "approx. 7.24% YTM (analyst estimate using standard approximate-yield formula: [C + (F-P)/n] / [(F+P)/2] on the 26-Sep-2026 clean price of 102.336, coupon 7.875%, ~4.26 years to the 30-Dec-2030 maturity; this is a calculated approximation, not a source-quoted YTM/YTW, since the resources upload is a price series only)",
+      "rating": "At issuance: Moody's B3 / S&P B+ / Fitch B+ (instrument); Issuer CFR: Moody's B3 / Fitch B- / S&P not rated",
+      "source": "Price and yield: user-uploaded resources file /Users/ciaranmckay/Claude/9fin-agent/resources/Punch/9fin-pricing-chart.csv (\"GBP 640.0m 7.875% Senior Secured Notes due 2030\" daily clean price series, 22-May-2025 to 26-Sep-2026), per standing 'resources upload beats 9fin' priority rule. All other fields: 9fin get_latest_captable and get_debt_instruments_and_covenants_table (company_id 1157); issued 05-Jun-2025 to refinance £600m Existing Notes due 2026 via tender offer at par plus repay £33m RCF drawings; https://9fin.com/legals/covenant-data?Company%5B0%5D=Punch%20Pubs"
+    },
+    {
+      "instrument": "£50m Senior Secured Notes fungible tap due 2030",
+      "amount": "GBP 50.0m outstanding (fungible add-on, same terms as £640m notes)",
+      "ebitda_multiple": "Included in the 6.69x / 6.57x gross/net secured multiples above (combined £690m secured tranche)",
+      "rate": "Fixed, 7.875% (same coupon as existing notes)",
+      "maturity": "30-Dec-2030",
+      "price": "102.336 (clean price, as of 26-Sep-2026) -- inferred, not separately confirmed. The uploaded price series (resources/Punch/9fin-pricing-chart.csv) is labelled only 'GBP 640.0m 7.875% Senior Secured Notes due 2030'. Because the £50m tap is fungible with the original £640m notes (same ISIN/CUSIP, coupon and maturity per the cap table note), it should trade as a single line and share this price, but the upload does not explicitly confirm the tap is included -- flagged as an inference, not a direct citation",
+      "yield": "approx. 7.24% YTM on the same inferred basis as the £640m notes above (same fungible instrument)",
+      "rating": "Moody's B3 / S&P B+ / Fitch B+ at issuance (per bonds & loans screener)",
+      "source": "RESOLVED via primary source: Punch Finance plc's own pricing press release, 'Pricing of £50,000,000 of Additional 7.875% Senior Secured Notes due 2030' (9fin document_uuid e83aaec3-e396-43dc-b6db-c74128153b27, https://9fin.com/documents/e83aaec3-e396-43dc-b6db-c74128153b27), dated 12 February 2026, states pricing occurred that day at an issuance price of 102.75% -- matching the cap table's '2.75% premium' note exactly -- with settlement 'scheduled to settle on 20 February 2026, subject to the satisfaction of customary closing conditions.' This confirms 12-Feb-2026 is the correct pricing/issue date. The bonds & loans screener's 19-Feb-2026 figure does not match either the pricing date (12-Feb) or the stated settlement date (20-Feb) exactly, but sits one day before the disclosed settlement date -- consistent with the auditor's hypothesis that the screener's 'Issue Date' field reflects a settlement/admission-adjacent date rather than the pricing date, even though it is not an exact match to 20-Feb (possibly a T-1/business-day convention in how 9fin populates that field). 9fin get_latest_captable note 2's 12-Feb-2026 pricing date is treated as authoritative going forward, corroborated by this primary-source press release.",
+      "data_gap_note": "RESOLVED (see source field): 12-Feb-2026 is the confirmed pricing date per Punch Finance plc's own press release; settlement was scheduled for 20-Feb-2026. The bonds & loans screener's 19-Feb-2026 'Issue Date' appears to reflect settlement/admission timing rather than pricing, not an error, though it is one day off the stated 20-Feb settlement date itself. Q2 FY26 earnings call transcript (08-May-2026) corroborates 'completed in February' and confirms the £50m tap funded 49 bolt-on freehold pub acquisitions (£42m total cost incl. capex, ~6.5x EBITDA multiple, £6.5m incremental EBITDA)."
+    },
+    {
+      "instrument": "Gross Secured Debt (RCF + both SSN tranches)",
+      "amount": "GBP 690.0m",
+      "ebitda_multiple": "6.69x",
+      "rate": "n/a (aggregate line)",
+      "maturity": "n/a (aggregate line)",
+      "price": "n/a",
+      "yield": "n/a",
+      "rating": "n/a",
+      "source": "9fin cap table; also expressed as 63.92% of Aggregate Property Value (£1,079.4m) -- see property/freehold section"
+    },
+    {
+      "instrument": "Net Secured Debt",
+      "amount": "GBP 677.4m",
+      "ebitda_multiple": "6.57x",
+      "rate": "n/a",
+      "maturity": "n/a",
+      "price": "n/a",
+      "yield": "n/a",
+      "rating": "n/a",
+      "source": "9fin cap table; 62.76% of Aggregate Property Value"
+    },
+    {
+      "instrument": "Lease Liabilities (IFRS 16)",
+      "amount": "GBP 71.9m (nominal, excludes £8.5m capitalised debt issuance costs and £1.4m premium on debt issuance)",
+      "ebitda_multiple": "Included in 7.39x gross / 7.27x net total leverage",
+      "rate": "not available - further diligence required (lease-level rates not disclosed in cap table; would require Annual Report/Financial Statements note on lease liabilities)",
+      "maturity": "not available - further diligence required (various; not itemised in cap table)",
+      "price": "n/a (not a traded instrument)",
+      "yield": "n/a",
+      "rating": "n/a",
+      "source": "9fin cap table"
+    },
+    {
+      "instrument": "Gross Debt (Secured Debt + Lease Liabilities)",
+      "amount": "GBP 761.9m",
+      "ebitda_multiple": "7.39x",
+      "rate": "n/a",
+      "maturity": "n/a",
+      "price": "n/a",
+      "yield": "n/a",
+      "rating": "n/a",
+      "source": "9fin cap table"
+    },
+    {
+      "instrument": "Net Debt (Gross Debt less cash)",
+      "amount": "GBP 749.3m",
+      "ebitda_multiple": "7.27x",
+      "rate": "n/a",
+      "maturity": "n/a",
+      "price": "n/a",
+      "yield": "n/a",
+      "rating": "n/a",
+      "source": "9fin cap table; company-reported net leverage on Q3 FY26 earnings flash (31-Jul-2026) was 6.6x, down 0.1x QoQ -- note this differs from the 7.27x total net leverage shown on the 9fin cap table because management's guided metric is calculated on a different EBITDA/debt base (likely run-rate/MAT EBITDA including pro forma acquisition benefit and possibly excluding leases); the two leverage bases are not blended here and should be read as distinct metrics -- see data_gaps"
+    }
+  ],
+  "underlying_ebitda_gbpm": 103.1,
+  "leverage_note": "9fin cap table shows 6.57x net secured / 7.27x net total leverage off £103.1m underlying EBITDA (17-May-2026 basis). Company's own Q3 FY26 earnings flash (31-Jul-2026) guided net leverage of 6.6x, reducing 0.1x QoQ, and the Q2 FY26 transcript referenced leverage falling from 7.5x (Aug-2023 year-end) to 6.6x current, against a stated financial policy target of below 6.0x. These are likely calculated on different EBITDA/debt bases (company measure appears to net leases out and/or use run-rate EBITDA including acquisition benefit) -- flagged as a conflicting leverage basis rather than blended, per house style.",
+  "liquidity": {
+    "cash": "GBP 12.6m (as of 17-May-2026 cap table); Q2 FY23-era commentary flagged liquidity as historically tight (£13m cash, £35m RCF availability in Q2 FY23) -- current position is materially stronger",
+    "available_facilities": "GBP 85.0m RCF, fully undrawn (GBP 0.0m drawn) as of 17-May-2026 and reconfirmed as undrawn in the Q2 FY26 earnings call transcript (08-May-2026)",
+    "min_operating_liquidity": "not available - further diligence required. No explicit minimum operating liquidity threshold is disclosed in the 9fin cap table or debt instruments/covenants table. The RCF carries a springing covenant requiring the LTV ratio of net cash RCF drawings to remain below 0.15 at quarter-end, but this is only tested once drawings exceed 40% of total commitments (i.e. currently untested given the RCF is undrawn) and functions as a leverage/LTV test rather than a stated minimum-liquidity covenant. Likely source to resolve: Annual Report or bond indenture liquidity/going-concern disclosure.",
+    "headroom": "GBP 97.6m total liquidity (cash £12.6m + undrawn RCF £85.0m), per 9fin cap table 'Liquidity' line. No RCF drawn, so full £85m facility headroom is available against the springing 0.15x LTV-of-drawings covenant, which in any case is not currently tested (drawings are 0%, well below the 40%-of-commitments trigger).",
+    "source": "9fin get_latest_captable (company_id 1157), notes 1 and 4"
+  },
+  "group_structure": {
+    "summary": "Ownership sits above the restricted group: Funds managed by Fortress and Management jointly own Punch Taverns Limited (unrestricted Topco). Punch Taverns Limited owns Punch Pubs Group Limited (Parent Guarantor), which marks the top of the restricted group (dashed boundary on 9fin org chart). Punch Pubs Group Limited owns both Punch Finance plc (the Issuer of the £640m and £50m Senior Secured Notes) and Punch Pubs Holdings Limited (the 'Company', borrower under the £85m Super Senior RCF). Punch Pubs Holdings Limited sits above the four operating subsidiaries: Punch Partnerships (PML) Limited, Punch Taverns (Branston) Limited, and The Laine Pub Company Limited (all Guarantors, shaded on the chart), plus a bucket of Non-Guarantor Subsidiaries. The Laine Pub Company Limited has its own further Non-Guarantor Subsidiaries beneath it. All Guarantor entities, plus Punch Pubs Group Limited, Punch Pubs Holdings Limited and Punch Finance plc, sit inside the restricted group.",
+    "restricted_group_note": "Per the 9fin Bond Legal QuickTake on the £640m notes (20-May-2025), as of the 52 weeks ended 11-Aug-2024 the Issuer and Guarantors represented 97.7% of Group revenue, 98.5% of Adjusted Underlying EBITDA, and 92.9% of total assets -- i.e. the bulk of the freehold property base sits within the guarantor/collateral group, though not all of it. 9fin's own commentary flags a structural risk: the covenants permit the Issuer/Guarantors to transfer assets (including Collateral, i.e. freehold property) to non-Guarantor Restricted Subsidiaries, and there is no non-guarantor sub-limit for Ratio Debt, so structural subordination risk is 'heightened' in 9fin's assessment.",
+    "property_owning_entities": "The org chart does not break out a separate property-owning SPV or PropCo -- freehold and leasehold real estate is held directly within the operating Guarantor subsidiaries (Punch Partnerships (PML) Limited, Punch Taverns (Branston) Limited, The Laine Pub Company Limited) rather than ring-fenced in a dedicated real estate entity, based on the org chart and security package description. This differs from some UK pub/leisure structures (e.g. securitised propco/opco splits) and means property and trading risk sit in the same restricted entities.",
+    "source": "9fin get_org_chart (company_id 1157, chart dated 19-May-2025, https://9fin.com/company/Punch%20Pubs/orgcharts) and 9fin Bond Legal QuickTake (20-May-2025), https://9fin.com/news/7768eb86-d221-46fc-91ee-b5ba6e429c7a"
+  },
+  "debt_holdings": {
+    "instrument": "Combined GBP 690.0m 7.875% Senior Secured Notes due 2030 (£640m original tranche + £50m Feb-2026 fungible tap; source file is titled '640m GBP SSNs Holders' but the underlying data covers the combined tranche -- see basis_note)",
+    "snapshot_date": "30-Aug-2026",
+    "total_holders_found": 43,
+    "top_10_holders": [
+      {"holder": "Fidelity", "amount_held_gbp": 48359125, "pct_of_instrument": "7.01%", "cumulative_pct": "7.01%"},
+      {"holder": "Lord Abbett", "amount_held_gbp": 41403813, "pct_of_instrument": "6.00%", "cumulative_pct": "13.01%"},
+      {"holder": "Schroders", "amount_held_gbp": 41216440, "pct_of_instrument": "5.97%", "cumulative_pct": "18.98%"},
+      {"holder": "FundsNetwork", "amount_held_gbp": 31902152, "pct_of_instrument": "4.62%", "cumulative_pct": "23.60%"},
+      {"holder": "RL360", "amount_held_gbp": 29966539, "pct_of_instrument": "4.34%", "cumulative_pct": "27.94%"},
+      {"holder": "Muzinich & Co.", "amount_held_gbp": 17107156, "pct_of_instrument": "2.48%", "cumulative_pct": "30.42%"},
+      {"holder": "Vontobel", "amount_held_gbp": 14122434, "pct_of_instrument": "2.05%", "cumulative_pct": "32.47%"},
+      {"holder": "Wellington", "amount_held_gbp": 12974827, "pct_of_instrument": "1.88%", "cumulative_pct": "34.35%"},
+      {"holder": "J.P. Morgan Asset Management", "amount_held_gbp": 12450376, "pct_of_instrument": "1.80%", "cumulative_pct": "36.15%"},
+      {"holder": "BNY", "amount_held_gbp": 12443866, "pct_of_instrument": "1.80%", "cumulative_pct": "37.95%"}
+    ],
+    "total_top_10": {"amount_held_gbp": 261946728, "pct_of_instrument": "37.95%"},
+    "basis_note": "The source file is titled '640m GBP SSNs Holders.png' but the underlying data covers the combined £690m secured notes tranche (£640m original notes + £50m Feb-2026 fungible tap), not just the original £640m. Confirmed by the Phase 2.5 auditor: back-solving every top-10 holder's disclosed £ amount against its disclosed percentage is unambiguously consistent with a ~£690.0m denominator and inconsistent with £640.0m (e.g. Fidelity £48,359,125/7.01% implies £690.0m; at a £640.0m denominator Fidelity's stake would read ~7.56%, not 7.01%). This is a clean arithmetic determination from a single source document, not a choice between conflicting sources, so it is resolved here rather than shown as an open item.",
+    "concentration_commentary": "Holder base is granular: the top 10 lenders/funds hold only ~38% of the tranche between them, with 33 further holders (43 found in total) accounting for the remaining ~62%. The largest single holder, Fidelity, holds just 7.01%. Against the notes' amendment thresholds disclosed in 9fin's Bond Legal QuickTake (key money terms 90%, release of security 90%, release of guarantees 75%, other amendments 50.01%), no single holder or small handful of holders shown here appears close to a blocking or controlling stake -- consent solicitations would likely require broad syndication across many holders, which is a modestly credit-supportive feature (less concentration risk / single-holder leverage) but also means coordination in a restructuring scenario would involve a wide holder base.",
+    "source": "User-uploaded resources file /Users/ciaranmckay/Claude/9fin-agent/resources/Punch/640m GBP SSNs Holders.png, per standing 'resources upload beats 9fin' priority rule. 9fin's own tools (get_latest_captable, get_debt_instruments_and_covenants_table, get_bonds_loans_screener_filters) returned no holder-level data for this company, so 9fin holdings data is not applicable here as a secondary source/cross-check."
+  },
+  "trading": {
+    "data_source": "user-uploaded",
+    "note": "Sourced from /Users/ciaranmckay/Claude/9fin-agent/resources/Punch/9fin-pricing-chart.csv per the standing 'resources upload beats 9fin' priority rule (9fin's own connector does not provide Latest Price/Latest Price Date for this or any company, per licensing restriction confirmed via get_bonds_loans_screener_filters). The file contains a daily clean price series for the 'GBP 640.0m 7.875% Senior Secured Notes due 2030' running from 22-May-2025 (99.897) to 26-Sep-2026 (102.336). Price ranged from a low of ~99.746 (27/28-Mar-2026) to a high of ~103.798 (07-Jul-2026) over the series. Event dates below are annotated with the closest available trading-day price from the CSV.",
+    "events": [
+      {"date": "2025-05-20", "label": "Prelim OM launched, tender for 2026 notes", "price": "not available (before CSV series starts 22-May-2025)"},
+      {"date": "2025-06-05", "label": "£640m SSN priced, refinances 2026 notes", "price": "101.745 (05-Jun-2025)"},
+      {"date": "2026-02-12", "label": "£50m tap priced at 2.75% premium", "price": "103.169 (12-Feb-2026, pricing date per Punch Finance plc press release; notes settled 20-Feb-2026)"},
+      {"date": "2026-02-23", "label": "Punch Finance plc admitted to Official List", "price": "103.107 (23-Feb-2026)"},
+      {"date": "2026-05-08", "label": "Q2 FY26 results: EBITDA +8.1%, leverage +0.3x", "price": "101.671 (08-May-2026)"},
+      {"date": "2026-07-31", "label": "Q3 FY26 results: EBITDA +5.8%, leverage -0.1x", "price": "103.271 (31-Jul-2026)"}
+    ],
+    "latest_price": {"date": "26-Sep-2026", "value": "102.336 (clean price)"},
+    "rating_actions_note": "No post-issuance rating action (upgrade/downgrade/outlook change) news items were returned by 9fin's latest news for Punch Pubs (company_id 1157) -- only Results, Press Release (directorate changes), and Deal-type events appear. Instrument/CFR ratings on file are the at-issuance ratings noted in the capital structure table above. Likely source to resolve any subsequent rating actions: direct Moody's/S&P/Fitch surveillance check, since 9fin's news feed for this name does not show a 'Ratings' tagged event in the period covered."
+  },
+  "property_freehold_analysis": {
+    "estate_mix_ownership": "Approximately 92% of Punch's ~1,264-1,298 pub sites are held freehold or long leasehold, with the remaining ~8% short leasehold (per Final Offering Memorandum, 21-May-2025, as of 23-Feb-2025 estate of 1,264 pubs). CEO commentary on the Q2 FY26 call (08-May-2026) reiterated 'the vast majority of our pubs are owned on a freehold basis' across an estate that had grown to 1,298 pubs by that date. Trend: freehold/long-leasehold ownership share has been broadly stable in the 92-96% range since at least 2021 (96% freehold cited in the 20-May-2025 9fin Credit QuickTake; 93% cited in 2021 QuickTakes), with bolt-on acquisitions (e.g. the 49 pubs acquired in FY26 for £42m) added on a freehold basis.",
+    "operating_model_mix": "Two operating models: (1) Leased & Tenanted (L&T) -- publicans hold a lease/tenancy, pay Punch rent, and (under 'tie' arrangements covering ~97% of L&T pubs) commit to purchase the majority of drinks from Punch at above-market prices in exchange for below-market rent; and (2) Pub Partnership (PP, includes the Management Partnership/MP and Laine Pub Company sub-brands) -- Punch retains all sales and costs and pays the publican a percentage-based fee. As of the Feb-2025 OM, L&T was 75% of pubs (947 sites, ~60% of EBITDA) and PP was 25% (317 sites, ~40% of EBITDA before non-underlying items) -- PP is structurally higher-margin per site. By the Q2 FY26 call (08-May-2026), the mix had shifted to 922 L&T pubs (~71%) and 376 PP pubs (~29%) out of 1,298 total, consistent with management's stated strategy of converting L&T sites to PP (55 conversions in the prior 12 months referenced on the call; conversion economics historically ~£205k-230k capex per site for a ~33% ROI and ~93% uplift in outlet EBITDA per 9fin's 20-May-2025 Credit QuickTake).",
+    "freehold_valuation": "Aggregate Property Value of GBP 1,079.4m as of the 17-May-2026 cap table date, per Savills valuation referenced explicitly by CFO Steve Dando on the Q2 FY26 earnings call (08-May-2026): 'secured against the Freehold pub estate, which was valued by Savills in 2025, and has a current property valuation of approximately £1.1 billion.' This is an independent third-party (Savills) valuation, not merely a book value. Historical valuation trend from 9fin sources: ~£849.7m (21-May-2021, 1,235 pubs) -> ~£879m (Dec-2021, at Fortress's acquisition of Punch from Patron Capital for an EV of ~£1bn) -> £992.0m (23-Feb-2025, per Final OM, 1,264 pubs) -> £1,079.4m (17-May-2026 cap table). The rise from £992m to £1,079.4m (+8.8%) over roughly 15 months reflects both bolt-on freehold acquisitions (e.g. the £42m/49-pub deal funded by the Feb-2026 tap) and underlying revaluation.",
+    "security_and_ltv": "The £85m Super Senior RCF and £640m/£50m Senior Secured Notes are secured on a shared collateral package, including (per the 20-May-2025 9fin Bond Legal QuickTake on the notes) 'a fixed first equitable charge over all freehold property and certain leasehold real property (excluding leasehold real property that has 25 years or less to run or has rack-rent payable)', alongside share pledges, structural intercompany loan security, material bank accounts, and a floating charge over substantially all other assets. Notably, no legal mortgages are granted and there is no requirement to register/perfect the equitable charge (beyond debenture registration at Companies House) unless an acceleration event is ongoing -- a lighter-touch security package than a fully perfected legal mortgage, common in UK sponsor-backed HY structures but worth flagging as a practical recovery consideration. The 9fin cap table computes an explicit '% LTV' column defined as debt divided by Aggregate Property Value: Gross Secured Debt (£690.0m) / Aggregate Property Value (£1,079.4m) = 63.92% LTV; Net Secured Debt (£677.4m) / Property Value = 62.76% LTV; Gross Debt including leases (£761.9m) / Property Value = 70.59%; Net Debt (£749.3m) / Property Value = 69.42%. This LTV framing (property-value-based, not EBITDA-based) is 9fin's standard presentation for this credit and mirrors how UK pub-sector secured lending is typically underwritten.",
+    "ltv_covenant_status": "The RCF carries a springing covenant requiring the LTV ratio of net cash RCF drawings to remain below 0.15, tested only at quarter-end if drawings exceed 40% of total commitments (per cap table note 1). This is narrower than a portfolio-wide maintenance LTV covenant on the bonds -- the debt instruments & covenants table for the £640m/£50m notes shows incurrence-based leverage tests (SSNL < 6.5x for the notes covenant basket, FCCR > 2x, and a TNL < 5.5x builder-basket condition, plus TNL < 6.4x one-time portability threshold) rather than a distinct property-LTV maintenance covenant. In short: freehold value underpins the security package and is disclosed prominently, but is not itself a tested maintenance covenant on the notes as far as 9fin's covenant data shows.",
+    "valuation_floor_vs_net_debt": "On a straight book/independent-valuation basis, Aggregate Property Value of £1,079.4m provides asset coverage of approximately 1.42x Gross Debt (£761.9m, including leases) and 1.44x Net Debt (£749.3m) -- i.e. roughly £318-330m of headroom between the Savills freehold valuation and the group's all-in debt quantum. This is a materially different (and more supportive) picture than the 7.27x net-debt/EBITDA multiple would suggest in isolation, and is the basis for treating freehold real estate as a distinct hard-asset valuation floor / downside recovery reference point separate from the going-concern EBITDA multiple valuation. Caveat: this is a going-concern, largely desktop-style independent valuation (Savills), not a forced-sale or liquidation value. A 2021-era 9fin risk-factor extract on this same estate noted that 'Savills Valuation Report says the freehold and leasehold properties evaluation was done with limited due diligence and property inspections. Instead Savills valued the majority of properties on a desktop basis that contained a number of assumptions,' and separately that properties are 'revalued annually on a five-year rolling basis' with the majority assessed by the director supported by independent valuation of only a subset in a given year. In a genuine distressed/restructuring scenario, illiquidity in UK pub real estate, use-restriction covenants on some sites (limiting alcohol sale or requiring residential-only use), and the risk of a wave of independent-pub disposals depressing comparable values could all compress realisable value well below the £1.1bn headline figure. This valuation-methodology caveat is a real constraint on how much weight to place on the asset-coverage math above.",
+    "data_gaps_property": [
+      "No freehold-vs-leasehold split of the £1,079.4m Aggregate Property Value itself is disclosed by 9fin (the 92%/8% freehold-long-leasehold/short-leasehold split is a site-count metric, not a value-weighted split). Likely source: full Savills valuation report or the Annual Report property note, neither accessible via 9fin tools in this session.",
+      "No per-region or per-segment (L&T vs PP) breakdown of the property valuation is available from 9fin. Likely source: Annual Report/Companies House filings for Punch Pubs Group Limited or Punch Taverns Limited.",
+      "No independent comparable-transaction data (e.g. Stonegate freehold disposals) was pulled in this session; flagged by Ciarán's brief as a useful cross-check but out of scope for 9fin's toolset -- would require external market data / press research."
+    ]
+  },
+  "data_gaps": [
+    "Trading price/yield -- RESOLVED for the £640m notes (and inferred for the fungible £50m tap) via user-uploaded resources/Punch/9fin-pricing-chart.csv (latest: 102.336 on 26-Sep-2026); YTM of ~7.24% is an analyst approximation, not a source-quoted figure, since the upload is a price series only, not a full yield calculator",
+    "Debt holdings / top holder table -- RESOLVED for the combined £690m SSN tranche (£640m original + £50m tap, confirmed by auditor arithmetic check) via user-uploaded resources/Punch/640m GBP SSNs Holders.png (snapshot 30-Aug-2026, top 10 = 37.95% of instrument, 43 holders total).",
+    "Minimum operating liquidity threshold -- not explicitly disclosed in 9fin cap table or covenant data; likely source Annual Report / indenture liquidity disclosure",
+    "Lease liability rate and maturity detail -- not itemised in cap table; likely source Annual Report lease note",
+    "Freehold-value-weighted (as opposed to site-count) freehold/leasehold split -- not available from 9fin; likely source full Savills valuation report or Annual Report property note",
+    "Post-issuance rating actions (upgrade/downgrade/outlook) beyond at-issuance ratings -- none found in 9fin's news feed for this company; likely source direct Moody's/S&P/Fitch surveillance",
+    "Conflicting leverage basis: 9fin cap table shows 7.27x net total leverage vs company-guided 6.6x net leverage (Q3 FY26 earnings flash) -- likely different EBITDA/debt bases (run-rate vs reported EBITDA, and/or lease treatment); shown separately here rather than blended, per house convention",
+    "RESOLVED: £50m tap issue date -- confirmed 12-Feb-2026 as the pricing date via Punch Finance plc's own pricing press release (9fin document_uuid e83aaec3-e396-43dc-b6db-c74128153b27), which also discloses a 20-Feb-2026 scheduled settlement date; the bonds & loans screener's 19-Feb-2026 figure is one day off that settlement date and likely reflects a settlement/admission-adjacent convention in how 9fin populates its 'Issue Date' field, not an error in the cap table"
+  ]
+}
