@@ -74,6 +74,8 @@ If none apply, recommend "pass" and state why briefly. Every recommendation stat
 
 **Goal:** Produce a single-page, self-contained summary per selected name that a reader with no prior context can absorb in five minutes.
 
+**Quality bar:** `/Templates/gold_standard_wagamama_tearsheet.html` is a real, fully worked-up tearsheet kept as the reference for depth and sourcing rigor — every figure attributed to its source, conflicting leverage bases called out rather than blended, data gaps stated with what would resolve them. Check it before writing content for a new company; it is a quality bar, not a template to copy from.
+
 **Steps:**
 1. Before launching the three parallel Phase 2 researcher subagents (capital, financials, news), confirm the 9fin connector is still live in this session by making one direct 9fin call yourself, per Phase 1 Step 2. Do this even if Phase 1 already confirmed it earlier in the same session, since the connection isn't guaranteed to still be live later on.
 2. For each name Ciarán selects, pull the full data set from 9fin: financials, capital structure, covenants, ownership/org structure, holders, trading levels, news, transcripts.
@@ -139,22 +141,21 @@ If none apply, recommend "pass" and state why briefly. Every recommendation stat
 
 **Steps:**
 1. Build each tearsheet as an HTML file styled for A4 portrait (as in Phase 2).
-2. Convert to PDF and combine:
-   - Render each HTML tearsheet to PDF at A4 portrait dimensions (210mm x 297mm) using `render_pdf.js` (Puppeteer is installed as a project dependency — run `npm install` from the project root if `node_modules` is ever missing, rather than reinstalling into a temp directory each run).
-   - If multiple companies were taken to Phase 2, combine into one PDF with one page per company, using a page break between each. Name the combined file `ddmmyy_weekly_screen.pdf`.
-   - If only one company, save the single tearsheet PDF using the standard file convention (`ddmmyy_companyname_tearsheet.pdf`).
-   - Save the PDF to `/outputs`. The HTML artifact may still be published for interactive viewing, but the email attachment must be a PDF.
-3. Draft the covering email using the template at `/Templates/weekly_screen_email_template.md`. Populate all bracketed fields with the actual screen criteria, results, and recommendation rationale.
-4. Resolve recipient first names for the greeting using `/Templates/recipient_names.csv`. If an email address has no mapping in the CSV, ask Ciarán to confirm the name, then save the new mapping to the CSV for future runs. Greeting rules: 1 recipient uses "Hi [First Name],"; 2 recipients uses "Hi [First Name 1], [First Name 2],"; 3+ recipients uses "Hi team,".
-5. Present the draft email (recipient, subject, body, PDF attachment) to Ciarán for confirmation.
-6. Only send once Ciarán confirms. This confirmation step applies every time, including once the workflow is routine — it is not a one-off setup requirement.
-7. Update `/target_list` with this week's names, recommendations, and status.
+   - If multiple companies were taken to Phase 2, combine into one HTML file with one page per company, using a page break between each. Name it `ddmmyy_weekly_screen.html`.
+   - If only one company, use that company's tearsheet HTML directly, named per the standard file convention.
+2. Render a PDF from that same HTML using `render_pdf.js` and save it to `/outputs` (`ddmmyy_weekly_screen.pdf` for multiple companies, or the standard single-company filename). This is no longer emailed; it stays as the durable local record of what was sent.
+3. Publish the HTML file as a Claude artifact and turn on link sharing for it, since artifacts are private by default. A recipient without access to the underlying account cannot open an unshared artifact. If sharing cannot be turned on in the current session, stop and ask Ciarán to do it before the email is confirmed. Once shared, the link should still be treated as internal-use-only, the same as the PDF was — it carries licensed 9fin data and rating-agency content.
+4. Draft the covering email using the template at `/Templates/weekly_screen_email_template.md`. Populate all bracketed fields with the actual screen criteria, results, recommendation rationale, and the artifact link from step 3.
+5. Resolve recipient first names for the greeting using `/Templates/recipient_names.csv`. If an email address has no mapping in the CSV, ask Ciarán to confirm the name, then save the new mapping to the CSV for future runs. Greeting rules: 1 recipient uses "Hi [First Name],"; 2 recipients uses "Hi [First Name 1], [First Name 2],"; 3+ recipients uses "Hi team,".
+6. Present the draft email (recipient, subject, body, artifact link, confirmation that sharing is on) to Ciarán for confirmation.
+7. Only send once Ciarán confirms. This confirmation step applies every time, including once the workflow is routine — it is not a one-off setup requirement.
+8. Update `/target_list` with this week's names, recommendations, and status.
 
 **Output — Email:**
 - Recipient: iemckayci@gmail.com (confirm before sending regardless)
 - Subject: reflects the week's screen date
-- Body: populated from `/Templates/weekly_screen_email_template.md`
-- Attachment: single PDF (combined if multiple targets, one page per company), A4 portrait
+- Body: populated from `/Templates/weekly_screen_email_template.md`, including the artifact link
+- Attachment: none — the report is a shared artifact link, not a file attachment
 
 ---
 
@@ -208,7 +209,7 @@ All written output (triage table commentary, tearsheet commentary, email copy) f
 - `/target_list` — running CSV record of identified targets: sales, EBITDA, sponsor, liquidity, leverage, next maturity, recommended next steps
 - `/resources` — reference materials, source documents, research
 - `/drafts` — work in progress
-- `/Templates` — reusable templates and frameworks; `weekly_screen_email_template.md` is the covering email template for Phase 3; `recipient_names.csv` maps email addresses to first names for greetings
+- `/Templates` — reusable templates and frameworks; `weekly_screen_email_template.md` is the covering email template for Phase 3; `recipient_names.csv` maps email addresses to first names for greetings; `gold_standard_wagamama_tearsheet.html`/`.pdf` is the reference tearsheet for depth and sourcing rigor
 - `/Precedent Emails` — saved record of emails already sent
 
 ---

@@ -19,7 +19,7 @@ The system screens for three key restructuring triggers:
 - **Weekly screening** - automated Sunday evening run that screens European corporates rated BB/B/CCC with meaningful price declines, triages the results, and waits for analyst input on which names to progress
 - **Ad hoc screening** - manually triggered with custom criteria (different regions, rating bands, price thresholds, or sectors)
 - **Company tearsheets** - one-page, print-ready summaries for selected targets covering business description, financials, capital structure, trading, holders, and a clear recommendation
-- **Email delivery** - covering email with attached PDF sent to the team, summarising the week's findings
+- **Email delivery** - covering email with a link to a shared Claude artifact sent to the team, summarising the week's findings
 
 ## Workflow Steps
 
@@ -31,30 +31,33 @@ The system screens for three key restructuring triggers:
 4. Build a triage table with a recommendation for each name ("further work" or "pass") tied to the three triggers
 5. Present the triage table and wait for the analyst to select which names to take forward
 
-### Phase 2: One-Page Tearsheet
+### Phase 2: Company Tearsheet
 
-For each selected name, build a structured tearsheet covering:
+For each selected name, build a structured, print-ready tearsheet covering:
 
 - Header block with key stats (revenue, EBITDA, leverage, liquidity)
 - Business description and situation overview
 - Key catalysts and triggers to watch
-- Summary financials (multi-year, including FCF build)
+- Management and sponsor representation
 - Capital structure table with pricing and maturities
 - Liquidity build and group structure chart
 - Debt holdings (top holders by instrument)
+- Revenue splits and summary financials (multi-year, including FCF build)
 - Trading chart with annotated credit events
-- Final recommendation with rationale
+- Recent news and final recommendation with rationale
+
+A single-instrument, thinly-covered name may fit on one page; a fully worked-up situation like the Wagamama example below typically runs to three or four A4 pages once every section has real data behind it.
 
 ### Phase 3: Delivery
 
-1. Render tearsheets as A4 portrait PDFs using Puppeteer
-2. Combine into a single PDF if multiple companies were assessed
-3. Draft a covering email using the team template
-4. Confirm content and recipients with the analyst, then send via Gmail
+1. Render tearsheets as A4 portrait PDFs using Puppeteer, kept as the local archival record
+2. Publish the tearsheet HTML (combined across companies if more than one) as a Claude artifact and turn on link sharing
+3. Draft a covering email with the artifact link, using the team template
+4. Confirm content, recipients, and that the link is shared, with the analyst, then send via Gmail
 
 ## Agent Architecture
 
-The workflow uses four specialised Claude Code sub-agents:
+The workflow uses five specialised Claude Code sub-agents:
 
 | Agent | Role |
 |---|---|
@@ -62,34 +65,37 @@ The workflow uses four specialised Claude Code sub-agents:
 | `researcher-financials` | Phase 2: business description, revenue splits, summary financials, FCF build |
 | `researcher-capital` | Phase 2: capital structure, liquidity, org chart, trading, holders |
 | `researcher-news` | Phase 2: news, 9fin analysis, management, situation overview, recommendation |
+| `auditor` | Phase 2.5: cross-references the three researchers' outputs against each other and against any uploaded resources for the same company, flagging discrepancies before the tearsheet is built |
 
-The financial and capital researchers run in parallel for each company, then the news researcher integrates their outputs into the final tearsheet.
+The three Phase 2 researchers run in parallel for each company. Once all three finish, the auditor checks their outputs for internal consistency (e.g. the same debt instrument's size or maturity reported differently) before the orchestrating session builds the final tearsheet.
 
 ## Example Outputs
 
-### Tearsheet: Header and Key Stats
+The screenshots below are the actual four-page tearsheet produced for **Wagamama** (UK casual dining, Apollo-sponsored, £330m 8.5% Senior Secured Notes due 2030) — a fully worked-up, watchlist-monitor recommendation that shows the format at full depth.
 
-Company header with ratings, key financial metrics, business description, situation overview, and triggers to watch.
+### Page 1: Header, Business Description, Situation Overview, Key Catalysts
 
-![Tearsheet header section](docs/screenshots/tearsheet_header.png)
+Company header with ratings and coverage status, key stats box, watchlist call, business description with corporate history, situation overview with sourced commentary, and key catalysts (liquidity, maturities, covenant headroom) stated against explicit levels and dates.
 
-### Tearsheet: Summary Financials and Capital Structure
+![Wagamama tearsheet, page 1: header, business description, situation overview, key catalysts](docs/screenshots/tearsheet_header.png)
 
-Multi-year financials table (revenue through to leverage), capital structure with instrument-level detail, and liquidity build.
+### Page 2: Management, Capital Structure, Liquidity, Group Structure
 
-![Tearsheet financials section](docs/screenshots/tearsheet_financials.png)
+Management and sponsor table with relevant experience, instrument-level capital structure with pricing and covenant detail, a liquidity sources-and-uses build, and a simplified group structure chart showing exactly where the debt sits relative to the restricted group.
 
-### Tearsheet: Group Structure, Management, News, and Trading
+![Wagamama tearsheet, page 2: management, capital structure, liquidity build, group structure](docs/screenshots/tearsheet_capital.png)
 
-Simplified ownership chart, management table, recent credit events, and annotated instrument trading chart.
+### Page 3: Debt Holdings, Revenue Splits, Summary Financials, FCF Build
 
-![Tearsheet capital section](docs/screenshots/tearsheet_capital.png)
+Top-10 holder register with cumulative percentages, revenue splits by geography, multi-year summary financials, and the full FCF build through to UFCF/LFCF conversion — a negative conversion is flagged in red italics rather than shown as a misleadingly precise negative percentage.
 
-### Tearsheet: Debt Holdings and Recommendation
+![Wagamama tearsheet, page 3: debt holdings, revenue splits, summary financials, FCF build](docs/screenshots/tearsheet_financials.png)
 
-Top holders by instrument with cumulative percentages, and the final recommendation box with primary triggers identified.
+### Page 4: Trading Chart, Recent News, Recommendation
 
-![Tearsheet bottom section](docs/screenshots/tearsheet_bottom.png)
+Annotated instrument-price trading chart with credit events called out against the date they occurred, a dated recent-news table with sourced links, and the final recommendation tied explicitly back to the three key triggers.
+
+![Wagamama tearsheet, page 4: trading chart, recent news, recommendation](docs/screenshots/tearsheet_bottom.png)
 
 ## Folder Structure
 
